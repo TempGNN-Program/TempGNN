@@ -1,5 +1,4 @@
 
-````markdown
 # TempGNN
 
 **TempGNN** is a target-centric FPGA accelerator for high-performance real-time Temporal Graph Neural Network (TGNN) inference. TempGNN reorganizes temporal graph computation into **Target Dependency Packets (TDPs)**, enabling dependency-driven TDP construction, overlap-aware synchronization, and efficient on-chip execution for irregular, dependency-constrained TGNN workloads.
@@ -59,6 +58,3 @@ Citation information will be added after publication.
 ## Contact
 
 For questions about the artifact, please contact the authors of the TempGNN paper.
-
-```
-```
