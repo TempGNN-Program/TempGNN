@@ -1,4 +1,3 @@
-下面这版可以直接复制到仓库根目录的 `README.md`。我把 Markdown 代码块、标题层级和 “Code will be made available soon.” 都整理好了。
 
 ````markdown
 # TempGNN
