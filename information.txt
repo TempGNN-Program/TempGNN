@@ -1,0 +1,184 @@
+TempGNN Artifact Environment Information
+=======================================
+
+This file records the execution environment used to reproduce the main
+results of the TempGNN artifact. It summarizes the system platforms,
+hardware devices, compiler and toolchain versions, software libraries,
+and default experimental settings used in the paper.
+
+This static environment summary is prepared from the Artifact Description.
+It can be regenerated or replaced by running:
+    bash information/collect_env.sh
+
+
+[System]
+Operating System: Ubuntu 20.04.6 LTS
+Kernel: 5.15.0-82-generic
+Architecture: x86_64
+
+
+[FPGA Platform]
+Board: Xilinx Alveo U280
+LUTs: 1.08M
+BRAM: 9 MB
+UltraRAM: 30 MB
+DSP slices: 9,024
+HBM: two 4 GB HBM2 stacks
+Aggregate HBM bandwidth: 460 GB/s
+TempGNN post-route frequency: 225 MHz
+
+TempGNN post-route resource utilization:
+- LUTs: 18.25%
+- Registers: 22.33%
+- BRAM: 78.24%
+- UltraRAM: 42.15%
+- DSPs: 84.58%
+
+
+[GPU Platform]
+GPU: NVIDIA A100
+GPU memory: 80 GB HBM2e
+GPU prototype: TempGNN-G
+GPU programming model: CUDA C++
+
+
+[CPU Platform]
+CPU: Intel Xeon Platinum 8357B
+Cores: 32
+Frequency: 2.6 GHz
+Host memory: 503 GB DDR4
+Memory channels: 16
+
+
+[Compilers and Toolchains]
+FPGA toolchain: Xilinx Vitis 2019.2
+GPU toolchain: CUDA Toolkit 12.2
+nvcc: V12.2.140
+CPU compiler: GCC/G++ 9.4.0
+CPU optimization flags: -O3
+CPU parallelization: OpenMP enabled for CPU baselines
+
+
+[Software Libraries]
+Python: 3.10.12
+PyTorch: 2.1.2
+cuBLAS: 12.2.5
+DGL: 2.4.0
+
+
+[Software Baselines]
+TGLite-CPU:
+- Platform: Intel Xeon Platinum 8357B CPU
+- Role: CPU software baseline for TGNN inference
+
+Cascade:
+- Platform: NVIDIA A100 GPU
+- Role: GPU software baseline for TGNN inference
+
+
+[Hardware Baselines]
+MATG:
+- Type: FPGA-based TGNN inference accelerator
+- Source: official open-source HLS implementation from zjjzby/TGNN-FPGA-IPDPS2022
+- Modification: memory interfaces adapted to the Xilinx Alveo U280 HBM subsystem while preserving the core algorithmic logic
+
+ViTeGNN:
+- Type: FPGA-based TGNN inference accelerator
+- Source code availability: source code not publicly available
+- Implementation: best-effort reproduction based on the architectural descriptions, execution dataflows, and hardware parameters reported in the original paper
+- Notes: relies on algorithm/model/architecture co-design and includes model-side adaptation such as lightweight temporal attention, neighbor pruning, knowledge-distillation training, and inference-mode selection
+
+RTGA:
+- Type: FPGA-based real-time TGNN inference accelerator
+- Source code availability: source code not publicly available
+- Implementation: best-effort reproduction based on the architectural descriptions, execution dataflows, and hardware parameters reported in the original paper
+
+
+[Evaluation Policy]
+All FPGA-based designs, including TempGNN and the hardware baselines,
+are synthesized, placed, and routed on the same Xilinx Alveo U280 FPGA
+platform using the same Xilinx Vitis 2019.2 toolchain.
+
+For MATG and ViTeGNN, offline model-side adaptation costs, including
+model simplification, neighbor pruning, knowledge-distillation training,
+and inference-mode selection, are excluded from the reported inference
+latency. For all FPGA-based designs, only end-to-end inference latency
+measured on the FPGA board under the corresponding deployed
+model/configuration is reported.
+
+Unless otherwise noted, all implementations use 32-bit floating-point
+precision.
+
+
+[Evaluated Models]
+JODIE:
+- Layers: 1
+- Neighbor sampling: no neighbor sampling
+
+TGAT:
+- Layers: 2
+- Neighbor sampling: 20-neighbor sampling
+
+TGN:
+- Layers: 2
+- Neighbor sampling: 20-neighbor sampling
+
+APAN:
+- Layers: 1
+- Mailbox size: 10
+
+
+[Datasets]
+Wikipedia (WK)
+MOOC (MC)
+Reddit (RT)
+LastFM (LM)
+WikiTalk (WT)
+GDELT (GT)
+
+
+[Default Experiment Settings]
+Batch size: 1000
+Precision: FP32
+Sampling strategy: recent sampling
+Remaining hyperparameters: follow Cascade unless otherwise specified
+
+
+[Reported Results Covered by the Artifact]
+The artifact is intended to reproduce the main evaluation results reported
+in the paper, including:
+- software workload characterization
+- end-to-end speedup over software baselines
+- end-to-end speedup over hardware baselines
+- energy-efficiency comparison
+- ablation studies
+- sensitivity studies
+
+
+[Power Measurement]
+GPU power:
+- Collected using NVIDIA System Management Interface (nvidia-smi)
+
+FPGA power:
+- Estimated using Xilinx Vivado Power Analyzer after post-implementation routing
+
+
+[Repository Information]
+Artifact repository:
+https://github.com/TempGNN-Program/TempGNN.git
+
+Environment information file:
+https://github.com/TempGNN-Program/TempGNN/blob/main/information/information.txt
+
+Environment collection script:
+https://github.com/TempGNN-Program/TempGNN/blob/main/information/collect_env.sh
+
+
+[Notes]
+This file is a static environment summary prepared from the Artifact
+Description. For a machine-specific environment dump, run:
+
+    bash information/collect_env.sh
+
+The generated output can replace this file before the artifact evaluation
+stage if a full command-level environment snapshot is required.
