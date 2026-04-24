@@ -4,33 +4,6 @@
 
 **TempGNN** is a target-centric FPGA accelerator for high-performance real-time Temporal Graph Neural Network (TGNN) inference. TempGNN reorganizes temporal graph computation into **Target Dependency Packets (TDPs)**, enabling dependency-driven TDP construction, overlap-aware synchronization, and efficient on-chip execution for irregular, dependency-constrained TGNN workloads.
 
-## Overview
-
-Temporal Graph Neural Networks are effective for modeling dynamic graphs with evolving topology and temporal interactions. However, high-performance TGNN inference is challenging because strict temporal dependencies in vertex-memory updates force timestamp-ordered execution, leading to limited useful parallelism and inefficient off-chip memory communication.
-
-TempGNN addresses these challenges through:
-
-- **Target Dependency Packets (TDPs):** a target-centric abstraction that captures the temporally valid dependency states required for each target update.
-- **Dependency-driven TDP construction:** a data-loading and construction pipeline that integrates timestamp-constrained temporal sampling with on-the-fly dependency expansion.
-- **Overlap-aware synchronization:** a packet-level synchronization strategy that detects shared dependency packets across overlapping targets and reduces redundant dependency processing.
-- **FPGA-based acceleration:** an implementation on the Xilinx Alveo U280 platform for low-latency and energy-efficient real-time TGNN inference.
-
-## Artifact Status
-
-Code will be made available soon.
-
-This repository currently provides artifact-related information for the TempGNN submission, including environment information and reproducibility notes. Full source code, build scripts, dataset preprocessing scripts, and evaluation scripts will be released in a future update.
-
-## Repository Structure
-
-```text
-TempGNN/
-├── information/
-│   ├── README.md
-│   ├── collect_env.sh
-│   └── information.txt
-└── README.md
-````
 
 ## Environment Information
 
