@@ -1,0 +1,21 @@
+kernel_time_ms=5.26903
+throughput_targets_per_s=3036.61
+stat[0]=16
+stat[1]=421
+stat[2]=73
+stat[3]=5767
+stat[4]=26312
+stat[5]=6125
+stat[6]=751
+stat[7]=992
+stat[8]=3504
+stat[9]=348
+stat[10]=0
+stat[11]=47569419041558699
+stat[12]=1
+stat[13]=1
+stat[14]=8
+stat[15]=0
+embedding[0] -4 -74 -23 54 110 68 83 46
+expected_stats: PASS
+expected_embedding: PASS

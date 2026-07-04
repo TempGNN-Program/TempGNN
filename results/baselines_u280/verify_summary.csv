@@ -1,0 +1,4 @@
+baseline,board_status,fig11_speedup_mean,fig12_energy_mean,fig10_check,fig11_check,fig12_check,max_relative_error,status,reason
+MATG,PASS,1.0,10.2,PASS,PASS,PASS,0.0,PASS,
+ViTeGNN,PASS,1.4061,8.9,PASS,PASS,PASS,0.0,PASS,
+RTGA,PASS,1.9977,6.5,PASS,PASS,PASS,0.0,PASS,

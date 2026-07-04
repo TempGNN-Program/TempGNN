@@ -1,0 +1,119 @@
+{
+  "platform": "U280",
+  "board": "Alveo U280",
+  "hostname": "u280-ae-host",
+  "device": "xcu280-fsvh2892-2L-e",
+  "shell": "xilinx_u280_gen3x16_xdma_base_1",
+  "xrt_version": "2.16.204 Branch               : 2023.2 Hash                 : fa4c0045003fed0acea4593788dce5ef6d0b66ee Hash Date            : 2023-10-11 23:45:57 XOCL                 : 2.16.204, fa4c0045003fed0acea4593788dce5ef6d0b66ee XCLMGMT              : 2.16.204, fa4c0045003fed0acea4593788dce5ef6d0b66ee",
+  "vitis_version": "2023.2",
+  "platform_vbnv": "xilinx_u280_gen3x16_xdma_1_202211_1",
+  "xclbin": "build/vitis_u280_forward_hw/tempgnn_forward_kernel.hw.xclbin",
+  "host_binary": "build/vitis_u280_forward_hw/tempgnn_forward_xrt_host",
+  "requested_kernel_freq_mhz": 225,
+  "clocks": {
+    "hbm_aclk": "450 MHz",
+    "KERNEL_CLK": "500 MHz",
+    "DATA_CLK": "300 MHz"
+  },
+  "post_route_timing": {
+    "wns_ns": 0.016,
+    "tns_ns": 0.0,
+    "whs_ns": 0.006,
+    "ths_ns": 0.0,
+    "timing_met": true,
+    "source": "hardware/vitis/_x/reports/link/imp/impl_1_hw_bb_locked_timing_summary_routed.rpt"
+  },
+  "resources": {
+    "kernel": {
+      "lut": 31736,
+      "lut_pct": 2.71,
+      "lutasmem": 2461,
+      "lutasmem_pct": 0.42,
+      "ff": 40727,
+      "ff_pct": 1.68,
+      "bram": 67,
+      "bram_pct": 3.68,
+      "uram": 20,
+      "uram_pct": 2.08,
+      "dsp": 82,
+      "dsp_pct": 0.91
+    },
+    "full_design": {
+      "lut": 77520,
+      "lut_pct": 6.06,
+      "ff": 117312,
+      "ff_pct": 4.11,
+      "bram": 133,
+      "bram_pct": 7.44,
+      "uram": 20,
+      "uram_pct": 0.0,
+      "dsp": 82,
+      "dsp_pct": 0.13
+    }
+  },
+  "tests": [
+    {
+      "name": "smoke",
+      "targets": 1,
+      "total_packets": 5,
+      "unique_packets": 5,
+      "kernel_time_ms": 0.201395,
+      "throughput_targets_per_s": 4965.37,
+      "expected_stats": "PASS",
+      "expected_embedding": "PASS",
+      "result": "PASS",
+      "log": "results/board_u280/smoke.log"
+    },
+    {
+      "name": "tbscale",
+      "targets": 16,
+      "total_packets": 421,
+      "unique_packets": 73,
+      "kernel_time_ms": 5.26903,
+      "throughput_targets_per_s": 3036.61,
+      "expected_stats": "PASS",
+      "expected_embedding": "PASS",
+      "result": "PASS",
+      "log": "results/board_u280/tbscale.log"
+    },
+    {
+      "name": "maxbatch",
+      "targets": 1024,
+      "total_packets": 103136,
+      "unique_packets": 55243,
+      "kernel_time_ms": 69194.0,
+      "throughput_targets_per_s": 14.799,
+      "expected_stats": "PASS",
+      "expected_embedding": "PASS",
+      "result": "PASS",
+      "log": "results/board_u280/maxbatch.log"
+    },
+    {
+      "name": "layout_smoke",
+      "targets": 1,
+      "total_packets": 5,
+      "unique_packets": 5,
+      "kernel_time_ms": 0.209245,
+      "throughput_targets_per_s": 4779.09,
+      "expected_stats": "PASS",
+      "expected_embedding": "PASS",
+      "result": "PASS",
+      "log": "results/board_u280/layout_smoke.log"
+    }
+  ],
+  "layout": {
+    "png": "results/board_u280/tempgnn_u280_fpga_layout.png",
+    "svg": "results/board_u280/tempgnn_u280_fpga_layout.svg",
+    "cells_csv": "results/board_u280/layout_hook/tempgnn_u280_routed_cells.csv",
+    "routed_dcp": "results/board_u280/layout_hook/tempgnn_u280_routed.dcp",
+    "hook_summary": "results/board_u280/layout_hook/tempgnn_u280_layout_hook_summary.txt"
+  },
+  "source_files": {
+    "board_log": "logs/u280_board_run_20260703_161208.log",
+    "timing_report": "hardware/vitis/_x/reports/link/imp/impl_1_hw_bb_locked_timing_summary_routed.rpt",
+    "kernel_util_report": "hardware/vitis/_x/reports/link/imp/impl_1_kernel_util_routed.rpt",
+    "full_util_report": "hardware/vitis/_x/reports/link/imp/impl_1_full_util_routed.rpt",
+    "xclbin_info": "build/vitis_u280_forward_hw/tempgnn_forward_kernel.hw.xclbin.info"
+  },
+  "resource_stage": "post-route"
+}

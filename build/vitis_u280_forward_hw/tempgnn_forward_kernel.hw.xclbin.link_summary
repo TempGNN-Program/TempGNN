@@ -1,0 +1,2542 @@
+<ENTRY>
+{
+ "thisFile": "/home/ae_reviewer/TempGNN/build/vitis_u280_forward_hw/tempgnn_forward_kernel.hw.xclbin.link_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Fri Jul  3 13:42:38 2026",
+ "timestampMillis": "1783057358260",
+ "buildStep": {
+  "cmdId": "d61b6970-146c-413c-b58c-c828149a965a",
+  "name": "v++",
+  "logFile": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/link/link.steps.log",
+  "commandLine": "/tools/Xilinx/Vitis/2023.2/bin/unwrapped/lnx64.o/v++  --vivado.prop \"run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" -l -t hw --platform /opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm --freqhz 225000000:tempgnn_forward_kernel_1 --config /home/ae_reviewer/TempGNN/hardware/vitis/tempgnn_forward_u280.cfg /home/ae_reviewer/TempGNN/build/vitis_u280_forward_hw/tempgnn_forward_kernel.hw.xo -o /home/ae_reviewer/TempGNN/build/vitis_u280_forward_hw/tempgnn_forward_kernel.hw.xclbin ",
+  "args": [
+   "-l",
+   "-t",
+   "hw",
+   "--platform",
+   "/opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm",
+   "--freqhz",
+   "225000000:tempgnn_forward_kernel_1",
+   "--config",
+   "/home/ae_reviewer/TempGNN/hardware/vitis/tempgnn_forward_u280.cfg",
+   "/home/ae_reviewer/TempGNN/build/vitis_u280_forward_hw/tempgnn_forward_kernel.hw.xo",
+   "-o",
+   "/home/ae_reviewer/TempGNN/build/vitis_u280_forward_hw/tempgnn_forward_kernel.hw.xclbin"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/ae_reviewer/TempGNN/hardware/vitis/tempgnn_forward_u280.cfg",
+    "content": "[connectivity]\nnk=tempgnn_forward_kernel:1:tempgnn_forward_kernel_1\nsp=tempgnn_forward_kernel_1.event_src:HBM[0]\nsp=tempgnn_forward_kernel_1.event_dst:HBM[1]\nsp=tempgnn_forward_kernel_1.event_ts:HBM[2]\nsp=tempgnn_forward_kernel_1.vertex_offsets:HBM[3]\nsp=tempgnn_forward_kernel_1.history_event_idx:HBM[4]\nsp=tempgnn_forward_kernel_1.history_peer:HBM[5]\nsp=tempgnn_forward_kernel_1.target_vertex:HBM[6]\nsp=tempgnn_forward_kernel_1.target_event_idx:HBM[7]\nsp=tempgnn_forward_kernel_1.initial_memory:HBM[8]\nsp=tempgnn_forward_kernel_1.event_features:HBM[9]\nsp=tempgnn_forward_kernel_1.weight_self:HBM[10]\nsp=tempgnn_forward_kernel_1.weight_peer:HBM[10]\nsp=tempgnn_forward_kernel_1.weight_event:HBM[10]\nsp=tempgnn_forward_kernel_1.bias:HBM[10]\nsp=tempgnn_forward_kernel_1.embedding_out:HBM[11]\nsp=tempgnn_forward_kernel_1.stats_out:HBM[12]\n\n[hls]\nclock=225000000:tempgnn_forward_kernel_1\n"
+   }
+  ],
+  "cwd": "/home/ae_reviewer/TempGNN/hardware/vitis"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Jul  3 13:42:38 2026",
+ "timestampMillis": "1783057358260",
+ "status": {
+  "cmdId": "d61b6970-146c-413c-b58c-c828149a965a",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Fri Jul  3 13:42:44 2026",
+ "timestampMillis": "1783057364069",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_u280_gen3x16_xdma_1_202211_1.xpfm",
+  "hardwareDsa": "",
+  "platformDirectory": "/opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_LINK",
+  "target": "TT_HW",
+  "binaryContainer": {
+   "base": {
+    "type": "BT_UKNOWN",
+    "name": "tempgnn_forward_kernel.hw",
+    "file": "/home/ae_reviewer/TempGNN/build/vitis_u280_forward_hw/tempgnn_forward_kernel.hw.xclbin",
+    "reports": [],
+    "uuid": ""
+   },
+   "kernels": []
+  },
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "tempgnn_forward_kernel",
+     "file": "/home/ae_reviewer/TempGNN/build/vitis_u280_forward_hw/tempgnn_forward_kernel.hw.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/ae_reviewer/TempGNN/hardware/vitis/_x/link/int/xo/tempgnn_forward_kernel/tempgnn_forward_kernel/cpu_sources/tempgnn_forward_kernel.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [
+     "tempgnn_forward_kernel_1"
+    ],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "Vitis V++ Compiler Release 2023.2. SW Build 4026344 on 2023-10-11-15:42:10"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Jul  3 13:42:44 2026",
+ "timestampMillis": "1783057364338",
+ "buildStep": {
+  "cmdId": "2dd6f25b-e500-4fa0-8378-981dca8e1acb",
+  "name": "system_link",
+  "logFile": "",
+  "commandLine": "system_link --xo /home/ae_reviewer/TempGNN/build/vitis_u280_forward_hw/tempgnn_forward_kernel.hw.xo --config /home/ae_reviewer/TempGNN/hardware/vitis/_x/link/int/syslinkConfig.ini --xpfm /opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm --target hw --output_dir /home/ae_reviewer/TempGNN/hardware/vitis/_x/link/int --temp_dir /home/ae_reviewer/TempGNN/hardware/vitis/_x/link/sys_link",
+  "args": [
+   "--xo",
+   "/home/ae_reviewer/TempGNN/build/vitis_u280_forward_hw/tempgnn_forward_kernel.hw.xo",
+   "--config",
+   "/home/ae_reviewer/TempGNN/hardware/vitis/_x/link/int/syslinkConfig.ini",
+   "--xpfm",
+   "/opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm",
+   "--target",
+   "hw",
+   "--output_dir",
+   "/home/ae_reviewer/TempGNN/hardware/vitis/_x/link/int",
+   "--temp_dir",
+   "/home/ae_reviewer/TempGNN/hardware/vitis/_x/link/sys_link"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/link/int/syslinkConfig.ini",
+    "content": "nk=tempgnn_forward_kernel:1:tempgnn_forward_kernel_1\nsp=tempgnn_forward_kernel_1.event_src:HBM[0]\nsp=tempgnn_forward_kernel_1.event_dst:HBM[1]\nsp=tempgnn_forward_kernel_1.event_ts:HBM[2]\nsp=tempgnn_forward_kernel_1.vertex_offsets:HBM[3]\nsp=tempgnn_forward_kernel_1.history_event_idx:HBM[4]\nsp=tempgnn_forward_kernel_1.history_peer:HBM[5]\nsp=tempgnn_forward_kernel_1.target_vertex:HBM[6]\nsp=tempgnn_forward_kernel_1.target_event_idx:HBM[7]\nsp=tempgnn_forward_kernel_1.initial_memory:HBM[8]\nsp=tempgnn_forward_kernel_1.event_features:HBM[9]\nsp=tempgnn_forward_kernel_1.weight_self:HBM[10]\nsp=tempgnn_forward_kernel_1.weight_peer:HBM[10]\nsp=tempgnn_forward_kernel_1.weight_event:HBM[10]\nsp=tempgnn_forward_kernel_1.bias:HBM[10]\nsp=tempgnn_forward_kernel_1.embedding_out:HBM[11]\nsp=tempgnn_forward_kernel_1.stats_out:HBM[12]\n\nclock.freqHz=225000000:tempgnn_forward_kernel_1\n\n"
+   }
+  ],
+  "cwd": "/home/ae_reviewer/TempGNN/hardware/vitis"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Jul  3 13:42:44 2026",
+ "timestampMillis": "1783057364339",
+ "status": {
+  "cmdId": "2dd6f25b-e500-4fa0-8378-981dca8e1acb",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Jul  3 13:43:12 2026",
+ "timestampMillis": "1783057392999",
+ "status": {
+  "cmdId": "2dd6f25b-e500-4fa0-8378-981dca8e1acb",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Jul  3 13:43:13 2026",
+ "timestampMillis": "1783057393002",
+ "buildStep": {
+  "cmdId": "1b5f89e9-91ea-43bf-a3b2-c988ebbdb55a",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -sdsl /home/ae_reviewer/TempGNN/hardware/vitis/_x/link/int/sdsl.dat -rtd /home/ae_reviewer/TempGNN/hardware/vitis/_x/link/int/cf2sw.rtd -nofilter /home/ae_reviewer/TempGNN/hardware/vitis/_x/link/int/cf2sw_full.rtd -xclbin /home/ae_reviewer/TempGNN/hardware/vitis/_x/link/int/xclbin_orig.xml -o /home/ae_reviewer/TempGNN/hardware/vitis/_x/link/int/xclbin_orig.1.xml",
+  "args": [
+   "-sdsl",
+   "/home/ae_reviewer/TempGNN/hardware/vitis/_x/link/int/sdsl.dat",
+   "-rtd",
+   "/home/ae_reviewer/TempGNN/hardware/vitis/_x/link/int/cf2sw.rtd",
+   "-nofilter",
+   "/home/ae_reviewer/TempGNN/hardware/vitis/_x/link/int/cf2sw_full.rtd",
+   "-xclbin",
+   "/home/ae_reviewer/TempGNN/hardware/vitis/_x/link/int/xclbin_orig.xml",
+   "-o",
+   "/home/ae_reviewer/TempGNN/hardware/vitis/_x/link/int/xclbin_orig.1.xml"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/ae_reviewer/TempGNN/hardware/vitis"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Jul  3 13:43:13 2026",
+ "timestampMillis": "1783057393002",
+ "status": {
+  "cmdId": "1b5f89e9-91ea-43bf-a3b2-c988ebbdb55a",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Jul  3 13:43:21 2026",
+ "timestampMillis": "1783057401776",
+ "status": {
+  "cmdId": "1b5f89e9-91ea-43bf-a3b2-c988ebbdb55a",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Jul  3 13:43:21 2026",
+ "timestampMillis": "1783057401779",
+ "buildStep": {
+  "cmdId": "e85de762-3f9c-428a-903e-1821f4962ffe",
+  "name": "rtd2_system_diagram",
+  "logFile": "",
+  "commandLine": "rtd2SystemDiagram",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/ae_reviewer/TempGNN/hardware/vitis"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Jul  3 13:43:21 2026",
+ "timestampMillis": "1783057401779",
+ "status": {
+  "cmdId": "e85de762-3f9c-428a-903e-1821f4962ffe",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 13:43:22 2026",
+ "timestampMillis": "1783057402243",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/link/int/systemDiagramModel.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Jul  3 13:43:22 2026",
+ "timestampMillis": "1783057402244",
+ "status": {
+  "cmdId": "e85de762-3f9c-428a-903e-1821f4962ffe",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Jul  3 13:43:22 2026",
+ "timestampMillis": "1783057402246",
+ "buildStep": {
+  "cmdId": "3354f370-451a-491c-9ab7-66f15bde1300",
+  "name": "vpl",
+  "logFile": "",
+  "commandLine": "vpl -t hw -f /opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm --remote_ip_cache /home/ae_reviewer/TempGNN/hardware/vitis/.ipcache --output_dir /home/ae_reviewer/TempGNN/hardware/vitis/_x/link/int --log_dir /home/ae_reviewer/TempGNN/hardware/vitis/_x/logs/link --report_dir /home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link --config /home/ae_reviewer/TempGNN/hardware/vitis/_x/link/int/vplConfig.ini -k /home/ae_reviewer/TempGNN/hardware/vitis/_x/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/ae_reviewer/TempGNN/hardware/vitis/_x/link --no-info --iprepo /home/ae_reviewer/TempGNN/hardware/vitis/_x/link/int/xo/ip_repo/xilinx_com_hls_tempgnn_forward_kernel_1_0 --messageDb /home/ae_reviewer/TempGNN/hardware/vitis/_x/link/run_link/vpl.pb /home/ae_reviewer/TempGNN/hardware/vitis/_x/link/int/dr.bd.tcl",
+  "args": [
+   "-t",
+   "hw",
+   "-f",
+   "/opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm",
+   "--remote_ip_cache",
+   "/home/ae_reviewer/TempGNN/hardware/vitis/.ipcache",
+   "--output_dir",
+   "/home/ae_reviewer/TempGNN/hardware/vitis/_x/link/int",
+   "--log_dir",
+   "/home/ae_reviewer/TempGNN/hardware/vitis/_x/logs/link",
+   "--report_dir",
+   "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link",
+   "--config",
+   "/home/ae_reviewer/TempGNN/hardware/vitis/_x/link/int/vplConfig.ini",
+   "-k",
+   "/home/ae_reviewer/TempGNN/hardware/vitis/_x/link/int/kernel_info.dat",
+   "--webtalk_flag",
+   "Vitis",
+   "--temp_dir",
+   "/home/ae_reviewer/TempGNN/hardware/vitis/_x/link",
+   "--no-info",
+   "--iprepo",
+   "/home/ae_reviewer/TempGNN/hardware/vitis/_x/link/int/xo/ip_repo/xilinx_com_hls_tempgnn_forward_kernel_1_0",
+   "--messageDb",
+   "/home/ae_reviewer/TempGNN/hardware/vitis/_x/link/run_link/vpl.pb",
+   "/home/ae_reviewer/TempGNN/hardware/vitis/_x/link/int/dr.bd.tcl"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/link/int/vplConfig.ini",
+    "content": "[advanced]\nmisc=report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\nmisc=report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\nparam=compiler.enablePerformanceTrace=1\nparam=compiler.vppCurrentWorkingDir=/home/ae_reviewer/TempGNN/hardware/vitis\nmisc=BinaryName=tempgnn_forward_kernel.hw\n\n[connectivity]\nnk=tempgnn_forward_kernel:1:tempgnn_forward_kernel_1\n\n[vivado]\nprop=run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\n\n"
+   }
+  ],
+  "cwd": "/home/ae_reviewer/TempGNN/hardware/vitis"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Jul  3 13:43:22 2026",
+ "timestampMillis": "1783057402247",
+ "status": {
+  "cmdId": "3354f370-451a-491c-9ab7-66f15bde1300",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Fri Jul  3 13:43:24 2026",
+ "timestampMillis": "1783057404407",
+ "buildStep": {
+  "cmdId": "2d074081-e111-4ca9-a9ea-c5bfefa4cd3a",
+  "name": "vpl",
+  "logFile": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/link/link.steps.log",
+  "commandLine": "/tools/Xilinx/Vitis/2023.2/bin/unwrapped/lnx64.o/vpl -t hw -f /opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm --remote_ip_cache /home/ae_reviewer/TempGNN/hardware/vitis/.ipcache --output_dir /home/ae_reviewer/TempGNN/hardware/vitis/_x/link/int --log_dir /home/ae_reviewer/TempGNN/hardware/vitis/_x/logs/link --report_dir /home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link --config /home/ae_reviewer/TempGNN/hardware/vitis/_x/link/int/vplConfig.ini -k /home/ae_reviewer/TempGNN/hardware/vitis/_x/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/ae_reviewer/TempGNN/hardware/vitis/_x/link --no-info --iprepo /home/ae_reviewer/TempGNN/hardware/vitis/_x/link/int/xo/ip_repo/xilinx_com_hls_tempgnn_forward_kernel_1_0 --messageDb /home/ae_reviewer/TempGNN/hardware/vitis/_x/link/run_link/vpl.pb /home/ae_reviewer/TempGNN/hardware/vitis/_x/link/int/dr.bd.tcl ",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/link/run_link"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Jul  3 13:43:24 2026",
+ "timestampMillis": "1783057404407",
+ "status": {
+  "cmdId": "2d074081-e111-4ca9-a9ea-c5bfefa4cd3a",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_VivadoProject",
+ "dateTimestamp": "Fri Jul  3 13:43:30 2026",
+ "timestampMillis": "1783057410531",
+ "vivadoProject": {
+  "openDir": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/link/vivado/vpl",
+  "openScript": "openprj.tcl",
+  "relativeProject": "prj/prj.xpr"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Jul  3 13:43:30 2026",
+ "timestampMillis": "1783057410532",
+ "buildStep": {
+  "cmdId": "f27251f9-82a8-42d8-8899-ca8d1e6bdd32",
+  "name": "vivado",
+  "logFile": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/link/vivado/vpl/vivado.log",
+  "commandLine": "vivado -log vivado.log -applog -m64 -messageDb vivado.pb -mode batch -source vpl.tcl -notrace",
+  "args": [
+   "-log",
+   "vivado.log",
+   "-applog",
+   " -m64",
+   "-messageDb",
+   "vivado.pb",
+   "-mode",
+   "batch",
+   "-source",
+   "vpl.tcl",
+   "-notrace"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/link/run_link"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Jul  3 13:43:30 2026",
+ "timestampMillis": "1783057410532",
+ "status": {
+  "cmdId": "f27251f9-82a8-42d8-8899-ca8d1e6bdd32",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 13:47:28 2026",
+ "timestampMillis": "1783057648546",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/link/int/automation_summary_pre_synthesis.txt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "VITIS_DESIGN_FLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Fri Jul  3 14:16:54 2026",
+ "timestampMillis": "1783059414562",
+ "buildStep": {
+  "cmdId": "111e0e86-7c86-48be-a198-e15902c2e552",
+  "name": "vivado.impl",
+  "logFile": "",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/link/vivado/vpl"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Jul  3 14:16:54 2026",
+ "timestampMillis": "1783059414607",
+ "status": {
+  "cmdId": "111e0e86-7c86-48be-a198-e15902c2e552",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Fri Jul  3 14:16:54 2026",
+ "timestampMillis": "1783059414608",
+ "buildStep": {
+  "cmdId": "18dc8779-8db7-4b1f-903e-b7a4be2a2511",
+  "name": "vivado.impl.impl_1",
+  "logFile": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/link/vivado/vpl/prj/prj.runs/impl_1/runme.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/link/vivado/vpl/prj/prj.runs/impl_1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Jul  3 14:16:54 2026",
+ "timestampMillis": "1783059414608",
+ "status": {
+  "cmdId": "18dc8779-8db7-4b1f-903e-b7a4be2a2511",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 15:52:55 2026",
+ "timestampMillis": "1783065175976",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/link/vivado/vpl/prj/prj.runs/impl_1/system_diagram.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 15:54:58 2026",
+ "timestampMillis": "1783065298220",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/link/int/kernel_service.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "KERNEL_SERVICE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 15:54:58 2026",
+ "timestampMillis": "1783065298221",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/link/int/kernel_service.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "KERNEL_SERVICE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 15:57:41 2026",
+ "timestampMillis": "1783065461795",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/link/vivado/vpl/prj/prj.runs/impl_1/dr_timing_summary.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY_FAIL",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Jul  3 16:09:54 2026",
+ "timestampMillis": "1783066194786",
+ "status": {
+  "cmdId": "f27251f9-82a8-42d8-8899-ca8d1e6bdd32",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195056",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/imp/impl_1_kernel_util_synthed.xutil",
+  "name": "",
+  "fileType": "XUTIL",
+  "reportType": "KERNEL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195057",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/imp/impl_1_kernel_util_synthed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195058",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/imp/impl_1_full_util_synthed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195058",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/imp/impl_1_full_util_synthed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195059",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/imp/impl_1_kernel_util_placed.xutil",
+  "name": "",
+  "fileType": "XUTIL",
+  "reportType": "KERNEL_UTILIZATION_PLACEMENT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195059",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/imp/impl_1_kernel_util_placed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_UTILIZATION_PLACEMENT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195060",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/imp/impl_1_slr_util_placed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SLR_UTIL_PLACED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195061",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/imp/impl_1_slr_util_placed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_SLR_UTIL_PLACED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195061",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/imp/impl_1_full_util_placed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_UTILIZATION_PLACEMENT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195062",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/imp/impl_1_full_util_placed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_UTILIZATION_PLACEMENT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195062",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/imp/impl_1_kernel_util_routed.xutil",
+  "name": "",
+  "fileType": "XUTIL",
+  "reportType": "KERNEL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195063",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/imp/impl_1_kernel_util_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195063",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/imp/impl_1_slr_util_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SLR_UTIL_ROUTED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195064",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/imp/impl_1_slr_util_routed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_SLR_UTIL_ROUTED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195064",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/imp/impl_1_full_util_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195065",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/imp/impl_1_full_util_routed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195066",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/ulp_ii_level0_wire_0_synth_1_ulp_ii_level0_wire_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195067",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/ulp_regslice_control_userpf_1_synth_1_ulp_regslice_control_userpf_1_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195067",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/ulp_regslice_control_userpf_0_synth_1_ulp_regslice_control_userpf_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195068",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/ulp_proc_sys_reset_freerun_slr1_0_synth_1_ulp_proc_sys_reset_freerun_slr1_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195069",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/ulp_proc_sys_reset_kernel2_slr1_0_synth_1_ulp_proc_sys_reset_kernel2_slr1_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195069",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/ulp_proc_sys_reset_freerun_slr2_0_synth_1_ulp_proc_sys_reset_freerun_slr2_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195070",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/ulp_proc_sys_reset_freerun_slr0_0_synth_1_ulp_proc_sys_reset_freerun_slr0_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195070",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/ulp_proc_sys_reset_kernel2_slr2_0_synth_1_ulp_proc_sys_reset_kernel2_slr2_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195071",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/ulp_proc_sys_reset_kernel_slr2_0_synth_1_ulp_proc_sys_reset_kernel_slr2_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195071",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/ulp_proc_sys_reset_kernel_slr1_0_synth_1_ulp_proc_sys_reset_kernel_slr1_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195072",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/ulp_proc_sys_reset_ctrl_slr1_0_synth_1_ulp_proc_sys_reset_ctrl_slr1_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195072",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/ulp_proc_sys_reset_kernel2_slr0_0_synth_1_ulp_proc_sys_reset_kernel2_slr0_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195073",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/ulp_proc_sys_reset_kernel_slr0_0_synth_1_ulp_proc_sys_reset_kernel_slr0_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195074",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/ulp_proc_sys_reset_ctrl_slr2_0_synth_1_ulp_proc_sys_reset_ctrl_slr2_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195074",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/ulp_proc_sys_reset_ctrl_slr0_0_synth_1_ulp_proc_sys_reset_ctrl_slr0_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195075",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/ulp_hmss_0_0_synth_1_ulp_hmss_0_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195075",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/ulp_axi_vip_data_0_synth_1_ulp_axi_vip_data_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195076",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/ulp_ulp_ucs_0_synth_1_ulp_ulp_ucs_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195076",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/ulp_ulp_cmp_0_synth_1_ulp_ulp_cmp_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195077",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/ulp_regslice_control_userpf_2_synth_1_ulp_regslice_control_userpf_2_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195077",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/ulp_axi_gpio_null_2_synth_1_ulp_axi_gpio_null_2_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195078",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/ulp_axi_vip_ctrl_userpf_2_synth_1_ulp_axi_vip_ctrl_userpf_2_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195078",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/bd_85ad_slice13_12_0_synth_1_bd_85ad_slice13_12_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195079",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/bd_22c0_xbar_1_synth_1_bd_22c0_xbar_1_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195079",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/bd_7cf0_bsip_0_synth_1_bd_7cf0_bsip_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195080",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/bd_22c0_aclk_kernel_00_cont_adapt_0_synth_1_bd_22c0_aclk_kernel_00_cont_adapt_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195081",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/bd_097b_build_info_0_synth_1_bd_097b_build_info_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195081",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/bd_22c0_psreset_aclk_freerun_0_synth_1_bd_22c0_psreset_aclk_freerun_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195082",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/bd_22c0_clock_throttling_aclk_kernel_01_0_synth_1_bd_22c0_clock_throttling_aclk_kernel_01_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195082",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/bd_22c0_frequency_counter_aclk_0_synth_1_bd_22c0_frequency_counter_aclk_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195083",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/bd_22c0_fanout_aresetn_kernel_01_slr2_4_0_synth_1_bd_22c0_fanout_aresetn_kernel_01_slr2_4_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195083",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/bd_7cf0_axi_jtag_0_synth_1_bd_7cf0_axi_jtag_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195084",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/bd_097b_user_debug_bridge_0_synth_1_bd_097b_user_debug_bridge_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195084",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/bd_7cf0_bs_switch_1_0_synth_1_bd_7cf0_bs_switch_1_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195085",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/bd_22c0_aclk_kernel_01_cont_adapt_0_synth_1_bd_22c0_aclk_kernel_01_cont_adapt_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195086",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/bd_22c0_clkwiz_aclk_kernel_00_0_synth_1_bd_22c0_clkwiz_aclk_kernel_00_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195086",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/bd_22c0_clock_throttling_aclk_kernel_00_0_synth_1_bd_22c0_clock_throttling_aclk_kernel_00_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195087",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/bd_22c0_fanout_aresetn_kernel_00_slr2_3_0_synth_1_bd_22c0_fanout_aresetn_kernel_00_slr2_3_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195087",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/bd_22c0_psreset_kernel_01_0_synth_1_bd_22c0_psreset_kernel_01_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195089",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/bd_22c0_frequency_counter_aclk_kernel_01_0_synth_1_bd_22c0_frequency_counter_aclk_kernel_01_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195089",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/bd_097b_user_debug_hub_0_synth_1_bd_097b_user_debug_hub_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195090",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/bd_22c0_psreset_kernel_00_0_synth_1_bd_22c0_psreset_kernel_00_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195090",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/bd_22c0_frequency_counter_aclk_hbm_0_synth_1_bd_22c0_frequency_counter_aclk_hbm_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195091",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/bd_58f6_lut_buffer_0_synth_1_bd_58f6_lut_buffer_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195091",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/bd_22c0_clkwiz_aclk_kernel_01_0_synth_1_bd_22c0_clkwiz_aclk_kernel_01_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195092",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/bd_58f6_xsdbm_0_synth_1_bd_58f6_xsdbm_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195093",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/bd_85ad_interconnect6_5_0_synth_1_bd_85ad_interconnect6_5_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195093",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/ulp_m00_regslice_0_synth_1_ulp_m00_regslice_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195094",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/ulp_tempgnn_forward_kernel_1_0_synth_1_ulp_tempgnn_forward_kernel_1_0_utilization_synth.rpt",
+  "name": "tempgnn_forward_kernel",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195094",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/bd_85ad_interconnect11_10_0_synth_1_bd_85ad_interconnect11_10_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195095",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/ulp_clk_wiz_0_synth_1_ulp_clk_wiz_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195095",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/bd_85ad_interconnect13_12_0_synth_1_bd_85ad_interconnect13_12_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195096",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/bd_85ad_interconnect7_6_0_synth_1_bd_85ad_interconnect7_6_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195097",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/ulp_xbar_3_synth_1_ulp_xbar_3_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195097",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/bd_85ad_interconnect2_1_0_synth_1_bd_85ad_interconnect2_1_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195098",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/bd_22c0_fanout_aresetn_hbm_0_synth_1_bd_22c0_fanout_aresetn_hbm_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195098",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/bd_22c0_psreset_hbm_0_synth_1_bd_22c0_psreset_hbm_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195099",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/bd_22c0_clkwiz_hbm_0_synth_1_bd_22c0_clkwiz_hbm_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195099",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/bd_22c0_clock_throttling_avg_0_synth_1_bd_22c0_clock_throttling_avg_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195100",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/bd_22c0_gapping_demand_toggle_0_synth_1_bd_22c0_gapping_demand_toggle_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195100",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/bd_22c0_gapping_demand_update_0_synth_1_bd_22c0_gapping_demand_update_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195101",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/bd_22c0_fanout_aresetn_ctrl_slr0_2_0_synth_1_bd_22c0_fanout_aresetn_ctrl_slr0_2_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195101",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/bd_22c0_build_info_0_synth_1_bd_22c0_build_info_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195102",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/bd_22c0_gpio_gapping_demand_0_synth_1_bd_22c0_gpio_gapping_demand_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195103",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/bd_22c0_fanout_aresetn_pcie_slr0_3_0_synth_1_bd_22c0_fanout_aresetn_pcie_slr0_3_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195103",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/bd_22c0_clock_shutdown_latch_0_synth_1_bd_22c0_clock_shutdown_latch_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195104",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/bd_22c0_clk_hbm_adapt_0_synth_1_bd_22c0_clk_hbm_adapt_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195105",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/bd_85ad_interconnect9_8_0_synth_1_bd_85ad_interconnect9_8_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195105",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/bd_22c0_xbar_0_synth_1_bd_22c0_xbar_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195106",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/bd_22c0_gpio_ucs_control_status_0_synth_1_bd_22c0_gpio_ucs_control_status_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195107",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/bd_85ad_interconnect4_3_0_synth_1_bd_85ad_interconnect4_3_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195107",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/ulp_rst_clk_wiz_225M_0_synth_1_ulp_rst_clk_wiz_225M_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195108",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/bd_85ad_interconnect3_2_0_synth_1_bd_85ad_interconnect3_2_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195108",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/bd_85ad_init_reduce_0_synth_1_bd_85ad_init_reduce_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195109",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/bd_85ad_interconnect0_13_0_synth_1_bd_85ad_interconnect0_13_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195118",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/ulp_xbar_2_synth_1_ulp_xbar_2_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195118",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/bd_85ad_interconnect8_7_0_synth_1_bd_85ad_interconnect8_7_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195119",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/bd_22c0_auto_cc_0_synth_1_bd_22c0_auto_cc_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195120",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/ulp_m01_regslice_0_synth_1_ulp_m01_regslice_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195124",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/ulp_s00_regslice_18_synth_1_ulp_s00_regslice_18_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195125",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/ulp_auto_cc_1_synth_1_ulp_auto_cc_1_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195125",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/ulp_s00_regslice_20_synth_1_ulp_s00_regslice_20_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195126",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/ulp_auto_cc_3_synth_1_ulp_auto_cc_3_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195126",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/bd_85ad_axi_apb_bridge_inst_0_synth_1_bd_85ad_axi_apb_bridge_inst_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195127",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/bd_85ad_hbm_inst_0_synth_1_bd_85ad_hbm_inst_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195127",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/bd_85ad_slice0_13_0_synth_1_bd_85ad_slice0_13_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195128",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/bd_85ad_interconnect5_4_0_synth_1_bd_85ad_interconnect5_4_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195128",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/bd_85ad_interconnect12_11_0_synth_1_bd_85ad_interconnect12_11_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195129",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/bd_85ad_interconnect10_9_0_synth_1_bd_85ad_interconnect10_9_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195130",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/bd_85ad_vip_S13_0_synth_1_bd_85ad_vip_S13_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195131",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/bd_85ad_interconnect1_0_0_synth_1_bd_85ad_interconnect1_0_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195131",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/syn/bd_85ad_hbm_reset_sync_SLR2_0_synth_1_bd_85ad_hbm_reset_sync_SLR2_0_utilization_synth.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195132",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/imp/impl_1_system_diagram.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS",
+  "cmdId": "18dc8779-8db7-4b1f-903e-b7a4be2a2511"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195142",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/imp/impl_1_hw_bb_locked_timing_summary_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY",
+  "cmdId": "18dc8779-8db7-4b1f-903e-b7a4be2a2511"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195152",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/imp/impl_1_hw_bb_locked_timing_summary_routed.rpx",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY",
+  "cmdId": "18dc8779-8db7-4b1f-903e-b7a4be2a2511"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195153",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/imp/impl_1_hw_bb_locked_timing_summary_routed.rpv",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY_CONCISE",
+  "cmdId": "18dc8779-8db7-4b1f-903e-b7a4be2a2511"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195300",
+ "status": {
+  "cmdId": "2d074081-e111-4ca9-a9ea-c5bfefa4cd3a",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195326",
+ "status": {
+  "cmdId": "3354f370-451a-491c-9ab7-66f15bde1300",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195328",
+ "buildStep": {
+  "cmdId": "50ba1f3b-cd1b-458a-ba66-fcecf8f093ea",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "rtdgen",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/ae_reviewer/TempGNN/hardware/vitis"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195329",
+ "status": {
+  "cmdId": "50ba1f3b-cd1b-458a-ba66-fcecf8f093ea",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195338",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/link/int/tempgnn_forward_kernel.hw_xml.rtd",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "XCLBIN_INFO",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195340",
+ "buildStep": {
+  "cmdId": "f45a3014-ff09-4411-9fa0-2762c7de81cc",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -a /home/ae_reviewer/TempGNN/hardware/vitis/_x/link/int/address_map.xml -sdsl /home/ae_reviewer/TempGNN/hardware/vitis/_x/link/int/sdsl.dat -xclbin /home/ae_reviewer/TempGNN/hardware/vitis/_x/link/int/xclbin_orig.xml -rtd /home/ae_reviewer/TempGNN/hardware/vitis/_x/link/int/tempgnn_forward_kernel.hw.rtd -o /home/ae_reviewer/TempGNN/hardware/vitis/_x/link/int/tempgnn_forward_kernel.hw.xml",
+  "args": [
+   "-a",
+   "/home/ae_reviewer/TempGNN/hardware/vitis/_x/link/int/address_map.xml",
+   "-sdsl",
+   "/home/ae_reviewer/TempGNN/hardware/vitis/_x/link/int/sdsl.dat",
+   "-xclbin",
+   "/home/ae_reviewer/TempGNN/hardware/vitis/_x/link/int/xclbin_orig.xml",
+   "-rtd",
+   "/home/ae_reviewer/TempGNN/hardware/vitis/_x/link/int/tempgnn_forward_kernel.hw.rtd",
+   "-o",
+   "/home/ae_reviewer/TempGNN/hardware/vitis/_x/link/int/tempgnn_forward_kernel.hw.xml"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/ae_reviewer/TempGNN/hardware/vitis"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Jul  3 16:09:55 2026",
+ "timestampMillis": "1783066195340",
+ "status": {
+  "cmdId": "f45a3014-ff09-4411-9fa0-2762c7de81cc",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Jul  3 16:10:02 2026",
+ "timestampMillis": "1783066202429",
+ "status": {
+  "cmdId": "f45a3014-ff09-4411-9fa0-2762c7de81cc",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Jul  3 16:10:02 2026",
+ "timestampMillis": "1783066202430",
+ "buildStep": {
+  "cmdId": "8fd9eac6-070e-4f40-8e94-456c6c3b8140",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "writeSystemDiagram",
+  "args": [
+   "/home/ae_reviewer/TempGNN/hardware/vitis/_x/link/int/tempgnn_forward_kernel.hw.rtd",
+   "/home/ae_reviewer/TempGNN/hardware/vitis/_x/link/int/systemDiagramModelSlrBaseAddress.json"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/ae_reviewer/TempGNN/hardware/vitis"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Jul  3 16:10:02 2026",
+ "timestampMillis": "1783066202430",
+ "status": {
+  "cmdId": "8fd9eac6-070e-4f40-8e94-456c6c3b8140",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:10:02 2026",
+ "timestampMillis": "1783066202436",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/link/int/systemDiagramModelSlrBaseAddress.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Jul  3 16:10:02 2026",
+ "timestampMillis": "1783066202436",
+ "status": {
+  "cmdId": "8fd9eac6-070e-4f40-8e94-456c6c3b8140",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Jul  3 16:10:02 2026",
+ "timestampMillis": "1783066202437",
+ "buildStep": {
+  "cmdId": "4e2fb1b5-e8e6-448e-aada-c43904e9bdab",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "writeAutomationSummary",
+  "args": [
+   "/home/ae_reviewer/TempGNN/hardware/vitis/_x/link/int/automation_summary.txt"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/ae_reviewer/TempGNN/hardware/vitis"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Jul  3 16:10:02 2026",
+ "timestampMillis": "1783066202437",
+ "status": {
+  "cmdId": "4e2fb1b5-e8e6-448e-aada-c43904e9bdab",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:10:02 2026",
+ "timestampMillis": "1783066202438",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/link/int/automation_summary.txt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "VITIS_DESIGN_FLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Jul  3 16:10:02 2026",
+ "timestampMillis": "1783066202439",
+ "status": {
+  "cmdId": "4e2fb1b5-e8e6-448e-aada-c43904e9bdab",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Jul  3 16:10:02 2026",
+ "timestampMillis": "1783066202440",
+ "status": {
+  "cmdId": "50ba1f3b-cd1b-458a-ba66-fcecf8f093ea",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Jul  3 16:10:02 2026",
+ "timestampMillis": "1783066202442",
+ "buildStep": {
+  "cmdId": "d2b6f8fe-005e-42ce-8eae-435dd6a0eb79",
+  "name": "xclbinutil",
+  "logFile": "",
+  "commandLine": "xclbinutil --add-section BITSTREAM:RAW:/home/ae_reviewer/TempGNN/hardware/vitis/_x/link/int/partial.bit --force --target hw --key-value SYS:dfx_enable:true --add-section :JSON:/home/ae_reviewer/TempGNN/hardware/vitis/_x/link/int/tempgnn_forward_kernel.hw.rtd --append-section :JSON:/home/ae_reviewer/TempGNN/hardware/vitis/_x/link/int/appendSection.rtd --add-section CLOCK_FREQ_TOPOLOGY:JSON:/home/ae_reviewer/TempGNN/hardware/vitis/_x/link/int/tempgnn_forward_kernel.hw_xml.rtd --add-section BUILD_METADATA:JSON:/home/ae_reviewer/TempGNN/hardware/vitis/_x/link/int/tempgnn_forward_kernel.hw_build.rtd --add-section EMBEDDED_METADATA:RAW:/home/ae_reviewer/TempGNN/hardware/vitis/_x/link/int/tempgnn_forward_kernel.hw.xml --add-section SYSTEM_METADATA:RAW:/home/ae_reviewer/TempGNN/hardware/vitis/_x/link/int/systemDiagramModelSlrBaseAddress.json --key-value SYS:PlatformVBNV:xilinx_u280_gen3x16_xdma_1_202211_1 --output /home/ae_reviewer/TempGNN/build/vitis_u280_forward_hw/tempgnn_forward_kernel.hw.xclbin",
+  "args": [
+   "--add-section",
+   "BITSTREAM:RAW:/home/ae_reviewer/TempGNN/hardware/vitis/_x/link/int/partial.bit",
+   "--force",
+   "--target",
+   "hw",
+   "--key-value",
+   "SYS:dfx_enable:true",
+   "--add-section",
+   ":JSON:/home/ae_reviewer/TempGNN/hardware/vitis/_x/link/int/tempgnn_forward_kernel.hw.rtd",
+   "--append-section",
+   ":JSON:/home/ae_reviewer/TempGNN/hardware/vitis/_x/link/int/appendSection.rtd",
+   "--add-section",
+   "CLOCK_FREQ_TOPOLOGY:JSON:/home/ae_reviewer/TempGNN/hardware/vitis/_x/link/int/tempgnn_forward_kernel.hw_xml.rtd",
+   "--add-section",
+   "BUILD_METADATA:JSON:/home/ae_reviewer/TempGNN/hardware/vitis/_x/link/int/tempgnn_forward_kernel.hw_build.rtd",
+   "--add-section",
+   "EMBEDDED_METADATA:RAW:/home/ae_reviewer/TempGNN/hardware/vitis/_x/link/int/tempgnn_forward_kernel.hw.xml",
+   "--add-section",
+   "SYSTEM_METADATA:RAW:/home/ae_reviewer/TempGNN/hardware/vitis/_x/link/int/systemDiagramModelSlrBaseAddress.json",
+   "--key-value",
+   "SYS:PlatformVBNV:xilinx_u280_gen3x16_xdma_1_202211_1",
+   "--output",
+   "/home/ae_reviewer/TempGNN/build/vitis_u280_forward_hw/tempgnn_forward_kernel.hw.xclbin"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/ae_reviewer/TempGNN/hardware/vitis"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Jul  3 16:10:02 2026",
+ "timestampMillis": "1783066202442",
+ "status": {
+  "cmdId": "d2b6f8fe-005e-42ce-8eae-435dd6a0eb79",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Jul  3 16:10:02 2026",
+ "timestampMillis": "1783066202583",
+ "status": {
+  "cmdId": "d2b6f8fe-005e-42ce-8eae-435dd6a0eb79",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Jul  3 16:10:02 2026",
+ "timestampMillis": "1783066202585",
+ "buildStep": {
+  "cmdId": "e851172a-fa0c-4e91-b123-292e609d4f18",
+  "name": "xclbinutilinfo",
+  "logFile": "",
+  "commandLine": "xclbinutil --quiet --force --info /home/ae_reviewer/TempGNN/build/vitis_u280_forward_hw/tempgnn_forward_kernel.hw.xclbin.info --input /home/ae_reviewer/TempGNN/build/vitis_u280_forward_hw/tempgnn_forward_kernel.hw.xclbin",
+  "args": [
+   "--quiet",
+   "--force",
+   "--info",
+   "/home/ae_reviewer/TempGNN/build/vitis_u280_forward_hw/tempgnn_forward_kernel.hw.xclbin.info",
+   "--input",
+   "/home/ae_reviewer/TempGNN/build/vitis_u280_forward_hw/tempgnn_forward_kernel.hw.xclbin"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/ae_reviewer/TempGNN/hardware/vitis"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Jul  3 16:10:02 2026",
+ "timestampMillis": "1783066202585",
+ "status": {
+  "cmdId": "e851172a-fa0c-4e91-b123-292e609d4f18",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Jul  3 16:10:03 2026",
+ "timestampMillis": "1783066203182",
+ "status": {
+  "cmdId": "e851172a-fa0c-4e91-b123-292e609d4f18",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Fri Jul  3 16:10:03 2026",
+ "timestampMillis": "1783066203185",
+ "buildStep": {
+  "cmdId": "4ac17f72-65ec-468f-81b3-0f0e286f7c2d",
+  "name": "generate_sc_driver",
+  "logFile": "",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/ae_reviewer/TempGNN/hardware/vitis"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Jul  3 16:10:03 2026",
+ "timestampMillis": "1783066203185",
+ "status": {
+  "cmdId": "4ac17f72-65ec-468f-81b3-0f0e286f7c2d",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Jul  3 16:10:03 2026",
+ "timestampMillis": "1783066203186",
+ "status": {
+  "cmdId": "4ac17f72-65ec-468f-81b3-0f0e286f7c2d",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:10:03 2026",
+ "timestampMillis": "1783066203229",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/system_estimate_tempgnn_forward_kernel.hw.xtxt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SYSTEM_ESTIMATE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:10:04 2026",
+ "timestampMillis": "1783066204402",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/logs/optraceViewer.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "OPERATION_TRACE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Fri Jul  3 16:10:04 2026",
+ "timestampMillis": "1783066204440",
+ "status": {
+  "cmdId": "d61b6970-146c-413c-b58c-c828149a965a",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:10:04 2026",
+ "timestampMillis": "1783066204537",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/reports/link/v++_link_tempgnn_forward_kernel.hw_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Fri Jul  3 16:10:04 2026",
+ "timestampMillis": "1783066204537",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/hardware/vitis/_x/v++_link_tempgnn_forward_kernel.hw_guidance.pb3",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

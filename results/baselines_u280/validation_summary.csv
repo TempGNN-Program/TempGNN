@@ -1,0 +1,4 @@
+baseline,platform,frequency_mhz,timing_met,fixture,board_result,fig11_speedup_mean,fig12_energy_mean,latency_threshold,energy_threshold,figure_consistency,status
+MATG,U280,225,True,tbscale,PASS,1.0,10.2,0.05,0.1,PASS,PASS
+ViTeGNN,U280,225,True,maxbatch,PASS,1.4061,8.9,0.05,0.1,PASS,PASS
+RTGA,U280,225,True,tbscale,PASS,1.9977,6.5,0.05,0.1,PASS,PASS

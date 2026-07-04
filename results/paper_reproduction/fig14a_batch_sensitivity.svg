@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="460" viewBox="0 0 760 460"><rect width="100%" height="100%" fill="white"/>
+<text x="380.0" y="26" text-anchor="middle" font-size="18">Fig.14(a) Sensitivity to batch size</text>
+<line x1="70" y1="390" x2="730" y2="390" stroke="#333"/>
+<line x1="70" y1="45" x2="70" y2="390" stroke="#333"/>
+<text x="380.0" y="448" text-anchor="middle" font-size="13">batch size</text>
+<line x1="70.0" y1="390" x2="70.0" y2="395" stroke="#333"/>
+<text x="70.0" y="410" text-anchor="middle" font-size="11">400</text>
+<line x1="235.0" y1="390" x2="235.0" y2="395" stroke="#333"/>
+<text x="235.0" y="410" text-anchor="middle" font-size="11">600</text>
+<line x1="400.0" y1="390" x2="400.0" y2="395" stroke="#333"/>
+<text x="400.0" y="410" text-anchor="middle" font-size="11">800</text>
+<line x1="565.0" y1="390" x2="565.0" y2="395" stroke="#333"/>
+<text x="565.0" y="410" text-anchor="middle" font-size="11">1000</text>
+<line x1="730.0" y1="390" x2="730.0" y2="395" stroke="#333"/>
+<text x="730.0" y="410" text-anchor="middle" font-size="11">1200</text>
+<line x1="70" y1="390.0" x2="730" y2="390.0" stroke="#eee"/>
+<text x="62" y="394.0" text-anchor="end" font-size="11">0.0</text>
+<line x1="70" y1="321.0" x2="730" y2="321.0" stroke="#eee"/>
+<text x="62" y="325.0" text-anchor="end" font-size="11">0.2</text>
+<line x1="70" y1="252.0" x2="730" y2="252.0" stroke="#eee"/>
+<text x="62" y="256.0" text-anchor="end" font-size="11">0.4</text>
+<line x1="70" y1="183.0" x2="730" y2="183.0" stroke="#eee"/>
+<text x="62" y="187.0" text-anchor="end" font-size="11">0.6</text>
+<line x1="70" y1="114.0" x2="730" y2="114.0" stroke="#eee"/>
+<text x="62" y="118.0" text-anchor="end" font-size="11">0.8</text>
+<line x1="70" y1="45.0" x2="730" y2="45.0" stroke="#eee"/>
+<text x="62" y="49.0" text-anchor="end" font-size="11">1.0</text>
+<polyline points="70.0,193.8 235.0,139.7 400.0,85.6 565.0,51.8 730.0,45.0" fill="none" stroke="#4c78a8" stroke-width="2"/>
+<circle cx="70.0" cy="193.8" r="3.5" fill="#4c78a8"><title>AVG 400: 0.58</title></circle>
+<circle cx="235.0" cy="139.7" r="3.5" fill="#4c78a8"><title>AVG 600: 0.74</title></circle>
+<circle cx="400.0" cy="85.6" r="3.5" fill="#4c78a8"><title>AVG 800: 0.9</title></circle>
+<circle cx="565.0" cy="51.8" r="3.5" fill="#4c78a8"><title>AVG 1000: 1</title></circle>
+<circle cx="730.0" cy="45.0" r="3.5" fill="#4c78a8"><title>AVG 1200: 1.02</title></circle>
+<rect x="550.0" y="38.0" width="12" height="12" fill="#4c78a8"/>
+<text x="568.0" y="48.0" font-size="12">AVG</text>
+</svg>

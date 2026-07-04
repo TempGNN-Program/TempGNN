@@ -1,0 +1,10 @@
+csv_file,figure_id,svg_file,title
+motivation_gpu_bottleneck.csv,motivation_gpu_bottleneck,motivation_gpu_bottleneck.svg,Motivation: GPU bottleneck
+motivation_useful_data_ratio.csv,motivation_useful_data_ratio,motivation_useful_data_ratio.svg,Motivation: useful-data ratio
+motivation_bpr.csv,motivation_bpr,motivation_bpr.svg,Motivation: branch parallelism ratio
+fig10_speedup_tglite_cpu.csv,fig10_speedup_tglite_cpu,fig10_speedup_tglite_cpu.svg,Fig.10 speedup normalized to TGLite-CPU
+fig11_speedup_matg.csv,fig11_speedup_matg,fig11_speedup_matg.svg,Fig.11 speedup normalized to MATG
+fig12_energy_tempgnn.csv,fig12_energy_tempgnn,fig12_energy_tempgnn.svg,Fig.12 energy normalized to TempGNN
+fig13_ablation_time.csv,fig13_ablation_time,fig13_ablation_time.svg,Fig.13 DDTC/OATS ablation
+fig14a_batch_sensitivity.csv,fig14a_batch_sensitivity,fig14a_batch_sensitivity.svg,Fig.14(a) batch-size sensitivity
+fig14b_tdp_entries.csv,fig14b_tdp_entries,fig14b_tdp_entries.svg,Fig.14(b) TDP-entry sensitivity

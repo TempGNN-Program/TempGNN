@@ -1,0 +1,35 @@
+{
+  "baseline": "RTGA",
+  "paper_source": "RTGA: A Redundancy-free Accelerator for High-Performance Temporal Graph Neural Network Inference",
+  "validation_scope": "reproduced redundancy-aware packet/cache forward path",
+  "reproduction_change": "Reproduced according to the paper and measured on U280 with redundancy-aware packet/cache behavior.",
+  "platform": "xilinx_u280_gen3x16_xdma_1_202211_1",
+  "device": "xcu280-fsvh2892-2L-e",
+  "shell": "xilinx_u280_gen3x16_xdma_base_1",
+  "vitis_vivado": "2023.2",
+  "xrt": "2.16.204",
+  "frequency_mhz": 225,
+  "datasets": [
+    "WK",
+    "MC",
+    "RT",
+    "LM",
+    "WT",
+    "GT"
+  ],
+  "models": [
+    "JODIE",
+    "TGN",
+    "TGAT",
+    "APAN"
+  ],
+  "batch_size": 1000,
+  "fixture": "tbscale",
+  "xclbin": "build/vitis_u280_forward_hw/tempgnn_forward_kernel.hw.xclbin",
+  "host_binary": "build/vitis_u280_forward_hw/tempgnn_forward_xrt_host",
+  "measurement_date": "2026-07-05",
+  "latency_threshold": 0.05,
+  "speedup_threshold": 0.05,
+  "power_threshold": 0.1,
+  "energy_threshold": 0.1
+}

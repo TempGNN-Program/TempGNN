@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1750" height="560" viewBox="0 0 1750 560"><rect width="100%" height="100%" fill="white"/>
+<text x="875.0" y="26" text-anchor="middle" font-size="18">Motivation: GPU under-utilization and memory stalls</text>
+<line x1="70" y1="445" x2="1730" y2="445" stroke="#333"/>
+<line x1="70" y1="45" x2="70" y2="445" stroke="#333"/>
+<line x1="70" y1="445.0" x2="1730" y2="445.0" stroke="#eee"/>
+<text x="62" y="449.0" text-anchor="end" font-size="11">0.0</text>
+<line x1="70" y1="365.0" x2="1730" y2="365.0" stroke="#eee"/>
+<text x="62" y="369.0" text-anchor="end" font-size="11">17.1</text>
+<line x1="70" y1="285.0" x2="1730" y2="285.0" stroke="#eee"/>
+<text x="62" y="289.0" text-anchor="end" font-size="11">34.1</text>
+<line x1="70" y1="205.0" x2="1730" y2="205.0" stroke="#eee"/>
+<text x="62" y="209.0" text-anchor="end" font-size="11">51.2</text>
+<line x1="70" y1="125.0" x2="1730" y2="125.0" stroke="#eee"/>
+<text x="62" y="129.0" text-anchor="end" font-size="11">68.3</text>
+<line x1="70" y1="45.0" x2="1730" y2="45.0" stroke="#eee"/>
+<text x="62" y="49.0" text-anchor="end" font-size="11">85.4</text>
+<text x="103.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 103.0,542)">JODIE-WK</text>
+<rect x="81.0" y="388.4" width="18.7" height="56.6" fill="#4c78a8"><title>JODIE-WK GPU SM utilization (%): 12.07</title></rect>
+<rect x="103.0" y="91.3" width="18.7" height="353.7" fill="#f58518"><title>JODIE-WK Memory latency share (%): 75.48</title></rect>
+<text x="169.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 169.0,542)">JODIE-MC</text>
+<rect x="147.0" y="382.4" width="18.7" height="62.6" fill="#4c78a8"><title>JODIE-MC GPU SM utilization (%): 13.37</title></rect>
+<rect x="169.0" y="61.3" width="18.7" height="383.7" fill="#f58518"><title>JODIE-MC Memory latency share (%): 81.87</title></rect>
+<text x="235.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 235.0,542)">JODIE-RT</text>
+<rect x="213.0" y="386.3" width="18.7" height="58.7" fill="#4c78a8"><title>JODIE-RT GPU SM utilization (%): 12.52</title></rect>
+<rect x="235.0" y="80.8" width="18.7" height="364.2" fill="#f58518"><title>JODIE-RT Memory latency share (%): 77.72</title></rect>
+<text x="301.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 301.0,542)">JODIE-LM</text>
+<rect x="279.0" y="385.4" width="18.7" height="59.6" fill="#4c78a8"><title>JODIE-LM GPU SM utilization (%): 12.72</title></rect>
+<rect x="301.0" y="76.3" width="18.7" height="368.7" fill="#f58518"><title>JODIE-LM Memory latency share (%): 78.68</title></rect>
+<text x="367.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 367.0,542)">JODIE-WT</text>
+<rect x="345.0" y="383.3" width="18.7" height="61.7" fill="#4c78a8"><title>JODIE-WT GPU SM utilization (%): 13.17</title></rect>
+<rect x="367.0" y="65.8" width="18.7" height="379.2" fill="#f58518"><title>JODIE-WT Memory latency share (%): 80.92</title></rect>
+<text x="433.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 433.0,542)">JODIE-GT</text>
+<rect x="411.0" y="381.1" width="18.7" height="63.9" fill="#4c78a8"><title>JODIE-GT GPU SM utilization (%): 13.63</title></rect>
+<rect x="433.0" y="55.3" width="18.7" height="389.7" fill="#f58518"><title>JODIE-GT Memory latency share (%): 83.15</title></rect>
+<text x="499.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 499.0,542)">TGN-WK</text>
+<rect x="477.0" y="387.0" width="18.7" height="58.0" fill="#4c78a8"><title>TGN-WK GPU SM utilization (%): 12.38</title></rect>
+<rect x="499.0" y="84.5" width="18.7" height="360.5" fill="#f58518"><title>TGN-WK Memory latency share (%): 76.92</title></rect>
+<text x="565.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 565.0,542)">TGN-MC</text>
+<rect x="543.0" y="380.9" width="18.7" height="64.1" fill="#4c78a8"><title>TGN-MC GPU SM utilization (%): 13.68</title></rect>
+<rect x="565.0" y="54.6" width="18.7" height="390.4" fill="#f58518"><title>TGN-MC Memory latency share (%): 83.31</title></rect>
+<text x="631.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 631.0,542)">TGN-RT</text>
+<rect x="609.0" y="384.8" width="18.7" height="60.2" fill="#4c78a8"><title>TGN-RT GPU SM utilization (%): 12.84</title></rect>
+<rect x="631.0" y="74.0" width="18.7" height="371.0" fill="#f58518"><title>TGN-RT Memory latency share (%): 79.16</title></rect>
+<text x="697.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 697.0,542)">TGN-LM</text>
+<rect x="675.0" y="383.9" width="18.7" height="61.1" fill="#4c78a8"><title>TGN-LM GPU SM utilization (%): 13.03</title></rect>
+<rect x="697.0" y="69.6" width="18.7" height="375.4" fill="#f58518"><title>TGN-LM Memory latency share (%): 80.12</title></rect>
+<text x="763.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 763.0,542)">TGN-WT</text>
+<rect x="741.0" y="381.8" width="18.7" height="63.2" fill="#4c78a8"><title>TGN-WT GPU SM utilization (%): 13.48</title></rect>
+<rect x="763.0" y="59.1" width="18.7" height="385.9" fill="#f58518"><title>TGN-WT Memory latency share (%): 82.35</title></rect>
+<text x="829.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 829.0,542)">TGN-GT</text>
+<rect x="807.0" y="379.7" width="18.7" height="65.3" fill="#4c78a8"><title>TGN-GT GPU SM utilization (%): 13.94</title></rect>
+<rect x="829.0" y="48.6" width="18.7" height="396.4" fill="#f58518"><title>TGN-GT Memory latency share (%): 84.59</title></rect>
+<text x="895.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 895.0,542)">TGAT-WK</text>
+<rect x="873.0" y="386.2" width="18.7" height="58.8" fill="#4c78a8"><title>TGAT-WK GPU SM utilization (%): 12.55</title></rect>
+<rect x="895.0" y="80.9" width="18.7" height="364.1" fill="#f58518"><title>TGAT-WK Memory latency share (%): 77.69</title></rect>
+<text x="961.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 961.0,542)">TGAT-MC</text>
+<rect x="939.0" y="380.1" width="18.7" height="64.9" fill="#4c78a8"><title>TGAT-MC GPU SM utilization (%): 13.84</title></rect>
+<rect x="961.0" y="51.0" width="18.7" height="394.0" fill="#f58518"><title>TGAT-MC Memory latency share (%): 84.08</title></rect>
+<text x="1027.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 1027.0,542)">TGAT-RT</text>
+<rect x="1005.0" y="384.1" width="18.7" height="60.9" fill="#4c78a8"><title>TGAT-RT GPU SM utilization (%): 13</title></rect>
+<rect x="1027.0" y="70.4" width="18.7" height="374.6" fill="#f58518"><title>TGAT-RT Memory latency share (%): 79.92</title></rect>
+<text x="1093.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 1093.0,542)">TGAT-LM</text>
+<rect x="1071.0" y="383.2" width="18.7" height="61.8" fill="#4c78a8"><title>TGAT-LM GPU SM utilization (%): 13.2</title></rect>
+<rect x="1093.0" y="66.0" width="18.7" height="379.0" fill="#f58518"><title>TGAT-LM Memory latency share (%): 80.88</title></rect>
+<text x="1159.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 1159.0,542)">TGAT-WT</text>
+<rect x="1137.0" y="381.0" width="18.7" height="64.0" fill="#4c78a8"><title>TGAT-WT GPU SM utilization (%): 13.65</title></rect>
+<rect x="1159.0" y="55.5" width="18.7" height="389.5" fill="#f58518"><title>TGAT-WT Memory latency share (%): 83.12</title></rect>
+<text x="1225.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 1225.0,542)">TGAT-GT</text>
+<rect x="1203.0" y="378.9" width="18.7" height="66.1" fill="#4c78a8"><title>TGAT-GT GPU SM utilization (%): 14.1</title></rect>
+<rect x="1225.0" y="45.0" width="18.7" height="400.0" fill="#f58518"><title>TGAT-GT Memory latency share (%): 85.36</title></rect>
+<text x="1291.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 1291.0,542)">APAN-WK</text>
+<rect x="1269.0" y="388.6" width="18.7" height="56.4" fill="#4c78a8"><title>APAN-WK GPU SM utilization (%): 12.03</title></rect>
+<rect x="1291.0" y="92.2" width="18.7" height="352.8" fill="#f58518"><title>APAN-WK Memory latency share (%): 75.29</title></rect>
+<text x="1357.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 1357.0,542)">APAN-MC</text>
+<rect x="1335.0" y="382.6" width="18.7" height="62.4" fill="#4c78a8"><title>APAN-MC GPU SM utilization (%): 13.33</title></rect>
+<rect x="1357.0" y="62.2" width="18.7" height="382.8" fill="#f58518"><title>APAN-MC Memory latency share (%): 81.68</title></rect>
+<text x="1423.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 1423.0,542)">APAN-RT</text>
+<rect x="1401.0" y="386.5" width="18.7" height="58.5" fill="#4c78a8"><title>APAN-RT GPU SM utilization (%): 12.48</title></rect>
+<rect x="1423.0" y="81.7" width="18.7" height="363.3" fill="#f58518"><title>APAN-RT Memory latency share (%): 77.53</title></rect>
+<text x="1489.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 1489.0,542)">APAN-LM</text>
+<rect x="1467.0" y="385.6" width="18.7" height="59.4" fill="#4c78a8"><title>APAN-LM GPU SM utilization (%): 12.68</title></rect>
+<rect x="1489.0" y="77.2" width="18.7" height="367.8" fill="#f58518"><title>APAN-LM Memory latency share (%): 78.49</title></rect>
+<text x="1555.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 1555.0,542)">APAN-WT</text>
+<rect x="1533.0" y="383.5" width="18.7" height="61.5" fill="#4c78a8"><title>APAN-WT GPU SM utilization (%): 13.13</title></rect>
+<rect x="1555.0" y="66.7" width="18.7" height="378.3" fill="#f58518"><title>APAN-WT Memory latency share (%): 80.72</title></rect>
+<text x="1621.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 1621.0,542)">APAN-GT</text>
+<rect x="1599.0" y="381.3" width="18.7" height="63.7" fill="#4c78a8"><title>APAN-GT GPU SM utilization (%): 13.59</title></rect>
+<rect x="1621.0" y="56.2" width="18.7" height="388.8" fill="#f58518"><title>APAN-GT Memory latency share (%): 82.96</title></rect>
+<text x="1687.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 1687.0,542)">AVG</text>
+<rect x="1665.0" y="383.6" width="18.7" height="61.4" fill="#4c78a8"><title>AVG GPU SM utilization (%): 13.1</title></rect>
+<rect x="1687.0" y="67.8" width="18.7" height="377.2" fill="#f58518"><title>AVG Memory latency share (%): 80.5</title></rect>
+<rect x="1130.0" y="38.0" width="12" height="12" fill="#4c78a8"/>
+<text x="1148.0" y="48.0" font-size="12">GPU SM utilization (%)</text>
+<rect x="1320.0" y="38.0" width="12" height="12" fill="#f58518"/>
+<text x="1338.0" y="48.0" font-size="12">Memory latency share (%)</text>
+</svg>

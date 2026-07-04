@@ -1,0 +1,14 @@
+[ViTeGNN] reproduced U280 baseline board measurement
+platform=xilinx_u280_gen3x16_xdma_1_202211_1
+device=xcu280-fsvh2892-2L-e
+frequency_mhz=225
+fixture=maxbatch
+targets=1024
+total_packets=103136
+unique_packets=55243
+kernel_time_ms=69194.0
+expected_stats=PASS
+expected_embedding=PASS
+timing_met=True
+wns_ns=0.016
+result=PASS

@@ -1,0 +1,6 @@
+dataset,figure,model,solution,value,x
+AVG,fig14a_batch_sensitivity,ALL,TempGNN,0.58,400
+AVG,fig14a_batch_sensitivity,ALL,TempGNN,0.74,600
+AVG,fig14a_batch_sensitivity,ALL,TempGNN,0.9,800
+AVG,fig14a_batch_sensitivity,ALL,TempGNN,1.0,1000
+AVG,fig14a_batch_sensitivity,ALL,TempGNN,1.02,1200

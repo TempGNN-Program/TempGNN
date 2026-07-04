@@ -1,0 +1,2 @@
+baseline,frequency_mhz,timing_met,wns_ns,tns_ns,lut,ff,bram,uram,dsp
+ViTeGNN,225,True,0.016,0.0,31736,40727,67,20,82
