@@ -271,7 +271,7 @@ paper equivalence and must not be converted to PASS by adjusting measured rows.
 
 Passing `A2` establishes that four distinct implementations execute on the
 same U280, produce stable software-checked outputs, and emit traceable raw
-measurement data. The clean-room scope prevents this path from independently
+measurement data. The bounded reproduction scope prevents this path from independently
 supporting a Results Reproduced claim for `C4`.
 
 ## Computational Artifact A3

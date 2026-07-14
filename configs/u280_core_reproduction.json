@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "paper_id": "pap142",
-  "comparison_scope": "bounded_clean_room_forward_path_on_real_dataset_prefixes",
+  "comparison_scope": "bounded_independent_paper_based_forward_path_on_real_dataset_prefixes",
   "results_reproduced_eligible": false,
   "methodology_differences": [
     "bounded 8192-event prefixes rather than full-dataset evaluation",

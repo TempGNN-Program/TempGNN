@@ -1,6 +1,6 @@
 # Paper-Based U280 Baseline Reproductions
 
-This directory contains independent, clean-room forward-path reproductions of
+This directory contains independent, paper-based forward-path reproductions of
 MATG, ViTeGNN, and RTGA. They were implemented from the published algorithm and
 architecture descriptions because complete author RTL/HLS projects that build
 in this U280 environment were not available. They are not the authors' original

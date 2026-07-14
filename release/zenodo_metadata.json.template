@@ -2,7 +2,7 @@
   "title": "TempGNN: Artifact for SC26 Paper pap142",
   "upload_type": "software",
   "version": "1.0.0-sc26-ae",
-  "description": "Frozen computational artifact for SC26 paper pap142, including the TempGNN software model, U280 forward-path functional evidence, deterministic reference-figure reconstruction, and bounded clean-room U280 baseline comparisons.",
+  "description": "Frozen computational artifact for SC26 paper pap142, including the TempGNN software model, U280 forward-path functional evidence, deterministic reference-figure reconstruction, and bounded independent paper-based U280 baseline comparisons.",
   "access_right": "open",
   "license": "REPLACE_WITH_SELECTED_LICENSE",
   "creators": [

@@ -50,7 +50,7 @@ PLATFORM_NOTES = [
     PlatformNote(
         name="MATG",
         platform="Xilinx Alveo U280",
-        toolchain="Clean-room Vitis-HLS 2023.2 reproduction informed by the MATG paper",
+        toolchain="Independent Vitis-HLS 2023.2 reproduction informed by the MATG paper",
         reproduction_status=(
             "Independent bounded implementation of the documented MATG-style pruning and LUT time-encoding "
             "mechanisms; freshly runnable on U280, but not the authors' complete stack or a paper-equivalent rerun."
@@ -61,7 +61,7 @@ PLATFORM_NOTES = [
     PlatformNote(
         name="ViTeGNN",
         platform="Xilinx Alveo U280",
-        toolchain="Clean-room Vitis-HLS 2023.2 reproduction informed by the ViTeGNN paper",
+        toolchain="Independent Vitis-HLS 2023.2 reproduction informed by the ViTeGNN paper",
         reproduction_status=(
             "Independent bounded implementation of documented lightweight-attention and retained-neighbor "
             "mechanisms; freshly runnable on U280, but not the authors' complete lat/bal/thpt stack."
@@ -72,7 +72,7 @@ PLATFORM_NOTES = [
     PlatformNote(
         name="RTGA",
         platform="Xilinx Alveo U280",
-        toolchain="Clean-room Vitis-HLS 2023.2 reproduction informed by the RTGA paper",
+        toolchain="Independent Vitis-HLS 2023.2 reproduction informed by the RTGA paper",
         reproduction_status=(
             "Independent bounded implementation of documented temporal-tree scheduling and temporal-aware "
             "caching mechanisms; freshly runnable on U280, but not the authors' complete stack."

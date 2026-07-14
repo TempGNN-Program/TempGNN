@@ -218,7 +218,7 @@ the TempGNN kernel.
 - TempGNN: includes HLS kernels, testbenches, Vitis build scripts, XRT host
   code, U280 forward-path board logs, and its own U280 xclbin.
 
-The three baselines are clean-room, paper-based forward-path reproductions, not
+The three baselines are independent, paper-based forward-path reproductions, not
 the authors' complete original stacks. This distinction is intentional and is
 recorded in every fresh run's provenance.
 

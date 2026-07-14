@@ -9,21 +9,21 @@
 
 ## MATG
 - Platform: Xilinx Alveo U280
-- Toolchain: Clean-room Vitis-HLS 2023.2 reproduction informed by the MATG paper
+- Toolchain: Independent Vitis-HLS 2023.2 reproduction informed by the MATG paper
 - Reproduction status: Independent bounded implementation of the documented MATG-style pruning and LUT time-encoding mechanisms; freshly runnable on U280, but not the authors' complete stack or a paper-equivalent rerun.
 - Key settings: bounded degree scan, neighbor pruning, LUT time encoding, fixed-point forward path
 - Notes: Its measured rows are generated only by the fresh U280 workflow, never copied into reference figures.
 
 ## ViTeGNN
 - Platform: Xilinx Alveo U280
-- Toolchain: Clean-room Vitis-HLS 2023.2 reproduction informed by the ViTeGNN paper
+- Toolchain: Independent Vitis-HLS 2023.2 reproduction informed by the ViTeGNN paper
 - Reproduction status: Independent bounded implementation of documented lightweight-attention and retained-neighbor mechanisms; freshly runnable on U280, but not the authors' complete lat/bal/thpt stack.
 - Key settings: four retained neighbors, lightweight attention, fixed-point forward path
 - Notes: Its measured rows are generated only by the fresh U280 workflow, never copied into reference figures.
 
 ## RTGA
 - Platform: Xilinx Alveo U280
-- Toolchain: Clean-room Vitis-HLS 2023.2 reproduction informed by the RTGA paper
+- Toolchain: Independent Vitis-HLS 2023.2 reproduction informed by the RTGA paper
 - Reproduction status: Independent bounded implementation of documented temporal-tree scheduling and temporal-aware caching mechanisms; freshly runnable on U280, but not the authors' complete stack.
 - Key settings: temporal-tree traversal, redundancy-aware selection, temporal-aware cache, fixed-point path
 - Notes: Its measured rows are generated only by the fresh U280 workflow, never copied into reference figures.

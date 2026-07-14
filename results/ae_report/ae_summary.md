@@ -2,7 +2,7 @@
 
 ## Scope
 
-The CPU-only command regenerates paper-reference CSV/SVG records from a source-labeled table; it does not rerun CPU, GPU, or FPGA baselines. The fresh U280 command executes four distinct xclbins and writes new latency, total-board-power, checksum, and provenance evidence. MATG, ViTeGNN, and RTGA are clean-room paper-based forward-path reproductions, not the baseline authors' complete original stacks.
+The CPU-only command regenerates paper-reference CSV/SVG records from a source-labeled table; it does not rerun CPU, GPU, or FPGA baselines. The fresh U280 command executes four distinct xclbins and writes new latency, total-board-power, checksum, and provenance evidence. MATG, ViTeGNN, and RTGA are independent paper-based forward-path reproductions, not the baseline authors' complete original stacks.
 The fresh command is a bounded mechanism-level comparison on real-dataset prefixes. Each xclbin link request is cross-checked against the Vivado-connected kernel clock and nonnegative post-route WNS/TNS; unequal timing-closed clocks block normalized comparison generation. It is not paper-equivalent: the packaged kernels use an 8-dimensional Q10 forward path and `xbutil` board power, while the paper specifies full models, default 32-bit floating point, full evaluation streams, and post-route Vivado power estimates.
 
 See `AE_APPENDIX_DRAFT.md` for the authoritative measurement boundary.

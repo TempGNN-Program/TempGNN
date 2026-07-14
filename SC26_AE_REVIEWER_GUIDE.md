@@ -11,7 +11,7 @@ The artifact demonstrates three things:
    ablation, and sensitivity inputs can be regenerated as source-labeled
    CSV/SVG files without hardware.
 3. A bounded FPGA mechanism comparison can be rerun using four distinct U280 xclbins:
-   TempGNN plus clean-room paper-based MATG, ViTeGNN, and RTGA reproductions.
+   TempGNN plus independent paper-based MATG, ViTeGNN, and RTGA reproductions.
    The fresh path records timing, total board power, checksums, post-route
    evidence, real-dataset-prefix provenance, and diagnostic normalized rows.
 
@@ -206,7 +206,7 @@ The recorded build used Vitis/Vivado 2023.2, XRT 2.16.204, and the `xilinx_u280_
 The historical TempGNN sanity logs and layout remain under
 `results/board_u280/`. Four runnable, metadata-normalized comparison artifacts
 are under `artifacts/u280/`, with separate xclbins and build provenance.
-Baseline source and clean-room scope are documented in
+Baseline source and reproduction scope are documented in
 `hardware/baselines/README.md`.
 
 ## Bridge Evidence

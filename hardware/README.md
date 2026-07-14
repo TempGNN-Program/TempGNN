@@ -79,5 +79,5 @@ make u280-core-preflight
 make ae-core-u280 U280_CORE_DEVICE=0 U280_CORE_REPETITIONS=3
 ```
 
-The clean-room MATG, ViTeGNN, and RTGA sources, mechanism map, build commands,
+The independent MATG, ViTeGNN, and RTGA sources, mechanism map, build commands,
 and scope limits are documented in `baselines/README.md`.

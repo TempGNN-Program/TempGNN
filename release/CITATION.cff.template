@@ -6,7 +6,7 @@ license: "REPLACE_WITH_SELECTED_LICENSE"
 abstract: >-
   Frozen computational artifact for SC26 paper pap142, including the TempGNN
   software model, U280 forward-path functional evidence, deterministic
-  reference-figure reconstruction, and bounded clean-room U280 baseline
+  reference-figure reconstruction, and bounded independent paper-based U280 baseline
   comparisons.
 message: "Please cite the version-specific Zenodo DOI for this artifact."
 authors:
