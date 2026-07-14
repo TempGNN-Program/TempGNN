@@ -137,7 +137,7 @@ The default dependency chain is:
 
 ```text
 T1: create environment
-  -> T2: run 20 unit tests
+  -> T2: run 26 unit tests
   -> T3: optionally fetch real edge streams
   -> T4: profile TDP/DDTC/OATS behavior
   -> T5: generate CSV and Markdown summaries
