@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "paper_id": "pap142",
+  "comparison_scope": "describe_the_exact_scope_here",
+  "results_reproduced_eligible": false,
+  "methodology_differences": ["list every difference from the paper methodology"],
+  "platform": "xilinx_u280_gen3x16_xdma_1_202211_1",
+  "repetitions": 3,
+  "energy_consistency_tolerance": 0.05,
+  "requested_frequency_mhz": 225,
+  "frequency_comparison_tolerance_mhz": 0.5,
+  "datasets": ["WK", "MC", "RT", "LM", "WT", "GT"],
+  "models": ["JODIE", "TGN", "TGAT", "APAN"],
+  "systems": [
+    {
+      "name": "TempGNN",
+      "source_revision": "TO_BE_FILLED",
+      "sources": ["TO_BE_FILLED"],
+      "runner": "artifacts/u280/TempGNN/run_measurements.sh",
+      "host": "artifacts/u280/TempGNN/bin/tempgnn_host",
+      "xclbin": "artifacts/u280/TempGNN/bin/tempgnn_u280.xclbin",
+      "command": [
+        "bash", "{runner}", "--host", "{host}", "--xclbin", "{xclbin}",
+        "--device", "{device}", "--datasets", "{datasets}", "--models", "{models}",
+        "--repetitions", "{repetitions}", "--output", "{raw_csv}"
+      ]
+    },
+    {
+      "name": "MATG",
+      "source_revision": "TO_BE_FILLED",
+      "sources": ["TO_BE_FILLED"],
+      "runner": "artifacts/u280/MATG/run_measurements.sh",
+      "host": "artifacts/u280/MATG/bin/matg_host",
+      "xclbin": "artifacts/u280/MATG/bin/matg_u280.xclbin",
+      "command": [
+        "bash", "{runner}", "--host", "{host}", "--xclbin", "{xclbin}",
+        "--device", "{device}", "--datasets", "{datasets}", "--models", "{models}",
+        "--repetitions", "{repetitions}", "--output", "{raw_csv}"
+      ]
+    },
+    {
+      "name": "ViTeGNN",
+      "source_revision": "TO_BE_FILLED",
+      "sources": ["TO_BE_FILLED"],
+      "runner": "artifacts/u280/ViTeGNN/run_measurements.sh",
+      "host": "artifacts/u280/ViTeGNN/bin/vitegnn_host",
+      "xclbin": "artifacts/u280/ViTeGNN/bin/vitegnn_u280.xclbin",
+      "command": [
+        "bash", "{runner}", "--host", "{host}", "--xclbin", "{xclbin}",
+        "--device", "{device}", "--datasets", "{datasets}", "--models", "{models}",
+        "--repetitions", "{repetitions}", "--output", "{raw_csv}"
+      ]
+    },
+    {
+      "name": "RTGA",
+      "source_revision": "TO_BE_FILLED",
+      "sources": ["TO_BE_FILLED"],
+      "runner": "artifacts/u280/RTGA/run_measurements.sh",
+      "host": "artifacts/u280/RTGA/bin/rtga_host",
+      "xclbin": "artifacts/u280/RTGA/bin/rtga_u280.xclbin",
+      "command": [
+        "bash", "{runner}", "--host", "{host}", "--xclbin", "{xclbin}",
+        "--device", "{device}", "--datasets", "{datasets}", "--models", "{models}",
+        "--repetitions", "{repetitions}", "--output", "{raw_csv}"
+      ]
+    }
+  ]
+}

@@ -4,25 +4,26 @@ set -euo pipefail
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$ROOT_DIR"
 
-pkg="${1:-tempgnn_ae_u280_measured_20260705_single_fpga.tgz}"
+pkg="${1:-ae_export/pap142_tempgnn_sc26_ae_u280.tgz}"
+archive_root="pap142_tempgnn_sc26_ae"
+mkdir -p "$(dirname "$pkg")"
 
 entries=(
-  README.md ENVIRONMENT.md AD_APPENDIX_DRAFT.md AE_APPENDIX_DRAFT.md SC26_AE_REVIEWER_GUIDE.md requirements.txt .gitignore Makefile
-  scripts tempgenn tests hardware
+  README.md ENVIRONMENT.md AD_APPENDIX_DRAFT.md AE_APPENDIX_DRAFT.md SC26_AE_REVIEWER_GUIDE.md ZENODO_RELEASE_CHECKLIST.md requirements.txt .gitattributes .gitignore Makefile
+  scripts tempgenn tests hardware configs artifacts release reference_inputs
   results/ae_report
   results/q14_real_tgl_edges
-  results/baselines_u280
-  results/derived_comparison_figures
   results/paper_reproduction
   results/board_u280
   results/fixtures
 )
 
 optional_entries=(
-  build/vitis_u280_forward_hw/tempgnn_forward_kernel.hw.xclbin
-  build/vitis_u280_forward_hw/tempgnn_forward_kernel.hw.xclbin.info
-  build/vitis_u280_forward_hw/tempgnn_forward_kernel.hw.xclbin.link_summary
-  build/vitis_u280_forward_hw/tempgnn_forward_xrt_host
+  LICENSE
+  CITATION.cff
+  .zenodo.json
+  external/u280_dataset_samples
+  results/reviewer_u280_runs
 )
 
 for path in "${optional_entries[@]}"; do
@@ -31,7 +32,10 @@ for path in "${optional_entries[@]}"; do
   fi
 done
 
+python3 -m scripts.run_u280_core_reproduction --preflight-only
+
 tar -czf "$pkg" \
+  --transform="s|^|${archive_root}/|" \
   --exclude='**/__pycache__' \
   --exclude='*.pyc' \
   --exclude='results/ae_report/old_*' \
@@ -45,7 +49,8 @@ tar -czf "$pkg" \
   --exclude='hardware/vitis/v++_*.backup.log' \
   --exclude='hardware/vitis/xcd.log' \
   --exclude='results/board_u280/layout_hook/*.dcp' \
-  --exclude='build/vitis_u280_forward_hw/*.xo' \
   "${entries[@]}"
 
 ls -lh "$pkg"
+sha256sum "$pkg" > "${pkg}.sha256"
+cat "${pkg}.sha256"

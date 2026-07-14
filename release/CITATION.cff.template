@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+title: "TempGNN: Artifact for SC26 Paper pap142"
+version: "1.0.0-sc26-ae"
+type: software
+license: "REPLACE_WITH_SELECTED_LICENSE"
+abstract: >-
+  Frozen computational artifact for SC26 paper pap142, including the TempGNN
+  software model, U280 forward-path functional evidence, deterministic
+  reference-figure reconstruction, and bounded clean-room U280 baseline
+  comparisons.
+message: "Please cite the version-specific Zenodo DOI for this artifact."
+authors:
+  - name: "REPLACE_WITH_CREATOR_METADATA_AFTER_ANONYMITY"
+repository-code: "https://github.com/TempGNN-Program/TempGNN"
+keywords:
+  - temporal graph neural network
+  - FPGA
+  - Alveo U280
+  - artifact evaluation
+  - reproducibility

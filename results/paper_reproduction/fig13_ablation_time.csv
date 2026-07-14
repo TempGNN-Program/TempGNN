@@ -1,76 +1,76 @@
-dataset,figure,model,solution,value
-WK,fig13_ablation_time,JODIE,TempGNN,1.0
-WK,fig13_ablation_time,JODIE,WO/DDTC,2.7102
-WK,fig13_ablation_time,JODIE,WO/OATS,1.5194
-MC,fig13_ablation_time,JODIE,TempGNN,1.0
-MC,fig13_ablation_time,JODIE,WO/DDTC,3.1952
-MC,fig13_ablation_time,JODIE,WO/OATS,1.8665
-RT,fig13_ablation_time,JODIE,TempGNN,1.0
-RT,fig13_ablation_time,JODIE,WO/DDTC,2.8799
-RT,fig13_ablation_time,JODIE,WO/OATS,1.6409
-LM,fig13_ablation_time,JODIE,TempGNN,1.0
-LM,fig13_ablation_time,JODIE,WO/DDTC,2.9527
-LM,fig13_ablation_time,JODIE,WO/OATS,1.693
-WT,fig13_ablation_time,JODIE,TempGNN,1.0
-WT,fig13_ablation_time,JODIE,WO/DDTC,3.1224
-WT,fig13_ablation_time,JODIE,WO/OATS,1.8144
-GT,fig13_ablation_time,JODIE,TempGNN,1.0
-GT,fig13_ablation_time,JODIE,WO/DDTC,3.2922
-GT,fig13_ablation_time,JODIE,WO/OATS,1.9359
-WK,fig13_ablation_time,TGN,TempGNN,1.0
-WK,fig13_ablation_time,TGN,WO/DDTC,2.8011
-WK,fig13_ablation_time,TGN,WO/OATS,1.5611
-MC,fig13_ablation_time,TGN,TempGNN,1.0
-MC,fig13_ablation_time,TGN,WO/DDTC,3.2861
-MC,fig13_ablation_time,TGN,WO/OATS,1.9081
-RT,fig13_ablation_time,TGN,TempGNN,1.0
-RT,fig13_ablation_time,TGN,WO/DDTC,2.9709
-RT,fig13_ablation_time,TGN,WO/OATS,1.6825
-LM,fig13_ablation_time,TGN,TempGNN,1.0
-LM,fig13_ablation_time,TGN,WO/DDTC,3.0436
-LM,fig13_ablation_time,TGN,WO/OATS,1.7346
-WT,fig13_ablation_time,TGN,TempGNN,1.0
-WT,fig13_ablation_time,TGN,WO/DDTC,3.2134
-WT,fig13_ablation_time,TGN,WO/OATS,1.8561
-GT,fig13_ablation_time,TGN,TempGNN,1.0
-GT,fig13_ablation_time,TGN,WO/DDTC,3.3831
-GT,fig13_ablation_time,TGN,WO/OATS,1.9775
-WK,fig13_ablation_time,TGAT,TempGNN,1.0
-WK,fig13_ablation_time,TGAT,WO/DDTC,2.8496
-WK,fig13_ablation_time,TGAT,WO/OATS,1.5833
-MC,fig13_ablation_time,TGAT,TempGNN,1.0
-MC,fig13_ablation_time,TGAT,WO/DDTC,3.3346
-MC,fig13_ablation_time,TGAT,WO/OATS,1.9303
-RT,fig13_ablation_time,TGAT,TempGNN,1.0
-RT,fig13_ablation_time,TGAT,WO/DDTC,3.0194
-RT,fig13_ablation_time,TGAT,WO/OATS,1.7048
-LM,fig13_ablation_time,TGAT,TempGNN,1.0
-LM,fig13_ablation_time,TGAT,WO/DDTC,3.0921
-LM,fig13_ablation_time,TGAT,WO/OATS,1.7568
-WT,fig13_ablation_time,TGAT,TempGNN,1.0
-WT,fig13_ablation_time,TGAT,WO/DDTC,3.2619
-WT,fig13_ablation_time,TGAT,WO/OATS,1.8783
-GT,fig13_ablation_time,TGAT,TempGNN,1.0
-GT,fig13_ablation_time,TGAT,WO/DDTC,3.4317
-GT,fig13_ablation_time,TGAT,WO/OATS,1.9998
-WK,fig13_ablation_time,APAN,TempGNN,1.0
-WK,fig13_ablation_time,APAN,WO/DDTC,2.698
-WK,fig13_ablation_time,APAN,WO/OATS,1.5139
-MC,fig13_ablation_time,APAN,TempGNN,1.0
-MC,fig13_ablation_time,APAN,WO/DDTC,3.1831
-MC,fig13_ablation_time,APAN,WO/OATS,1.8609
-RT,fig13_ablation_time,APAN,TempGNN,1.0
-RT,fig13_ablation_time,APAN,WO/DDTC,2.8678
-RT,fig13_ablation_time,APAN,WO/OATS,1.6353
-LM,fig13_ablation_time,APAN,TempGNN,1.0
-LM,fig13_ablation_time,APAN,WO/DDTC,2.9406
-LM,fig13_ablation_time,APAN,WO/OATS,1.6874
-WT,fig13_ablation_time,APAN,TempGNN,1.0
-WT,fig13_ablation_time,APAN,WO/DDTC,3.1103
-WT,fig13_ablation_time,APAN,WO/OATS,1.8089
-GT,fig13_ablation_time,APAN,TempGNN,1.0
-GT,fig13_ablation_time,APAN,WO/DDTC,3.2801
-GT,fig13_ablation_time,APAN,WO/OATS,1.9303
-AVG,fig13_ablation_time,AVG,TempGNN,1.0
-AVG,fig13_ablation_time,AVG,WO/DDTC,3.08
-AVG,fig13_ablation_time,AVG,WO/OATS,1.77
+dataset,figure,model,solution,source_id,source_kind,source_locator,source_sha256,value,value_note
+WK,fig13_ablation_time,JODIE,TempGNN,workbook_b,exact_workbook_value,Sheet1!J31,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.0,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+WK,fig13_ablation_time,JODIE,WO/DDTC,workbook_b,exact_workbook_value,Sheet1!K31,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,3.1,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+WK,fig13_ablation_time,JODIE,WO/OATS,workbook_b,exact_workbook_value,Sheet1!L31,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.75,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+MC,fig13_ablation_time,JODIE,TempGNN,workbook_b,exact_workbook_value,Sheet1!J32,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.0,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+MC,fig13_ablation_time,JODIE,WO/DDTC,workbook_b,exact_workbook_value,Sheet1!K32,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,2.95,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+MC,fig13_ablation_time,JODIE,WO/OATS,workbook_b,exact_workbook_value,Sheet1!L32,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.68,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+RT,fig13_ablation_time,JODIE,TempGNN,workbook_b,exact_workbook_value,Sheet1!J33,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.0,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+RT,fig13_ablation_time,JODIE,WO/DDTC,workbook_b,exact_workbook_value,Sheet1!K33,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,3.25,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+RT,fig13_ablation_time,JODIE,WO/OATS,workbook_b,exact_workbook_value,Sheet1!L33,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.82,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+LM,fig13_ablation_time,JODIE,TempGNN,workbook_b,exact_workbook_value,Sheet1!J34,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.0,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+LM,fig13_ablation_time,JODIE,WO/DDTC,workbook_b,exact_workbook_value,Sheet1!K34,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,2.65,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+LM,fig13_ablation_time,JODIE,WO/OATS,workbook_b,exact_workbook_value,Sheet1!L34,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.55,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+WT,fig13_ablation_time,JODIE,TempGNN,workbook_b,exact_workbook_value,Sheet1!J35,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.0,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+WT,fig13_ablation_time,JODIE,WO/DDTC,workbook_b,exact_workbook_value,Sheet1!K35,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,3.65,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+WT,fig13_ablation_time,JODIE,WO/OATS,workbook_b,exact_workbook_value,Sheet1!L35,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.95,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+GT,fig13_ablation_time,JODIE,TempGNN,workbook_b,exact_workbook_value,Sheet1!J36,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.0,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+GT,fig13_ablation_time,JODIE,WO/DDTC,workbook_b,exact_workbook_value,Sheet1!K36,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,4.25,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+GT,fig13_ablation_time,JODIE,WO/OATS,workbook_b,exact_workbook_value,Sheet1!L36,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,2.45,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+WK,fig13_ablation_time,TGN,TempGNN,workbook_b,exact_workbook_value,Sheet1!J37,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.0,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+WK,fig13_ablation_time,TGN,WO/DDTC,workbook_b,exact_workbook_value,Sheet1!K37,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,3.2,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+WK,fig13_ablation_time,TGN,WO/OATS,workbook_b,exact_workbook_value,Sheet1!L37,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.8,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+MC,fig13_ablation_time,TGN,TempGNN,workbook_b,exact_workbook_value,Sheet1!J38,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.0,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+MC,fig13_ablation_time,TGN,WO/DDTC,workbook_b,exact_workbook_value,Sheet1!K38,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,3.05,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+MC,fig13_ablation_time,TGN,WO/OATS,workbook_b,exact_workbook_value,Sheet1!L38,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.75,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+RT,fig13_ablation_time,TGN,TempGNN,workbook_b,exact_workbook_value,Sheet1!J39,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.0,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+RT,fig13_ablation_time,TGN,WO/DDTC,workbook_b,exact_workbook_value,Sheet1!K39,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,3.35,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+RT,fig13_ablation_time,TGN,WO/OATS,workbook_b,exact_workbook_value,Sheet1!L39,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.88,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+LM,fig13_ablation_time,TGN,TempGNN,workbook_b,exact_workbook_value,Sheet1!J40,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.0,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+LM,fig13_ablation_time,TGN,WO/DDTC,workbook_b,exact_workbook_value,Sheet1!K40,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,2.75,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+LM,fig13_ablation_time,TGN,WO/OATS,workbook_b,exact_workbook_value,Sheet1!L40,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.62,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+WT,fig13_ablation_time,TGN,TempGNN,workbook_b,exact_workbook_value,Sheet1!J41,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.0,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+WT,fig13_ablation_time,TGN,WO/DDTC,workbook_b,exact_workbook_value,Sheet1!K41,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,3.85,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+WT,fig13_ablation_time,TGN,WO/OATS,workbook_b,exact_workbook_value,Sheet1!L41,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,2.05,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+GT,fig13_ablation_time,TGN,TempGNN,workbook_b,exact_workbook_value,Sheet1!J42,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.0,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+GT,fig13_ablation_time,TGN,WO/DDTC,workbook_b,exact_workbook_value,Sheet1!K42,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,4.45,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+GT,fig13_ablation_time,TGN,WO/OATS,workbook_b,exact_workbook_value,Sheet1!L42,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,2.55,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+WK,fig13_ablation_time,TGAT,TempGNN,workbook_b,exact_workbook_value,Sheet1!J43,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.0,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+WK,fig13_ablation_time,TGAT,WO/DDTC,workbook_b,exact_workbook_value,Sheet1!K43,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,2.15,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+WK,fig13_ablation_time,TGAT,WO/OATS,workbook_b,exact_workbook_value,Sheet1!L43,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.12,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+MC,fig13_ablation_time,TGAT,TempGNN,workbook_b,exact_workbook_value,Sheet1!J44,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.0,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+MC,fig13_ablation_time,TGAT,WO/DDTC,workbook_b,exact_workbook_value,Sheet1!K44,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,2.05,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+MC,fig13_ablation_time,TGAT,WO/OATS,workbook_b,exact_workbook_value,Sheet1!L44,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.08,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+RT,fig13_ablation_time,TGAT,TempGNN,workbook_b,exact_workbook_value,Sheet1!J45,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.0,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+RT,fig13_ablation_time,TGAT,WO/DDTC,workbook_b,exact_workbook_value,Sheet1!K45,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,2.25,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+RT,fig13_ablation_time,TGAT,WO/OATS,workbook_b,exact_workbook_value,Sheet1!L45,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.15,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+LM,fig13_ablation_time,TGAT,TempGNN,workbook_b,exact_workbook_value,Sheet1!J46,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.0,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+LM,fig13_ablation_time,TGAT,WO/DDTC,workbook_b,exact_workbook_value,Sheet1!K46,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.85,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+LM,fig13_ablation_time,TGAT,WO/OATS,workbook_b,exact_workbook_value,Sheet1!L46,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.05,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+WT,fig13_ablation_time,TGAT,TempGNN,workbook_b,exact_workbook_value,Sheet1!J47,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.0,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+WT,fig13_ablation_time,TGAT,WO/DDTC,workbook_b,exact_workbook_value,Sheet1!K47,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,2.45,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+WT,fig13_ablation_time,TGAT,WO/OATS,workbook_b,exact_workbook_value,Sheet1!L47,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.18,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+GT,fig13_ablation_time,TGAT,TempGNN,workbook_b,exact_workbook_value,Sheet1!J48,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.0,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+GT,fig13_ablation_time,TGAT,WO/DDTC,workbook_b,exact_workbook_value,Sheet1!K48,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,2.65,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+GT,fig13_ablation_time,TGAT,WO/OATS,workbook_b,exact_workbook_value,Sheet1!L48,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.25,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+WK,fig13_ablation_time,APAN,TempGNN,workbook_b,exact_workbook_value,Sheet1!J49,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.0,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+WK,fig13_ablation_time,APAN,WO/DDTC,workbook_b,exact_workbook_value,Sheet1!K49,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,3.25,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+WK,fig13_ablation_time,APAN,WO/OATS,workbook_b,exact_workbook_value,Sheet1!L49,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.85,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+MC,fig13_ablation_time,APAN,TempGNN,workbook_b,exact_workbook_value,Sheet1!J50,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.0,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+MC,fig13_ablation_time,APAN,WO/DDTC,workbook_b,exact_workbook_value,Sheet1!K50,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,3.12,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+MC,fig13_ablation_time,APAN,WO/OATS,workbook_b,exact_workbook_value,Sheet1!L50,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.78,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+RT,fig13_ablation_time,APAN,TempGNN,workbook_b,exact_workbook_value,Sheet1!J51,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.0,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+RT,fig13_ablation_time,APAN,WO/DDTC,workbook_b,exact_workbook_value,Sheet1!K51,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,3.42,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+RT,fig13_ablation_time,APAN,WO/OATS,workbook_b,exact_workbook_value,Sheet1!L51,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.92,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+LM,fig13_ablation_time,APAN,TempGNN,workbook_b,exact_workbook_value,Sheet1!J52,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.0,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+LM,fig13_ablation_time,APAN,WO/DDTC,workbook_b,exact_workbook_value,Sheet1!K52,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,2.82,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+LM,fig13_ablation_time,APAN,WO/OATS,workbook_b,exact_workbook_value,Sheet1!L52,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.65,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+WT,fig13_ablation_time,APAN,TempGNN,workbook_b,exact_workbook_value,Sheet1!J53,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.0,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+WT,fig13_ablation_time,APAN,WO/DDTC,workbook_b,exact_workbook_value,Sheet1!K53,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,3.95,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+WT,fig13_ablation_time,APAN,WO/OATS,workbook_b,exact_workbook_value,Sheet1!L53,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,2.12,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+GT,fig13_ablation_time,APAN,TempGNN,workbook_b,exact_workbook_value,Sheet1!J54,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.0,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+GT,fig13_ablation_time,APAN,WO/DDTC,workbook_b,exact_workbook_value,Sheet1!K54,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,4.55,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+GT,fig13_ablation_time,APAN,WO/OATS,workbook_b,exact_workbook_value,Sheet1!L54,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,2.65,Exact workbook value; workbook label WO/OASC is normalized to the paper label WO/OATS.
+AVG,fig13_ablation_time,AVG,TempGNN,workbook_b,exact_workbook_value,Sheet1!J55,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.0,Explicit average cell from the author plotting workbook.
+AVG,fig13_ablation_time,AVG,WO/DDTC,workbook_b,exact_workbook_value,Sheet1!K55,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,3.08,Explicit average cell from the author plotting workbook.
+AVG,fig13_ablation_time,AVG,WO/OATS,workbook_b,exact_workbook_value,Sheet1!L55,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.77,Explicit average cell from the author plotting workbook.

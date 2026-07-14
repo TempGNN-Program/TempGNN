@@ -7,16 +7,17 @@ from typing import Dict, Iterable, List, Sequence
 from tempgenn.paper_reproduction import (
     DATASETS,
     MODELS,
+    figure2_rows,
+    figure4a_rows,
+    figure9b_rows,
     figure10_rows,
     figure11_rows,
     figure12_rows,
     figure13_rows,
     figure14_batch_rows,
     figure14_sync_rows,
-    motivation_bpr_rows,
-    motivation_gpu_bottleneck_rows,
-    motivation_useful_data_rows,
     platform_notes_as_dicts,
+    reference_input_path,
 )
 
 
@@ -27,9 +28,9 @@ def main() -> None:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
 
     figures = {
-        "motivation_gpu_bottleneck": motivation_gpu_bottleneck_rows(),
-        "motivation_useful_data_ratio": motivation_useful_data_rows(),
-        "motivation_bpr": motivation_bpr_rows(),
+        "fig2_execution_breakdown": figure2_rows(),
+        "fig4a_branch_parallelism_ratio": figure4a_rows(),
+        "fig9b_gpu_overhead_breakdown": figure9b_rows(),
         "fig10_speedup_tglite_cpu": figure10_rows(),
         "fig11_speedup_matg": figure11_rows(),
         "fig12_energy_tempgnn": figure12_rows(),
@@ -39,9 +40,9 @@ def main() -> None:
     }
 
     figure_titles = {
-        "motivation_gpu_bottleneck": "Motivation: GPU bottleneck",
-        "motivation_useful_data_ratio": "Motivation: useful-data ratio",
-        "motivation_bpr": "Motivation: branch parallelism ratio",
+        "fig2_execution_breakdown": "Fig.2 execution-time breakdown",
+        "fig4a_branch_parallelism_ratio": "Fig.4(a) branch parallelism ratio",
+        "fig9b_gpu_overhead_breakdown": "Fig.9(b) GPU overhead breakdown",
         "fig10_speedup_tglite_cpu": "Fig.10 speedup normalized to TGLite-CPU",
         "fig11_speedup_matg": "Fig.11 speedup normalized to MATG",
         "fig12_energy_tempgnn": "Fig.12 energy normalized to TempGNN",
@@ -54,57 +55,57 @@ def main() -> None:
         _write_csv(OUT_DIR / f"{name}.csv", rows)
 
     _write_grouped_bar_svg(
-        OUT_DIR / "motivation_gpu_bottleneck.svg",
-        figures["motivation_gpu_bottleneck"],
-        ["GPU SM utilization (%)", "Memory latency share (%)"],
-        "Motivation: GPU under-utilization and memory stalls",
+        OUT_DIR / "fig2_execution_breakdown.svg",
+        figures["fig2_execution_breakdown"],
+        ["TGS (%)", "MG (%)", "VMU (%)", "TA (%)"],
+        "Paper-reference Fig.2 execution-time breakdown",
     )
     _write_grouped_bar_svg(
-        OUT_DIR / "motivation_useful_data_ratio.svg",
-        figures["motivation_useful_data_ratio"],
-        ["Useful-data ratio (%)"],
-        "Motivation: dependency-relevant useful-data ratio",
-    )
-    _write_grouped_bar_svg(
-        OUT_DIR / "motivation_bpr.svg",
-        figures["motivation_bpr"],
+        OUT_DIR / "fig4a_branch_parallelism_ratio.svg",
+        figures["fig4a_branch_parallelism_ratio"],
         ["BPR (%)"],
-        "Motivation: branch parallelism ratio",
+        "Paper-reference Fig.4(a) branch parallelism ratio",
+    )
+    _write_grouped_bar_svg(
+        OUT_DIR / "fig9b_gpu_overhead_breakdown.svg",
+        figures["fig9b_gpu_overhead_breakdown"],
+        ["Warp divergence", "Dependency synchronization", "Dynamic dependency bookkeeping"],
+        "Paper-reference Fig.9(b) GPU overhead breakdown",
     )
     _write_grouped_bar_svg(
         OUT_DIR / "fig10_speedup_tglite_cpu.svg",
         figures["fig10_speedup_tglite_cpu"],
         ["TGLite-CPU", "Cascade", "TempGNN-G", "TempGNN"],
-        "Fig.10 End-to-end speedup normalized to TGLite-CPU",
+        "Paper-reference Fig.10 speedup normalized to TGLite-CPU",
     )
     _write_grouped_bar_svg(
         OUT_DIR / "fig11_speedup_matg.svg",
         figures["fig11_speedup_matg"],
         ["MATG", "ViTeGNN", "RTGA", "TempGNN"],
-        "Fig.11 End-to-end speedup normalized to MATG",
+        "Paper-reference Fig.11 speedup normalized to MATG",
     )
     _write_grouped_bar_svg(
         OUT_DIR / "fig12_energy_tempgnn.svg",
         figures["fig12_energy_tempgnn"],
         ["TGLite-CPU", "Cascade", "MATG", "ViTeGNN", "RTGA", "TempGNN"],
-        "Fig.12 Energy consumption normalized to TempGNN",
+        "Paper-reference Fig.12 energy normalized to TempGNN",
     )
     _write_grouped_bar_svg(
         OUT_DIR / "fig13_ablation_time.svg",
         figures["fig13_ablation_time"],
         ["TempGNN", "WO/DDTC", "WO/OATS"],
-        "Fig.13 TempGNN with and without DDTC/OATS",
+        "Paper-reference Fig.13 TempGNN with and without DDTC/OATS",
     )
     _write_line_svg(
         OUT_DIR / "fig14a_batch_sensitivity.svg",
         figures["fig14a_batch_sensitivity"],
-        "Fig.14(a) Sensitivity to batch size",
+        "Paper-reference Fig.14(a) sensitivity to batch size",
         x_label="batch size",
     )
     _write_line_svg(
         OUT_DIR / "fig14b_tdp_entries.svg",
         figures["fig14b_tdp_entries"],
-        "Fig.14(b) Sensitivity to TDP synchronization entries",
+        "Paper-reference Fig.14(b) sensitivity to TDP synchronization entries",
         x_label="TDP entries",
     )
 
@@ -132,6 +133,8 @@ def _write_figure_data_manifest(out_dir: Path, figure_titles: Dict[str, str]) ->
                 "title": title,
                 "csv_file": f"{figure_id}.csv",
                 "svg_file": f"{figure_id}.svg",
+                "input_file": reference_input_path().relative_to(reference_input_path().parents[1]).as_posix(),
+                "data_status": "paper-reference reconstruction; not a fresh execution",
             }
         )
     _write_csv(out_dir / "figure_data_manifest.csv", rows)
@@ -147,8 +150,14 @@ def _write_combined_figure_data(out_dir: Path, figures: Dict[str, List[Dict[str,
     _write_csv(out_dir / "all_figure_data.csv", rows)
 
 
-def _category_order() -> List[tuple[str, str]]:
-    return [(model, dataset) for model in MODELS for dataset in DATASETS] + [("AVG", "AVG")]
+def _category_order(rows: Sequence[Dict[str, object]]) -> List[tuple[str, str]]:
+    present = {(str(row["model"]), str(row["dataset"])) for row in rows}
+    preferred = [(model, dataset) for model in MODELS for dataset in DATASETS]
+    preferred.extend(("ALL", dataset) for dataset in DATASETS)
+    preferred.append(("AVG", "AVG"))
+    ordered = [category for category in preferred if category in present]
+    extras = sorted(present - set(ordered))
+    return ordered + extras
 
 
 def _write_grouped_bar_svg(
@@ -157,7 +166,7 @@ def _write_grouped_bar_svg(
     solutions: Sequence[str],
     title: str,
 ) -> None:
-    categories = _category_order()
+    categories = _category_order(rows)
     values = {
         (str(row["model"]), str(row["dataset"]), str(row["solution"])): float(row["value"])
         for row in rows
@@ -213,8 +222,18 @@ def _write_line_svg(
     x_label: str,
 ) -> None:
     series: Dict[str, List[tuple[float, float]]] = {}
+    solution_names = {str(row["solution"]) for row in rows}
+    dataset_names = {str(row["dataset"]) for row in rows}
     for row in rows:
-        series.setdefault(str(row["dataset"]), []).append((float(row["x"]), float(row["value"])))
+        solution = str(row["solution"])
+        dataset = str(row["dataset"])
+        if len(solution_names) > 1 and len(dataset_names) == 1:
+            name = solution
+        elif len(solution_names) == 1:
+            name = dataset
+        else:
+            name = f"{solution}/{dataset}"
+        series.setdefault(name, []).append((float(row["x"]), float(row["value"])))
     for points in series.values():
         points.sort()
 
@@ -222,7 +241,10 @@ def _write_line_svg(
     max_value = max(point[1] for points in series.values() for point in points)
     min_x, max_x = min(xs), max(xs)
     width, height = 760, 460
-    margin_left, margin_right, margin_top, margin_bottom = 70, 30, 45, 70
+    legend_columns = min(3, len(series))
+    legend_rows = (len(series) + legend_columns - 1) // legend_columns
+    margin_left, margin_right, margin_bottom = 70, 30, 70
+    margin_top = 55 + legend_rows * 22
     plot_w = width - margin_left - margin_right
     plot_h = height - margin_top - margin_bottom
     colors = ["#4c78a8", "#f58518", "#54a24b", "#b279a2", "#e45756", "#72b7b2"]
@@ -256,15 +278,32 @@ def _write_line_svg(
         svg.append(f'<polyline points="{coords}" fill="none" stroke="{color}" stroke-width="2"/>')
         for x, y in points:
             svg.append(f'<circle cx="{x_scale(x):.1f}" cy="{y_scale(y):.1f}" r="3.5" fill="{color}"><title>{_esc(name)} {x:g}: {y:.4g}</title></circle>')
-    _append_legend(svg, list(series.keys()), colors, width - 210, 48)
+    _append_legend(
+        svg,
+        list(series.keys()),
+        colors,
+        margin_left,
+        50,
+        columns=legend_columns,
+        column_width=(width - margin_left - margin_right) / legend_columns,
+    )
     svg.append("</svg>\n")
     path.write_text("\n".join(svg), encoding="utf-8")
 
 
-def _append_legend(svg: List[str], labels: Sequence[str], colors: Sequence[str], x: float, y: float) -> None:
+def _append_legend(
+    svg: List[str],
+    labels: Sequence[str],
+    colors: Sequence[str],
+    x: float,
+    y: float,
+    *,
+    columns: int = 3,
+    column_width: float = 190,
+) -> None:
     for idx, label in enumerate(labels):
-        xx = x + (idx % 3) * 190
-        yy = y + (idx // 3) * 22
+        xx = x + (idx % columns) * column_width
+        yy = y + (idx // columns) * 22
         svg.append(f'<rect x="{xx:.1f}" y="{yy - 10:.1f}" width="12" height="12" fill="{colors[idx % len(colors)]}"/>')
         svg.append(f'<text x="{xx + 18:.1f}" y="{yy:.1f}" font-size="12">{_esc(label)}</text>')
 

@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="760" height="460" viewBox="0 0 760 460"><rect width="100%" height="100%" fill="white"/>
-<text x="380.0" y="26" text-anchor="middle" font-size="18">Fig.14(b) Sensitivity to TDP synchronization entries</text>
+<text x="380.0" y="26" text-anchor="middle" font-size="18">Paper-reference Fig.14(b) sensitivity to TDP synchronization entries</text>
 <line x1="70" y1="390" x2="730" y2="390" stroke="#333"/>
-<line x1="70" y1="45" x2="70" y2="390" stroke="#333"/>
+<line x1="70" y1="99" x2="70" y2="390" stroke="#333"/>
 <text x="380.0" y="448" text-anchor="middle" font-size="13">TDP entries</text>
 <line x1="70.0" y1="390" x2="70.0" y2="395" stroke="#333"/>
 <text x="70.0" y="410" text-anchor="middle" font-size="11">2</text>
@@ -19,74 +19,74 @@
 <text x="730.0" y="410" text-anchor="middle" font-size="11">64</text>
 <line x1="70" y1="390.0" x2="730" y2="390.0" stroke="#eee"/>
 <text x="62" y="394.0" text-anchor="end" font-size="11">0.0</text>
-<line x1="70" y1="321.0" x2="730" y2="321.0" stroke="#eee"/>
-<text x="62" y="325.0" text-anchor="end" font-size="11">0.7</text>
-<line x1="70" y1="252.0" x2="730" y2="252.0" stroke="#eee"/>
-<text x="62" y="256.0" text-anchor="end" font-size="11">1.4</text>
-<line x1="70" y1="183.0" x2="730" y2="183.0" stroke="#eee"/>
-<text x="62" y="187.0" text-anchor="end" font-size="11">2.1</text>
-<line x1="70" y1="114.0" x2="730" y2="114.0" stroke="#eee"/>
-<text x="62" y="118.0" text-anchor="end" font-size="11">2.9</text>
-<line x1="70" y1="45.0" x2="730" y2="45.0" stroke="#eee"/>
-<text x="62" y="49.0" text-anchor="end" font-size="11">3.6</text>
-<polyline points="70.0,298.0 91.3,231.8 112.6,189.5 133.9,154.6 219.0,93.9 389.4,88.4 730.0,86.5" fill="none" stroke="#4c78a8" stroke-width="2"/>
-<circle cx="70.0" cy="298.0" r="3.5" fill="#4c78a8"><title>WK 2: 0.95</title></circle>
-<circle cx="91.3" cy="231.8" r="3.5" fill="#4c78a8"><title>WK 4: 1.634</title></circle>
-<circle cx="112.6" cy="189.5" r="3.5" fill="#4c78a8"><title>WK 6: 2.071</title></circle>
-<circle cx="133.9" cy="154.6" r="3.5" fill="#4c78a8"><title>WK 8: 2.432</title></circle>
-<circle cx="219.0" cy="93.9" r="3.5" fill="#4c78a8"><title>WK 16: 3.059</title></circle>
-<circle cx="389.4" cy="88.4" r="3.5" fill="#4c78a8"><title>WK 32: 3.116</title></circle>
-<circle cx="730.0" cy="86.5" r="3.5" fill="#4c78a8"><title>WK 64: 3.135</title></circle>
-<polyline points="70.0,288.4 91.3,215.2 112.6,168.4 133.9,129.8 219.0,62.7 389.4,56.6 730.0,54.6" fill="none" stroke="#f58518" stroke-width="2"/>
-<circle cx="70.0" cy="288.4" r="3.5" fill="#f58518"><title>MC 2: 1.05</title></circle>
-<circle cx="91.3" cy="215.2" r="3.5" fill="#f58518"><title>MC 4: 1.806</title></circle>
-<circle cx="112.6" cy="168.4" r="3.5" fill="#f58518"><title>MC 6: 2.289</title></circle>
-<circle cx="133.9" cy="129.8" r="3.5" fill="#f58518"><title>MC 8: 2.688</title></circle>
-<circle cx="219.0" cy="62.7" r="3.5" fill="#f58518"><title>MC 16: 3.381</title></circle>
-<circle cx="389.4" cy="56.6" r="3.5" fill="#f58518"><title>MC 32: 3.444</title></circle>
-<circle cx="730.0" cy="54.6" r="3.5" fill="#f58518"><title>MC 64: 3.465</title></circle>
-<polyline points="70.0,295.1 91.3,226.8 112.6,183.2 133.9,147.1 219.0,84.5 389.4,78.8 730.0,76.9" fill="none" stroke="#54a24b" stroke-width="2"/>
-<circle cx="70.0" cy="295.1" r="3.5" fill="#54a24b"><title>RT 2: 0.98</title></circle>
-<circle cx="91.3" cy="226.8" r="3.5" fill="#54a24b"><title>RT 4: 1.686</title></circle>
-<circle cx="112.6" cy="183.2" r="3.5" fill="#54a24b"><title>RT 6: 2.136</title></circle>
-<circle cx="133.9" cy="147.1" r="3.5" fill="#54a24b"><title>RT 8: 2.509</title></circle>
-<circle cx="219.0" cy="84.5" r="3.5" fill="#54a24b"><title>RT 16: 3.156</title></circle>
-<circle cx="389.4" cy="78.8" r="3.5" fill="#54a24b"><title>RT 32: 3.214</title></circle>
-<circle cx="730.0" cy="76.9" r="3.5" fill="#54a24b"><title>RT 64: 3.234</title></circle>
-<polyline points="70.0,300.9 91.3,236.8 112.6,195.9 133.9,162.0 219.0,103.2 389.4,97.9 730.0,96.1" fill="none" stroke="#b279a2" stroke-width="2"/>
-<circle cx="70.0" cy="300.9" r="3.5" fill="#b279a2"><title>LM 2: 0.92</title></circle>
-<circle cx="91.3" cy="236.8" r="3.5" fill="#b279a2"><title>LM 4: 1.582</title></circle>
-<circle cx="112.6" cy="195.9" r="3.5" fill="#b279a2"><title>LM 6: 2.006</title></circle>
-<circle cx="133.9" cy="162.0" r="3.5" fill="#b279a2"><title>LM 8: 2.355</title></circle>
-<circle cx="219.0" cy="103.2" r="3.5" fill="#b279a2"><title>LM 16: 2.962</title></circle>
-<circle cx="389.4" cy="97.9" r="3.5" fill="#b279a2"><title>LM 32: 3.018</title></circle>
-<circle cx="730.0" cy="96.1" r="3.5" fill="#b279a2"><title>LM 64: 3.036</title></circle>
-<polyline points="70.0,285.5 91.3,210.2 112.6,162.1 133.9,122.4 219.0,53.4 389.4,47.1 730.0,45.0" fill="none" stroke="#e45756" stroke-width="2"/>
-<circle cx="70.0" cy="285.5" r="3.5" fill="#e45756"><title>WT 2: 1.08</title></circle>
-<circle cx="91.3" cy="210.2" r="3.5" fill="#e45756"><title>WT 4: 1.858</title></circle>
-<circle cx="112.6" cy="162.1" r="3.5" fill="#e45756"><title>WT 6: 2.354</title></circle>
-<circle cx="133.9" cy="122.4" r="3.5" fill="#e45756"><title>WT 8: 2.765</title></circle>
-<circle cx="219.0" cy="53.4" r="3.5" fill="#e45756"><title>WT 16: 3.478</title></circle>
-<circle cx="389.4" cy="47.1" r="3.5" fill="#e45756"><title>WT 32: 3.542</title></circle>
-<circle cx="730.0" cy="45.0" r="3.5" fill="#e45756"><title>WT 64: 3.564</title></circle>
-<polyline points="70.0,291.3 91.3,220.2 112.6,174.8 133.9,137.2 219.0,72.1 389.4,66.1 730.0,64.2" fill="none" stroke="#72b7b2" stroke-width="2"/>
-<circle cx="70.0" cy="291.3" r="3.5" fill="#72b7b2"><title>GT 2: 1.02</title></circle>
-<circle cx="91.3" cy="220.2" r="3.5" fill="#72b7b2"><title>GT 4: 1.754</title></circle>
-<circle cx="112.6" cy="174.8" r="3.5" fill="#72b7b2"><title>GT 6: 2.224</title></circle>
-<circle cx="133.9" cy="137.2" r="3.5" fill="#72b7b2"><title>GT 8: 2.611</title></circle>
-<circle cx="219.0" cy="72.1" r="3.5" fill="#72b7b2"><title>GT 16: 3.284</title></circle>
-<circle cx="389.4" cy="66.1" r="3.5" fill="#72b7b2"><title>GT 32: 3.346</title></circle>
-<circle cx="730.0" cy="64.2" r="3.5" fill="#72b7b2"><title>GT 64: 3.366</title></circle>
-<rect x="550.0" y="38.0" width="12" height="12" fill="#4c78a8"/>
-<text x="568.0" y="48.0" font-size="12">WK</text>
-<rect x="740.0" y="38.0" width="12" height="12" fill="#f58518"/>
-<text x="758.0" y="48.0" font-size="12">MC</text>
-<rect x="930.0" y="38.0" width="12" height="12" fill="#54a24b"/>
-<text x="948.0" y="48.0" font-size="12">RT</text>
-<rect x="550.0" y="60.0" width="12" height="12" fill="#b279a2"/>
-<text x="568.0" y="70.0" font-size="12">LM</text>
-<rect x="740.0" y="60.0" width="12" height="12" fill="#e45756"/>
-<text x="758.0" y="70.0" font-size="12">WT</text>
-<rect x="930.0" y="60.0" width="12" height="12" fill="#72b7b2"/>
-<text x="948.0" y="70.0" font-size="12">GT</text>
+<line x1="70" y1="331.8" x2="730" y2="331.8" stroke="#eee"/>
+<text x="62" y="335.8" text-anchor="end" font-size="11">0.7</text>
+<line x1="70" y1="273.6" x2="730" y2="273.6" stroke="#eee"/>
+<text x="62" y="277.6" text-anchor="end" font-size="11">1.5</text>
+<line x1="70" y1="215.4" x2="730" y2="215.4" stroke="#eee"/>
+<text x="62" y="219.4" text-anchor="end" font-size="11">2.2</text>
+<line x1="70" y1="157.2" x2="730" y2="157.2" stroke="#eee"/>
+<text x="62" y="161.2" text-anchor="end" font-size="11">2.9</text>
+<line x1="70" y1="99.0" x2="730" y2="99.0" stroke="#eee"/>
+<text x="62" y="103.0" text-anchor="end" font-size="11">3.7</text>
+<polyline points="70.0,310.4 91.3,268.9 112.6,242.6 133.9,218.7 219.0,186.8 389.4,182.9 730.0,184.5" fill="none" stroke="#4c78a8" stroke-width="2"/>
+<circle cx="70.0" cy="310.4" r="3.5" fill="#4c78a8"><title>WK 2: 0.9989</title></circle>
+<circle cx="91.3" cy="268.9" r="3.5" fill="#4c78a8"><title>WK 4: 1.519</title></circle>
+<circle cx="112.6" cy="242.6" r="3.5" fill="#4c78a8"><title>WK 6: 1.849</title></circle>
+<circle cx="133.9" cy="218.7" r="3.5" fill="#4c78a8"><title>WK 8: 2.149</title></circle>
+<circle cx="219.0" cy="186.8" r="3.5" fill="#4c78a8"><title>WK 16: 2.549</title></circle>
+<circle cx="389.4" cy="182.9" r="3.5" fill="#4c78a8"><title>WK 32: 2.599</title></circle>
+<circle cx="730.0" cy="184.5" r="3.5" fill="#4c78a8"><title>WK 64: 2.579</title></circle>
+<polyline points="70.0,310.3 91.3,266.4 112.6,240.1 133.9,216.2 219.0,181.1 389.4,177.9 730.0,178.7" fill="none" stroke="#f58518" stroke-width="2"/>
+<circle cx="70.0" cy="310.3" r="3.5" fill="#f58518"><title>MC 2: 1</title></circle>
+<circle cx="91.3" cy="266.4" r="3.5" fill="#f58518"><title>MC 4: 1.551</title></circle>
+<circle cx="112.6" cy="240.1" r="3.5" fill="#f58518"><title>MC 6: 1.881</title></circle>
+<circle cx="133.9" cy="216.2" r="3.5" fill="#f58518"><title>MC 8: 2.181</title></circle>
+<circle cx="219.0" cy="181.1" r="3.5" fill="#f58518"><title>MC 16: 2.621</title></circle>
+<circle cx="389.4" cy="177.9" r="3.5" fill="#f58518"><title>MC 32: 2.661</title></circle>
+<circle cx="730.0" cy="178.7" r="3.5" fill="#f58518"><title>MC 64: 2.651</title></circle>
+<polyline points="70.0,311.7 91.3,265.5 112.6,238.4 133.9,212.1 219.0,176.2 389.4,172.2 730.0,174.6" fill="none" stroke="#54a24b" stroke-width="2"/>
+<circle cx="70.0" cy="311.7" r="3.5" fill="#54a24b"><title>RT 2: 0.9818</title></circle>
+<circle cx="91.3" cy="265.5" r="3.5" fill="#54a24b"><title>RT 4: 1.562</title></circle>
+<circle cx="112.6" cy="238.4" r="3.5" fill="#54a24b"><title>RT 6: 1.902</title></circle>
+<circle cx="133.9" cy="212.1" r="3.5" fill="#54a24b"><title>RT 8: 2.232</title></circle>
+<circle cx="219.0" cy="176.2" r="3.5" fill="#54a24b"><title>RT 16: 2.683</title></circle>
+<circle cx="389.4" cy="172.2" r="3.5" fill="#54a24b"><title>RT 32: 2.732</title></circle>
+<circle cx="730.0" cy="174.6" r="3.5" fill="#54a24b"><title>RT 64: 2.702</title></circle>
+<polyline points="70.0,310.3 91.3,276.8 112.6,256.1 133.9,244.9 219.0,234.6 389.4,232.2 730.0,235.4" fill="none" stroke="#b279a2" stroke-width="2"/>
+<circle cx="70.0" cy="310.3" r="3.5" fill="#b279a2"><title>LM 2: 0.9996</title></circle>
+<circle cx="91.3" cy="276.8" r="3.5" fill="#b279a2"><title>LM 4: 1.421</title></circle>
+<circle cx="112.6" cy="256.1" r="3.5" fill="#b279a2"><title>LM 6: 1.679</title></circle>
+<circle cx="133.9" cy="244.9" r="3.5" fill="#b279a2"><title>LM 8: 1.82</title></circle>
+<circle cx="219.0" cy="234.6" r="3.5" fill="#b279a2"><title>LM 16: 1.95</title></circle>
+<circle cx="389.4" cy="232.2" r="3.5" fill="#b279a2"><title>LM 32: 1.979</title></circle>
+<circle cx="730.0" cy="235.4" r="3.5" fill="#b279a2"><title>LM 64: 1.94</title></circle>
+<polyline points="70.0,308.9 91.3,257.1 112.6,217.2 133.9,185.4 219.0,137.5 389.4,132.0 730.0,135.2" fill="none" stroke="#e45756" stroke-width="2"/>
+<circle cx="70.0" cy="308.9" r="3.5" fill="#e45756"><title>WT 2: 1.017</title></circle>
+<circle cx="91.3" cy="257.1" r="3.5" fill="#e45756"><title>WT 4: 1.667</title></circle>
+<circle cx="112.6" cy="217.2" r="3.5" fill="#e45756"><title>WT 6: 2.168</title></circle>
+<circle cx="133.9" cy="185.4" r="3.5" fill="#e45756"><title>WT 8: 2.567</title></circle>
+<circle cx="219.0" cy="137.5" r="3.5" fill="#e45756"><title>WT 16: 3.167</title></circle>
+<circle cx="389.4" cy="132.0" r="3.5" fill="#e45756"><title>WT 32: 3.237</title></circle>
+<circle cx="730.0" cy="135.2" r="3.5" fill="#e45756"><title>WT 64: 3.197</title></circle>
+<polyline points="70.0,310.3 91.3,252.8 112.6,202.6 133.9,162.8 219.0,106.9 389.4,99.0 730.0,102.2" fill="none" stroke="#72b7b2" stroke-width="2"/>
+<circle cx="70.0" cy="310.3" r="3.5" fill="#72b7b2"><title>GT 2: 1</title></circle>
+<circle cx="91.3" cy="252.8" r="3.5" fill="#72b7b2"><title>GT 4: 1.721</title></circle>
+<circle cx="112.6" cy="202.6" r="3.5" fill="#72b7b2"><title>GT 6: 2.351</title></circle>
+<circle cx="133.9" cy="162.8" r="3.5" fill="#72b7b2"><title>GT 8: 2.85</title></circle>
+<circle cx="219.0" cy="106.9" r="3.5" fill="#72b7b2"><title>GT 16: 3.551</title></circle>
+<circle cx="389.4" cy="99.0" r="3.5" fill="#72b7b2"><title>GT 32: 3.651</title></circle>
+<circle cx="730.0" cy="102.2" r="3.5" fill="#72b7b2"><title>GT 64: 3.611</title></circle>
+<rect x="70.0" y="40.0" width="12" height="12" fill="#4c78a8"/>
+<text x="88.0" y="50.0" font-size="12">WK</text>
+<rect x="290.0" y="40.0" width="12" height="12" fill="#f58518"/>
+<text x="308.0" y="50.0" font-size="12">MC</text>
+<rect x="510.0" y="40.0" width="12" height="12" fill="#54a24b"/>
+<text x="528.0" y="50.0" font-size="12">RT</text>
+<rect x="70.0" y="62.0" width="12" height="12" fill="#b279a2"/>
+<text x="88.0" y="72.0" font-size="12">LM</text>
+<rect x="290.0" y="62.0" width="12" height="12" fill="#e45756"/>
+<text x="308.0" y="72.0" font-size="12">WT</text>
+<rect x="510.0" y="62.0" width="12" height="12" fill="#72b7b2"/>
+<text x="528.0" y="72.0" font-size="12">GT</text>
 </svg>

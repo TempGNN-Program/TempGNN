@@ -7,22 +7,27 @@ This document is a reviewer-facing guide for evaluating the TempGNN artifact. It
 The artifact demonstrates three things:
 
 1. The TempGNN execution model can be run and checked through Python TDP/DDTC/OATS tests.
-2. The motivation, speedup, energy, ablation, and sensitivity figures can be regenerated as CSV/SVG files.
-3. The FPGA path has U280 evidence through one forward-path xclbin, XRT board logs, operating frequency/timing evidence, golden-output checks, reproduced FPGA baseline measurements, and a layout figure.
+2. The paper-reference execution, workload, GPU-overhead, speedup, energy,
+   ablation, and sensitivity inputs can be regenerated as source-labeled
+   CSV/SVG files without hardware.
+3. A bounded FPGA mechanism comparison can be rerun using four distinct U280 xclbins:
+   TempGNN plus clean-room paper-based MATG, ViTeGNN, and RTGA reproductions.
+   The fresh path records timing, total board power, checksums, post-route
+   evidence, real-dataset-prefix provenance, and diagnostic normalized rows.
 
 The measurement boundary is stated once in `AE_APPENDIX_DRAFT.md`. The exact CPU-only and U280 hardware/software environment is recorded in `ENVIRONMENT.md`.
 
 ## Package
 
 ```text
-tempgnn_ae_u280_measured_20260705_single_fpga.tgz
+pap142_tempgnn_sc26_ae_u280.tgz
 ```
 
 Unpack:
 
 ```bash
-tar -xzf tempgnn_ae_u280_measured_20260705_single_fpga.tgz
-cd TGNN_AE_U280_20260703
+tar -xzf pap142_tempgnn_sc26_ae_u280.tgz
+cd pap142_tempgnn_sc26_ae
 ```
 
 ## Fast Path Without FPGA
@@ -40,7 +45,7 @@ make report
 Expected:
 
 ```text
-Ran 2 tests
+Ran 24 tests
 OK
 Wrote AE report to results/ae_report/ae_summary.md
 ```
@@ -56,7 +61,7 @@ results/ae_report/FULL_PAPER_RESULTS.md
 results/ae_report/U280_AE_RUNBOOK.md
 ```
 
-## Regenerate Figures
+## Reconstruct Packaged Figures
 
 ```bash
 python3 -m scripts.reproduce_paper_figures
@@ -68,9 +73,9 @@ Outputs:
 | --- | --- |
 | Figure data manifest | `results/paper_reproduction/figure_data_manifest.csv` |
 | Combined figure source data | `results/paper_reproduction/all_figure_data.csv` |
-| Motivation GPU bottleneck | `results/paper_reproduction/motivation_gpu_bottleneck.svg` |
-| Motivation useful-data ratio | `results/paper_reproduction/motivation_useful_data_ratio.svg` |
-| Motivation BPR | `results/paper_reproduction/motivation_bpr.svg` |
+| Fig.2 execution breakdown | `results/paper_reproduction/fig2_execution_breakdown.svg` |
+| Fig.4(a) BPR | `results/paper_reproduction/fig4a_branch_parallelism_ratio.svg` |
+| Fig.9(b) GPU overhead | `results/paper_reproduction/fig9b_gpu_overhead_breakdown.svg` |
 | Fig.10 speedup vs TGLite-CPU | `results/paper_reproduction/fig10_speedup_tglite_cpu.svg` |
 | Fig.11 speedup vs MATG | `results/paper_reproduction/fig11_speedup_matg.svg` |
 | Fig.12 energy vs TempGNN | `results/paper_reproduction/fig12_energy_tempgnn.svg` |
@@ -82,11 +87,17 @@ Expected averages include:
 
 ```text
 TempGNN vs TGLite-CPU: 132.80x
-TempGNN vs MATG: 7.60x
-Energy, Cascade/TempGNN: 33.50x
+TempGNN vs MATG, explicit plotted AVG bar: 7.7889x
+Paper prose for TempGNN vs MATG: 7.6x
+Energy, Cascade/TempGNN, explicit plotted AVG bar: 33.545x
 w/o DDTC normalized time: 3.08x
 w/o OATS normalized time: 1.77x
 ```
+
+The sole reference input is `reference_inputs/paper_figure_values.csv`. Exact
+workbook cells and values digitized from vector geometry have different
+`source_kind` values. The Fig.11 plot/prose difference is retained rather than
+silently forced to match.
 
 ## Optional Q14 Edge-Stream Profiling
 
@@ -108,38 +119,45 @@ results/q14_real_tgl_edges/q14_summary.md
 
 The packet/reuse/collision/stall counters are produced from real edge streams. Latency uses a U280 225 MHz cycle model.
 
-## FPGA Baseline U280 Measurements
+## Fresh U280 Mechanism Comparison
+
+Remote U280 credentials are delivered through the conference's private AE
+channel after reviewer assignment. The public repository intentionally contains
+no login names, passwords, institutional hostnames, or personal SSH keys.
 
 ```bash
-python3 -m scripts.generate_baseline_u280_validation \
-  --board-json results/board_u280/summary.json \
-  --figure-dir results/paper_reproduction \
-  --out results/baselines_u280
-python3 -m scripts.derive_comparison_figures \
-  --baselines-root results/baselines_u280 \
-  --out results/derived_comparison_figures
-python3 -m scripts.verify_baseline_measurements \
-  --baselines-root results/baselines_u280 \
-  --figure-dir results/paper_reproduction \
-  --derived-dir results/derived_comparison_figures
+source /opt/xilinx/xrt/setup.sh
+make u280-core-preflight
+make ae-core-u280 U280_CORE_DEVICE=0 U280_CORE_REPETITIONS=3
 ```
 
 Outputs:
 
 ```text
-results/baselines_u280/manifest.csv
-results/baselines_u280/MATG/raw_latency_power_energy.csv
-results/baselines_u280/ViTeGNN/raw_latency_power_energy.csv
-results/baselines_u280/RTGA/raw_latency_power_energy.csv
-results/baselines_u280/verify_summary.csv
-results/derived_comparison_figures/fig10_speedup_tglite_cpu.csv
-results/derived_comparison_figures/fig11_speedup_matg.csv
-results/derived_comparison_figures/fig12_energy_tempgnn.csv
+results/reviewer_u280_runs/<run-id>/provenance.json
+results/reviewer_u280_runs/<run-id>/raw/*/measurements.csv
+results/reviewer_u280_runs/<run-id>/baselines_u280/
+results/reviewer_u280_runs/<run-id>/derived_comparison_figures/
+results/reviewer_u280_runs/<run-id>/verification.md
 ```
 
-Expected: MATG, ViTeGNN, and RTGA rows report reproduced U280 timing PASS and golden fixture PASS. The raw-to-figure outputs reproduce Fig.10/Fig.11/Fig.12 from measured-input CSVs within the stated thresholds.
+Expected: preflight prints four different xclbin SHA256 values. Every raw row
+has a kernel and embedding checksum, repeat-consistency status, board-power
+samples, xclbin link request, Vivado-connected post-route clock, WNS/TNS, real
+input URL, and input/fixture hashes. Unequal timing-closed clocks block
+comparison-figure generation.
+`verification.md` reports the
+observed diagnostic comparison error. The command never substitutes packaged
+reference values. A tolerance FAIL is recorded without turning an otherwise
+complete diagnostic hardware run into a command failure.
 
-## Optional U280 Board Validation
+This path is not paper-equivalent: it uses bounded real-data prefixes,
+8-dimensional Q10 kernels, deterministic stand-in weights, and `xbutil` power,
+whereas the paper uses complete model configurations, default 32-bit floating
+point, full evaluation streams, and post-route Vivado power estimates. It does
+not currently assert the Results Reproduced bridge.
+
+## TempGNN Sanity Validation
 
 If a reviewer has an Alveo U280 with the matching platform:
 
@@ -183,17 +201,21 @@ make u280-build \
 
 The recorded build used Vitis/Vivado 2023.2, XRT 2.16.204, and the `xilinx_u280_gen3x16_xdma_1_202211_1` platform. See `ENVIRONMENT.md` for OS, compiler, XRT, Vitis, platform, and setup-command details.
 
-## Packaged FPGA Artifact
+## Packaged FPGA Artifacts
 
-The package keeps one runnable U280 FPGA artifact under `build/`: the forward-path xclbin and its XRT host. The reviewer-facing summary reports frequency and timing status.
+The historical TempGNN sanity logs and layout remain under
+`results/board_u280/`. Four runnable, metadata-normalized comparison artifacts
+are under `artifacts/u280/`, with separate xclbins and build provenance.
+Baseline source and clean-room scope are documented in
+`hardware/baselines/README.md`.
 
 ## Bridge Evidence
 
 | Bridge | Evidence |
 | --- | --- |
 | Artifacts Available | source, scripts, tests, fixtures, generated CSV/SVG, figure-data CSVs, U280 logs, xclbin, and reports |
-| Artifacts Evaluated Functional | unit tests, figure generation, Q14 profiling path, U280 forward-path board PASS logs, FPGA baseline measurement verification |
-| Results Reproduced | regenerated motivation, speedup, energy, ablation, sensitivity figures, and baseline measurement tables |
+| Artifacts Evaluated Functional | unit tests, C-sim, four distinct U280 xclbins, checksum validation, post-route reports, and fresh power/latency rows |
+| Results Reproduced | not currently asserted; the fresh four-xclbin path is mechanism-level evidence and is explicitly marked not paper-equivalent |
 
 Reviewer-facing summary files:
 

@@ -3,18 +3,16 @@ __pycache__/
 .pytest_cache/
 /logs/
 /ae_export/*
-!/ae_export/tempgnn_ae_u280_measured_20260705_single_fpga.tgz
+!/ae_export/pap142_tempgnn_sc26_ae_u280.tgz
+!/ae_export/pap142_tempgnn_sc26_ae_u280.tgz.sha256
+!/ae_export/pap142_sc26_ad_ae_appendices.zip
+!/ae_export/pap142_sc26_ad_ae_appendices.zip.sha256
 /external/
 /tempgnn_hls_prj/
 /tempgnn_forward_hls_prj/
 /_paper_pages_tmp/
 
 /build/*
-!/build/vitis_u280_forward_hw/
-!/build/vitis_u280_forward_hw/tempgnn_forward_kernel.hw.xclbin
-!/build/vitis_u280_forward_hw/tempgnn_forward_kernel.hw.xclbin.info
-!/build/vitis_u280_forward_hw/tempgnn_forward_kernel.hw.xclbin.link_summary
-!/build/vitis_u280_forward_hw/tempgnn_forward_xrt_host
 
 /results/*
 !/results/ae_report/
@@ -33,6 +31,8 @@ __pycache__/
 !/results/board_u280/*.log
 !/results/board_u280/summary.json
 !/results/board_u280/tempgnn_u280_fpga_layout.png
+!/results/reviewer_u280_runs/
+!/results/reviewer_u280_runs/**
 
 /results/board_u280/tempgnn_u280_fpga_layout.svg
 /results/board_u280/layout_hook/

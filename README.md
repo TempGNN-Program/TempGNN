@@ -4,21 +4,31 @@ This repository packages a TempGNN artifact for SC-style AE review. It contains:
 
 1. A Python reference model for Target Dependency Packet (TDP) construction, DDTC scheduling, and OATS packet reuse.
 2. Vitis-HLS hardware source plus an XRT host path for an Alveo U280 forward-path FPGA run.
-3. Scripts that regenerate the TempGNN motivation, speedup, energy, ablation, and sensitivity CSV/SVG outputs.
+3. Independent paper-based MATG, ViTeGNN, and RTGA forward-path reproductions,
+   plus a common U280 measurement workflow for the core FPGA comparisons.
+4. Scripts that regenerate paper-reference CSV/SVG outputs from an anonymized,
+   source-labeled numeric table.
 
-The exact CPU-only and U280 hardware/software environments are listed in `ENVIRONMENT.md`. The measurement boundary is stated once in `AE_APPENDIX_DRAFT.md`.
+The exact CPU-only and U280 hardware/software environments are listed in
+`ENVIRONMENT.md`. The authoritative measurement boundary is stated in
+`AE_APPENDIX_DRAFT.md` and summarized in the reference-data manifest.
 
 ## Current U280 Board Evidence
 
 The package includes U280 forward-path evidence under `results/board_u280/`:
 
 - Board/platform: Alveo U280, `xilinx_u280_gen3x16_xdma_1_202211_1`.
-- Forward-path xclbin: `build/vitis_u280_forward_hw/tempgnn_forward_kernel.hw.xclbin`.
+- Current reviewer-runnable xclbin:
+  `artifacts/u280/TempGNN/bin/tempgnn_forward_kernel.hw.xclbin`.
 - Board runs: `smoke`, `tbscale`, `maxbatch`, and `layout_smoke` all PASS golden fixed-point checks.
 - Frequency/timing: target `225 MHz`, post-route WNS `+0.016 ns`, TNS `0.0 ns`.
 - Layout evidence: `results/board_u280/tempgnn_u280_fpga_layout.png`.
 
-The forward-path xclbin is the single packaged FPGA version.
+This directory preserves the original TempGNN forward-path sanity logs and
+layout evidence. Its older xclbin is omitted because its build metadata contains
+an absolute home path; the current metadata-normalized, bitstream-verified
+TempGNN xclbin is under `artifacts/u280/`. Fresh runs write new evidence under
+`results/reviewer_u280_runs/`.
 
 ## Current Local Vitis Status
 
@@ -110,9 +120,9 @@ Run on a TGL edge stream:
 python -m scripts.run_reproduction --data external/tgl/DATA/WIKI/edges.csv --batch-size 1000 --fanout 20 --depth 2
 ```
 
-## Figure Outputs
+## Packaged Reference Figure Outputs
 
-Generate the comparison artifacts:
+Regenerate the packaged reference CSV/SVG artifacts:
 
 ```bash
 python -m scripts.reproduce_paper_figures
@@ -122,9 +132,9 @@ Outputs are written to `results/paper_reproduction/`:
 
 - `all_figure_data.csv`
 - `figure_data_manifest.csv`
-- `motivation_gpu_bottleneck.csv/.svg`
-- `motivation_useful_data_ratio.csv/.svg`
-- `motivation_bpr.csv/.svg`
+- `fig2_execution_breakdown.csv/.svg`
+- `fig4a_branch_parallelism_ratio.csv/.svg`
+- `fig9b_gpu_overhead_breakdown.csv/.svg`
 - `fig10_speedup_tglite_cpu.csv/.svg`
 - `fig11_speedup_matg.csv/.svg`
 - `fig12_energy_tempgnn.csv/.svg`
@@ -133,39 +143,75 @@ Outputs are written to `results/paper_reproduction/`:
 - `fig14b_tdp_entries.csv/.svg`
 - `baseline_sources.md`
 
-Every generated SVG has a matching CSV source file. `figure_data_manifest.csv` maps each figure to its CSV/SVG pair, and `all_figure_data.csv` combines all plotted values into one reviewer-friendly table.
+Every generated SVG has a matching CSV source file. The sole input is
+`reference_inputs/paper_figure_values.csv`; each row records whether the value
+is an exact author-workbook cell or an axis-calibrated recovery from an author
+vector export. `reference_inputs/README.md` records source hashes, cell/geometry
+locators, uncertainty, and the Fig.11 plot/prose discrepancy. No per-point value
+is synthesized from a reported mean or range. This command checks deterministic
+paper-reference reconstruction; it is not the fresh U280 measurement command.
 
-## FPGA Baseline Measurements
+## Fresh U280 Mechanism Comparison
 
-Generate the reproduced U280 baseline measurement table:
+The reviewer-facing U280 workflow contains four independent implementations:
+TempGNN, MATG, ViTeGNN, and RTGA. Its checked configuration is
+`configs/u280_core_reproduction.json`:
 
 ```bash
-python -m scripts.generate_baseline_u280_validation --board-json results/board_u280/summary.json --figure-dir results/paper_reproduction --out results/baselines_u280
-python -m scripts.derive_comparison_figures --baselines-root results/baselines_u280 --out results/derived_comparison_figures
-python -m scripts.verify_baseline_measurements --baselines-root results/baselines_u280 --figure-dir results/paper_reproduction --derived-dir results/derived_comparison_figures
+make u280-core-preflight
+make ae-core-u280 U280_CORE_DEVICE=0 U280_CORE_REPETITIONS=3
 ```
 
-Outputs:
+The preflight records artifact hashes and rejects byte-identical xclbins. Each
+runner must write fresh per-repetition measurements from public real-dataset
+prefixes; the workflow then derives Fig.11/Fig.12-shaped diagnostic tables and
+writes an automatic numerical comparison under
+`results/reviewer_u280_runs/<run-id>/`. Synthetic fixtures are limited to C-sim
+and are rejected by this workflow. Packaged reference CSV files are never
+overwritten. The link request is read from each final xclbin, while the
+implemented kernel clock and WNS/TNS are verified from the Vivado `ap_clk`
+connection and post-route timing report. Comparison-figure generation is
+rejected if the four timing-closed kernel clocks are not comparable. Because
+this configuration is explicitly diagnostic, a completed
+run remains successful even when `verification.md` records a tolerance FAIL;
+use `--require-paper-match` only when auditing a paper-equivalent configuration.
 
-- `results/baselines_u280/manifest.csv`
-- `results/baselines_u280/MATG/`
-- `results/baselines_u280/ViTeGNN/`
-- `results/baselines_u280/RTGA/`
-- `results/baselines_u280/verify_summary.csv`
-- `results/derived_comparison_figures/fig10_speedup_tglite_cpu.csv/.svg`
-- `results/derived_comparison_figures/fig11_speedup_matg.csv/.svg`
-- `results/derived_comparison_figures/fig12_energy_tempgnn.csv/.svg`
+This is a bounded mechanism-level comparison, not a paper-equivalent rerun.
+The packaged kernels use an 8-dimensional Q10 forward path and deterministic
+stand-in weights over 8,192-event prefixes, with total-board power sampled by
+`xbutil`. The paper's evaluation uses complete model configurations, default
+32-bit floating point, full dataset streams, and post-route Vivado power
+estimates. `configs/u280_core_reproduction.json` therefore records
+`results_reproduced_eligible: false`.
 
-Each FPGA baseline directory contains `build_config.json`, `commit_patch.md`, `run_command.sh`, `board.log`, `timing_resource_report.md/.csv`, and `raw_latency_power_energy.csv`. The raw-to-figure script regenerates Fig.10/Fig.11/Fig.12 from these reproduced measured-input CSV files, and the verifier checks that the derived values match the packaged core conclusion figures within the stated thresholds.
+The baseline source, paper-mechanism mapping, limitations, build commands,
+measurement definition, artifact contract, and raw CSV schema are documented
+in `hardware/baselines/README.md` and `artifacts/u280/README.md`. If any
+independent implementation is absent, preflight fails rather than substituting
+the TempGNN kernel.
 
 ## Baseline Status
 
-- MATG: public source is available at `https://github.com/zjjzby/TGNN-FPGA-IPDPS2022`.
-- ViTeGNN: reproduced according to the published paper and measured on U280; the reported FPGA comparison values are from the reproduced run.
-- RTGA: reproduced according to the published paper and measured on U280; the reported FPGA comparison values are from the reproduced run.
-- Cascade: reproduced according to the published paper and measured in the GPU comparison environment; the reported comparison values are from the reproduced run.
-- TGLite: reproduced from the released artifact and measured in the CPU comparison environment; the reported comparison values are from the reproduced run.
-- TempGNN: this repo includes HLS kernels, testbenches, Vitis build scripts, XRT host code, U280 forward-path board logs, and one packaged U280 forward-path xclbin.
+- MATG: independently reproduced from the IPDPS 2022 paper and its partial
+  public HLS headers; includes a distinct source, runner, and U280 xclbin.
+- ViTeGNN: independently reproduced from the TPDS 2025 paper; includes a
+  distinct source, runner, and U280 xclbin.
+- RTGA: independently reproduced from the DAC 2024 paper; includes a distinct
+  source, runner, and U280 xclbin.
+- Cascade and TGLite-CPU: retained only as packaged paper comparison records in
+  this repository; no fresh execution of those external stacks is claimed.
+- TempGNN: includes HLS kernels, testbenches, Vitis build scripts, XRT host
+  code, U280 forward-path board logs, and its own U280 xclbin.
+
+The three baselines are clean-room, paper-based forward-path reproductions, not
+the authors' complete original stacks. This distinction is intentional and is
+recorded in every fresh run's provenance.
+
+Run `make release-preflight` before creating the Zenodo archive. It currently
+refuses a Results Reproduced release claim because the bounded implementation
+is not paper-equivalent; it also requires a license, final citation metadata,
+four distinct U280 artifacts, and a fresh numerical PASS. See
+`ZENODO_RELEASE_CHECKLIST.md`.
 
 ## Metric Meaning
 

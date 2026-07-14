@@ -1,101 +1,101 @@
-dataset,figure,model,solution,value
-WK,fig10_speedup_tglite_cpu,JODIE,TGLite-CPU,1.0
-WK,fig10_speedup_tglite_cpu,JODIE,Cascade,4.9478
-WK,fig10_speedup_tglite_cpu,JODIE,TempGNN-G,12.1394
-WK,fig10_speedup_tglite_cpu,JODIE,TempGNN,114.7194
-MC,fig10_speedup_tglite_cpu,JODIE,TGLite-CPU,1.0
-MC,fig10_speedup_tglite_cpu,JODIE,Cascade,4.6807
-MC,fig10_speedup_tglite_cpu,JODIE,TempGNN-G,12.9824
-MC,fig10_speedup_tglite_cpu,JODIE,TempGNN,138.2007
-RT,fig10_speedup_tglite_cpu,JODIE,TGLite-CPU,1.0
-RT,fig10_speedup_tglite_cpu,JODIE,Cascade,4.8392
-RT,fig10_speedup_tglite_cpu,JODIE,TempGNN-G,12.415
-RT,fig10_speedup_tglite_cpu,JODIE,TempGNN,122.9378
-LM,fig10_speedup_tglite_cpu,JODIE,TGLite-CPU,1.0
-LM,fig10_speedup_tglite_cpu,JODIE,Cascade,4.7982
-LM,fig10_speedup_tglite_cpu,JODIE,TempGNN-G,12.5403
-LM,fig10_speedup_tglite_cpu,JODIE,TempGNN,126.46
-WT,fig10_speedup_tglite_cpu,JODIE,TGLite-CPU,1.0
-WT,fig10_speedup_tglite_cpu,JODIE,Cascade,4.7132
-WT,fig10_speedup_tglite_cpu,JODIE,TempGNN-G,12.8463
-WT,fig10_speedup_tglite_cpu,JODIE,TempGNN,134.6785
-GT,fig10_speedup_tglite_cpu,JODIE,TGLite-CPU,1.0
-GT,fig10_speedup_tglite_cpu,JODIE,Cascade,4.6404
-GT,fig10_speedup_tglite_cpu,JODIE,TempGNN-G,13.168
-GT,fig10_speedup_tglite_cpu,JODIE,TempGNN,142.897
-WK,fig10_speedup_tglite_cpu,TGN,TGLite-CPU,1.0
-WK,fig10_speedup_tglite_cpu,TGN,Cascade,4.8397
-WK,fig10_speedup_tglite_cpu,TGN,TempGNN-G,12.1839
-WK,fig10_speedup_tglite_cpu,TGN,TempGNN,119.4156
-MC,fig10_speedup_tglite_cpu,TGN,TGLite-CPU,1.0
-MC,fig10_speedup_tglite_cpu,TGN,Cascade,4.6074
-MC,fig10_speedup_tglite_cpu,TGN,TempGNN-G,13.0743
-MC,fig10_speedup_tglite_cpu,TGN,TempGNN,142.897
-RT,fig10_speedup_tglite_cpu,TGN,TGLite-CPU,1.0
-RT,fig10_speedup_tglite_cpu,TGN,Cascade,4.7459
-RT,fig10_speedup_tglite_cpu,TGN,TempGNN-G,12.4797
-RT,fig10_speedup_tglite_cpu,TGN,TempGNN,127.6341
-LM,fig10_speedup_tglite_cpu,TGN,TGLite-CPU,1.0
-LM,fig10_speedup_tglite_cpu,TGN,Cascade,4.7103
-LM,fig10_speedup_tglite_cpu,TGN,TempGNN-G,12.6123
-LM,fig10_speedup_tglite_cpu,TGN,TempGNN,131.1563
-WT,fig10_speedup_tglite_cpu,TGN,TGLite-CPU,1.0
-WT,fig10_speedup_tglite_cpu,TGN,Cascade,4.636
-WT,fig10_speedup_tglite_cpu,TGN,TempGNN-G,12.9328
-WT,fig10_speedup_tglite_cpu,TGN,TempGNN,139.3748
-GT,fig10_speedup_tglite_cpu,TGN,TGLite-CPU,1.0
-GT,fig10_speedup_tglite_cpu,TGN,Cascade,4.5719
-GT,fig10_speedup_tglite_cpu,TGN,TempGNN-G,13.2664
-GT,fig10_speedup_tglite_cpu,TGN,TempGNN,147.5932
-WK,fig10_speedup_tglite_cpu,TGAT,TGLite-CPU,1.0
-WK,fig10_speedup_tglite_cpu,TGAT,Cascade,4.7872
-WK,fig10_speedup_tglite_cpu,TGAT,TempGNN-G,12.2152
-WK,fig10_speedup_tglite_cpu,TGAT,TempGNN,121.9203
-MC,fig10_speedup_tglite_cpu,TGAT,TGLite-CPU,1.0
-MC,fig10_speedup_tglite_cpu,TGAT,Cascade,4.5712
-MC,fig10_speedup_tglite_cpu,TGAT,TempGNN-G,13.1276
-MC,fig10_speedup_tglite_cpu,TGAT,TempGNN,145.4017
-RT,fig10_speedup_tglite_cpu,TGAT,TGLite-CPU,1.0
-RT,fig10_speedup_tglite_cpu,TGAT,Cascade,4.7003
-RT,fig10_speedup_tglite_cpu,TGAT,TempGNN-G,12.5203
-RT,fig10_speedup_tglite_cpu,TGAT,TempGNN,130.1388
-LM,fig10_speedup_tglite_cpu,TGAT,TGLite-CPU,1.0
-LM,fig10_speedup_tglite_cpu,TGAT,Cascade,4.6672
-LM,fig10_speedup_tglite_cpu,TGAT,TempGNN-G,12.6563
-LM,fig10_speedup_tglite_cpu,TGAT,TempGNN,133.661
-WT,fig10_speedup_tglite_cpu,TGAT,TGLite-CPU,1.0
-WT,fig10_speedup_tglite_cpu,TGAT,Cascade,4.5979
-WT,fig10_speedup_tglite_cpu,TGAT,TempGNN-G,12.9836
-WT,fig10_speedup_tglite_cpu,TGAT,TempGNN,141.8794
-GT,fig10_speedup_tglite_cpu,TGAT,TGLite-CPU,1.0
-GT,fig10_speedup_tglite_cpu,TGAT,Cascade,4.5379
-GT,fig10_speedup_tglite_cpu,TGAT,TempGNN-G,13.3226
-GT,fig10_speedup_tglite_cpu,TGAT,TempGNN,150.0979
-WK,fig10_speedup_tglite_cpu,APAN,TGLite-CPU,1.0
-WK,fig10_speedup_tglite_cpu,APAN,Cascade,4.9633
-WK,fig10_speedup_tglite_cpu,APAN,TempGNN-G,12.135
-WK,fig10_speedup_tglite_cpu,APAN,TempGNN,114.0932
-MC,fig10_speedup_tglite_cpu,APAN,TGLite-CPU,1.0
-MC,fig10_speedup_tglite_cpu,APAN,Cascade,4.691
-MC,fig10_speedup_tglite_cpu,APAN,TempGNN-G,12.971
-MC,fig10_speedup_tglite_cpu,APAN,TempGNN,137.5745
-RT,fig10_speedup_tglite_cpu,APAN,TGLite-CPU,1.0
-RT,fig10_speedup_tglite_cpu,APAN,Cascade,4.8524
-RT,fig10_speedup_tglite_cpu,APAN,TempGNN-G,12.4076
-RT,fig10_speedup_tglite_cpu,APAN,TempGNN,122.3117
-LM,fig10_speedup_tglite_cpu,APAN,TGLite-CPU,1.0
-LM,fig10_speedup_tglite_cpu,APAN,Cascade,4.8106
-LM,fig10_speedup_tglite_cpu,APAN,TempGNN-G,12.5318
-LM,fig10_speedup_tglite_cpu,APAN,TempGNN,125.8339
-WT,fig10_speedup_tglite_cpu,APAN,TGLite-CPU,1.0
-WT,fig10_speedup_tglite_cpu,APAN,Cascade,4.7241
-WT,fig10_speedup_tglite_cpu,APAN,TempGNN-G,12.8357
-WT,fig10_speedup_tglite_cpu,APAN,TempGNN,134.0523
-GT,fig10_speedup_tglite_cpu,APAN,TGLite-CPU,1.0
-GT,fig10_speedup_tglite_cpu,APAN,Cascade,4.6501
-GT,fig10_speedup_tglite_cpu,APAN,TempGNN-G,13.1556
-GT,fig10_speedup_tglite_cpu,APAN,TempGNN,142.2708
-AVG,fig10_speedup_tglite_cpu,AVG,TGLite-CPU,1.0
-AVG,fig10_speedup_tglite_cpu,AVG,Cascade,4.7202
-AVG,fig10_speedup_tglite_cpu,AVG,TempGNN-G,12.7293
-AVG,fig10_speedup_tglite_cpu,AVG,TempGNN,132.8
+dataset,figure,model,solution,source_id,source_kind,source_locator,source_sha256,value,value_note
+WK,fig10_speedup_tglite_cpu,JODIE,TGLite-CPU,workbook_b,exact_workbook_value,Sheet1!S31,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.0,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+WK,fig10_speedup_tglite_cpu,JODIE,Cascade,workbook_b,exact_workbook_value,Sheet1!T31,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,5.42,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+WK,fig10_speedup_tglite_cpu,JODIE,TempGNN-G,workbook_b,exact_workbook_value,Sheet1!U31,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,11.15,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+WK,fig10_speedup_tglite_cpu,JODIE,TempGNN,workbook_b,exact_workbook_value,Sheet1!V31,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,128.4,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+MC,fig10_speedup_tglite_cpu,JODIE,TGLite-CPU,workbook_b,exact_workbook_value,Sheet1!S32,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.0,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+MC,fig10_speedup_tglite_cpu,JODIE,Cascade,workbook_b,exact_workbook_value,Sheet1!T32,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,4.88,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+MC,fig10_speedup_tglite_cpu,JODIE,TempGNN-G,workbook_b,exact_workbook_value,Sheet1!U32,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,9.64,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+MC,fig10_speedup_tglite_cpu,JODIE,TempGNN,workbook_b,exact_workbook_value,Sheet1!V32,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,121.5,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+RT,fig10_speedup_tglite_cpu,JODIE,TGLite-CPU,workbook_b,exact_workbook_value,Sheet1!S33,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.0,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+RT,fig10_speedup_tglite_cpu,JODIE,Cascade,workbook_b,exact_workbook_value,Sheet1!T33,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,5.12,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+RT,fig10_speedup_tglite_cpu,JODIE,TempGNN-G,workbook_b,exact_workbook_value,Sheet1!U33,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,10.25,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+RT,fig10_speedup_tglite_cpu,JODIE,TempGNN,workbook_b,exact_workbook_value,Sheet1!V33,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,131.2,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+LM,fig10_speedup_tglite_cpu,JODIE,TGLite-CPU,workbook_b,exact_workbook_value,Sheet1!S34,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.0,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+LM,fig10_speedup_tglite_cpu,JODIE,Cascade,workbook_b,exact_workbook_value,Sheet1!T34,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,4.65,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+LM,fig10_speedup_tglite_cpu,JODIE,TempGNN-G,workbook_b,exact_workbook_value,Sheet1!U34,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,8.84,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+LM,fig10_speedup_tglite_cpu,JODIE,TempGNN,workbook_b,exact_workbook_value,Sheet1!V34,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,108.6,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+WT,fig10_speedup_tglite_cpu,JODIE,TGLite-CPU,workbook_b,exact_workbook_value,Sheet1!S35,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.0,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+WT,fig10_speedup_tglite_cpu,JODIE,Cascade,workbook_b,exact_workbook_value,Sheet1!T35,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,3.95,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+WT,fig10_speedup_tglite_cpu,JODIE,TempGNN-G,workbook_b,exact_workbook_value,Sheet1!U35,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,9.12,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+WT,fig10_speedup_tglite_cpu,JODIE,TempGNN,workbook_b,exact_workbook_value,Sheet1!V35,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,152.4,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+GT,fig10_speedup_tglite_cpu,JODIE,TGLite-CPU,workbook_b,exact_workbook_value,Sheet1!S36,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.0,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+GT,fig10_speedup_tglite_cpu,JODIE,Cascade,workbook_b,exact_workbook_value,Sheet1!T36,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,3.82,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+GT,fig10_speedup_tglite_cpu,JODIE,TempGNN-G,workbook_b,exact_workbook_value,Sheet1!U36,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,9.55,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+GT,fig10_speedup_tglite_cpu,JODIE,TempGNN,workbook_b,exact_workbook_value,Sheet1!V36,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,168.5,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+WK,fig10_speedup_tglite_cpu,TGN,TGLite-CPU,workbook_b,exact_workbook_value,Sheet1!S37,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.0,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+WK,fig10_speedup_tglite_cpu,TGN,Cascade,workbook_b,exact_workbook_value,Sheet1!T37,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,4.95,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+WK,fig10_speedup_tglite_cpu,TGN,TempGNN-G,workbook_b,exact_workbook_value,Sheet1!U37,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,10.22,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+WK,fig10_speedup_tglite_cpu,TGN,TempGNN,workbook_b,exact_workbook_value,Sheet1!V37,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,132.8,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+MC,fig10_speedup_tglite_cpu,TGN,TGLite-CPU,workbook_b,exact_workbook_value,Sheet1!S38,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.0,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+MC,fig10_speedup_tglite_cpu,TGN,Cascade,workbook_b,exact_workbook_value,Sheet1!T38,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,4.54,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+MC,fig10_speedup_tglite_cpu,TGN,TempGNN-G,workbook_b,exact_workbook_value,Sheet1!U38,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,8.95,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+MC,fig10_speedup_tglite_cpu,TGN,TempGNN,workbook_b,exact_workbook_value,Sheet1!V38,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,125.4,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+RT,fig10_speedup_tglite_cpu,TGN,TGLite-CPU,workbook_b,exact_workbook_value,Sheet1!S39,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.0,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+RT,fig10_speedup_tglite_cpu,TGN,Cascade,workbook_b,exact_workbook_value,Sheet1!T39,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,4.76,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+RT,fig10_speedup_tglite_cpu,TGN,TempGNN-G,workbook_b,exact_workbook_value,Sheet1!U39,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,9.42,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+RT,fig10_speedup_tglite_cpu,TGN,TempGNN,workbook_b,exact_workbook_value,Sheet1!V39,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,135.2,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+LM,fig10_speedup_tglite_cpu,TGN,TGLite-CPU,workbook_b,exact_workbook_value,Sheet1!S40,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.0,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+LM,fig10_speedup_tglite_cpu,TGN,Cascade,workbook_b,exact_workbook_value,Sheet1!T40,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,4.25,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+LM,fig10_speedup_tglite_cpu,TGN,TempGNN-G,workbook_b,exact_workbook_value,Sheet1!U40,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,8.15,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+LM,fig10_speedup_tglite_cpu,TGN,TempGNN,workbook_b,exact_workbook_value,Sheet1!V40,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,112.5,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+WT,fig10_speedup_tglite_cpu,TGN,TGLite-CPU,workbook_b,exact_workbook_value,Sheet1!S41,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.0,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+WT,fig10_speedup_tglite_cpu,TGN,Cascade,workbook_b,exact_workbook_value,Sheet1!T41,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,3.65,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+WT,fig10_speedup_tglite_cpu,TGN,TempGNN-G,workbook_b,exact_workbook_value,Sheet1!U41,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,8.45,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+WT,fig10_speedup_tglite_cpu,TGN,TempGNN,workbook_b,exact_workbook_value,Sheet1!V41,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,158.6,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+GT,fig10_speedup_tglite_cpu,TGN,TGLite-CPU,workbook_b,exact_workbook_value,Sheet1!S42,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.0,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+GT,fig10_speedup_tglite_cpu,TGN,Cascade,workbook_b,exact_workbook_value,Sheet1!T42,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,3.48,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+GT,fig10_speedup_tglite_cpu,TGN,TempGNN-G,workbook_b,exact_workbook_value,Sheet1!U42,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,8.86,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+GT,fig10_speedup_tglite_cpu,TGN,TempGNN,workbook_b,exact_workbook_value,Sheet1!V42,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,175.2,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+WK,fig10_speedup_tglite_cpu,TGAT,TGLite-CPU,workbook_b,exact_workbook_value,Sheet1!S43,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.0,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+WK,fig10_speedup_tglite_cpu,TGAT,Cascade,workbook_b,exact_workbook_value,Sheet1!T43,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,5.86,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+WK,fig10_speedup_tglite_cpu,TGAT,TempGNN-G,workbook_b,exact_workbook_value,Sheet1!U43,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,12.32,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+WK,fig10_speedup_tglite_cpu,TGAT,TempGNN,workbook_b,exact_workbook_value,Sheet1!V43,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,130.5,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+MC,fig10_speedup_tglite_cpu,TGAT,TGLite-CPU,workbook_b,exact_workbook_value,Sheet1!S44,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.0,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+MC,fig10_speedup_tglite_cpu,TGAT,Cascade,workbook_b,exact_workbook_value,Sheet1!T44,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,5.35,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+MC,fig10_speedup_tglite_cpu,TGAT,TempGNN-G,workbook_b,exact_workbook_value,Sheet1!U44,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,10.63,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+MC,fig10_speedup_tglite_cpu,TGAT,TempGNN,workbook_b,exact_workbook_value,Sheet1!V44,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,123.6,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+RT,fig10_speedup_tglite_cpu,TGAT,TGLite-CPU,workbook_b,exact_workbook_value,Sheet1!S45,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.0,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+RT,fig10_speedup_tglite_cpu,TGAT,Cascade,workbook_b,exact_workbook_value,Sheet1!T45,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,5.49,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+RT,fig10_speedup_tglite_cpu,TGAT,TempGNN-G,workbook_b,exact_workbook_value,Sheet1!U45,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,11.24,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+RT,fig10_speedup_tglite_cpu,TGAT,TempGNN,workbook_b,exact_workbook_value,Sheet1!V45,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,133.4,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+LM,fig10_speedup_tglite_cpu,TGAT,TGLite-CPU,workbook_b,exact_workbook_value,Sheet1!S46,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.0,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+LM,fig10_speedup_tglite_cpu,TGAT,Cascade,workbook_b,exact_workbook_value,Sheet1!T46,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,5.18,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+LM,fig10_speedup_tglite_cpu,TGAT,TempGNN-G,workbook_b,exact_workbook_value,Sheet1!U46,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,10.04,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+LM,fig10_speedup_tglite_cpu,TGAT,TempGNN,workbook_b,exact_workbook_value,Sheet1!V46,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,110.2,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+WT,fig10_speedup_tglite_cpu,TGAT,TGLite-CPU,workbook_b,exact_workbook_value,Sheet1!S47,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.0,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+WT,fig10_speedup_tglite_cpu,TGAT,Cascade,workbook_b,exact_workbook_value,Sheet1!T47,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,4.28,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+WT,fig10_speedup_tglite_cpu,TGAT,TempGNN-G,workbook_b,exact_workbook_value,Sheet1!U47,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,10.07,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+WT,fig10_speedup_tglite_cpu,TGAT,TempGNN,workbook_b,exact_workbook_value,Sheet1!V47,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,155.8,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+GT,fig10_speedup_tglite_cpu,TGAT,TGLite-CPU,workbook_b,exact_workbook_value,Sheet1!S48,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.0,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+GT,fig10_speedup_tglite_cpu,TGAT,Cascade,workbook_b,exact_workbook_value,Sheet1!T48,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,4.31,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+GT,fig10_speedup_tglite_cpu,TGAT,TempGNN-G,workbook_b,exact_workbook_value,Sheet1!U48,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,10.68,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+GT,fig10_speedup_tglite_cpu,TGAT,TempGNN,workbook_b,exact_workbook_value,Sheet1!V48,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,171.4,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+WK,fig10_speedup_tglite_cpu,APAN,TGLite-CPU,workbook_b,exact_workbook_value,Sheet1!S49,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.0,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+WK,fig10_speedup_tglite_cpu,APAN,Cascade,workbook_b,exact_workbook_value,Sheet1!T49,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,7.85,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+WK,fig10_speedup_tglite_cpu,APAN,TempGNN-G,workbook_b,exact_workbook_value,Sheet1!U49,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,15.42,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+WK,fig10_speedup_tglite_cpu,APAN,TempGNN,workbook_b,exact_workbook_value,Sheet1!V49,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,115.6,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+MC,fig10_speedup_tglite_cpu,APAN,TGLite-CPU,workbook_b,exact_workbook_value,Sheet1!S50,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.0,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+MC,fig10_speedup_tglite_cpu,APAN,Cascade,workbook_b,exact_workbook_value,Sheet1!T50,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,7.12,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+MC,fig10_speedup_tglite_cpu,APAN,TempGNN-G,workbook_b,exact_workbook_value,Sheet1!U50,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,13.85,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+MC,fig10_speedup_tglite_cpu,APAN,TempGNN,workbook_b,exact_workbook_value,Sheet1!V50,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,105.8,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+RT,fig10_speedup_tglite_cpu,APAN,TGLite-CPU,workbook_b,exact_workbook_value,Sheet1!S51,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.0,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+RT,fig10_speedup_tglite_cpu,APAN,Cascade,workbook_b,exact_workbook_value,Sheet1!T51,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,7.45,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+RT,fig10_speedup_tglite_cpu,APAN,TempGNN-G,workbook_b,exact_workbook_value,Sheet1!U51,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,14.62,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+RT,fig10_speedup_tglite_cpu,APAN,TempGNN,workbook_b,exact_workbook_value,Sheet1!V51,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,118.4,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+LM,fig10_speedup_tglite_cpu,APAN,TGLite-CPU,workbook_b,exact_workbook_value,Sheet1!S52,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.0,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+LM,fig10_speedup_tglite_cpu,APAN,Cascade,workbook_b,exact_workbook_value,Sheet1!T52,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,6.84,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+LM,fig10_speedup_tglite_cpu,APAN,TempGNN-G,workbook_b,exact_workbook_value,Sheet1!U52,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,12.54,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+LM,fig10_speedup_tglite_cpu,APAN,TempGNN,workbook_b,exact_workbook_value,Sheet1!V52,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,98.5,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+WT,fig10_speedup_tglite_cpu,APAN,TGLite-CPU,workbook_b,exact_workbook_value,Sheet1!S53,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.0,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+WT,fig10_speedup_tglite_cpu,APAN,Cascade,workbook_b,exact_workbook_value,Sheet1!T53,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,5.95,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+WT,fig10_speedup_tglite_cpu,APAN,TempGNN-G,workbook_b,exact_workbook_value,Sheet1!U53,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,12.85,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+WT,fig10_speedup_tglite_cpu,APAN,TempGNN,workbook_b,exact_workbook_value,Sheet1!V53,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,142.3,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+GT,fig10_speedup_tglite_cpu,APAN,TGLite-CPU,workbook_b,exact_workbook_value,Sheet1!S54,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.0,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+GT,fig10_speedup_tglite_cpu,APAN,Cascade,workbook_b,exact_workbook_value,Sheet1!T54,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,6.12,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+GT,fig10_speedup_tglite_cpu,APAN,TempGNN-G,workbook_b,exact_workbook_value,Sheet1!U54,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,13.45,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+GT,fig10_speedup_tglite_cpu,APAN,TempGNN,workbook_b,exact_workbook_value,Sheet1!V54,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,156.4,"Exact workbook value. Model blocks follow the published figure axis (JODIE, TGN, TGAT, APAN); two neighboring workbook labels are swapped."
+AVG,fig10_speedup_tglite_cpu,AVG,TGLite-CPU,workbook_b,exact_workbook_value,Sheet1!S55,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,1.0,Explicit overall cell from the author plotting workbook.
+AVG,fig10_speedup_tglite_cpu,AVG,Cascade,workbook_b,exact_workbook_value,Sheet1!T55,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,5.22,Explicit overall cell from the author plotting workbook.
+AVG,fig10_speedup_tglite_cpu,AVG,TempGNN-G,workbook_b,exact_workbook_value,Sheet1!U55,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,10.85,Explicit overall cell from the author plotting workbook.
+AVG,fig10_speedup_tglite_cpu,AVG,TempGNN,workbook_b,exact_workbook_value,Sheet1!V55,fb9c95a3e356b9e2c601c612941d7e66ee9c3fa7d1b92392c77ac57fa3d768cf,132.8,Explicit overall cell from the author plotting workbook.

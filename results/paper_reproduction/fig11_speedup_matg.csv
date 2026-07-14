@@ -1,101 +1,101 @@
-dataset,figure,model,solution,value
-WK,fig11_speedup_matg,JODIE,MATG,1.0
-WK,fig11_speedup_matg,JODIE,ViTeGNN,1.3625
-WK,fig11_speedup_matg,JODIE,RTGA,1.9057
-WK,fig11_speedup_matg,JODIE,TempGNN,6.6263
-MC,fig11_speedup_matg,JODIE,MATG,1.0
-MC,fig11_speedup_matg,JODIE,ViTeGNN,1.4212
-MC,fig11_speedup_matg,JODIE,RTGA,2.0297
-MC,fig11_speedup_matg,JODIE,TempGNN,7.8967
-RT,fig11_speedup_matg,JODIE,MATG,1.0
-RT,fig11_speedup_matg,JODIE,ViTeGNN,1.3849
-RT,fig11_speedup_matg,JODIE,RTGA,1.9523
-RT,fig11_speedup_matg,JODIE,TempGNN,7.0709
-LM,fig11_speedup_matg,JODIE,MATG,1.0
-LM,fig11_speedup_matg,JODIE,ViTeGNN,1.3938
-LM,fig11_speedup_matg,JODIE,RTGA,1.9712
-LM,fig11_speedup_matg,JODIE,TempGNN,7.2615
-WT,fig11_speedup_matg,JODIE,MATG,1.0
-WT,fig11_speedup_matg,JODIE,ViTeGNN,1.4134
-WT,fig11_speedup_matg,JODIE,RTGA,2.0128
-WT,fig11_speedup_matg,JODIE,TempGNN,7.7061
-GT,fig11_speedup_matg,JODIE,MATG,1.0
-GT,fig11_speedup_matg,JODIE,ViTeGNN,1.4313
-GT,fig11_speedup_matg,JODIE,RTGA,2.0514
-GT,fig11_speedup_matg,JODIE,TempGNN,8.1508
-WK,fig11_speedup_matg,TGN,MATG,1.0
-WK,fig11_speedup_matg,TGN,ViTeGNN,1.3726
-WK,fig11_speedup_matg,TGN,RTGA,1.9266
-WK,fig11_speedup_matg,TGN,TempGNN,6.8729
-MC,fig11_speedup_matg,TGN,MATG,1.0
-MC,fig11_speedup_matg,TGN,ViTeGNN,1.4286
-MC,fig11_speedup_matg,TGN,RTGA,2.0456
-MC,fig11_speedup_matg,TGN,TempGNN,8.1433
-RT,fig11_speedup_matg,TGN,MATG,1.0
-RT,fig11_speedup_matg,TGN,ViTeGNN,1.3939
-RT,fig11_speedup_matg,TGN,RTGA,1.9713
-RT,fig11_speedup_matg,TGN,TempGNN,7.3175
-LM,fig11_speedup_matg,TGN,MATG,1.0
-LM,fig11_speedup_matg,TGN,ViTeGNN,1.4024
-LM,fig11_speedup_matg,TGN,RTGA,1.9894
-LM,fig11_speedup_matg,TGN,TempGNN,7.5081
-WT,fig11_speedup_matg,TGN,MATG,1.0
-WT,fig11_speedup_matg,TGN,ViTeGNN,1.4211
-WT,fig11_speedup_matg,TGN,RTGA,2.0294
-WT,fig11_speedup_matg,TGN,TempGNN,7.9527
-GT,fig11_speedup_matg,TGN,MATG,1.0
-GT,fig11_speedup_matg,TGN,ViTeGNN,1.4382
-GT,fig11_speedup_matg,TGN,RTGA,2.0665
-GT,fig11_speedup_matg,TGN,TempGNN,8.3974
-WK,fig11_speedup_matg,TGAT,MATG,1.0
-WK,fig11_speedup_matg,TGAT,ViTeGNN,1.3778
-WK,fig11_speedup_matg,TGAT,RTGA,1.9374
-WK,fig11_speedup_matg,TGAT,TempGNN,7.0044
-MC,fig11_speedup_matg,TGAT,MATG,1.0
-MC,fig11_speedup_matg,TGAT,ViTeGNN,1.4324
-MC,fig11_speedup_matg,TGAT,RTGA,2.0539
-MC,fig11_speedup_matg,TGAT,TempGNN,8.2748
-RT,fig11_speedup_matg,TGAT,MATG,1.0
-RT,fig11_speedup_matg,TGAT,ViTeGNN,1.3985
-RT,fig11_speedup_matg,TGAT,RTGA,1.981
-RT,fig11_speedup_matg,TGAT,TempGNN,7.449
-LM,fig11_speedup_matg,TGAT,MATG,1.0
-LM,fig11_speedup_matg,TGAT,ViTeGNN,1.4068
-LM,fig11_speedup_matg,TGAT,RTGA,1.9988
-LM,fig11_speedup_matg,TGAT,TempGNN,7.6396
-WT,fig11_speedup_matg,TGAT,MATG,1.0
-WT,fig11_speedup_matg,TGAT,ViTeGNN,1.4251
-WT,fig11_speedup_matg,TGAT,RTGA,2.0379
-WT,fig11_speedup_matg,TGAT,TempGNN,8.0842
-GT,fig11_speedup_matg,TGAT,MATG,1.0
-GT,fig11_speedup_matg,TGAT,ViTeGNN,1.4418
-GT,fig11_speedup_matg,TGAT,RTGA,2.0744
-GT,fig11_speedup_matg,TGAT,TempGNN,8.5289
-WK,fig11_speedup_matg,APAN,MATG,1.0
-WK,fig11_speedup_matg,APAN,ViTeGNN,1.3611
-WK,fig11_speedup_matg,APAN,RTGA,1.9028
-WK,fig11_speedup_matg,APAN,TempGNN,6.5934
-MC,fig11_speedup_matg,APAN,MATG,1.0
-MC,fig11_speedup_matg,APAN,ViTeGNN,1.4202
-MC,fig11_speedup_matg,APAN,RTGA,2.0275
-MC,fig11_speedup_matg,APAN,TempGNN,7.8638
-RT,fig11_speedup_matg,APAN,MATG,1.0
-RT,fig11_speedup_matg,APAN,ViTeGNN,1.3837
-RT,fig11_speedup_matg,APAN,RTGA,1.9497
-RT,fig11_speedup_matg,APAN,TempGNN,7.038
-LM,fig11_speedup_matg,APAN,MATG,1.0
-LM,fig11_speedup_matg,APAN,ViTeGNN,1.3927
-LM,fig11_speedup_matg,APAN,RTGA,1.9687
-LM,fig11_speedup_matg,APAN,TempGNN,7.2286
-WT,fig11_speedup_matg,APAN,MATG,1.0
-WT,fig11_speedup_matg,APAN,ViTeGNN,1.4123
-WT,fig11_speedup_matg,APAN,RTGA,2.0105
-WT,fig11_speedup_matg,APAN,TempGNN,7.6732
-GT,fig11_speedup_matg,APAN,MATG,1.0
-GT,fig11_speedup_matg,APAN,ViTeGNN,1.4303
-GT,fig11_speedup_matg,APAN,RTGA,2.0493
-GT,fig11_speedup_matg,APAN,TempGNN,8.1179
-AVG,fig11_speedup_matg,AVG,MATG,1.0
-AVG,fig11_speedup_matg,AVG,ViTeGNN,1.4061
-AVG,fig11_speedup_matg,AVG,RTGA,1.9977
-AVG,fig11_speedup_matg,AVG,TempGNN,7.6
+dataset,figure,model,solution,source_id,source_kind,source_locator,source_sha256,value,value_note
+WK,fig11_speedup_matg,JODIE,MATG,vector_fig11,vector_geometry_digitization,Fig.11 bar:JODIE/WK/MATG,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,1.0,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+MC,fig11_speedup_matg,JODIE,MATG,vector_fig11,vector_geometry_digitization,Fig.11 bar:JODIE/MC/MATG,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,1.0,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+RT,fig11_speedup_matg,JODIE,MATG,vector_fig11,vector_geometry_digitization,Fig.11 bar:JODIE/RT/MATG,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,1.0,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+LM,fig11_speedup_matg,JODIE,MATG,vector_fig11,vector_geometry_digitization,Fig.11 bar:JODIE/LM/MATG,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,1.0,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+WT,fig11_speedup_matg,JODIE,MATG,vector_fig11,vector_geometry_digitization,Fig.11 bar:JODIE/WT/MATG,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,1.0,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+GT,fig11_speedup_matg,JODIE,MATG,vector_fig11,vector_geometry_digitization,Fig.11 bar:JODIE/GT/MATG,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,1.0,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+WK,fig11_speedup_matg,TGN,MATG,vector_fig11,vector_geometry_digitization,Fig.11 bar:TGN/WK/MATG,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,1.0,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+MC,fig11_speedup_matg,TGN,MATG,vector_fig11,vector_geometry_digitization,Fig.11 bar:TGN/MC/MATG,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,1.0,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+RT,fig11_speedup_matg,TGN,MATG,vector_fig11,vector_geometry_digitization,Fig.11 bar:TGN/RT/MATG,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,1.0,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+LM,fig11_speedup_matg,TGN,MATG,vector_fig11,vector_geometry_digitization,Fig.11 bar:TGN/LM/MATG,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,1.0,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+WT,fig11_speedup_matg,TGN,MATG,vector_fig11,vector_geometry_digitization,Fig.11 bar:TGN/WT/MATG,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,1.0,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+GT,fig11_speedup_matg,TGN,MATG,vector_fig11,vector_geometry_digitization,Fig.11 bar:TGN/GT/MATG,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,1.0,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+WK,fig11_speedup_matg,TGAT,MATG,vector_fig11,vector_geometry_digitization,Fig.11 bar:TGAT/WK/MATG,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,1.0,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+MC,fig11_speedup_matg,TGAT,MATG,vector_fig11,vector_geometry_digitization,Fig.11 bar:TGAT/MC/MATG,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,1.0,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+RT,fig11_speedup_matg,TGAT,MATG,vector_fig11,vector_geometry_digitization,Fig.11 bar:TGAT/RT/MATG,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,1.0,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+LM,fig11_speedup_matg,TGAT,MATG,vector_fig11,vector_geometry_digitization,Fig.11 bar:TGAT/LM/MATG,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,1.0,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+WT,fig11_speedup_matg,TGAT,MATG,vector_fig11,vector_geometry_digitization,Fig.11 bar:TGAT/WT/MATG,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,1.0,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+GT,fig11_speedup_matg,TGAT,MATG,vector_fig11,vector_geometry_digitization,Fig.11 bar:TGAT/GT/MATG,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,1.0,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+WK,fig11_speedup_matg,APAN,MATG,vector_fig11,vector_geometry_digitization,Fig.11 bar:APAN/WK/MATG,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,1.0,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+MC,fig11_speedup_matg,APAN,MATG,vector_fig11,vector_geometry_digitization,Fig.11 bar:APAN/MC/MATG,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,1.0,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+RT,fig11_speedup_matg,APAN,MATG,vector_fig11,vector_geometry_digitization,Fig.11 bar:APAN/RT/MATG,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,1.0,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+LM,fig11_speedup_matg,APAN,MATG,vector_fig11,vector_geometry_digitization,Fig.11 bar:APAN/LM/MATG,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,1.0,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+WT,fig11_speedup_matg,APAN,MATG,vector_fig11,vector_geometry_digitization,Fig.11 bar:APAN/WT/MATG,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,1.0,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+GT,fig11_speedup_matg,APAN,MATG,vector_fig11,vector_geometry_digitization,Fig.11 bar:APAN/GT/MATG,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,1.0,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+AVG,fig11_speedup_matg,AVG,MATG,vector_fig11,vector_geometry_digitization,Fig.11 AVG bar:MATG,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,1.0,"Digitized from the explicit AVG bar, not recomputed from rounded point values."
+WK,fig11_speedup_matg,JODIE,ViTeGNN,vector_fig11,vector_geometry_digitization,Fig.11 bar:JODIE/WK/ViTeGNN,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,1.4199,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+MC,fig11_speedup_matg,JODIE,ViTeGNN,vector_fig11,vector_geometry_digitization,Fig.11 bar:JODIE/MC/ViTeGNN,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,1.3789,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+RT,fig11_speedup_matg,JODIE,ViTeGNN,vector_fig11,vector_geometry_digitization,Fig.11 bar:JODIE/RT/ViTeGNN,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,1.4473,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+LM,fig11_speedup_matg,JODIE,ViTeGNN,vector_fig11,vector_geometry_digitization,Fig.11 bar:JODIE/LM/ViTeGNN,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,1.3469,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+WT,fig11_speedup_matg,JODIE,ViTeGNN,vector_fig11,vector_geometry_digitization,Fig.11 bar:JODIE/WT/ViTeGNN,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,1.5158,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+GT,fig11_speedup_matg,JODIE,ViTeGNN,vector_fig11,vector_geometry_digitization,Fig.11 bar:JODIE/GT/ViTeGNN,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,1.5981,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+WK,fig11_speedup_matg,TGN,ViTeGNN,vector_fig11,vector_geometry_digitization,Fig.11 bar:TGN/WK/ViTeGNN,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,1.4382,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+MC,fig11_speedup_matg,TGN,ViTeGNN,vector_fig11,vector_geometry_digitization,Fig.11 bar:TGN/MC/ViTeGNN,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,1.3971,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+RT,fig11_speedup_matg,TGN,ViTeGNN,vector_fig11,vector_geometry_digitization,Fig.11 bar:TGN/RT/ViTeGNN,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,1.4701,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+LM,fig11_speedup_matg,TGN,ViTeGNN,vector_fig11,vector_geometry_digitization,Fig.11 bar:TGN/LM/ViTeGNN,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,1.3697,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+WT,fig11_speedup_matg,TGN,ViTeGNN,vector_fig11,vector_geometry_digitization,Fig.11 bar:TGN/WT/ViTeGNN,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,1.5386,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+GT,fig11_speedup_matg,TGN,ViTeGNN,vector_fig11,vector_geometry_digitization,Fig.11 bar:TGN/GT/ViTeGNN,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,1.6483,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+WK,fig11_speedup_matg,TGAT,ViTeGNN,vector_fig11,vector_geometry_digitization,Fig.11 bar:TGAT/WK/ViTeGNN,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,1.3469,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+MC,fig11_speedup_matg,TGAT,ViTeGNN,vector_fig11,vector_geometry_digitization,Fig.11 bar:TGAT/MC/ViTeGNN,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,1.3195,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+RT,fig11_speedup_matg,TGAT,ViTeGNN,vector_fig11,vector_geometry_digitization,Fig.11 bar:TGAT/RT/ViTeGNN,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,1.3788,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+LM,fig11_speedup_matg,TGAT,ViTeGNN,vector_fig11,vector_geometry_digitization,Fig.11 bar:TGAT/LM/ViTeGNN,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,1.2784,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+WT,fig11_speedup_matg,TGAT,ViTeGNN,vector_fig11,vector_geometry_digitization,Fig.11 bar:TGAT/WT/ViTeGNN,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,1.4199,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+GT,fig11_speedup_matg,TGAT,ViTeGNN,vector_fig11,vector_geometry_digitization,Fig.11 bar:TGAT/GT/ViTeGNN,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,1.4793,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+WK,fig11_speedup_matg,APAN,ViTeGNN,vector_fig11,vector_geometry_digitization,Fig.11 bar:APAN/WK/ViTeGNN,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,1.4473,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+MC,fig11_speedup_matg,APAN,ViTeGNN,vector_fig11,vector_geometry_digitization,Fig.11 bar:APAN/MC/ViTeGNN,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,1.4062,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+RT,fig11_speedup_matg,APAN,ViTeGNN,vector_fig11,vector_geometry_digitization,Fig.11 bar:APAN/RT/ViTeGNN,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,1.4884,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+LM,fig11_speedup_matg,APAN,ViTeGNN,vector_fig11,vector_geometry_digitization,Fig.11 bar:APAN/LM/ViTeGNN,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,1.388,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+WT,fig11_speedup_matg,APAN,ViTeGNN,vector_fig11,vector_geometry_digitization,Fig.11 bar:APAN/WT/ViTeGNN,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,1.5569,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+GT,fig11_speedup_matg,APAN,ViTeGNN,vector_fig11,vector_geometry_digitization,Fig.11 bar:APAN/GT/ViTeGNN,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,1.6757,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+AVG,fig11_speedup_matg,AVG,ViTeGNN,vector_fig11,vector_geometry_digitization,Fig.11 AVG bar:ViTeGNN,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,1.4473,"Digitized from the explicit AVG bar, not recomputed from rounded point values."
+WK,fig11_speedup_matg,JODIE,RTGA,vector_fig11,vector_geometry_digitization,Fig.11 bar:JODIE/WK/RTGA,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,1.9495,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+MC,fig11_speedup_matg,JODIE,RTGA,vector_fig11,vector_geometry_digitization,Fig.11 bar:JODIE/MC/RTGA,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,1.8765,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+RT,fig11_speedup_matg,JODIE,RTGA,vector_fig11,vector_geometry_digitization,Fig.11 bar:JODIE/RT/RTGA,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,2.018,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+LM,fig11_speedup_matg,JODIE,RTGA,vector_fig11,vector_geometry_digitization,Fig.11 bar:JODIE/LM/RTGA,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,2.2464,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+WT,fig11_speedup_matg,JODIE,RTGA,vector_fig11,vector_geometry_digitization,Fig.11 bar:JODIE/WT/RTGA,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,2.1458,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+GT,fig11_speedup_matg,JODIE,RTGA,vector_fig11,vector_geometry_digitization,Fig.11 bar:JODIE/GT/RTGA,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,2.0956,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+WK,fig11_speedup_matg,TGN,RTGA,vector_fig11,vector_geometry_digitization,Fig.11 bar:TGN/WK/RTGA,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,1.9769,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+MC,fig11_speedup_matg,TGN,RTGA,vector_fig11,vector_geometry_digitization,Fig.11 bar:TGN/MC/RTGA,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,1.9176,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+RT,fig11_speedup_matg,TGN,RTGA,vector_fig11,vector_geometry_digitization,Fig.11 bar:TGN/RT/RTGA,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,2.0454,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+LM,fig11_speedup_matg,TGN,RTGA,vector_fig11,vector_geometry_digitization,Fig.11 bar:TGN/LM/RTGA,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,2.2966,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+WT,fig11_speedup_matg,TGN,RTGA,vector_fig11,vector_geometry_digitization,Fig.11 bar:TGN/WT/RTGA,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,2.1962,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+GT,fig11_speedup_matg,TGN,RTGA,vector_fig11,vector_geometry_digitization,Fig.11 bar:TGN/GT/RTGA,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,2.1458,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+WK,fig11_speedup_matg,TGAT,RTGA,vector_fig11,vector_geometry_digitization,Fig.11 bar:TGAT/WK/RTGA,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,1.8491,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+MC,fig11_speedup_matg,TGAT,RTGA,vector_fig11,vector_geometry_digitization,Fig.11 bar:TGAT/MC/RTGA,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,1.7989,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+RT,fig11_speedup_matg,TGAT,RTGA,vector_fig11,vector_geometry_digitization,Fig.11 bar:TGAT/RT/RTGA,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,1.8993,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+LM,fig11_speedup_matg,TGAT,RTGA,vector_fig11,vector_geometry_digitization,Fig.11 bar:TGAT/LM/RTGA,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,2.1458,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+WT,fig11_speedup_matg,TGAT,RTGA,vector_fig11,vector_geometry_digitization,Fig.11 bar:TGAT/WT/RTGA,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,1.9495,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+GT,fig11_speedup_matg,TGAT,RTGA,vector_fig11,vector_geometry_digitization,Fig.11 bar:TGAT/GT/RTGA,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,1.9952,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+WK,fig11_speedup_matg,APAN,RTGA,vector_fig11,vector_geometry_digitization,Fig.11 bar:APAN/WK/RTGA,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,1.9952,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+MC,fig11_speedup_matg,APAN,RTGA,vector_fig11,vector_geometry_digitization,Fig.11 bar:APAN/MC/RTGA,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,1.9495,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+RT,fig11_speedup_matg,APAN,RTGA,vector_fig11,vector_geometry_digitization,Fig.11 bar:APAN/RT/RTGA,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,2.0773,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+LM,fig11_speedup_matg,APAN,RTGA,vector_fig11,vector_geometry_digitization,Fig.11 bar:APAN/LM/RTGA,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,2.3468,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+WT,fig11_speedup_matg,APAN,RTGA,vector_fig11,vector_geometry_digitization,Fig.11 bar:APAN/WT/RTGA,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,2.2464,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+GT,fig11_speedup_matg,APAN,RTGA,vector_fig11,vector_geometry_digitization,Fig.11 bar:APAN/GT/RTGA,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,2.1962,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+AVG,fig11_speedup_matg,AVG,RTGA,vector_fig11,vector_geometry_digitization,Fig.11 AVG bar:RTGA,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,2.0591,"Digitized from the explicit AVG bar, not recomputed from rounded point values."
+WK,fig11_speedup_matg,JODIE,TempGNN,vector_fig11,vector_geometry_digitization,Fig.11 bar:JODIE/WK/TempGNN,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,7.8392,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+MC,fig11_speedup_matg,JODIE,TempGNN,vector_fig11,vector_geometry_digitization,Fig.11 bar:JODIE/MC/TempGNN,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,7.41,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+RT,fig11_speedup_matg,JODIE,TempGNN,vector_fig11,vector_geometry_digitization,Fig.11 bar:JODIE/RT/TempGNN,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,8.0902,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+LM,fig11_speedup_matg,JODIE,TempGNN,vector_fig11,vector_geometry_digitization,Fig.11 bar:JODIE/LM/TempGNN,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,6.1408,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+WT,fig11_speedup_matg,JODIE,TempGNN,vector_fig11,vector_geometry_digitization,Fig.11 bar:JODIE/WT/TempGNN,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,8.6381,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+GT,fig11_speedup_matg,JODIE,TempGNN,vector_fig11,vector_geometry_digitization,Fig.11 bar:JODIE/GT/TempGNN,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,10.2361,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+WK,fig11_speedup_matg,TGN,TempGNN,vector_fig11,vector_geometry_digitization,Fig.11 bar:TGN/WK/TempGNN,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,7.9076,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+MC,fig11_speedup_matg,TGN,TempGNN,vector_fig11,vector_geometry_digitization,Fig.11 bar:TGN/MC/TempGNN,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,7.5425,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+RT,fig11_speedup_matg,TGN,TempGNN,vector_fig11,vector_geometry_digitization,Fig.11 bar:TGN/RT/TempGNN,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,8.241,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+LM,fig11_speedup_matg,TGN,TempGNN,vector_fig11,vector_geometry_digitization,Fig.11 bar:TGN/LM/TempGNN,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,6.3417,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+WT,fig11_speedup_matg,TGN,TempGNN,vector_fig11,vector_geometry_digitization,Fig.11 bar:TGN/WT/TempGNN,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,8.9395,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+GT,fig11_speedup_matg,TGN,TempGNN,vector_fig11,vector_geometry_digitization,Fig.11 bar:TGN/GT/TempGNN,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,10.6379,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+WK,fig11_speedup_matg,TGAT,TempGNN,vector_fig11,vector_geometry_digitization,Fig.11 bar:TGAT/WK/TempGNN,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,6.2412,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+MC,fig11_speedup_matg,TGAT,TempGNN,vector_fig11,vector_geometry_digitization,Fig.11 bar:TGAT/MC/TempGNN,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,5.9445,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+RT,fig11_speedup_matg,TGAT,TempGNN,vector_fig11,vector_geometry_digitization,Fig.11 bar:TGAT/RT/TempGNN,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,6.4421,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+LM,fig11_speedup_matg,TGAT,TempGNN,vector_fig11,vector_geometry_digitization,Fig.11 bar:TGAT/LM/TempGNN,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,5.1455,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+WT,fig11_speedup_matg,TGAT,TempGNN,vector_fig11,vector_geometry_digitization,Fig.11 bar:TGAT/WT/TempGNN,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,6.8392,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+GT,fig11_speedup_matg,TGAT,TempGNN,vector_fig11,vector_geometry_digitization,Fig.11 bar:TGAT/GT/TempGNN,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,7.5425,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+WK,fig11_speedup_matg,APAN,TempGNN,vector_fig11,vector_geometry_digitization,Fig.11 bar:APAN/WK/TempGNN,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,8.1406,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+MC,fig11_speedup_matg,APAN,TempGNN,vector_fig11,vector_geometry_digitization,Fig.11 bar:APAN/MC/TempGNN,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,7.7387,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+RT,fig11_speedup_matg,APAN,TempGNN,vector_fig11,vector_geometry_digitization,Fig.11 bar:APAN/RT/TempGNN,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,8.4373,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+LM,fig11_speedup_matg,APAN,TempGNN,vector_fig11,vector_geometry_digitization,Fig.11 bar:APAN/LM/TempGNN,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,6.5425,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+WT,fig11_speedup_matg,APAN,TempGNN,vector_fig11,vector_geometry_digitization,Fig.11 bar:APAN/WT/TempGNN,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,9.1403,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+GT,fig11_speedup_matg,APAN,TempGNN,vector_fig11,vector_geometry_digitization,Fig.11 bar:APAN/GT/TempGNN,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,10.8342,Digitized from vector bar geometry; expected uncertainty is about +/-0.02 normalized unit.
+AVG,fig11_speedup_matg,AVG,TempGNN,vector_fig11,vector_geometry_digitization,Fig.11 AVG bar:TempGNN,e2f655b815ea93b42fd8b4d07a3338108b05d526538a508a06911ee8a44f9699,7.7889,"Digitized from the explicit AVG bar, not recomputed from rounded point values."

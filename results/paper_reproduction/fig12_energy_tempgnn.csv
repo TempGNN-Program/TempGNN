@@ -1,151 +1,151 @@
-dataset,figure,model,solution,value
-WK,fig12_energy_tempgnn,JODIE,TGLite-CPU,148.3007
-MC,fig12_energy_tempgnn,JODIE,TGLite-CPU,174.7889
-RT,fig12_energy_tempgnn,JODIE,TGLite-CPU,157.5716
-LM,fig12_energy_tempgnn,JODIE,TGLite-CPU,161.5448
-WT,fig12_energy_tempgnn,JODIE,TGLite-CPU,170.8157
-GT,fig12_energy_tempgnn,JODIE,TGLite-CPU,180.0866
-WK,fig12_energy_tempgnn,TGN,TGLite-CPU,152.7706
-MC,fig12_energy_tempgnn,TGN,TGLite-CPU,179.2588
-RT,fig12_energy_tempgnn,TGN,TGLite-CPU,162.0415
-LM,fig12_energy_tempgnn,TGN,TGLite-CPU,166.0147
-WT,fig12_energy_tempgnn,TGN,TGLite-CPU,175.2856
-GT,fig12_energy_tempgnn,TGN,TGLite-CPU,184.5565
-WK,fig12_energy_tempgnn,TGAT,TGLite-CPU,155.1546
-MC,fig12_energy_tempgnn,TGAT,TGLite-CPU,181.6428
-RT,fig12_energy_tempgnn,TGAT,TGLite-CPU,164.4254
-LM,fig12_energy_tempgnn,TGAT,TGLite-CPU,168.3987
-WT,fig12_energy_tempgnn,TGAT,TGLite-CPU,177.6695
-GT,fig12_energy_tempgnn,TGAT,TGLite-CPU,186.9404
-WK,fig12_energy_tempgnn,APAN,TGLite-CPU,147.7048
-MC,fig12_energy_tempgnn,APAN,TGLite-CPU,174.193
-RT,fig12_energy_tempgnn,APAN,TGLite-CPU,156.9756
-LM,fig12_energy_tempgnn,APAN,TGLite-CPU,160.9489
-WT,fig12_energy_tempgnn,APAN,TGLite-CPU,170.2197
-GT,fig12_energy_tempgnn,APAN,TGLite-CPU,179.4906
-WK,fig12_energy_tempgnn,JODIE,Cascade,29.5367
-MC,fig12_energy_tempgnn,JODIE,Cascade,34.8123
-RT,fig12_energy_tempgnn,JODIE,Cascade,31.3832
-LM,fig12_energy_tempgnn,JODIE,Cascade,32.1745
-WT,fig12_energy_tempgnn,JODIE,Cascade,34.021
-GT,fig12_energy_tempgnn,JODIE,Cascade,35.8674
-WK,fig12_energy_tempgnn,TGN,Cascade,30.427
-MC,fig12_energy_tempgnn,TGN,Cascade,35.7026
-RT,fig12_energy_tempgnn,TGN,Cascade,32.2734
-LM,fig12_energy_tempgnn,TGN,Cascade,33.0648
-WT,fig12_energy_tempgnn,TGN,Cascade,34.9112
-GT,fig12_energy_tempgnn,TGN,Cascade,36.7577
-WK,fig12_energy_tempgnn,TGAT,Cascade,30.9018
-MC,fig12_energy_tempgnn,TGAT,Cascade,36.1774
-RT,fig12_energy_tempgnn,TGAT,Cascade,32.7482
-LM,fig12_energy_tempgnn,TGAT,Cascade,33.5396
-WT,fig12_energy_tempgnn,TGAT,Cascade,35.386
-GT,fig12_energy_tempgnn,TGAT,Cascade,37.2325
-WK,fig12_energy_tempgnn,APAN,Cascade,29.418
-MC,fig12_energy_tempgnn,APAN,Cascade,34.6936
-RT,fig12_energy_tempgnn,APAN,Cascade,31.2645
-LM,fig12_energy_tempgnn,APAN,Cascade,32.0558
-WT,fig12_energy_tempgnn,APAN,Cascade,33.9023
-GT,fig12_energy_tempgnn,APAN,Cascade,35.7487
-WK,fig12_energy_tempgnn,JODIE,MATG,8.9933
-MC,fig12_energy_tempgnn,JODIE,MATG,10.5996
-RT,fig12_energy_tempgnn,JODIE,MATG,9.5555
-LM,fig12_energy_tempgnn,JODIE,MATG,9.7964
-WT,fig12_energy_tempgnn,JODIE,MATG,10.3586
-GT,fig12_energy_tempgnn,JODIE,MATG,10.9208
-WK,fig12_energy_tempgnn,TGN,MATG,9.2643
-MC,fig12_energy_tempgnn,TGN,MATG,10.8706
-RT,fig12_energy_tempgnn,TGN,MATG,9.8265
-LM,fig12_energy_tempgnn,TGN,MATG,10.0675
-WT,fig12_energy_tempgnn,TGN,MATG,10.6297
-GT,fig12_energy_tempgnn,TGN,MATG,11.1919
-WK,fig12_energy_tempgnn,TGAT,MATG,9.4089
-MC,fig12_energy_tempgnn,TGAT,MATG,11.0152
-RT,fig12_energy_tempgnn,TGAT,MATG,9.9711
-LM,fig12_energy_tempgnn,TGAT,MATG,10.212
-WT,fig12_energy_tempgnn,TGAT,MATG,10.7743
-GT,fig12_energy_tempgnn,TGAT,MATG,11.3365
-WK,fig12_energy_tempgnn,APAN,MATG,8.9571
-MC,fig12_energy_tempgnn,APAN,MATG,10.5634
-RT,fig12_energy_tempgnn,APAN,MATG,9.5193
-LM,fig12_energy_tempgnn,APAN,MATG,9.7603
-WT,fig12_energy_tempgnn,APAN,MATG,10.3225
-GT,fig12_energy_tempgnn,APAN,MATG,10.8847
-WK,fig12_energy_tempgnn,JODIE,ViTeGNN,7.8471
-MC,fig12_energy_tempgnn,JODIE,ViTeGNN,9.2486
-RT,fig12_energy_tempgnn,JODIE,ViTeGNN,8.3376
-LM,fig12_energy_tempgnn,JODIE,ViTeGNN,8.5479
-WT,fig12_energy_tempgnn,JODIE,ViTeGNN,9.0384
-GT,fig12_energy_tempgnn,JODIE,ViTeGNN,9.529
-WK,fig12_energy_tempgnn,TGN,ViTeGNN,8.0836
-MC,fig12_energy_tempgnn,TGN,ViTeGNN,9.4852
-RT,fig12_energy_tempgnn,TGN,ViTeGNN,8.5741
-LM,fig12_energy_tempgnn,TGN,ViTeGNN,8.7844
-WT,fig12_energy_tempgnn,TGN,ViTeGNN,9.2749
-GT,fig12_energy_tempgnn,TGN,ViTeGNN,9.7655
-WK,fig12_energy_tempgnn,TGAT,ViTeGNN,8.2097
-MC,fig12_energy_tempgnn,TGAT,ViTeGNN,9.6113
-RT,fig12_energy_tempgnn,TGAT,ViTeGNN,8.7003
-LM,fig12_energy_tempgnn,TGAT,ViTeGNN,8.9105
-WT,fig12_energy_tempgnn,TGAT,ViTeGNN,9.4011
-GT,fig12_energy_tempgnn,TGAT,ViTeGNN,9.8916
-WK,fig12_energy_tempgnn,APAN,ViTeGNN,7.8155
-MC,fig12_energy_tempgnn,APAN,ViTeGNN,9.2171
-RT,fig12_energy_tempgnn,APAN,ViTeGNN,8.3061
-LM,fig12_energy_tempgnn,APAN,ViTeGNN,8.5163
-WT,fig12_energy_tempgnn,APAN,ViTeGNN,9.0069
-GT,fig12_energy_tempgnn,APAN,ViTeGNN,9.4974
-WK,fig12_energy_tempgnn,JODIE,RTGA,5.731
-MC,fig12_energy_tempgnn,JODIE,RTGA,6.7546
-RT,fig12_energy_tempgnn,JODIE,RTGA,6.0893
-LM,fig12_energy_tempgnn,JODIE,RTGA,6.2428
-WT,fig12_energy_tempgnn,JODIE,RTGA,6.6011
-GT,fig12_energy_tempgnn,JODIE,RTGA,6.9594
-WK,fig12_energy_tempgnn,TGN,RTGA,5.9037
-MC,fig12_energy_tempgnn,TGN,RTGA,6.9274
-RT,fig12_energy_tempgnn,TGN,RTGA,6.262
-LM,fig12_energy_tempgnn,TGN,RTGA,6.4156
-WT,fig12_energy_tempgnn,TGN,RTGA,6.7738
-GT,fig12_energy_tempgnn,TGN,RTGA,7.1321
-WK,fig12_energy_tempgnn,TGAT,RTGA,5.9959
-MC,fig12_energy_tempgnn,TGAT,RTGA,7.0195
-RT,fig12_energy_tempgnn,TGAT,RTGA,6.3541
-LM,fig12_energy_tempgnn,TGAT,RTGA,6.5077
-WT,fig12_energy_tempgnn,TGAT,RTGA,6.8659
-GT,fig12_energy_tempgnn,TGAT,RTGA,7.2242
-WK,fig12_energy_tempgnn,APAN,RTGA,5.708
-MC,fig12_energy_tempgnn,APAN,RTGA,6.7316
-RT,fig12_energy_tempgnn,APAN,RTGA,6.0662
-LM,fig12_energy_tempgnn,APAN,RTGA,6.2198
-WT,fig12_energy_tempgnn,APAN,RTGA,6.5781
-GT,fig12_energy_tempgnn,APAN,RTGA,6.9363
-WK,fig12_energy_tempgnn,JODIE,TempGNN,1.0
-MC,fig12_energy_tempgnn,JODIE,TempGNN,1.0
-RT,fig12_energy_tempgnn,JODIE,TempGNN,1.0
-LM,fig12_energy_tempgnn,JODIE,TempGNN,1.0
-WT,fig12_energy_tempgnn,JODIE,TempGNN,1.0
-GT,fig12_energy_tempgnn,JODIE,TempGNN,1.0
-WK,fig12_energy_tempgnn,TGN,TempGNN,1.0
-MC,fig12_energy_tempgnn,TGN,TempGNN,1.0
-RT,fig12_energy_tempgnn,TGN,TempGNN,1.0
-LM,fig12_energy_tempgnn,TGN,TempGNN,1.0
-WT,fig12_energy_tempgnn,TGN,TempGNN,1.0
-GT,fig12_energy_tempgnn,TGN,TempGNN,1.0
-WK,fig12_energy_tempgnn,TGAT,TempGNN,1.0
-MC,fig12_energy_tempgnn,TGAT,TempGNN,1.0
-RT,fig12_energy_tempgnn,TGAT,TempGNN,1.0
-LM,fig12_energy_tempgnn,TGAT,TempGNN,1.0
-WT,fig12_energy_tempgnn,TGAT,TempGNN,1.0
-GT,fig12_energy_tempgnn,TGAT,TempGNN,1.0
-WK,fig12_energy_tempgnn,APAN,TempGNN,1.0
-MC,fig12_energy_tempgnn,APAN,TempGNN,1.0
-RT,fig12_energy_tempgnn,APAN,TempGNN,1.0
-LM,fig12_energy_tempgnn,APAN,TempGNN,1.0
-WT,fig12_energy_tempgnn,APAN,TempGNN,1.0
-GT,fig12_energy_tempgnn,APAN,TempGNN,1.0
-AVG,fig12_energy_tempgnn,AVG,TGLite-CPU,168.2
-AVG,fig12_energy_tempgnn,AVG,Cascade,33.5
-AVG,fig12_energy_tempgnn,AVG,MATG,10.2
-AVG,fig12_energy_tempgnn,AVG,ViTeGNN,8.9
-AVG,fig12_energy_tempgnn,AVG,RTGA,6.5
-AVG,fig12_energy_tempgnn,AVG,TempGNN,1.0
+dataset,figure,model,solution,source_id,source_kind,source_locator,source_sha256,value,value_note
+WK,fig12_energy_tempgnn,JODIE,TGLite-CPU,vector_fig12,vector_geometry_digitization,Fig.12 bar:JODIE/WK/TGLite-CPU,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,160.472,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+MC,fig12_energy_tempgnn,JODIE,TGLite-CPU,vector_fig12,vector_geometry_digitization,Fig.12 bar:JODIE/MC/TGLite-CPU,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,150.236,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+RT,fig12_energy_tempgnn,JODIE,TGLite-CPU,vector_fig12,vector_geometry_digitization,Fig.12 bar:JODIE/RT/TGLite-CPU,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,170.788,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+LM,fig12_energy_tempgnn,JODIE,TGLite-CPU,vector_fig12,vector_geometry_digitization,Fig.12 bar:JODIE/LM/TGLite-CPU,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,190.474,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+WT,fig12_energy_tempgnn,JODIE,TGLite-CPU,vector_fig12,vector_geometry_digitization,Fig.12 bar:JODIE/WT/TGLite-CPU,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,185.432,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+GT,fig12_energy_tempgnn,JODIE,TGLite-CPU,vector_fig12,vector_geometry_digitization,Fig.12 bar:JODIE/GT/TGLite-CPU,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,216.615,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+WK,fig12_energy_tempgnn,TGN,TGLite-CPU,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGN/WK/TGLite-CPU,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,165.51,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+MC,fig12_energy_tempgnn,TGN,TGLite-CPU,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGN/MC/TGLite-CPU,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,155.196,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+RT,fig12_energy_tempgnn,TGN,TGLite-CPU,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGN/RT/TGLite-CPU,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,175.826,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+LM,fig12_energy_tempgnn,TGN,TGLite-CPU,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGN/LM/TGLite-CPU,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,195.512,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+WT,fig12_energy_tempgnn,TGN,TGLite-CPU,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGN/WT/TGLite-CPU,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,190.395,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+GT,fig12_energy_tempgnn,TGN,TGLite-CPU,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGN/GT/TGLite-CPU,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,221.577,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+WK,fig12_energy_tempgnn,TGAT,TGLite-CPU,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGAT/WK/TGLite-CPU,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,115.511,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+MC,fig12_energy_tempgnn,TGAT,TGLite-CPU,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGAT/MC/TGLite-CPU,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,110.236,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+RT,fig12_energy_tempgnn,TGAT,TGLite-CPU,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGAT/RT/TGLite-CPU,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,120.787,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+LM,fig12_energy_tempgnn,TGAT,TGLite-CPU,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGAT/LM/TGLite-CPU,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,140.551,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+WT,fig12_energy_tempgnn,TGAT,TGLite-CPU,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGAT/WT/TGLite-CPU,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,135.432,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+GT,fig12_energy_tempgnn,TGAT,TGLite-CPU,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGAT/GT/TGLite-CPU,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,150.393,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+WK,fig12_energy_tempgnn,APAN,TGLite-CPU,vector_fig12,vector_geometry_digitization,Fig.12 bar:APAN/WK/TGLite-CPU,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,162.519,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+MC,fig12_energy_tempgnn,APAN,TGLite-CPU,vector_fig12,vector_geometry_digitization,Fig.12 bar:APAN/MC/TGLite-CPU,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,152.204,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+RT,fig12_energy_tempgnn,APAN,TGLite-CPU,vector_fig12,vector_geometry_digitization,Fig.12 bar:APAN/RT/TGLite-CPU,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,172.834,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+LM,fig12_energy_tempgnn,APAN,TGLite-CPU,vector_fig12,vector_geometry_digitization,Fig.12 bar:APAN/LM/TGLite-CPU,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,192.52,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+WT,fig12_energy_tempgnn,APAN,TGLite-CPU,vector_fig12,vector_geometry_digitization,Fig.12 bar:APAN/WT/TGLite-CPU,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,187.4,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+GT,fig12_energy_tempgnn,APAN,TGLite-CPU,vector_fig12,vector_geometry_digitization,Fig.12 bar:APAN/GT/TGLite-CPU,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,218.583,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+AVG,fig12_energy_tempgnn,AVG,TGLite-CPU,vector_fig12,vector_geometry_digitization,Fig.12 AVG bar:TGLite-CPU,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,168.186,"Digitized from the explicit AVG bar, not recomputed from rounded point values."
+WK,fig12_energy_tempgnn,JODIE,Cascade,vector_fig12,vector_geometry_digitization,Fig.12 bar:JODIE/WK/Cascade,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,30.475,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+MC,fig12_energy_tempgnn,JODIE,Cascade,vector_fig12,vector_geometry_digitization,Fig.12 bar:JODIE/MC/Cascade,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,28.505,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+RT,fig12_energy_tempgnn,JODIE,Cascade,vector_fig12,vector_geometry_digitization,Fig.12 bar:JODIE/RT/Cascade,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,32.522,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+LM,fig12_energy_tempgnn,JODIE,Cascade,vector_fig12,vector_geometry_digitization,Fig.12 bar:JODIE/LM/Cascade,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,39.528,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+WT,fig12_energy_tempgnn,JODIE,Cascade,vector_fig12,vector_geometry_digitization,Fig.12 bar:JODIE/WT/Cascade,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,37.481,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+GT,fig12_energy_tempgnn,JODIE,Cascade,vector_fig12,vector_geometry_digitization,Fig.12 bar:JODIE/GT/Cascade,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,49.472,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+WK,fig12_energy_tempgnn,TGN,Cascade,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGN/WK/Cascade,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,31.971,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+MC,fig12_energy_tempgnn,TGN,Cascade,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGN/MC/Cascade,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,30.0,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+RT,fig12_energy_tempgnn,TGN,Cascade,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGN/RT/Cascade,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,34.017,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+LM,fig12_energy_tempgnn,TGN,Cascade,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGN/LM/Cascade,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,42.165,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+WT,fig12_energy_tempgnn,TGN,Cascade,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGN/WT/Cascade,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,38.977,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+GT,fig12_energy_tempgnn,TGN,Cascade,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGN/GT/Cascade,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,52.627,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+WK,fig12_energy_tempgnn,TGAT,Cascade,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGAT/WK/Cascade,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,21.499,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+MC,fig12_energy_tempgnn,TGAT,Cascade,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGAT/MC/Cascade,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,20.239,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+RT,fig12_energy_tempgnn,TGAT,Cascade,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGAT/RT/Cascade,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,23.073,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+LM,fig12_energy_tempgnn,TGAT,Cascade,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGAT/LM/Cascade,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,28.505,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+WT,fig12_energy_tempgnn,TGAT,Cascade,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGAT/WT/Cascade,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,26.537,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+GT,fig12_energy_tempgnn,TGAT,Cascade,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGAT/GT/Cascade,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,31.97,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+WK,fig12_energy_tempgnn,APAN,Cascade,vector_fig12,vector_geometry_digitization,Fig.12 bar:APAN/WK/Cascade,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,31.183,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+MC,fig12_energy_tempgnn,APAN,Cascade,vector_fig12,vector_geometry_digitization,Fig.12 bar:APAN/MC/Cascade,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,29.213,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+RT,fig12_energy_tempgnn,APAN,Cascade,vector_fig12,vector_geometry_digitization,Fig.12 bar:APAN/RT/Cascade,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,33.23,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+LM,fig12_energy_tempgnn,APAN,Cascade,vector_fig12,vector_geometry_digitization,Fig.12 bar:APAN/LM/Cascade,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,40.498,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+WT,fig12_energy_tempgnn,APAN,Cascade,vector_fig12,vector_geometry_digitization,Fig.12 bar:APAN/WT/Cascade,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,38.189,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+GT,fig12_energy_tempgnn,APAN,Cascade,vector_fig12,vector_geometry_digitization,Fig.12 bar:APAN/GT/Cascade,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,50.966,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+AVG,fig12_energy_tempgnn,AVG,Cascade,vector_fig12,vector_geometry_digitization,Fig.12 AVG bar:Cascade,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,33.545,"Digitized from the explicit AVG bar, not recomputed from rounded point values."
+WK,fig12_energy_tempgnn,JODIE,MATG,vector_fig12,vector_geometry_digitization,Fig.12 bar:JODIE/WK/MATG,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,9.29,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+MC,fig12_energy_tempgnn,JODIE,MATG,vector_fig12,vector_geometry_digitization,Fig.12 bar:JODIE/MC/MATG,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,8.975,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+RT,fig12_energy_tempgnn,JODIE,MATG,vector_fig12,vector_geometry_digitization,Fig.12 bar:JODIE/RT/MATG,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,9.922,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+LM,fig12_energy_tempgnn,JODIE,MATG,vector_fig12,vector_geometry_digitization,Fig.12 bar:JODIE/LM/MATG,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,12.284,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+WT,fig12_energy_tempgnn,JODIE,MATG,vector_fig12,vector_geometry_digitization,Fig.12 bar:JODIE/WT/MATG,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,11.576,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+GT,fig12_energy_tempgnn,JODIE,MATG,vector_fig12,vector_geometry_digitization,Fig.12 bar:JODIE/GT/MATG,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,14.331,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+WK,fig12_energy_tempgnn,TGN,MATG,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGN/WK/MATG,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,9.605,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+MC,fig12_energy_tempgnn,TGN,MATG,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGN/MC/MATG,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,9.212,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+RT,fig12_energy_tempgnn,TGN,MATG,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGN/RT/MATG,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,10.237,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+LM,fig12_energy_tempgnn,TGN,MATG,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGN/LM/MATG,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,12.599,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+WT,fig12_energy_tempgnn,TGN,MATG,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGN/WT/MATG,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,11.891,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+GT,fig12_energy_tempgnn,TGN,MATG,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGN/GT/MATG,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,14.567,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+WK,fig12_energy_tempgnn,TGAT,MATG,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGAT/WK/MATG,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,6.377,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+MC,fig12_energy_tempgnn,TGAT,MATG,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGAT/MC/MATG,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,6.062,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+RT,fig12_energy_tempgnn,TGAT,MATG,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGAT/RT/MATG,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,6.692,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+LM,fig12_energy_tempgnn,TGAT,MATG,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGAT/LM/MATG,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,8.109,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+WT,fig12_energy_tempgnn,TGAT,MATG,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGAT/WT/MATG,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,7.401,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+GT,fig12_energy_tempgnn,TGAT,MATG,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGAT/GT/MATG,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,8.739,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+WK,fig12_energy_tempgnn,APAN,MATG,vector_fig12,vector_geometry_digitization,Fig.12 bar:APAN/WK/MATG,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,9.369,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+MC,fig12_energy_tempgnn,APAN,MATG,vector_fig12,vector_geometry_digitization,Fig.12 bar:APAN/MC/MATG,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,9.133,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+RT,fig12_energy_tempgnn,APAN,MATG,vector_fig12,vector_geometry_digitization,Fig.12 bar:APAN/RT/MATG,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,10.001,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+LM,fig12_energy_tempgnn,APAN,MATG,vector_fig12,vector_geometry_digitization,Fig.12 bar:APAN/LM/MATG,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,12.363,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+WT,fig12_energy_tempgnn,APAN,MATG,vector_fig12,vector_geometry_digitization,Fig.12 bar:APAN/WT/MATG,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,11.733,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+GT,fig12_energy_tempgnn,APAN,MATG,vector_fig12,vector_geometry_digitization,Fig.12 bar:APAN/GT/MATG,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,14.41,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+AVG,fig12_energy_tempgnn,AVG,MATG,vector_fig12,vector_geometry_digitization,Fig.12 AVG bar:MATG,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,10.237,"Digitized from the explicit AVG bar, not recomputed from rounded point values."
+WK,fig12_energy_tempgnn,JODIE,ViTeGNN,vector_fig12,vector_geometry_digitization,Fig.12 bar:JODIE/WK/ViTeGNN,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,8.109,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+MC,fig12_energy_tempgnn,JODIE,ViTeGNN,vector_fig12,vector_geometry_digitization,Fig.12 bar:JODIE/MC/ViTeGNN,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,7.873,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+RT,fig12_energy_tempgnn,JODIE,ViTeGNN,vector_fig12,vector_geometry_digitization,Fig.12 bar:JODIE/RT/ViTeGNN,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,8.739,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+LM,fig12_energy_tempgnn,JODIE,ViTeGNN,vector_fig12,vector_geometry_digitization,Fig.12 bar:JODIE/LM/ViTeGNN,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,10.867,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+WT,fig12_energy_tempgnn,JODIE,ViTeGNN,vector_fig12,vector_geometry_digitization,Fig.12 bar:JODIE/WT/ViTeGNN,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,10.08,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+GT,fig12_energy_tempgnn,JODIE,ViTeGNN,vector_fig12,vector_geometry_digitization,Fig.12 bar:JODIE/GT/ViTeGNN,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,11.891,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+WK,fig12_energy_tempgnn,TGN,ViTeGNN,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGN/WK/ViTeGNN,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,8.424,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+MC,fig12_energy_tempgnn,TGN,ViTeGNN,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGN/MC/ViTeGNN,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,8.188,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+RT,fig12_energy_tempgnn,TGN,ViTeGNN,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGN/RT/ViTeGNN,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,8.975,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+LM,fig12_energy_tempgnn,TGN,ViTeGNN,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGN/LM/ViTeGNN,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,11.182,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+WT,fig12_energy_tempgnn,TGN,ViTeGNN,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGN/WT/ViTeGNN,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,10.395,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+GT,fig12_energy_tempgnn,TGN,ViTeGNN,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGN/GT/ViTeGNN,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,12.205,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+WK,fig12_energy_tempgnn,TGAT,ViTeGNN,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGAT/WK/ViTeGNN,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,5.432,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+MC,fig12_energy_tempgnn,TGAT,ViTeGNN,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGAT/MC/ViTeGNN,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,5.117,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+RT,fig12_energy_tempgnn,TGAT,ViTeGNN,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGAT/RT/ViTeGNN,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,5.669,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+LM,fig12_energy_tempgnn,TGAT,ViTeGNN,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGAT/LM/ViTeGNN,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,6.928,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+WT,fig12_energy_tempgnn,TGAT,ViTeGNN,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGAT/WT/ViTeGNN,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,6.377,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+GT,fig12_energy_tempgnn,TGAT,ViTeGNN,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGAT/GT/ViTeGNN,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,8.897,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+WK,fig12_energy_tempgnn,APAN,ViTeGNN,vector_fig12,vector_geometry_digitization,Fig.12 bar:APAN/WK/ViTeGNN,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,8.188,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+MC,fig12_energy_tempgnn,APAN,ViTeGNN,vector_fig12,vector_geometry_digitization,Fig.12 bar:APAN/MC/ViTeGNN,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,8.03,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+RT,fig12_energy_tempgnn,APAN,ViTeGNN,vector_fig12,vector_geometry_digitization,Fig.12 bar:APAN/RT/ViTeGNN,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,8.818,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+LM,fig12_energy_tempgnn,APAN,ViTeGNN,vector_fig12,vector_geometry_digitization,Fig.12 bar:APAN/LM/ViTeGNN,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,11.024,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+WT,fig12_energy_tempgnn,APAN,ViTeGNN,vector_fig12,vector_geometry_digitization,Fig.12 bar:APAN/WT/ViTeGNN,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,10.237,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+GT,fig12_energy_tempgnn,APAN,ViTeGNN,vector_fig12,vector_geometry_digitization,Fig.12 bar:APAN/GT/ViTeGNN,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,11.969,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+AVG,fig12_energy_tempgnn,AVG,ViTeGNN,vector_fig12,vector_geometry_digitization,Fig.12 AVG bar:ViTeGNN,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,8.897,"Digitized from the explicit AVG bar, not recomputed from rounded point values."
+WK,fig12_energy_tempgnn,JODIE,RTGA,vector_fig12,vector_geometry_digitization,Fig.12 bar:JODIE/WK/RTGA,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,5.905,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+MC,fig12_energy_tempgnn,JODIE,RTGA,vector_fig12,vector_geometry_digitization,Fig.12 bar:JODIE/MC/RTGA,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,5.59,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+RT,fig12_energy_tempgnn,JODIE,RTGA,vector_fig12,vector_geometry_digitization,Fig.12 bar:JODIE/RT/RTGA,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,6.299,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+LM,fig12_energy_tempgnn,JODIE,RTGA,vector_fig12,vector_geometry_digitization,Fig.12 bar:JODIE/LM/RTGA,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,8.031,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+WT,fig12_energy_tempgnn,JODIE,RTGA,vector_fig12,vector_geometry_digitization,Fig.12 bar:JODIE/WT/RTGA,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,7.401,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+GT,fig12_energy_tempgnn,JODIE,RTGA,vector_fig12,vector_geometry_digitization,Fig.12 bar:JODIE/GT/RTGA,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,8.975,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+WK,fig12_energy_tempgnn,TGN,RTGA,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGN/WK/RTGA,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,6.062,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+MC,fig12_energy_tempgnn,TGN,RTGA,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGN/MC/RTGA,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,5.826,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+RT,fig12_energy_tempgnn,TGN,RTGA,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGN/RT/RTGA,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,6.535,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+LM,fig12_energy_tempgnn,TGN,RTGA,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGN/LM/RTGA,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,8.188,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+WT,fig12_energy_tempgnn,TGN,RTGA,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGN/WT/RTGA,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,7.637,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+GT,fig12_energy_tempgnn,TGN,RTGA,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGN/GT/RTGA,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,9.212,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+WK,fig12_energy_tempgnn,TGAT,RTGA,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGAT/WK/RTGA,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,4.015,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+MC,fig12_energy_tempgnn,TGAT,RTGA,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGAT/MC/RTGA,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,3.779,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+RT,fig12_energy_tempgnn,TGAT,RTGA,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGAT/RT/RTGA,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,4.33,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+LM,fig12_energy_tempgnn,TGAT,RTGA,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGAT/LM/RTGA,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,5.275,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+WT,fig12_energy_tempgnn,TGAT,RTGA,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGAT/WT/RTGA,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,4.724,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+GT,fig12_energy_tempgnn,TGAT,RTGA,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGAT/GT/RTGA,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,5.511,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+WK,fig12_energy_tempgnn,APAN,RTGA,vector_fig12,vector_geometry_digitization,Fig.12 bar:APAN/WK/RTGA,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,5.983,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+MC,fig12_energy_tempgnn,APAN,RTGA,vector_fig12,vector_geometry_digitization,Fig.12 bar:APAN/MC/RTGA,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,5.669,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+RT,fig12_energy_tempgnn,APAN,RTGA,vector_fig12,vector_geometry_digitization,Fig.12 bar:APAN/RT/RTGA,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,6.377,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+LM,fig12_energy_tempgnn,APAN,RTGA,vector_fig12,vector_geometry_digitization,Fig.12 bar:APAN/LM/RTGA,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,8.109,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+WT,fig12_energy_tempgnn,APAN,RTGA,vector_fig12,vector_geometry_digitization,Fig.12 bar:APAN/WT/RTGA,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,7.479,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+GT,fig12_energy_tempgnn,APAN,RTGA,vector_fig12,vector_geometry_digitization,Fig.12 bar:APAN/GT/RTGA,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,9.133,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+AVG,fig12_energy_tempgnn,AVG,RTGA,vector_fig12,vector_geometry_digitization,Fig.12 AVG bar:RTGA,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,6.535,"Digitized from the explicit AVG bar, not recomputed from rounded point values."
+WK,fig12_energy_tempgnn,JODIE,TempGNN,vector_fig12,vector_geometry_digitization,Fig.12 bar:JODIE/WK/TempGNN,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,1.0,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+MC,fig12_energy_tempgnn,JODIE,TempGNN,vector_fig12,vector_geometry_digitization,Fig.12 bar:JODIE/MC/TempGNN,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,1.0,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+RT,fig12_energy_tempgnn,JODIE,TempGNN,vector_fig12,vector_geometry_digitization,Fig.12 bar:JODIE/RT/TempGNN,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,1.0,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+LM,fig12_energy_tempgnn,JODIE,TempGNN,vector_fig12,vector_geometry_digitization,Fig.12 bar:JODIE/LM/TempGNN,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,1.0,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+WT,fig12_energy_tempgnn,JODIE,TempGNN,vector_fig12,vector_geometry_digitization,Fig.12 bar:JODIE/WT/TempGNN,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,1.0,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+GT,fig12_energy_tempgnn,JODIE,TempGNN,vector_fig12,vector_geometry_digitization,Fig.12 bar:JODIE/GT/TempGNN,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,1.0,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+WK,fig12_energy_tempgnn,TGN,TempGNN,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGN/WK/TempGNN,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,1.0,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+MC,fig12_energy_tempgnn,TGN,TempGNN,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGN/MC/TempGNN,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,1.0,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+RT,fig12_energy_tempgnn,TGN,TempGNN,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGN/RT/TempGNN,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,1.0,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+LM,fig12_energy_tempgnn,TGN,TempGNN,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGN/LM/TempGNN,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,1.0,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+WT,fig12_energy_tempgnn,TGN,TempGNN,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGN/WT/TempGNN,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,1.0,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+GT,fig12_energy_tempgnn,TGN,TempGNN,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGN/GT/TempGNN,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,1.0,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+WK,fig12_energy_tempgnn,TGAT,TempGNN,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGAT/WK/TempGNN,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,1.0,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+MC,fig12_energy_tempgnn,TGAT,TempGNN,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGAT/MC/TempGNN,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,1.0,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+RT,fig12_energy_tempgnn,TGAT,TempGNN,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGAT/RT/TempGNN,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,1.0,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+LM,fig12_energy_tempgnn,TGAT,TempGNN,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGAT/LM/TempGNN,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,1.0,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+WT,fig12_energy_tempgnn,TGAT,TempGNN,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGAT/WT/TempGNN,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,1.0,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+GT,fig12_energy_tempgnn,TGAT,TempGNN,vector_fig12,vector_geometry_digitization,Fig.12 bar:TGAT/GT/TempGNN,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,1.0,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+WK,fig12_energy_tempgnn,APAN,TempGNN,vector_fig12,vector_geometry_digitization,Fig.12 bar:APAN/WK/TempGNN,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,1.0,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+MC,fig12_energy_tempgnn,APAN,TempGNN,vector_fig12,vector_geometry_digitization,Fig.12 bar:APAN/MC/TempGNN,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,1.0,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+RT,fig12_energy_tempgnn,APAN,TempGNN,vector_fig12,vector_geometry_digitization,Fig.12 bar:APAN/RT/TempGNN,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,1.0,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+LM,fig12_energy_tempgnn,APAN,TempGNN,vector_fig12,vector_geometry_digitization,Fig.12 bar:APAN/LM/TempGNN,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,1.0,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+WT,fig12_energy_tempgnn,APAN,TempGNN,vector_fig12,vector_geometry_digitization,Fig.12 bar:APAN/WT/TempGNN,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,1.0,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+GT,fig12_energy_tempgnn,APAN,TempGNN,vector_fig12,vector_geometry_digitization,Fig.12 bar:APAN/GT/TempGNN,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,1.0,Digitized from the vector bar geometry using the plotted broken-axis calibration.
+AVG,fig12_energy_tempgnn,AVG,TempGNN,vector_fig12,vector_geometry_digitization,Fig.12 AVG bar:TempGNN,03631bb354c124578afb69b94bca09c584300e28db6692d3f08578ea1bbc7051,1.0,"Digitized from the explicit AVG bar, not recomputed from rounded point values."

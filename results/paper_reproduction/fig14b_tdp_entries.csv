@@ -1,43 +1,43 @@
-dataset,figure,model,solution,value,x
-WK,fig14b_tdp_entries,ALL,TempGNN,0.95,2
-WK,fig14b_tdp_entries,ALL,TempGNN,1.634,4
-WK,fig14b_tdp_entries,ALL,TempGNN,2.071,6
-WK,fig14b_tdp_entries,ALL,TempGNN,2.432,8
-WK,fig14b_tdp_entries,ALL,TempGNN,3.059,16
-WK,fig14b_tdp_entries,ALL,TempGNN,3.116,32
-WK,fig14b_tdp_entries,ALL,TempGNN,3.135,64
-MC,fig14b_tdp_entries,ALL,TempGNN,1.05,2
-MC,fig14b_tdp_entries,ALL,TempGNN,1.806,4
-MC,fig14b_tdp_entries,ALL,TempGNN,2.289,6
-MC,fig14b_tdp_entries,ALL,TempGNN,2.688,8
-MC,fig14b_tdp_entries,ALL,TempGNN,3.381,16
-MC,fig14b_tdp_entries,ALL,TempGNN,3.444,32
-MC,fig14b_tdp_entries,ALL,TempGNN,3.465,64
-RT,fig14b_tdp_entries,ALL,TempGNN,0.98,2
-RT,fig14b_tdp_entries,ALL,TempGNN,1.6856,4
-RT,fig14b_tdp_entries,ALL,TempGNN,2.1364,6
-RT,fig14b_tdp_entries,ALL,TempGNN,2.5088,8
-RT,fig14b_tdp_entries,ALL,TempGNN,3.1556,16
-RT,fig14b_tdp_entries,ALL,TempGNN,3.2144,32
-RT,fig14b_tdp_entries,ALL,TempGNN,3.234,64
-LM,fig14b_tdp_entries,ALL,TempGNN,0.92,2
-LM,fig14b_tdp_entries,ALL,TempGNN,1.5824,4
-LM,fig14b_tdp_entries,ALL,TempGNN,2.0056,6
-LM,fig14b_tdp_entries,ALL,TempGNN,2.3552,8
-LM,fig14b_tdp_entries,ALL,TempGNN,2.9624,16
-LM,fig14b_tdp_entries,ALL,TempGNN,3.0176,32
-LM,fig14b_tdp_entries,ALL,TempGNN,3.036,64
-WT,fig14b_tdp_entries,ALL,TempGNN,1.08,2
-WT,fig14b_tdp_entries,ALL,TempGNN,1.8576,4
-WT,fig14b_tdp_entries,ALL,TempGNN,2.3544,6
-WT,fig14b_tdp_entries,ALL,TempGNN,2.7648,8
-WT,fig14b_tdp_entries,ALL,TempGNN,3.4776,16
-WT,fig14b_tdp_entries,ALL,TempGNN,3.5424,32
-WT,fig14b_tdp_entries,ALL,TempGNN,3.564,64
-GT,fig14b_tdp_entries,ALL,TempGNN,1.02,2
-GT,fig14b_tdp_entries,ALL,TempGNN,1.7544,4
-GT,fig14b_tdp_entries,ALL,TempGNN,2.2236,6
-GT,fig14b_tdp_entries,ALL,TempGNN,2.6112,8
-GT,fig14b_tdp_entries,ALL,TempGNN,3.2844,16
-GT,fig14b_tdp_entries,ALL,TempGNN,3.3456,32
-GT,fig14b_tdp_entries,ALL,TempGNN,3.366,64
+dataset,figure,model,solution,source_id,source_kind,source_locator,source_sha256,value,value_note,x
+WK,fig14b_tdp_entries,ALL,TempGNN,vector_fig14,vector_geometry_digitization,Fig.14(b) marker:WK/2,7899270127476690fd8215bb6c8a7fc329563deca39c9a447654f1c5d9018d70,0.9989,Digitized from the vector line-marker geometry; expected uncertainty is about +/-0.01 speedup.,2
+WK,fig14b_tdp_entries,ALL,TempGNN,vector_fig14,vector_geometry_digitization,Fig.14(b) marker:WK/4,7899270127476690fd8215bb6c8a7fc329563deca39c9a447654f1c5d9018d70,1.5194,Digitized from the vector line-marker geometry; expected uncertainty is about +/-0.01 speedup.,4
+WK,fig14b_tdp_entries,ALL,TempGNN,vector_fig14,vector_geometry_digitization,Fig.14(b) marker:WK/6,7899270127476690fd8215bb6c8a7fc329563deca39c9a447654f1c5d9018d70,1.8493,Digitized from the vector line-marker geometry; expected uncertainty is about +/-0.01 speedup.,6
+WK,fig14b_tdp_entries,ALL,TempGNN,vector_fig14,vector_geometry_digitization,Fig.14(b) marker:WK/8,7899270127476690fd8215bb6c8a7fc329563deca39c9a447654f1c5d9018d70,2.1493,Digitized from the vector line-marker geometry; expected uncertainty is about +/-0.01 speedup.,8
+WK,fig14b_tdp_entries,ALL,TempGNN,vector_fig14,vector_geometry_digitization,Fig.14(b) marker:WK/16,7899270127476690fd8215bb6c8a7fc329563deca39c9a447654f1c5d9018d70,2.5489,Digitized from the vector line-marker geometry; expected uncertainty is about +/-0.01 speedup.,16
+WK,fig14b_tdp_entries,ALL,TempGNN,vector_fig14,vector_geometry_digitization,Fig.14(b) marker:WK/32,7899270127476690fd8215bb6c8a7fc329563deca39c9a447654f1c5d9018d70,2.5987,Digitized from the vector line-marker geometry; expected uncertainty is about +/-0.01 speedup.,32
+WK,fig14b_tdp_entries,ALL,TempGNN,vector_fig14,vector_geometry_digitization,Fig.14(b) marker:WK/64,7899270127476690fd8215bb6c8a7fc329563deca39c9a447654f1c5d9018d70,2.5788,Digitized from the vector line-marker geometry; expected uncertainty is about +/-0.01 speedup.,64
+MC,fig14b_tdp_entries,ALL,TempGNN,vector_fig14,vector_geometry_digitization,Fig.14(b) marker:MC/2,7899270127476690fd8215bb6c8a7fc329563deca39c9a447654f1c5d9018d70,1.0004,Digitized from the vector line-marker geometry; expected uncertainty is about +/-0.01 speedup.,2
+MC,fig14b_tdp_entries,ALL,TempGNN,vector_fig14,vector_geometry_digitization,Fig.14(b) marker:MC/4,7899270127476690fd8215bb6c8a7fc329563deca39c9a447654f1c5d9018d70,1.5507,Digitized from the vector line-marker geometry; expected uncertainty is about +/-0.01 speedup.,4
+MC,fig14b_tdp_entries,ALL,TempGNN,vector_fig14,vector_geometry_digitization,Fig.14(b) marker:MC/6,7899270127476690fd8215bb6c8a7fc329563deca39c9a447654f1c5d9018d70,1.8806,Digitized from the vector line-marker geometry; expected uncertainty is about +/-0.01 speedup.,6
+MC,fig14b_tdp_entries,ALL,TempGNN,vector_fig14,vector_geometry_digitization,Fig.14(b) marker:MC/8,7899270127476690fd8215bb6c8a7fc329563deca39c9a447654f1c5d9018d70,2.1806,Digitized from the vector line-marker geometry; expected uncertainty is about +/-0.01 speedup.,8
+MC,fig14b_tdp_entries,ALL,TempGNN,vector_fig14,vector_geometry_digitization,Fig.14(b) marker:MC/16,7899270127476690fd8215bb6c8a7fc329563deca39c9a447654f1c5d9018d70,2.6214,Digitized from the vector line-marker geometry; expected uncertainty is about +/-0.01 speedup.,16
+MC,fig14b_tdp_entries,ALL,TempGNN,vector_fig14,vector_geometry_digitization,Fig.14(b) marker:MC/32,7899270127476690fd8215bb6c8a7fc329563deca39c9a447654f1c5d9018d70,2.6612,Digitized from the vector line-marker geometry; expected uncertainty is about +/-0.01 speedup.,32
+MC,fig14b_tdp_entries,ALL,TempGNN,vector_fig14,vector_geometry_digitization,Fig.14(b) marker:MC/64,7899270127476690fd8215bb6c8a7fc329563deca39c9a447654f1c5d9018d70,2.6513,Digitized from the vector line-marker geometry; expected uncertainty is about +/-0.01 speedup.,64
+RT,fig14b_tdp_entries,ALL,TempGNN,vector_fig14,vector_geometry_digitization,Fig.14(b) marker:RT/2,7899270127476690fd8215bb6c8a7fc329563deca39c9a447654f1c5d9018d70,0.9818,Digitized from the vector line-marker geometry; expected uncertainty is about +/-0.01 speedup.,2
+RT,fig14b_tdp_entries,ALL,TempGNN,vector_fig14,vector_geometry_digitization,Fig.14(b) marker:RT/4,7899270127476690fd8215bb6c8a7fc329563deca39c9a447654f1c5d9018d70,1.562,Digitized from the vector line-marker geometry; expected uncertainty is about +/-0.01 speedup.,4
+RT,fig14b_tdp_entries,ALL,TempGNN,vector_fig14,vector_geometry_digitization,Fig.14(b) marker:RT/6,7899270127476690fd8215bb6c8a7fc329563deca39c9a447654f1c5d9018d70,1.9019,Digitized from the vector line-marker geometry; expected uncertainty is about +/-0.01 speedup.,6
+RT,fig14b_tdp_entries,ALL,TempGNN,vector_fig14,vector_geometry_digitization,Fig.14(b) marker:RT/8,7899270127476690fd8215bb6c8a7fc329563deca39c9a447654f1c5d9018d70,2.2318,Digitized from the vector line-marker geometry; expected uncertainty is about +/-0.01 speedup.,8
+RT,fig14b_tdp_entries,ALL,TempGNN,vector_fig14,vector_geometry_digitization,Fig.14(b) marker:RT/16,7899270127476690fd8215bb6c8a7fc329563deca39c9a447654f1c5d9018d70,2.6825,Digitized from the vector line-marker geometry; expected uncertainty is about +/-0.01 speedup.,16
+RT,fig14b_tdp_entries,ALL,TempGNN,vector_fig14,vector_geometry_digitization,Fig.14(b) marker:RT/32,7899270127476690fd8215bb6c8a7fc329563deca39c9a447654f1c5d9018d70,2.7323,Digitized from the vector line-marker geometry; expected uncertainty is about +/-0.01 speedup.,32
+RT,fig14b_tdp_entries,ALL,TempGNN,vector_fig14,vector_geometry_digitization,Fig.14(b) marker:RT/64,7899270127476690fd8215bb6c8a7fc329563deca39c9a447654f1c5d9018d70,2.7024,Digitized from the vector line-marker geometry; expected uncertainty is about +/-0.01 speedup.,64
+LM,fig14b_tdp_entries,ALL,TempGNN,vector_fig14,vector_geometry_digitization,Fig.14(b) marker:LM/2,7899270127476690fd8215bb6c8a7fc329563deca39c9a447654f1c5d9018d70,0.9996,Digitized from the vector line-marker geometry; expected uncertainty is about +/-0.01 speedup.,2
+LM,fig14b_tdp_entries,ALL,TempGNN,vector_fig14,vector_geometry_digitization,Fig.14(b) marker:LM/4,7899270127476690fd8215bb6c8a7fc329563deca39c9a447654f1c5d9018d70,1.4205,Digitized from the vector line-marker geometry; expected uncertainty is about +/-0.01 speedup.,4
+LM,fig14b_tdp_entries,ALL,TempGNN,vector_fig14,vector_geometry_digitization,Fig.14(b) marker:LM/6,7899270127476690fd8215bb6c8a7fc329563deca39c9a447654f1c5d9018d70,1.6793,Digitized from the vector line-marker geometry; expected uncertainty is about +/-0.01 speedup.,6
+LM,fig14b_tdp_entries,ALL,TempGNN,vector_fig14,vector_geometry_digitization,Fig.14(b) marker:LM/8,7899270127476690fd8215bb6c8a7fc329563deca39c9a447654f1c5d9018d70,1.8201,Digitized from the vector line-marker geometry; expected uncertainty is about +/-0.01 speedup.,8
+LM,fig14b_tdp_entries,ALL,TempGNN,vector_fig14,vector_geometry_digitization,Fig.14(b) marker:LM/16,7899270127476690fd8215bb6c8a7fc329563deca39c9a447654f1c5d9018d70,1.9495,Digitized from the vector line-marker geometry; expected uncertainty is about +/-0.01 speedup.,16
+LM,fig14b_tdp_entries,ALL,TempGNN,vector_fig14,vector_geometry_digitization,Fig.14(b) marker:LM/32,7899270127476690fd8215bb6c8a7fc329563deca39c9a447654f1c5d9018d70,1.9794,Digitized from the vector line-marker geometry; expected uncertainty is about +/-0.01 speedup.,32
+LM,fig14b_tdp_entries,ALL,TempGNN,vector_fig14,vector_geometry_digitization,Fig.14(b) marker:LM/64,7899270127476690fd8215bb6c8a7fc329563deca39c9a447654f1c5d9018d70,1.9396,Digitized from the vector line-marker geometry; expected uncertainty is about +/-0.01 speedup.,64
+WT,fig14b_tdp_entries,ALL,TempGNN,vector_fig14,vector_geometry_digitization,Fig.14(b) marker:WT/2,7899270127476690fd8215bb6c8a7fc329563deca39c9a447654f1c5d9018d70,1.0174,Digitized from the vector line-marker geometry; expected uncertainty is about +/-0.01 speedup.,2
+WT,fig14b_tdp_entries,ALL,TempGNN,vector_fig14,vector_geometry_digitization,Fig.14(b) marker:WT/4,7899270127476690fd8215bb6c8a7fc329563deca39c9a447654f1c5d9018d70,1.6672,Digitized from the vector line-marker geometry; expected uncertainty is about +/-0.01 speedup.,4
+WT,fig14b_tdp_entries,ALL,TempGNN,vector_fig14,vector_geometry_digitization,Fig.14(b) marker:WT/6,7899270127476690fd8215bb6c8a7fc329563deca39c9a447654f1c5d9018d70,2.1678,Digitized from the vector line-marker geometry; expected uncertainty is about +/-0.01 speedup.,6
+WT,fig14b_tdp_entries,ALL,TempGNN,vector_fig14,vector_geometry_digitization,Fig.14(b) marker:WT/8,7899270127476690fd8215bb6c8a7fc329563deca39c9a447654f1c5d9018d70,2.5674,Digitized from the vector line-marker geometry; expected uncertainty is about +/-0.01 speedup.,8
+WT,fig14b_tdp_entries,ALL,TempGNN,vector_fig14,vector_geometry_digitization,Fig.14(b) marker:WT/16,7899270127476690fd8215bb6c8a7fc329563deca39c9a447654f1c5d9018d70,3.1674,Digitized from the vector line-marker geometry; expected uncertainty is about +/-0.01 speedup.,16
+WT,fig14b_tdp_entries,ALL,TempGNN,vector_fig14,vector_geometry_digitization,Fig.14(b) marker:WT/32,7899270127476690fd8215bb6c8a7fc329563deca39c9a447654f1c5d9018d70,3.2371,Digitized from the vector line-marker geometry; expected uncertainty is about +/-0.01 speedup.,32
+WT,fig14b_tdp_entries,ALL,TempGNN,vector_fig14,vector_geometry_digitization,Fig.14(b) marker:WT/64,7899270127476690fd8215bb6c8a7fc329563deca39c9a447654f1c5d9018d70,3.1973,Digitized from the vector line-marker geometry; expected uncertainty is about +/-0.01 speedup.,64
+GT,fig14b_tdp_entries,ALL,TempGNN,vector_fig14,vector_geometry_digitization,Fig.14(b) marker:GT/2,7899270127476690fd8215bb6c8a7fc329563deca39c9a447654f1c5d9018d70,1.0004,Digitized from the vector line-marker geometry; expected uncertainty is about +/-0.01 speedup.,2
+GT,fig14b_tdp_entries,ALL,TempGNN,vector_fig14,vector_geometry_digitization,Fig.14(b) marker:GT/4,7899270127476690fd8215bb6c8a7fc329563deca39c9a447654f1c5d9018d70,1.7213,Digitized from the vector line-marker geometry; expected uncertainty is about +/-0.01 speedup.,4
+GT,fig14b_tdp_entries,ALL,TempGNN,vector_fig14,vector_geometry_digitization,Fig.14(b) marker:GT/6,7899270127476690fd8215bb6c8a7fc329563deca39c9a447654f1c5d9018d70,2.3512,Digitized from the vector line-marker geometry; expected uncertainty is about +/-0.01 speedup.,6
+GT,fig14b_tdp_entries,ALL,TempGNN,vector_fig14,vector_geometry_digitization,Fig.14(b) marker:GT/8,7899270127476690fd8215bb6c8a7fc329563deca39c9a447654f1c5d9018d70,2.8503,Digitized from the vector line-marker geometry; expected uncertainty is about +/-0.01 speedup.,8
+GT,fig14b_tdp_entries,ALL,TempGNN,vector_fig14,vector_geometry_digitization,Fig.14(b) marker:GT/16,7899270127476690fd8215bb6c8a7fc329563deca39c9a447654f1c5d9018d70,3.5514,Digitized from the vector line-marker geometry; expected uncertainty is about +/-0.01 speedup.,16
+GT,fig14b_tdp_entries,ALL,TempGNN,vector_fig14,vector_geometry_digitization,Fig.14(b) marker:GT/32,7899270127476690fd8215bb6c8a7fc329563deca39c9a447654f1c5d9018d70,3.6509,Digitized from the vector line-marker geometry; expected uncertainty is about +/-0.01 speedup.,32
+GT,fig14b_tdp_entries,ALL,TempGNN,vector_fig14,vector_geometry_digitization,Fig.14(b) marker:GT/64,7899270127476690fd8215bb6c8a7fc329563deca39c9a447654f1c5d9018d70,3.6111,Digitized from the vector line-marker geometry; expected uncertainty is about +/-0.01 speedup.,64

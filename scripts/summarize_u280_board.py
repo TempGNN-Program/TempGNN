@@ -53,9 +53,21 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Summarize measured U280 board and routed-build evidence.")
     parser.add_argument("--board-dir", type=Path, default=Path("results/board_u280"))
     parser.add_argument("--board-log", type=Path, default=Path("logs/u280_board_run_20260703_161208.log"))
-    parser.add_argument("--xclbin", type=Path, default=Path("build/vitis_u280_forward_hw/tempgnn_forward_kernel.hw.xclbin"))
-    parser.add_argument("--host-binary", type=Path, default=Path("build/vitis_u280_forward_hw/tempgnn_forward_xrt_host"))
-    parser.add_argument("--xclbin-info", type=Path, default=Path("build/vitis_u280_forward_hw/tempgnn_forward_kernel.hw.xclbin.info"))
+    parser.add_argument(
+        "--xclbin",
+        type=Path,
+        default=Path("artifacts/u280/TempGNN/bin/tempgnn_forward_kernel.hw.xclbin"),
+    )
+    parser.add_argument(
+        "--host-binary",
+        type=Path,
+        default=Path("artifacts/u280/TempGNN/bin/u280_forward_benchmark_host"),
+    )
+    parser.add_argument(
+        "--xclbin-info",
+        type=Path,
+        default=Path("artifacts/u280/TempGNN/evidence/packaged_xclbin_info.txt"),
+    )
     parser.add_argument("--timing-report", type=Path, default=Path("hardware/vitis/_x/reports/link/imp/impl_1_hw_bb_locked_timing_summary_routed.rpt"))
     parser.add_argument("--kernel-util-report", type=Path, default=Path("hardware/vitis/_x/reports/link/imp/impl_1_kernel_util_routed.rpt"))
     parser.add_argument("--full-util-report", type=Path, default=Path("hardware/vitis/_x/reports/link/imp/impl_1_full_util_routed.rpt"))

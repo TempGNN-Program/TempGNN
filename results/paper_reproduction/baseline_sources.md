@@ -1,43 +1,43 @@
 # Baseline Reproduction Notes
 
 ## TempGNN
-- Platform: Xilinx Alveo U280, 2x4 GB HBM2, 460 GB/s
-- Toolchain: Xilinx Vitis, 225 MHz post-route target
-- Reproduction status: This repo provides the Vitis-HLS kernel, C-sim/cosim scripts, XRT host, U280 v++ build flow, and measured U280 board evidence.
-- Key settings: batch size 1000, recent sampling, JODIE/TGN/TGAT/APAN, 32-bit floating point
-- Notes: Primary TempGNN comparison row.
+- Platform: Xilinx Alveo U280
+- Toolchain: Xilinx Vitis 2023.2 for the packaged AE path; paper target 225 MHz
+- Reproduction status: The repository supplies a bounded Q10 forward-path implementation, XRT host, build flow, and fresh U280 measurement harness. It is not the complete paper implementation.
+- Key settings: 8-dimensional Q10 diagnostic path; batch-size-1000 real-stream prefixes in the U280 workflow
+- Notes: Paper reference figures and fresh U280 diagnostic measurements are stored in separate directories.
 
 ## MATG
-- Platform: Xilinx Alveo U280 after reproduction
-- Toolchain: Xilinx Vitis 2020.2
-- Reproduction status: Reproduced from the published paper and available public source, then measured on U280 as a comparison input.
-- Key settings: TGN-attn model-architecture co-design with simplified attention, LUT time encoder, neighbor pruning, knowledge distillation
-- Notes: FPGA baseline comparison row measured from the reproduced U280 run.
+- Platform: Xilinx Alveo U280
+- Toolchain: Clean-room Vitis-HLS 2023.2 reproduction informed by the MATG paper
+- Reproduction status: Independent bounded implementation of the documented MATG-style pruning and LUT time-encoding mechanisms; freshly runnable on U280, but not the authors' complete stack or a paper-equivalent rerun.
+- Key settings: bounded degree scan, neighbor pruning, LUT time encoding, fixed-point forward path
+- Notes: Its measured rows are generated only by the fresh U280 workflow, never copied into reference figures.
 
 ## ViTeGNN
 - Platform: Xilinx Alveo U280
-- Toolchain: Xilinx Vitis 2022.2
-- Reproduction status: Reproduced according to the published paper, then measured on U280 as a comparison input.
-- Key settings: ViTeGNN-lat/bal/thpt modes; TGN-attn hidden/memory/time dim 100; batch sizes 50/200/200; 4 remaining neighbors
-- Notes: FPGA baseline comparison row measured from the reproduced U280 run.
+- Toolchain: Clean-room Vitis-HLS 2023.2 reproduction informed by the ViTeGNN paper
+- Reproduction status: Independent bounded implementation of documented lightweight-attention and retained-neighbor mechanisms; freshly runnable on U280, but not the authors' complete lat/bal/thpt stack.
+- Key settings: four retained neighbors, lightweight attention, fixed-point forward path
+- Notes: Its measured rows are generated only by the fresh U280 workflow, never copied into reference figures.
 
 ## RTGA
 - Platform: Xilinx Alveo U280
-- Toolchain: Xilinx Vivado 2019.1
-- Reproduction status: Reproduced according to the published paper, then measured on U280 as a comparison input.
-- Key settings: 8 TAUs; temporal tree construction/update, redundancy-aware sampling, temporal-aware data caching
-- Notes: FPGA baseline comparison row measured from the reproduced U280 run.
+- Toolchain: Clean-room Vitis-HLS 2023.2 reproduction informed by the RTGA paper
+- Reproduction status: Independent bounded implementation of documented temporal-tree scheduling and temporal-aware caching mechanisms; freshly runnable on U280, but not the authors' complete stack.
+- Key settings: temporal-tree traversal, redundancy-aware selection, temporal-aware cache, fixed-point path
+- Notes: Its measured rows are generated only by the fresh U280 workflow, never copied into reference figures.
 
 ## Cascade
-- Platform: NVIDIA A100 GPU
-- Toolchain: CUDA
-- Reproduction status: Reproduced according to the published paper, then measured in the GPU comparison environment.
-- Key settings: Dependency-aware batching GPU software baseline.
-- Notes: GPU baseline comparison row measured from the reproduced run.
+- Platform: NVIDIA A100 GPU in the paper
+- Toolchain: CUDA reference baseline
+- Reproduction status: Reference-figure input only; this repository does not execute Cascade on U280.
+- Key settings: dependency-aware GPU batching
+- Notes: Cascade is not one of the fresh U280 xclbins.
 
 ## TGLite-CPU
-- Platform: 32-core Intel Xeon Platinum 8357B, 2.6 GHz, 503 GB DDR4, 16 memory channels
-- Toolchain: TGLite artifact / CPU baseline
-- Reproduction status: Reproduced from the released artifact, then measured in the CPU comparison environment.
-- Key settings: batch size 1000, recent sampling
-- Notes: CPU normalization baseline measured from the reproduced run.
+- Platform: 32-core Intel Xeon Platinum 8357B in the paper
+- Toolchain: TGLite CPU reference baseline
+- Reproduction status: Reference-figure input only; this repository does not freshly execute TGLite-CPU.
+- Key settings: batch size 1000 and recent sampling in the paper configuration
+- Notes: Reference-only plotting input.

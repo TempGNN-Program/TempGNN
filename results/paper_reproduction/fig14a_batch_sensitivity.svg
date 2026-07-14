@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="760" height="460" viewBox="0 0 760 460"><rect width="100%" height="100%" fill="white"/>
-<text x="380.0" y="26" text-anchor="middle" font-size="18">Fig.14(a) Sensitivity to batch size</text>
+<text x="380.0" y="26" text-anchor="middle" font-size="18">Paper-reference Fig.14(a) sensitivity to batch size</text>
 <line x1="70" y1="390" x2="730" y2="390" stroke="#333"/>
-<line x1="70" y1="45" x2="70" y2="390" stroke="#333"/>
+<line x1="70" y1="99" x2="70" y2="390" stroke="#333"/>
 <text x="380.0" y="448" text-anchor="middle" font-size="13">batch size</text>
 <line x1="70.0" y1="390" x2="70.0" y2="395" stroke="#333"/>
 <text x="70.0" y="410" text-anchor="middle" font-size="11">400</text>
@@ -15,22 +15,46 @@
 <text x="730.0" y="410" text-anchor="middle" font-size="11">1200</text>
 <line x1="70" y1="390.0" x2="730" y2="390.0" stroke="#eee"/>
 <text x="62" y="394.0" text-anchor="end" font-size="11">0.0</text>
-<line x1="70" y1="321.0" x2="730" y2="321.0" stroke="#eee"/>
-<text x="62" y="325.0" text-anchor="end" font-size="11">0.2</text>
-<line x1="70" y1="252.0" x2="730" y2="252.0" stroke="#eee"/>
-<text x="62" y="256.0" text-anchor="end" font-size="11">0.4</text>
-<line x1="70" y1="183.0" x2="730" y2="183.0" stroke="#eee"/>
-<text x="62" y="187.0" text-anchor="end" font-size="11">0.6</text>
-<line x1="70" y1="114.0" x2="730" y2="114.0" stroke="#eee"/>
-<text x="62" y="118.0" text-anchor="end" font-size="11">0.8</text>
-<line x1="70" y1="45.0" x2="730" y2="45.0" stroke="#eee"/>
-<text x="62" y="49.0" text-anchor="end" font-size="11">1.0</text>
-<polyline points="70.0,193.8 235.0,139.7 400.0,85.6 565.0,51.8 730.0,45.0" fill="none" stroke="#4c78a8" stroke-width="2"/>
-<circle cx="70.0" cy="193.8" r="3.5" fill="#4c78a8"><title>AVG 400: 0.58</title></circle>
-<circle cx="235.0" cy="139.7" r="3.5" fill="#4c78a8"><title>AVG 600: 0.74</title></circle>
-<circle cx="400.0" cy="85.6" r="3.5" fill="#4c78a8"><title>AVG 800: 0.9</title></circle>
-<circle cx="565.0" cy="51.8" r="3.5" fill="#4c78a8"><title>AVG 1000: 1</title></circle>
-<circle cx="730.0" cy="45.0" r="3.5" fill="#4c78a8"><title>AVG 1200: 1.02</title></circle>
-<rect x="550.0" y="38.0" width="12" height="12" fill="#4c78a8"/>
-<text x="568.0" y="48.0" font-size="12">AVG</text>
+<line x1="70" y1="331.8" x2="730" y2="331.8" stroke="#eee"/>
+<text x="62" y="335.8" text-anchor="end" font-size="11">0.2</text>
+<line x1="70" y1="273.6" x2="730" y2="273.6" stroke="#eee"/>
+<text x="62" y="277.6" text-anchor="end" font-size="11">0.4</text>
+<line x1="70" y1="215.4" x2="730" y2="215.4" stroke="#eee"/>
+<text x="62" y="219.4" text-anchor="end" font-size="11">0.6</text>
+<line x1="70" y1="157.2" x2="730" y2="157.2" stroke="#eee"/>
+<text x="62" y="161.2" text-anchor="end" font-size="11">0.8</text>
+<line x1="70" y1="99.0" x2="730" y2="99.0" stroke="#eee"/>
+<text x="62" y="103.0" text-anchor="end" font-size="11">1.0</text>
+<polyline points="70.0,99.0 235.0,122.3 400.0,138.3 565.0,151.4 730.0,158.6" fill="none" stroke="#4c78a8" stroke-width="2"/>
+<circle cx="70.0" cy="99.0" r="3.5" fill="#4c78a8"><title>MATG 400: 1</title></circle>
+<circle cx="235.0" cy="122.3" r="3.5" fill="#4c78a8"><title>MATG 600: 0.9201</title></circle>
+<circle cx="400.0" cy="138.3" r="3.5" fill="#4c78a8"><title>MATG 800: 0.865</title></circle>
+<circle cx="565.0" cy="151.4" r="3.5" fill="#4c78a8"><title>MATG 1000: 0.82</title></circle>
+<circle cx="730.0" cy="158.6" r="3.5" fill="#4c78a8"><title>MATG 1200: 0.7952</title></circle>
+<polyline points="70.0,163.0 235.0,190.7 400.0,208.2 565.0,224.9 730.0,231.4" fill="none" stroke="#f58518" stroke-width="2"/>
+<circle cx="70.0" cy="163.0" r="3.5" fill="#f58518"><title>ViTeGNN 400: 0.7801</title></circle>
+<circle cx="235.0" cy="190.7" r="3.5" fill="#f58518"><title>ViTeGNN 600: 0.685</title></circle>
+<circle cx="400.0" cy="208.2" r="3.5" fill="#f58518"><title>ViTeGNN 800: 0.6249</title></circle>
+<circle cx="565.0" cy="224.9" r="3.5" fill="#f58518"><title>ViTeGNN 1000: 0.5672</title></circle>
+<circle cx="730.0" cy="231.4" r="3.5" fill="#f58518"><title>ViTeGNN 1200: 0.545</title></circle>
+<polyline points="70.0,219.8 235.0,243.0 400.0,260.5 565.0,273.9 730.0,279.4" fill="none" stroke="#54a24b" stroke-width="2"/>
+<circle cx="70.0" cy="219.8" r="3.5" fill="#54a24b"><title>RTGA 400: 0.585</title></circle>
+<circle cx="235.0" cy="243.0" r="3.5" fill="#54a24b"><title>RTGA 600: 0.505</title></circle>
+<circle cx="400.0" cy="260.5" r="3.5" fill="#54a24b"><title>RTGA 800: 0.4449</title></circle>
+<circle cx="565.0" cy="273.9" r="3.5" fill="#54a24b"><title>RTGA 1000: 0.3989</title></circle>
+<circle cx="730.0" cy="279.4" r="3.5" fill="#54a24b"><title>RTGA 1200: 0.3801</title></circle>
+<polyline points="70.0,324.5 235.0,342.0 400.0,353.7 565.0,359.4 730.0,360.3" fill="none" stroke="#b279a2" stroke-width="2"/>
+<circle cx="70.0" cy="324.5" r="3.5" fill="#b279a2"><title>TempGNN 400: 0.225</title></circle>
+<circle cx="235.0" cy="342.0" r="3.5" fill="#b279a2"><title>TempGNN 600: 0.1649</title></circle>
+<circle cx="400.0" cy="353.7" r="3.5" fill="#b279a2"><title>TempGNN 800: 0.1249</title></circle>
+<circle cx="565.0" cy="359.4" r="3.5" fill="#b279a2"><title>TempGNN 1000: 0.1051</title></circle>
+<circle cx="730.0" cy="360.3" r="3.5" fill="#b279a2"><title>TempGNN 1200: 0.1021</title></circle>
+<rect x="70.0" y="40.0" width="12" height="12" fill="#4c78a8"/>
+<text x="88.0" y="50.0" font-size="12">MATG</text>
+<rect x="290.0" y="40.0" width="12" height="12" fill="#f58518"/>
+<text x="308.0" y="50.0" font-size="12">ViTeGNN</text>
+<rect x="510.0" y="40.0" width="12" height="12" fill="#54a24b"/>
+<text x="528.0" y="50.0" font-size="12">RTGA</text>
+<rect x="70.0" y="62.0" width="12" height="12" fill="#b279a2"/>
+<text x="88.0" y="72.0" font-size="12">TempGNN</text>
 </svg>

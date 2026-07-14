@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1750" height="560" viewBox="0 0 1750 560"><rect width="100%" height="100%" fill="white"/>
+<text x="875.0" y="26" text-anchor="middle" font-size="18">Paper-reference Fig.2 execution-time breakdown</text>
+<line x1="70" y1="445" x2="1730" y2="445" stroke="#333"/>
+<line x1="70" y1="45" x2="70" y2="445" stroke="#333"/>
+<line x1="70" y1="445.0" x2="1730" y2="445.0" stroke="#eee"/>
+<text x="62" y="449.0" text-anchor="end" font-size="11">0.0</text>
+<line x1="70" y1="365.0" x2="1730" y2="365.0" stroke="#eee"/>
+<text x="62" y="369.0" text-anchor="end" font-size="11">16.9</text>
+<line x1="70" y1="285.0" x2="1730" y2="285.0" stroke="#eee"/>
+<text x="62" y="289.0" text-anchor="end" font-size="11">33.8</text>
+<line x1="70" y1="205.0" x2="1730" y2="205.0" stroke="#eee"/>
+<text x="62" y="209.0" text-anchor="end" font-size="11">50.7</text>
+<line x1="70" y1="125.0" x2="1730" y2="125.0" stroke="#eee"/>
+<text x="62" y="129.0" text-anchor="end" font-size="11">67.6</text>
+<line x1="70" y1="45.0" x2="1730" y2="45.0" stroke="#eee"/>
+<text x="62" y="49.0" text-anchor="end" font-size="11">84.5</text>
+<text x="103.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 103.0,542)">JODIE-WK</text>
+<rect x="76.6" y="414.2" width="11.2" height="30.8" fill="#4c78a8"><title>JODIE-WK TGS (%): 6.5</title></rect>
+<rect x="89.8" y="422.3" width="11.2" height="22.7" fill="#f58518"><title>JODIE-WK MG (%): 4.8</title></rect>
+<rect x="103.0" y="59.2" width="11.2" height="385.8" fill="#54a24b"><title>JODIE-WK VMU (%): 81.5</title></rect>
+<rect x="116.2" y="410.9" width="11.2" height="34.1" fill="#b279a2"><title>JODIE-WK TA (%): 7.2</title></rect>
+<text x="169.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 169.0,542)">JODIE-MC</text>
+<rect x="142.6" y="420.4" width="11.2" height="24.6" fill="#4c78a8"><title>JODIE-MC TGS (%): 5.2</title></rect>
+<rect x="155.8" y="420.9" width="11.2" height="24.1" fill="#f58518"><title>JODIE-MC MG (%): 5.1</title></rect>
+<rect x="169.0" y="62.5" width="11.2" height="382.5" fill="#54a24b"><title>JODIE-MC VMU (%): 80.8</title></rect>
+<rect x="182.2" y="402.9" width="11.2" height="42.1" fill="#b279a2"><title>JODIE-MC TA (%): 8.9</title></rect>
+<text x="235.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 235.0,542)">JODIE-RT</text>
+<rect x="208.6" y="416.1" width="11.2" height="28.9" fill="#4c78a8"><title>JODIE-RT TGS (%): 6.1</title></rect>
+<rect x="221.8" y="423.7" width="11.2" height="21.3" fill="#f58518"><title>JODIE-RT MG (%): 4.5</title></rect>
+<rect x="235.0" y="55.9" width="11.2" height="389.1" fill="#54a24b"><title>JODIE-RT VMU (%): 82.2</title></rect>
+<rect x="248.2" y="410.9" width="11.2" height="34.1" fill="#b279a2"><title>JODIE-RT TA (%): 7.2</title></rect>
+<text x="301.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 301.0,542)">JODIE-LM</text>
+<rect x="274.6" y="412.8" width="11.2" height="32.2" fill="#4c78a8"><title>JODIE-LM TGS (%): 6.8</title></rect>
+<rect x="287.8" y="419.0" width="11.2" height="26.0" fill="#f58518"><title>JODIE-LM MG (%): 5.5</title></rect>
+<rect x="301.0" y="73.4" width="11.2" height="371.6" fill="#54a24b"><title>JODIE-LM VMU (%): 78.5</title></rect>
+<rect x="314.2" y="401.4" width="11.2" height="43.6" fill="#b279a2"><title>JODIE-LM TA (%): 9.2</title></rect>
+<text x="367.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 367.0,542)">JODIE-WT</text>
+<rect x="340.6" y="395.3" width="11.2" height="49.7" fill="#4c78a8"><title>JODIE-WT TGS (%): 10.5</title></rect>
+<rect x="353.8" y="429.9" width="11.2" height="15.1" fill="#f58518"><title>JODIE-WT MG (%): 3.2</title></rect>
+<rect x="367.0" y="61.1" width="11.2" height="383.9" fill="#54a24b"><title>JODIE-WT VMU (%): 81.1</title></rect>
+<rect x="380.2" y="420.4" width="11.2" height="24.6" fill="#b279a2"><title>JODIE-WT TA (%): 5.2</title></rect>
+<text x="433.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 433.0,542)">JODIE-GT</text>
+<rect x="406.6" y="377.8" width="11.2" height="67.2" fill="#4c78a8"><title>JODIE-GT TGS (%): 14.2</title></rect>
+<rect x="419.8" y="431.7" width="11.2" height="13.3" fill="#f58518"><title>JODIE-GT MG (%): 2.8</title></rect>
+<rect x="433.0" y="73.4" width="11.2" height="371.6" fill="#54a24b"><title>JODIE-GT VMU (%): 78.5</title></rect>
+<rect x="446.2" y="423.7" width="11.2" height="21.3" fill="#b279a2"><title>JODIE-GT TA (%): 4.5</title></rect>
+<text x="499.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 499.0,542)">TGN-WK</text>
+<rect x="472.6" y="234.3" width="11.2" height="210.7" fill="#4c78a8"><title>TGN-WK TGS (%): 44.5</title></rect>
+<rect x="485.8" y="417.5" width="11.2" height="27.5" fill="#f58518"><title>TGN-WK MG (%): 5.8</title></rect>
+<rect x="499.0" y="283.1" width="11.2" height="161.9" fill="#54a24b"><title>TGN-WK VMU (%): 34.2</title></rect>
+<rect x="512.2" y="371.6" width="11.2" height="73.4" fill="#b279a2"><title>TGN-WK TA (%): 15.5</title></rect>
+<text x="565.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 565.0,542)">TGN-MC</text>
+<rect x="538.6" y="250.0" width="11.2" height="195.0" fill="#4c78a8"><title>TGN-MC TGS (%): 41.2</title></rect>
+<rect x="551.8" y="414.2" width="11.2" height="30.8" fill="#f58518"><title>TGN-MC MG (%): 6.5</title></rect>
+<rect x="565.0" y="286.4" width="11.2" height="158.6" fill="#54a24b"><title>TGN-MC VMU (%): 33.5</title></rect>
+<rect x="578.2" y="356.0" width="11.2" height="89.0" fill="#b279a2"><title>TGN-MC TA (%): 18.8</title></rect>
+<text x="631.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 631.0,542)">TGN-RT</text>
+<rect x="604.6" y="223.5" width="11.2" height="221.5" fill="#4c78a8"><title>TGN-RT TGS (%): 46.8</title></rect>
+<rect x="617.8" y="420.4" width="11.2" height="24.6" fill="#f58518"><title>TGN-RT MG (%): 5.2</title></rect>
+<rect x="631.0" y="280.3" width="11.2" height="164.7" fill="#54a24b"><title>TGN-RT VMU (%): 34.8</title></rect>
+<rect x="644.2" y="382.5" width="11.2" height="62.5" fill="#b279a2"><title>TGN-RT TA (%): 13.2</title></rect>
+<text x="697.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 697.0,542)">TGN-LM</text>
+<rect x="670.6" y="243.8" width="11.2" height="201.2" fill="#4c78a8"><title>TGN-LM TGS (%): 42.5</title></rect>
+<rect x="683.8" y="416.1" width="11.2" height="28.9" fill="#f58518"><title>TGN-LM MG (%): 6.1</title></rect>
+<rect x="697.0" y="291.2" width="11.2" height="153.8" fill="#54a24b"><title>TGN-LM VMU (%): 32.5</title></rect>
+<rect x="710.2" y="355.5" width="11.2" height="89.5" fill="#b279a2"><title>TGN-LM TA (%): 18.9</title></rect>
+<text x="763.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 763.0,542)">TGN-WT</text>
+<rect x="736.6" y="182.8" width="11.2" height="262.2" fill="#4c78a8"><title>TGN-WT TGS (%): 55.4</title></rect>
+<rect x="749.8" y="425.1" width="11.2" height="19.9" fill="#f58518"><title>TGN-WT MG (%): 4.2</title></rect>
+<rect x="763.0" y="303.9" width="11.2" height="141.1" fill="#54a24b"><title>TGN-WT VMU (%): 29.8</title></rect>
+<rect x="776.2" y="394.8" width="11.2" height="50.2" fill="#b279a2"><title>TGN-WT TA (%): 10.6</title></rect>
+<text x="829.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 829.0,542)">TGN-GT</text>
+<rect x="802.6" y="155.3" width="11.2" height="289.7" fill="#4c78a8"><title>TGN-GT TGS (%): 61.2</title></rect>
+<rect x="815.8" y="428.4" width="11.2" height="16.6" fill="#f58518"><title>TGN-GT MG (%): 3.5</title></rect>
+<rect x="829.0" y="314.8" width="11.2" height="130.2" fill="#54a24b"><title>TGN-GT VMU (%): 27.5</title></rect>
+<rect x="842.2" y="408.1" width="11.2" height="36.9" fill="#b279a2"><title>TGN-GT TA (%): 7.8</title></rect>
+<text x="895.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 895.0,542)">TGAT-WK</text>
+<rect x="868.6" y="101.8" width="11.2" height="343.2" fill="#4c78a8"><title>TGAT-WK TGS (%): 72.5</title></rect>
+<rect x="881.8" y="425.1" width="11.2" height="19.9" fill="#f58518"><title>TGAT-WK MG (%): 4.2</title></rect>
+<rect x="895.0" y="436.5" width="11.2" height="8.5" fill="#54a24b"><title>TGAT-WK VMU (%): 1.8</title></rect>
+<rect x="908.2" y="343.2" width="11.2" height="101.8" fill="#b279a2"><title>TGAT-WK TA (%): 21.5</title></rect>
+<text x="961.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 961.0,542)">TGAT-MC</text>
+<rect x="934.6" y="119.3" width="11.2" height="325.7" fill="#4c78a8"><title>TGAT-MC TGS (%): 68.8</title></rect>
+<rect x="947.8" y="422.3" width="11.2" height="22.7" fill="#f58518"><title>TGAT-MC MG (%): 4.8</title></rect>
+<rect x="961.0" y="435.1" width="11.2" height="9.9" fill="#54a24b"><title>TGAT-MC VMU (%): 2.1</title></rect>
+<rect x="974.2" y="330.0" width="11.2" height="115.0" fill="#b279a2"><title>TGAT-MC TA (%): 24.3</title></rect>
+<text x="1027.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 1027.0,542)">TGAT-RT</text>
+<rect x="1000.6" y="94.2" width="11.2" height="350.8" fill="#4c78a8"><title>TGAT-RT TGS (%): 74.1</title></rect>
+<rect x="1013.8" y="426.5" width="11.2" height="18.5" fill="#f58518"><title>TGAT-RT MG (%): 3.9</title></rect>
+<rect x="1027.0" y="437.9" width="11.2" height="7.1" fill="#54a24b"><title>TGAT-RT VMU (%): 1.5</title></rect>
+<rect x="1040.2" y="348.0" width="11.2" height="97.0" fill="#b279a2"><title>TGAT-RT TA (%): 20.5</title></rect>
+<text x="1093.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 1093.0,542)">TGAT-LM</text>
+<rect x="1066.6" y="134.9" width="11.2" height="310.1" fill="#4c78a8"><title>TGAT-LM TGS (%): 65.5</title></rect>
+<rect x="1079.8" y="420.4" width="11.2" height="24.6" fill="#f58518"><title>TGAT-LM MG (%): 5.2</title></rect>
+<rect x="1093.0" y="433.2" width="11.2" height="11.8" fill="#54a24b"><title>TGAT-LM VMU (%): 2.5</title></rect>
+<rect x="1106.2" y="318.1" width="11.2" height="126.9" fill="#b279a2"><title>TGAT-LM TA (%): 26.8</title></rect>
+<text x="1159.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 1159.0,542)">TGAT-WT</text>
+<rect x="1132.6" y="65.4" width="11.2" height="379.6" fill="#4c78a8"><title>TGAT-WT TGS (%): 80.2</title></rect>
+<rect x="1145.8" y="430.3" width="11.2" height="14.7" fill="#f58518"><title>TGAT-WT MG (%): 3.1</title></rect>
+<rect x="1159.0" y="439.3" width="11.2" height="5.7" fill="#54a24b"><title>TGAT-WT VMU (%): 1.2</title></rect>
+<rect x="1172.2" y="371.6" width="11.2" height="73.4" fill="#b279a2"><title>TGAT-WT TA (%): 15.5</title></rect>
+<text x="1225.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 1225.0,542)">TGAT-GT</text>
+<rect x="1198.6" y="45.0" width="11.2" height="400.0" fill="#4c78a8"><title>TGAT-GT TGS (%): 84.5</title></rect>
+<rect x="1211.8" y="433.2" width="11.2" height="11.8" fill="#f58518"><title>TGAT-GT MG (%): 2.5</title></rect>
+<rect x="1225.0" y="439.8" width="11.2" height="5.2" fill="#54a24b"><title>TGAT-GT VMU (%): 1.1</title></rect>
+<rect x="1238.2" y="388.7" width="11.2" height="56.3" fill="#b279a2"><title>TGAT-GT TA (%): 11.9</title></rect>
+<text x="1291.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 1291.0,542)">APAN-WK</text>
+<rect x="1264.6" y="187.0" width="11.2" height="258.0" fill="#4c78a8"><title>APAN-WK TGS (%): 54.5</title></rect>
+<rect x="1277.8" y="417.5" width="11.2" height="27.5" fill="#f58518"><title>APAN-WK MG (%): 5.8</title></rect>
+<rect x="1291.0" y="358.8" width="11.2" height="86.2" fill="#54a24b"><title>APAN-WK VMU (%): 18.2</title></rect>
+<rect x="1304.2" y="343.2" width="11.2" height="101.8" fill="#b279a2"><title>APAN-WK TA (%): 21.5</title></rect>
+<text x="1357.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 1357.0,542)">APAN-MC</text>
+<rect x="1330.6" y="207.4" width="11.2" height="237.6" fill="#4c78a8"><title>APAN-MC TGS (%): 50.2</title></rect>
+<rect x="1343.8" y="414.2" width="11.2" height="30.8" fill="#f58518"><title>APAN-MC MG (%): 6.5</title></rect>
+<rect x="1357.0" y="362.2" width="11.2" height="82.8" fill="#54a24b"><title>APAN-MC VMU (%): 17.5</title></rect>
+<rect x="1370.2" y="322.9" width="11.2" height="122.1" fill="#b279a2"><title>APAN-MC TA (%): 25.8</title></rect>
+<text x="1423.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 1423.0,542)">APAN-RT</text>
+<rect x="1396.6" y="176.1" width="11.2" height="268.9" fill="#4c78a8"><title>APAN-RT TGS (%): 56.8</title></rect>
+<rect x="1409.8" y="420.4" width="11.2" height="24.6" fill="#f58518"><title>APAN-RT MG (%): 5.2</title></rect>
+<rect x="1423.0" y="352.7" width="11.2" height="92.3" fill="#54a24b"><title>APAN-RT VMU (%): 19.5</title></rect>
+<rect x="1436.2" y="357.4" width="11.2" height="87.6" fill="#b279a2"><title>APAN-RT TA (%): 18.5</title></rect>
+<text x="1489.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 1489.0,542)">APAN-LM</text>
+<rect x="1462.6" y="196.5" width="11.2" height="248.5" fill="#4c78a8"><title>APAN-LM TGS (%): 52.5</title></rect>
+<rect x="1475.8" y="416.1" width="11.2" height="28.9" fill="#f58518"><title>APAN-LM MG (%): 6.1</title></rect>
+<rect x="1489.0" y="365.5" width="11.2" height="79.5" fill="#54a24b"><title>APAN-LM VMU (%): 16.8</title></rect>
+<rect x="1502.2" y="328.6" width="11.2" height="116.4" fill="#b279a2"><title>APAN-LM TA (%): 24.6</title></rect>
+<text x="1555.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 1555.0,542)">APAN-WT</text>
+<rect x="1528.6" y="149.6" width="11.2" height="295.4" fill="#4c78a8"><title>APAN-WT TGS (%): 62.4</title></rect>
+<rect x="1541.8" y="425.1" width="11.2" height="19.9" fill="#f58518"><title>APAN-WT MG (%): 4.2</title></rect>
+<rect x="1555.0" y="358.8" width="11.2" height="86.2" fill="#54a24b"><title>APAN-WT VMU (%): 18.2</title></rect>
+<rect x="1568.2" y="373.0" width="11.2" height="72.0" fill="#b279a2"><title>APAN-WT TA (%): 15.2</title></rect>
+<text x="1621.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 1621.0,542)">APAN-GT</text>
+<rect x="1594.6" y="120.7" width="11.2" height="324.3" fill="#4c78a8"><title>APAN-GT TGS (%): 68.5</title></rect>
+<rect x="1607.8" y="428.4" width="11.2" height="16.6" fill="#f58518"><title>APAN-GT MG (%): 3.5</title></rect>
+<rect x="1621.0" y="370.2" width="11.2" height="74.8" fill="#54a24b"><title>APAN-GT VMU (%): 15.8</title></rect>
+<rect x="1634.2" y="387.2" width="11.2" height="57.8" fill="#b279a2"><title>APAN-GT TA (%): 12.2</title></rect>
+<text x="1687.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 1687.0,542)">AVG</text>
+<rect x="1660.6" y="222.0" width="11.2" height="223.0" fill="#4c78a8"><title>AVG TGS (%): 47.1</title></rect>
+<rect x="1673.8" y="422.8" width="11.2" height="22.2" fill="#f58518"><title>AVG MG (%): 4.7</title></rect>
+<rect x="1687.0" y="288.8" width="11.2" height="156.2" fill="#54a24b"><title>AVG VMU (%): 33</title></rect>
+<rect x="1700.2" y="373.0" width="11.2" height="72.0" fill="#b279a2"><title>AVG TA (%): 15.2</title></rect>
+<rect x="1130.0" y="38.0" width="12" height="12" fill="#4c78a8"/>
+<text x="1148.0" y="48.0" font-size="12">TGS (%)</text>
+<rect x="1320.0" y="38.0" width="12" height="12" fill="#f58518"/>
+<text x="1338.0" y="48.0" font-size="12">MG (%)</text>
+<rect x="1510.0" y="38.0" width="12" height="12" fill="#54a24b"/>
+<text x="1528.0" y="48.0" font-size="12">VMU (%)</text>
+<rect x="1130.0" y="60.0" width="12" height="12" fill="#b279a2"/>
+<text x="1148.0" y="70.0" font-size="12">TA (%)</text>
+</svg>
