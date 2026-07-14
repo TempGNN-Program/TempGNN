@@ -20,6 +20,9 @@ Each implementation directory contains:
 
 Each provenance record separates the complete workflow-source snapshot from
 the kernel/header/HLS/link files that are direct xclbin build inputs.
+Reviewer-run provenance also records the complete source Git commit. In a
+normal checkout this is detected from Git; a staged non-Git measurement copy
+must set `TEMPGNN_AE_SOURCE_COMMIT` to the full published 40-character commit.
 
 The four xclbins must be independently built. The preflight check records their
 SHA-256 hashes and rejects byte-identical xclbins so that one implementation

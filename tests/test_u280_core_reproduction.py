@@ -4,6 +4,7 @@ import csv
 import json
 import tempfile
 import unittest
+from unittest import mock
 from pathlib import Path
 
 from scripts.run_u280_core_reproduction import (
@@ -11,6 +12,7 @@ from scripts.run_u280_core_reproduction import (
     compare_figure_csv,
     portable_command,
     preflight,
+    resolve_source_commit,
     validate_frequency_comparability,
     validate_measurements,
 )
@@ -222,6 +224,18 @@ class U280CoreReproductionTests(unittest.TestCase):
         portable = portable_command(command, root)
         self.assertTrue(all(value.startswith("{repo}") for value in portable))
         self.assertNotIn(str(root), " ".join(portable))
+
+    def test_source_commit_can_be_bound_for_non_git_measurement_stage(self) -> None:
+        commit = "A" * 40
+        with mock.patch.dict("os.environ", {"TEMPGNN_AE_SOURCE_COMMIT": commit}):
+            resolved, source = resolve_source_commit(Path("/not/a/git/worktree"))
+        self.assertEqual(resolved, commit.lower())
+        self.assertEqual(source, "TEMPGNN_AE_SOURCE_COMMIT")
+
+    def test_source_commit_binding_rejects_abbreviated_sha(self) -> None:
+        with mock.patch.dict("os.environ", {"TEMPGNN_AE_SOURCE_COMMIT": "abc123"}):
+            with self.assertRaisesRegex(SystemExit, "complete 40-character Git SHA"):
+                resolve_source_commit(Path("/not/a/git/worktree"))
 
 
 if __name__ == "__main__":

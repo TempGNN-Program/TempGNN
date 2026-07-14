@@ -6,6 +6,7 @@ import csv
 import hashlib
 import json
 import os
+import re
 import statistics
 import subprocess
 import sys
@@ -754,18 +755,14 @@ def write_provenance(
     repetitions: int,
     repo_root: Path,
 ) -> None:
-    try:
-        commit = subprocess.check_output(
-            ["git", "rev-parse", "HEAD"], cwd=repo_root, text=True
-        ).strip()
-    except (subprocess.CalledProcessError, FileNotFoundError):
-        commit = "unavailable"
+    commit, commit_source = resolve_source_commit(repo_root)
     provenance = {
         "schema_version": 1,
         "paper_id": config.get("paper_id", "pap142"),
         "run_id": run_id,
         "created_utc": datetime.now(timezone.utc).isoformat(),
         "git_commit": commit,
+        "git_commit_source": commit_source,
         "device": device,
         "repetitions": repetitions,
         "platform": config.get("platform"),
@@ -779,6 +776,29 @@ def write_provenance(
         json.dumps(provenance, indent=2, sort_keys=True) + "\n",
         encoding="utf-8",
     )
+
+
+def resolve_source_commit(repo_root: Path) -> tuple[str, str]:
+    explicit_commit = os.environ.get("TEMPGNN_AE_SOURCE_COMMIT", "").strip()
+    if explicit_commit:
+        if re.fullmatch(r"[0-9a-fA-F]{40}", explicit_commit) is None:
+            raise SystemExit(
+                "TEMPGNN_AE_SOURCE_COMMIT must be a complete 40-character Git SHA"
+            )
+        return explicit_commit.lower(), "TEMPGNN_AE_SOURCE_COMMIT"
+
+    try:
+        commit = subprocess.check_output(
+            ["git", "rev-parse", "HEAD"],
+            cwd=repo_root,
+            text=True,
+            stderr=subprocess.DEVNULL,
+        ).strip()
+    except (subprocess.CalledProcessError, FileNotFoundError):
+        return "unavailable", "unavailable"
+    if re.fullmatch(r"[0-9a-fA-F]{40}", commit) is None:
+        raise SystemExit("git rev-parse HEAD did not return a complete 40-character SHA")
+    return commit.lower(), "git"
 
 
 def aggregate_destination(run_dir: Path, name: str) -> Path:

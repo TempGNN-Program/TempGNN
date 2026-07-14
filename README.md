@@ -162,6 +162,17 @@ make u280-core-preflight
 make ae-core-u280 U280_CORE_DEVICE=0 U280_CORE_REPETITIONS=3
 ```
 
+When the measurement directory is a staged copy without `.git`, bind it to the
+published source snapshot before running:
+
+```bash
+export TEMPGNN_AE_SOURCE_COMMIT=<full-40-character-published-commit>
+```
+
+The orchestrator validates the value and records both it and its origin in
+`provenance.json`. A normal Git checkout records `git rev-parse HEAD`
+automatically.
+
 The preflight records artifact hashes and rejects byte-identical xclbins. Each
 runner must write fresh per-repetition measurements from public real-dataset
 prefixes; the workflow then derives Fig.11/Fig.12-shaped diagnostic tables and
