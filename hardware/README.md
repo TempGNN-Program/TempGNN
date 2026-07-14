@@ -26,7 +26,7 @@ bash hardware/scripts/run_csim.sh forward
 Run HLS synthesis:
 
 ```bash
-source /path/to/Xilinx/Vitis/2019.2/settings64.sh
+source /tools/Xilinx/Vitis/2023.2/settings64.sh
 bash hardware/scripts/run_hls.sh
 ```
 
@@ -51,27 +51,33 @@ vitis-run --mode hls --tcl hardware\hls\tempgnn_hls.tcl
 vitis-run --mode hls --tcl hardware\hls\tempgnn_forward_hls.tcl
 ```
 
-Local Vitis/Vivado 2025.2 status on June 10, 2026:
+Historical developer-workstation Vitis/Vivado 2025.2 status on June 10, 2026:
 
 - `tempgnn_kernel`: C-sim, C-synthesis, and Verilog RTL cosim all PASS on temporary target `xcu55c-fsvh2892-2L-e`. Estimated clock is 3.244 ns at a 4.444 ns target. Resource estimate is BRAM18 65, DSP 58, FF 19,664, LUT 23,054, URAM 8.
 - `tempgnn_forward_kernel`: C-sim, C-synthesis, and Verilog RTL cosim all PASS on the same temporary target. Estimated clock is 3.244 ns. Resource estimate is BRAM18 93, DSP 94, FF 32,422, LUT 39,276, URAM 22.
 
-The local installer does not currently include the U280 device/platform used by the paper, so these are synthesizability and RTL-cosim results rather than final paper-equivalent U280 implementation numbers.
+Those U55C-targeted results are development checks only and are not the
+packaged FPGA evidence. The reviewer artifact contains separately built U280
+xclbins, post-route reports, and board measurements under `artifacts/u280/` and
+`results/reviewer_u280_runs/`. The exact measured environment is recorded in
+`ENVIRONMENT.md`.
 
 Build for U280:
 
 ```bash
-make -C hardware/vitis PLATFORM=xilinx_u280_xdma_201920_3 TARGET=hw all
+source /tools/Xilinx/Vitis/2023.2/settings64.sh
+make u280-build \
+  U280_PLATFORM=/opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm
 ```
 
-Generate board input arrays:
+Run the reviewer-facing four-implementation preflight and real-input
+measurement workflow:
 
 ```bash
-python -m scripts.export_hardware_fixture --events 8192 --target-events 1024 --out results/hardware_fixture
+source /opt/xilinx/xrt/setup.sh
+make u280-core-preflight
+make ae-core-u280 U280_CORE_DEVICE=0 U280_CORE_REPETITIONS=3
 ```
 
-Run the board host:
-
-```bash
-build/vitis_u280/tempgnn_xrt_host build/vitis_u280/tempgnn_kernel.hw.xclbin results/hardware_fixture
-```
+The clean-room MATG, ViTeGNN, and RTGA sources, mechanism map, build commands,
+and scope limits are documented in `baselines/README.md`.

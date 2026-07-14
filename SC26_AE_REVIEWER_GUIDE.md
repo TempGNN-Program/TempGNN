@@ -45,7 +45,7 @@ make report
 Expected:
 
 ```text
-Ran 24 tests
+Ran 26 tests
 OK
 Wrote AE report to results/ae_report/ae_summary.md
 ```

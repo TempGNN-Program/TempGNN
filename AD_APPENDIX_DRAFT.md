@@ -86,7 +86,7 @@ collisions, synchronization stalls, and off-chip traffic.
 
 ### B. Expected Results
 
-The unit suite must pass all 24 tests. The TDP implementation must agree with a
+The unit suite must pass all 26 tests. The TDP implementation must agree with a
 chronological reference update, fixture generation must be deterministic, and
 artifact paths/provenance must pass their consistency checks. Optional Q14
 profiling produces nonnegative, well-formed per-dataset/model statistics from
@@ -156,7 +156,7 @@ the target batch size, fanout, and depth are recorded in the output CSVs.
 
 ### F. Artifact Analysis
 
-The test command must finish with `Ran 24 tests` and `OK`. Optional Q14 outputs
+The test command must finish with `Ran 26 tests` and `OK`. Optional Q14 outputs
 are written to:
 
 ```text

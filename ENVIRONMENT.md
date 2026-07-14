@@ -94,6 +94,8 @@ make u280-build U280_PLATFORM=/path/to/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm
 | `python3 -m scripts.reproduce_paper_figures` | No | No | seconds |
 | `make q14` after `make data` | No | No | minutes |
 | `make u280-run` with packaged xclbin | Yes | No, XRT required | minutes |
+| `make u280-core-preflight` | No | No | seconds |
+| `make ae-core-u280` with four packaged xclbins | Yes | No, XRT required | minutes |
 | `make u280-build` | Yes for board run | Yes | multi-hour |
 
 See `AE_APPENDIX_DRAFT.md` for the measurement boundary.

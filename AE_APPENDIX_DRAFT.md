@@ -80,7 +80,7 @@ python3 -m unittest discover -s tests
 Expected terminal summary:
 
 ```text
-Ran 24 tests
+Ran 26 tests
 OK
 ```
 
@@ -97,7 +97,7 @@ when the corresponding edge files are already present.
 
 ### C. Artifact Analysis
 
-All 24 tests must pass. In particular, the recursive TDP state must agree with
+All 26 tests must pass. In particular, the recursive TDP state must agree with
 chronological updates, fixtures must be deterministic, xclbin link requests
 must agree with the Vivado-connected clock and nonnegative post-route WNS/TNS,
 and duplicate xclbins must be rejected by preflight.
@@ -318,7 +318,7 @@ make smoke
 make report
 ```
 
-`make smoke` includes the 24 tests from `A1`.
+`make smoke` includes the 26 tests from `A1`.
 
 ### C. Artifact Analysis
 
