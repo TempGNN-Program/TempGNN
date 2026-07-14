@@ -1,0 +1,59 @@
+{
+  "batch_size": 1000,
+  "dataset": "RT",
+  "depth": 1,
+  "fanout": 10,
+  "files_sha256": {
+    "bias.bin": "bcecf4c5a2d6fe6d19be9010efef13eaf100e3cac65a8406e062610ebcd21144",
+    "event_dst.bin": "8958f5222123c6c35c1fb876dcc1b2ef7a3b04c36cd770fa28d65055324eee38",
+    "event_features.bin": "3606a25115a2c9de02be96fcf9417cf540b6207d0d773e33c2d4951091cb9c12",
+    "event_src.bin": "09e4b1a6e5e608ea96f54253f1600f8eed2ed668842768a17adc501b545eafaf",
+    "event_ts.bin": "034099dc5d83f4a93bec5ba96d620c75a28b3898c5c6145eaf325d33c7de22b8",
+    "expected_tempgnn_forward_kernel_embedding.bin": "e6434668d3cd807129dcd007ffe30ec8b246bc71c5008ebf6fd60da450290fb7",
+    "expected_tempgnn_forward_kernel_stats.bin": "b0745d4c8f03b6c65c83b055af636daa591067584c314a813b6e7f7466f99595",
+    "history_event_idx.bin": "d961e26bb478f8fdb510848aa2e3604a43d1ed573bd37de9c5e4484474ecf995",
+    "history_peer.bin": "d9d9f751576a4dda1bf835baef933231fdab850d8aabe91876eaf5aa931b6082",
+    "initial_memory.bin": "23ba73174cc8340d3cc2ce0c40b186339ed77ecb868e74462117a876f9df45ef",
+    "target_event_idx.bin": "6167a7622cf9c793c2020d29d16fb986583e051bf6d13a2b0ced95ea644d7c4f",
+    "target_vertex.bin": "ddd303d4a527bc48b2f2cc1ff503f3dc563c686c9deb9df6a6012ef6f08a7e9c",
+    "vertex_offsets.bin": "103e287434fc0003869dc43746d0562ab9439f333ea37a55d7b91ed5d36df3bb",
+    "weight_event.bin": "5a2f3db537f8742ba1f5220b30a4fc75acc392f280f2e378f3f840602bc66dbc",
+    "weight_peer.bin": "f4c8840614e8a6f74b52657592b2ae7c48471711ffc71d6e89f2a8ee94fb3ae1",
+    "weight_self.bin": "a74368c7a57a6256f9b025f73d869a36143d74e7fdad82174942d267f6dfcf80"
+  },
+  "generator": "scripts/generate_u280_comparison_fixture.py",
+  "history_entries": 16384,
+  "input_kind": "real_dataset_prefix",
+  "input_sha256": "57635c30b7de6fe322e9ac47135a6a7323d9e95de339ce4c294a28035c962981",
+  "input_source": {
+    "citation_url": "https://github.com/amazon-science/tgl",
+    "dataset": "RT",
+    "dataset_name": "Reddit",
+    "input_kind": "real_dataset_prefix",
+    "sample_events": 8192,
+    "sample_sha256": "57635c30b7de6fe322e9ac47135a6a7323d9e95de339ce4c294a28035c962981",
+    "schema_version": 1,
+    "selection": "first source records, sorted chronologically within the selected prefix",
+    "source_order_was_monotonic": true,
+    "source_url": "https://s3.us-west-2.amazonaws.com/dgl-data/dataset/tgl/REDDIT/edges.csv"
+  },
+  "model": "APAN",
+  "model_id": 3,
+  "num_events": 8192,
+  "num_targets": 1000,
+  "num_vertices": 3713,
+  "schema_version": 4,
+  "seed": 309822,
+  "tempgnn_golden": {
+    "embedding_checksum": 18296450643280710268,
+    "kernel_checksum": 496236126730694497
+  },
+  "timestamp_mapping": {
+    "first_tick": 1,
+    "last_tick": 12036,
+    "method": "relative_source_time_quantized_by_median_positive_gap",
+    "origin": 0.0,
+    "source_time_units_per_tick": 4.0099999999997635
+  },
+  "vertex_mapping": "first-occurrence compact IDs within the bounded sample"
+}

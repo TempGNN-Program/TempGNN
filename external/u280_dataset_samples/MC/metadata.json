@@ -1,0 +1,12 @@
+{
+  "citation_url": "https://snap.stanford.edu/data/act-mooc.html",
+  "dataset": "MC",
+  "dataset_name": "MOOC",
+  "input_kind": "real_dataset_prefix",
+  "sample_events": 8192,
+  "sample_sha256": "8ecd975a6c4bd9fc8275f87397b3ae6a07aee581a95d67099bea6a026b3352ef",
+  "schema_version": 1,
+  "selection": "first source records, sorted chronologically within the selected prefix",
+  "source_order_was_monotonic": true,
+  "source_url": "https://s3.us-west-2.amazonaws.com/dgl-data/dataset/tgl/MOOC/edges.csv"
+}

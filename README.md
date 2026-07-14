@@ -186,6 +186,10 @@ rejected if the four timing-closed kernel clocks are not comparable. Because
 this configuration is explicitly diagnostic, a completed
 run remains successful even when `verification.md` records a tolerance FAIL;
 use `--require-paper-match` only when auditing a paper-equivalent configuration.
+The repository and frozen archive also retain the exact generated real-input
+fixtures under `results/generated_u280_comparison_fixtures/` so the fixture
+metadata and golden hashes named by packaged measurement rows remain directly
+inspectable.
 
 This is a bounded mechanism-level comparison, not a paper-equivalent rerun.
 The packaged kernels use an 8-dimensional Q10 forward path and deterministic

@@ -4,3 +4,4 @@
 *.xclbin binary
 *.png binary
 *.exe binary
+external/u280_dataset_samples/*/edges.csv binary

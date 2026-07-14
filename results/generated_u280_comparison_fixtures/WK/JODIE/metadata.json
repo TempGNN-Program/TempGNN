@@ -1,0 +1,59 @@
+{
+  "batch_size": 1000,
+  "dataset": "WK",
+  "depth": 1,
+  "fanout": 0,
+  "files_sha256": {
+    "bias.bin": "ef610ea53449959dd9ebfd78ba7b3241097c4bdec2f97d77fa3007b831f02ffd",
+    "event_dst.bin": "7e65902668c6ab55288e6827f05425092109c4acafa93a4a73fbc37b70dcc801",
+    "event_features.bin": "33ce84adcfcdb82125a36454e5276aab933debbb2e0391dedae8b1a6af44934b",
+    "event_src.bin": "088e56542467be057033a57df0ce99c2628a79de09a7723a3d50ba5be6c1c2b8",
+    "event_ts.bin": "20b4e1b7b4a5c0f525c5caabb0eb2f1240c1c08bbcb4b79764959dac99191a8a",
+    "expected_tempgnn_forward_kernel_embedding.bin": "6c56f6683c8006202db91f6ca5cfcd970fd5a7617252703e4bb7c082bd14d6b1",
+    "expected_tempgnn_forward_kernel_stats.bin": "d18c98d70606487c3f4aaf0d9153f2901153a646e41ab19d22e7324ddac9d677",
+    "history_event_idx.bin": "30d976fcccdb985f733596837b47c357683e814499a92932ea06283467b856a6",
+    "history_peer.bin": "2bb6cbcf40898da3e4eb9ef83910a99773c2a4adc2080f9c7c4f76482ee98a9d",
+    "initial_memory.bin": "a1466cfb9ee1f5d4bf05b824f0e68676b984e1539998ab995f62fbb93c5aba77",
+    "target_event_idx.bin": "6167a7622cf9c793c2020d29d16fb986583e051bf6d13a2b0ced95ea644d7c4f",
+    "target_vertex.bin": "2598f91ed49fc61ec8a28551ac3e9346bee7b442972a799d4c0e4d611350acfc",
+    "vertex_offsets.bin": "e177bb081f89c435c0f066479479da5f0d189aacbf206192ec2a2e09f658a7d8",
+    "weight_event.bin": "3afa24ad13d07a9c843213e85608124aa9b96bbb9adde551e91cce62f877bfb3",
+    "weight_peer.bin": "d5bdf5aa1e64991df6236dfdcf959d515cdca77eb119212f51a23cd7edb22b6b",
+    "weight_self.bin": "906f49aac85529049c8a012962f37dba481f257111fa50af80efd9b1328d3ea7"
+  },
+  "generator": "scripts/generate_u280_comparison_fixture.py",
+  "history_entries": 16384,
+  "input_kind": "real_dataset_prefix",
+  "input_sha256": "4a4932f9caf75adb07fb87d898a636dba574acc035b9bed26ad7afefc34f7677",
+  "input_source": {
+    "citation_url": "https://github.com/amazon-science/tgl",
+    "dataset": "WK",
+    "dataset_name": "Wikipedia",
+    "input_kind": "real_dataset_prefix",
+    "sample_events": 8192,
+    "sample_sha256": "4a4932f9caf75adb07fb87d898a636dba574acc035b9bed26ad7afefc34f7677",
+    "schema_version": 1,
+    "selection": "first source records, sorted chronologically within the selected prefix",
+    "source_order_was_monotonic": true,
+    "source_url": "https://s3.us-west-2.amazonaws.com/dgl-data/dataset/tgl/WIKI/edges.csv"
+  },
+  "model": "JODIE",
+  "model_id": 0,
+  "num_events": 8192,
+  "num_targets": 1000,
+  "num_vertices": 1664,
+  "schema_version": 4,
+  "seed": 101926,
+  "tempgnn_golden": {
+    "embedding_checksum": 7263741612376882041,
+    "kernel_checksum": 106395429068342820
+  },
+  "timestamp_mapping": {
+    "first_tick": 1,
+    "last_tick": 11278,
+    "method": "relative_source_time_quantized_by_median_positive_gap",
+    "origin": 0.0,
+    "source_time_units_per_tick": 17.0
+  },
+  "vertex_mapping": "first-occurrence compact IDs within the bounded sample"
+}

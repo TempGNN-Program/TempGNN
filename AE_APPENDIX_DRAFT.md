@@ -154,6 +154,9 @@ The common XRT host and baseline C-sim reference binaries are colocated under
 the same `bin/` directories. Source, paper-mechanism mapping, and limitations
 are in `hardware/baselines/README.md` and
 `hardware/baselines/MECHANISM_MAP.md`.
+The repository and frozen package also include the exact real-input fixture
+metadata and goldens used by the packaged run under
+`results/generated_u280_comparison_fixtures/`.
 
 Optional rebuilds require:
 

@@ -1,0 +1,59 @@
+{
+  "batch_size": 1000,
+  "dataset": "LM",
+  "depth": 2,
+  "fanout": 20,
+  "files_sha256": {
+    "bias.bin": "48e46862f7779f238b11fdd498f30491d767665c9626d4c6f3cce818595a2579",
+    "event_dst.bin": "694973c96439d450c54ad8d6922efe618a634d57cc74ff39aeca1f536edca564",
+    "event_features.bin": "b5750a240d6ae4c94f3cc3cecf400e84bc5c928e8de7d7b39004dc2ee54aed37",
+    "event_src.bin": "b6ca0d694ff074d25db5ce844768ae9849afb8d94000b7b40167b53b716b81bf",
+    "event_ts.bin": "b43e1ddf67f03f7e6a2673b66801739c58c1724788d9b42d489ddd8c0955fa98",
+    "expected_tempgnn_forward_kernel_embedding.bin": "2574184e5f8181fb73e3ea757b0d937ce3e3482c8526cc1851bbde1385f7ef11",
+    "expected_tempgnn_forward_kernel_stats.bin": "e32950a092dee8cb8d7be931882e11257e71f193fd02635611e375ec86015eb0",
+    "history_event_idx.bin": "86150aa515ceae9d11eb4f3f65cebb0ef7555cc2d5db4b052b722988822a7d0a",
+    "history_peer.bin": "a17a5257798399a2bf7a1c3e152f654f693015157200a264ec13f81ee4f3ef35",
+    "initial_memory.bin": "46662de357830a72d2240a9615a1d9faddcd796c1d6ef75e32609f06bd94d64b",
+    "target_event_idx.bin": "6167a7622cf9c793c2020d29d16fb986583e051bf6d13a2b0ced95ea644d7c4f",
+    "target_vertex.bin": "8825d93b972929013bf47a26584bde2e8fe29ef57e7e297b9469b5f824b71020",
+    "vertex_offsets.bin": "1fb4715ddf013ff5c2826b65369ef80849d7a635260e58e86c7f789a24e99886",
+    "weight_event.bin": "1ff2a2e13d3a6f0f9a4694f1c9f77737b1814f47cca26f11a2f949d36659712e",
+    "weight_peer.bin": "6014556ae6f99b2c4c5cbaf28a78b8655967970c4934a0ea31f12a0edfdff1c9",
+    "weight_self.bin": "a93570e4a0cf4da278dbfc0881c443782a6fc690eae1464d358728e4d68a46ae"
+  },
+  "generator": "scripts/generate_u280_comparison_fixture.py",
+  "history_entries": 16384,
+  "input_kind": "real_dataset_prefix",
+  "input_sha256": "fde30777ef2d1ce3253b4f0df6e6fe71baff943886a1a7e0932a9191d24d5bfe",
+  "input_source": {
+    "citation_url": "https://github.com/amazon-science/tgl",
+    "dataset": "LM",
+    "dataset_name": "LastFM",
+    "input_kind": "real_dataset_prefix",
+    "sample_events": 8192,
+    "sample_sha256": "fde30777ef2d1ce3253b4f0df6e6fe71baff943886a1a7e0932a9191d24d5bfe",
+    "schema_version": 1,
+    "selection": "first source records, sorted chronologically within the selected prefix",
+    "source_order_was_monotonic": true,
+    "source_url": "https://s3.us-west-2.amazonaws.com/dgl-data/dataset/tgl/LASTFM/edges.csv"
+  },
+  "model": "TGN",
+  "model_id": 1,
+  "num_events": 8192,
+  "num_targets": 1000,
+  "num_vertices": 677,
+  "schema_version": 4,
+  "seed": 404638,
+  "tempgnn_golden": {
+    "embedding_checksum": 11972239957607761548,
+    "kernel_checksum": 18195109759235440855
+  },
+  "timestamp_mapping": {
+    "first_tick": 1,
+    "last_tick": 19860,
+    "method": "relative_source_time_quantized_by_median_positive_gap",
+    "origin": 0.0,
+    "source_time_units_per_tick": 316.0
+  },
+  "vertex_mapping": "first-occurrence compact IDs within the bounded sample"
+}

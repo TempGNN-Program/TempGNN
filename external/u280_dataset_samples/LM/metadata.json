@@ -1,0 +1,12 @@
+{
+  "citation_url": "https://github.com/amazon-science/tgl",
+  "dataset": "LM",
+  "dataset_name": "LastFM",
+  "input_kind": "real_dataset_prefix",
+  "sample_events": 8192,
+  "sample_sha256": "fde30777ef2d1ce3253b4f0df6e6fe71baff943886a1a7e0932a9191d24d5bfe",
+  "schema_version": 1,
+  "selection": "first source records, sorted chronologically within the selected prefix",
+  "source_order_was_monotonic": true,
+  "source_url": "https://s3.us-west-2.amazonaws.com/dgl-data/dataset/tgl/LASTFM/edges.csv"
+}

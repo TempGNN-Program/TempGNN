@@ -1,0 +1,12 @@
+{
+  "citation_url": "https://github.com/amazon-science/tgl",
+  "dataset": "GT",
+  "dataset_name": "GDELT",
+  "input_kind": "real_dataset_prefix",
+  "sample_events": 8192,
+  "sample_sha256": "aa50a9bfcff82ed39fd3158a61670060970a2e0414ee1cd05e876c69d2d25836",
+  "schema_version": 1,
+  "selection": "first source records, sorted chronologically within the selected prefix",
+  "source_order_was_monotonic": true,
+  "source_url": "https://s3.us-west-2.amazonaws.com/dgl-data/dataset/tgl/GDELT/edges.csv"
+}

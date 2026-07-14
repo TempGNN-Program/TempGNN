@@ -1,0 +1,59 @@
+{
+  "batch_size": 1000,
+  "dataset": "WT",
+  "depth": 1,
+  "fanout": 10,
+  "files_sha256": {
+    "bias.bin": "bcecf4c5a2d6fe6d19be9010efef13eaf100e3cac65a8406e062610ebcd21144",
+    "event_dst.bin": "8b2f135c8e3f15c9dfbcd6db61df9354ad5e4a73f56b4b672fab7ca306b6a328",
+    "event_features.bin": "7251b07a8c83c91a6512bdcdcf57b8292c211171e78cb3f708d2c932c0812f5f",
+    "event_src.bin": "e09ae886a92dadafa71308bbf1c126d334d058cefdad6d1a0362ffacec1e1ecf",
+    "event_ts.bin": "0569be19f88e119176a7476f423eb0098910e9906f980e91796e1097a6b07c0a",
+    "expected_tempgnn_forward_kernel_embedding.bin": "02d64e4f22457ec5e0019e93dd5c43c218b89d69111150bf08549850220d7dab",
+    "expected_tempgnn_forward_kernel_stats.bin": "c69cd5d941ad658b7f78de654048c73055829079b51e295673b2d74adb1ecd53",
+    "history_event_idx.bin": "4bc53bd12175aa39834381d1c4750e5fbbf55dd6171e07757c7542da5fb02217",
+    "history_peer.bin": "7599407a5babc86c4d4b8312d826003e75d232467d5aaf2f005c688e9d1a1551",
+    "initial_memory.bin": "2c596c789d74267762c58dd919f408da7bfb218a234fb5035db36fb5e0f17137",
+    "target_event_idx.bin": "6167a7622cf9c793c2020d29d16fb986583e051bf6d13a2b0ced95ea644d7c4f",
+    "target_vertex.bin": "9ce0ca235e079af26bc009cd9e25f2fee6159ea4ae1ba46f9fedba8f5c4c0bc0",
+    "vertex_offsets.bin": "99139076f740fe748ac8ab0a983e3e59c7c2e9ce32e971e91767170f1e08558c",
+    "weight_event.bin": "5a2f3db537f8742ba1f5220b30a4fc75acc392f280f2e378f3f840602bc66dbc",
+    "weight_peer.bin": "f4c8840614e8a6f74b52657592b2ae7c48471711ffc71d6e89f2a8ee94fb3ae1",
+    "weight_self.bin": "a74368c7a57a6256f9b025f73d869a36143d74e7fdad82174942d267f6dfcf80"
+  },
+  "generator": "scripts/generate_u280_comparison_fixture.py",
+  "history_entries": 16384,
+  "input_kind": "real_dataset_prefix",
+  "input_sha256": "cc57219e9d06edb0ecb18987b5b61abd0458fdd907962a45513c59a2bf79a023",
+  "input_source": {
+    "citation_url": "https://snap.stanford.edu/data/",
+    "dataset": "WT",
+    "dataset_name": "WikiTalk",
+    "input_kind": "real_dataset_prefix",
+    "sample_events": 8192,
+    "sample_sha256": "cc57219e9d06edb0ecb18987b5b61abd0458fdd907962a45513c59a2bf79a023",
+    "schema_version": 1,
+    "selection": "first source records, sorted chronologically within the selected prefix",
+    "source_order_was_monotonic": false,
+    "source_url": "https://snap.stanford.edu/data/wiki-talk-temporal.txt.gz"
+  },
+  "model": "APAN",
+  "model_id": 3,
+  "num_events": 8192,
+  "num_targets": 1000,
+  "num_vertices": 1300,
+  "schema_version": 4,
+  "seed": 507586,
+  "tempgnn_golden": {
+    "embedding_checksum": 5059784464759660313,
+    "kernel_checksum": 18271384188866116326
+  },
+  "timestamp_mapping": {
+    "first_tick": 1,
+    "last_tick": 52015,
+    "method": "relative_source_time_quantized_by_median_positive_gap",
+    "origin": 999130846.0,
+    "source_time_units_per_tick": 3851.5
+  },
+  "vertex_mapping": "first-occurrence compact IDs within the bounded sample"
+}

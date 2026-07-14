@@ -23,6 +23,7 @@ optional_entries=(
   CITATION.cff
   .zenodo.json
   external/u280_dataset_samples
+  results/generated_u280_comparison_fixtures
   results/reviewer_u280_runs
 )
 

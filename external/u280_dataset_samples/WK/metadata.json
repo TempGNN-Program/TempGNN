@@ -1,0 +1,12 @@
+{
+  "citation_url": "https://github.com/amazon-science/tgl",
+  "dataset": "WK",
+  "dataset_name": "Wikipedia",
+  "input_kind": "real_dataset_prefix",
+  "sample_events": 8192,
+  "sample_sha256": "4a4932f9caf75adb07fb87d898a636dba574acc035b9bed26ad7afefc34f7677",
+  "schema_version": 1,
+  "selection": "first source records, sorted chronologically within the selected prefix",
+  "source_order_was_monotonic": true,
+  "source_url": "https://s3.us-west-2.amazonaws.com/dgl-data/dataset/tgl/WIKI/edges.csv"
+}

@@ -7,7 +7,9 @@ __pycache__/
 !/ae_export/pap142_tempgnn_sc26_ae_u280.tgz.sha256
 !/ae_export/pap142_sc26_ad_ae_appendices.zip
 !/ae_export/pap142_sc26_ad_ae_appendices.zip.sha256
-/external/
+/external/*
+!/external/u280_dataset_samples/
+!/external/u280_dataset_samples/**
 /tempgnn_hls_prj/
 /tempgnn_forward_hls_prj/
 /_paper_pages_tmp/
@@ -27,6 +29,8 @@ __pycache__/
 !/results/derived_comparison_figures/**
 !/results/fixtures/
 !/results/fixtures/**
+!/results/generated_u280_comparison_fixtures/
+!/results/generated_u280_comparison_fixtures/**
 !/results/board_u280/
 !/results/board_u280/*.log
 !/results/board_u280/summary.json

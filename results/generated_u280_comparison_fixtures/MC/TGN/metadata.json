@@ -1,0 +1,59 @@
+{
+  "batch_size": 1000,
+  "dataset": "MC",
+  "depth": 2,
+  "fanout": 20,
+  "files_sha256": {
+    "bias.bin": "48e46862f7779f238b11fdd498f30491d767665c9626d4c6f3cce818595a2579",
+    "event_dst.bin": "f7100c898a97234a962eb8cb6208e65b072dd289d81bf39d4e6b07f9a058e7d2",
+    "event_features.bin": "8f9d997726124603c6953bfba3657f6fef10baa20a72016260c0c2bb402655ed",
+    "event_src.bin": "7753b1f0d5e1ef97c6ae9424e28247e2774a17a883c3b9f10981e0fb4ed38dde",
+    "event_ts.bin": "f1f9043397331dd9ce687af04441bc1c5e04c2d3e3972b5ccfe21fc2e3dd3e7a",
+    "expected_tempgnn_forward_kernel_embedding.bin": "3f9d1d230792653de24e9c93b117b2c6ccbccd46dae5abfe4f16ee8f0e72f2ad",
+    "expected_tempgnn_forward_kernel_stats.bin": "e18c81a4a97edbe45d046b7250db2e4ed705ab0c98bcfd431367f5542a6090cc",
+    "history_event_idx.bin": "e5533db7574d1740b618b75adfdb8a4be5afe38d290a30f2857e0e4bc6f2fb14",
+    "history_peer.bin": "6ccff4ec211cb5dc2ce77d746f2b1327ae52ad0b324ddb5fab8aa14d060517c6",
+    "initial_memory.bin": "a84b43f921eb248f91cc3fe0f4bc54cc5f0ccf22681873e144742e4af292f196",
+    "target_event_idx.bin": "6167a7622cf9c793c2020d29d16fb986583e051bf6d13a2b0ced95ea644d7c4f",
+    "target_vertex.bin": "2688e09b5b3d581a38840bd449022cda5db324dec03ba16f0df1ffb5a7ee82c4",
+    "vertex_offsets.bin": "d8a68a0342fde7e2d22c60583cd8ebd3196bba99792b4702761a829772fdd728",
+    "weight_event.bin": "1ff2a2e13d3a6f0f9a4694f1c9f77737b1814f47cca26f11a2f949d36659712e",
+    "weight_peer.bin": "6014556ae6f99b2c4c5cbaf28a78b8655967970c4934a0ea31f12a0edfdff1c9",
+    "weight_self.bin": "a93570e4a0cf4da278dbfc0881c443782a6fc690eae1464d358728e4d68a46ae"
+  },
+  "generator": "scripts/generate_u280_comparison_fixture.py",
+  "history_entries": 16384,
+  "input_kind": "real_dataset_prefix",
+  "input_sha256": "8ecd975a6c4bd9fc8275f87397b3ae6a07aee581a95d67099bea6a026b3352ef",
+  "input_source": {
+    "citation_url": "https://snap.stanford.edu/data/act-mooc.html",
+    "dataset": "MC",
+    "dataset_name": "MOOC",
+    "input_kind": "real_dataset_prefix",
+    "sample_events": 8192,
+    "sample_sha256": "8ecd975a6c4bd9fc8275f87397b3ae6a07aee581a95d67099bea6a026b3352ef",
+    "schema_version": 1,
+    "selection": "first source records, sorted chronologically within the selected prefix",
+    "source_order_was_monotonic": true,
+    "source_url": "https://s3.us-west-2.amazonaws.com/dgl-data/dataset/tgl/MOOC/edges.csv"
+  },
+  "model": "TGN",
+  "model_id": 1,
+  "num_events": 8192,
+  "num_targets": 1000,
+  "num_vertices": 756,
+  "schema_version": 4,
+  "seed": 212928,
+  "tempgnn_golden": {
+    "embedding_checksum": 588648032767198063,
+    "kernel_checksum": 159036431434335248
+  },
+  "timestamp_mapping": {
+    "first_tick": 1,
+    "last_tick": 32445,
+    "method": "relative_source_time_quantized_by_median_positive_gap",
+    "origin": 0.0,
+    "source_time_units_per_tick": 3.0
+  },
+  "vertex_mapping": "first-occurrence compact IDs within the bounded sample"
+}

@@ -228,7 +228,9 @@ The direct workflow uses bundled, timestamp-sorted 8,192-event prefixes of
 Wikipedia, MOOC, Reddit, LastFM, WikiTalk, and GDELT. Each prefix has source and
 hash metadata. Fixtures are generated for JODIE, TGN, TGAT, and APAN with
 batch size 1,000. Synthetic inputs are permitted only for C-sim and are
-rejected by the core workflow.
+rejected by the core workflow. The repository and frozen archive retain the
+exact generated fixture metadata and goldens under
+`results/generated_u280_comparison_fixtures/` for direct hash inspection.
 
 #### Installation and Deployment
 

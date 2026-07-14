@@ -1,0 +1,12 @@
+{
+  "citation_url": "https://snap.stanford.edu/data/",
+  "dataset": "WT",
+  "dataset_name": "WikiTalk",
+  "input_kind": "real_dataset_prefix",
+  "sample_events": 8192,
+  "sample_sha256": "cc57219e9d06edb0ecb18987b5b61abd0458fdd907962a45513c59a2bf79a023",
+  "schema_version": 1,
+  "selection": "first source records, sorted chronologically within the selected prefix",
+  "source_order_was_monotonic": false,
+  "source_url": "https://snap.stanford.edu/data/wiki-talk-temporal.txt.gz"
+}
