@@ -4,4 +4,7 @@
 *.xclbin binary
 *.png binary
 *.exe binary
+*.pdf binary
+*.zip binary
+*.tgz binary
 external/u280_dataset_samples/*/edges.csv binary
