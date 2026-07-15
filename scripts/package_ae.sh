@@ -44,6 +44,12 @@ tar -czf "$pkg" \
   --exclude='results/paper_reproduction/summary.json' \
   --exclude='results/q14_real_tgl_edges/q14_dataset_model_summary.json' \
   --exclude='external/tgl/DATA' \
+  --exclude='*/_x' \
+  --exclude='*/_x/*' \
+  --exclude='*/.Xil' \
+  --exclude='*/.Xil/*' \
+  --exclude='*/.ipcache' \
+  --exclude='*/.ipcache/*' \
   --exclude='hardware/vitis/_x' \
   --exclude='hardware/vitis/.Xil' \
   --exclude='hardware/vitis/.ipcache' \
