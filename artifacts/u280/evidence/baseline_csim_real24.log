@@ -1,0 +1,105 @@
+TEMPGNN_BASELINE_CSIM_REAL24 schema=2
+created_utc=2026-07-14T21:13:16Z
+aea4ac6788fc11797d12f0fa8b6457bb4a6f9828fb6af21ad446c720878e84ba  build/baselines/matg_hw/baseline_csim
+33afcb25d4277ca5353b52198de489874075b3c2d4548c058fb132ce95f86300  hardware/baselines/src/matg_kernel.cpp
+1618625977d71ab78bca0ede43d9e6d01a2408567f3e8e7f4339fd3e3c2161f9  hardware/baselines/src/vitegnn_kernel.cpp
+6000ba6ac0bdc7b52fdb6e8e49590dba1f76510a00f3b95cf6da766f2cb78b4a  hardware/baselines/src/rtga_kernel.cpp
+0dd516826e54d2bbf29d7c4bcd55771a22669f08f0c3ee952e46b57a88b9b88c  hardware/baselines/include/baseline_hls.hpp
+c7404f74a89e0c6b97f234b78c7ccc0c5ee348bf3f17d0f32c813a41ed3fde3e  hardware/baselines/tb/baseline_csim.cpp
+CASE dataset=WK model=JODIE
+MATG checksum=14342123864124776473 embedding_checksum=11685956906968855993 scanned=0 selected=0 golden=PASS result=PASS
+ViTeGNN checksum=3217944299567993618 embedding_checksum=11685956906968855993 scanned=0 selected=0 golden=PASS result=PASS
+RTGA checksum=4757319007008334897 embedding_checksum=14301402679350721696 scanned=0 selected=0 golden=PASS result=PASS
+CASE dataset=WK model=TGN
+MATG checksum=6927012003806483508 embedding_checksum=886996669630824533 scanned=24170 selected=3811 golden=PASS result=PASS
+ViTeGNN checksum=15060342147793225511 embedding_checksum=6006920269339266955 scanned=24170 selected=2244 golden=PASS result=PASS
+RTGA checksum=10743689206342962897 embedding_checksum=12643951697634343248 scanned=24170 selected=4421 golden=PASS result=PASS
+CASE dataset=WK model=TGAT
+MATG checksum=15542505326335468785 embedding_checksum=772640964479544102 scanned=24170 selected=5567 golden=PASS result=PASS
+ViTeGNN checksum=13412090019198902646 embedding_checksum=9291091672968637361 scanned=24170 selected=2244 golden=PASS result=PASS
+RTGA checksum=12402228516717585937 embedding_checksum=10139659489628498263 scanned=24170 selected=4421 golden=PASS result=PASS
+CASE dataset=WK model=APAN
+MATG checksum=11646014753318196976 embedding_checksum=7658657024512692918 scanned=17952 selected=3811 golden=PASS result=PASS
+ViTeGNN checksum=1728192926472437296 embedding_checksum=15119528112951826801 scanned=17952 selected=1971 golden=PASS result=PASS
+RTGA checksum=16628501692384499501 embedding_checksum=15806387111604553300 scanned=17952 selected=2709 golden=PASS result=PASS
+CASE dataset=MC model=JODIE
+MATG checksum=3228938600554628363 embedding_checksum=17130813081907980252 scanned=0 selected=0 golden=PASS result=PASS
+ViTeGNN checksum=8508327618007639586 embedding_checksum=17130813081907980252 scanned=0 selected=0 golden=PASS result=PASS
+RTGA checksum=18215170509913870928 embedding_checksum=10190750018978985442 scanned=0 selected=0 golden=PASS result=PASS
+CASE dataset=MC model=TGN
+MATG checksum=8001003373990785372 embedding_checksum=1383169292214147819 scanned=48398 selected=3362 golden=PASS result=PASS
+ViTeGNN checksum=5979502852356371169 embedding_checksum=9352467871971163468 scanned=48398 selected=3352 golden=PASS result=PASS
+RTGA checksum=7209922012870766221 embedding_checksum=16384878648589387674 scanned=48398 selected=1018 golden=PASS result=PASS
+CASE dataset=MC model=TGAT
+MATG checksum=13474957352735775044 embedding_checksum=9569660635685781391 scanned=48398 selected=4998 golden=PASS result=PASS
+ViTeGNN checksum=5224260306916622588 embedding_checksum=8137328359185417866 scanned=48398 selected=3352 golden=PASS result=PASS
+RTGA checksum=10982390732008224293 embedding_checksum=6661371231940404445 scanned=48398 selected=1018 golden=PASS result=PASS
+CASE dataset=MC model=APAN
+MATG checksum=10939649201582415015 embedding_checksum=6954362157089094686 scanned=41080 selected=3362 golden=PASS result=PASS
+ViTeGNN checksum=2205762030955366183 embedding_checksum=13104072206488077385 scanned=41080 selected=3344 golden=PASS result=PASS
+RTGA checksum=6225300375325184413 embedding_checksum=4607643559767315833 scanned=41080 selected=935 golden=PASS result=PASS
+CASE dataset=RT model=JODIE
+MATG checksum=12964106430016231542 embedding_checksum=3058656277721075607 scanned=0 selected=0 golden=PASS result=PASS
+ViTeGNN checksum=8051700410907616516 embedding_checksum=3058656277721075607 scanned=0 selected=0 golden=PASS result=PASS
+RTGA checksum=4478019844409022131 embedding_checksum=2981977531326385641 scanned=0 selected=0 golden=PASS result=PASS
+CASE dataset=RT model=TGN
+MATG checksum=5297525064170809890 embedding_checksum=6923704309149909741 scanned=25781 selected=3433 golden=PASS result=PASS
+ViTeGNN checksum=3123711268719399780 embedding_checksum=3054563153094628828 scanned=25781 selected=3345 golden=PASS result=PASS
+RTGA checksum=1648811158150661494 embedding_checksum=2843212486466368689 scanned=25781 selected=5639 golden=PASS result=PASS
+CASE dataset=RT model=TGAT
+MATG checksum=11688720575031506609 embedding_checksum=4455716370235314060 scanned=25781 selected=4946 golden=PASS result=PASS
+ViTeGNN checksum=17457337691408165892 embedding_checksum=8961533491368901744 scanned=25781 selected=3345 golden=PASS result=PASS
+RTGA checksum=4363303764702478270 embedding_checksum=16936234688071587578 scanned=25781 selected=5639 golden=PASS result=PASS
+CASE dataset=RT model=APAN
+MATG checksum=3916284141014147805 embedding_checksum=9935716711691454465 scanned=19844 selected=3433 golden=PASS result=PASS
+ViTeGNN checksum=12581600898428257220 embedding_checksum=17024304772105867286 scanned=19844 selected=3324 golden=PASS result=PASS
+RTGA checksum=4541337982650269646 embedding_checksum=6949592462436959797 scanned=19844 selected=3139 golden=PASS result=PASS
+CASE dataset=LM model=JODIE
+MATG checksum=17669600223434697934 embedding_checksum=6971044998931978236 scanned=0 selected=0 golden=PASS result=PASS
+ViTeGNN checksum=5797875631738293178 embedding_checksum=6971044998931978236 scanned=0 selected=0 golden=PASS result=PASS
+RTGA checksum=1442586212328804850 embedding_checksum=427331376638534842 scanned=0 selected=0 golden=PASS result=PASS
+CASE dataset=LM model=TGN
+MATG checksum=16733245200779816888 embedding_checksum=12672975392060059872 scanned=17531 selected=3847 golden=PASS result=PASS
+ViTeGNN checksum=8445090519596555838 embedding_checksum=12555791943885126224 scanned=17531 selected=3452 golden=PASS result=PASS
+RTGA checksum=3592174908314471249 embedding_checksum=11584062149057341314 scanned=17531 selected=10002 golden=PASS result=PASS
+CASE dataset=LM model=TGAT
+MATG checksum=7196150456976117372 embedding_checksum=2146801632257800471 scanned=17531 selected=5620 golden=PASS result=PASS
+ViTeGNN checksum=17796853080670962873 embedding_checksum=2259741464207054421 scanned=17531 selected=3452 golden=PASS result=PASS
+RTGA checksum=14640738023356903863 embedding_checksum=4825183780025232869 scanned=17531 selected=10002 golden=PASS result=PASS
+CASE dataset=LM model=APAN
+MATG checksum=15220762254055598230 embedding_checksum=9641355086256203937 scanned=12053 selected=3847 golden=PASS result=PASS
+ViTeGNN checksum=9946589763172626403 embedding_checksum=6145822371532748740 scanned=12053 selected=3189 golden=PASS result=PASS
+RTGA checksum=8152870429622512565 embedding_checksum=14307157781227010017 scanned=12053 selected=5855 golden=PASS result=PASS
+CASE dataset=WT model=JODIE
+MATG checksum=6746390139706803953 embedding_checksum=8543619014782407079 scanned=0 selected=0 golden=PASS result=PASS
+ViTeGNN checksum=6002443202158821035 embedding_checksum=8543619014782407079 scanned=0 selected=0 golden=PASS result=PASS
+RTGA checksum=6661412521022446083 embedding_checksum=1131956704440883541 scanned=0 selected=0 golden=PASS result=PASS
+CASE dataset=WT model=TGN
+MATG checksum=15158014282410918209 embedding_checksum=1939733936944186186 scanned=56297 selected=1481 golden=PASS result=PASS
+ViTeGNN checksum=6441270169045749710 embedding_checksum=14554204197558407580 scanned=56297 selected=1356 golden=PASS result=PASS
+RTGA checksum=14844063691408757047 embedding_checksum=2161219442825546557 scanned=56297 selected=567 golden=PASS result=PASS
+CASE dataset=WT model=TGAT
+MATG checksum=10782488122089790768 embedding_checksum=16286753608057899900 scanned=56297 selected=2195 golden=PASS result=PASS
+ViTeGNN checksum=1536232767622609333 embedding_checksum=6236051973376124538 scanned=56297 selected=1356 golden=PASS result=PASS
+RTGA checksum=11820703670483296922 embedding_checksum=13324108624409472446 scanned=56297 selected=567 golden=PASS result=PASS
+CASE dataset=WT model=APAN
+MATG checksum=13440257121718274588 embedding_checksum=6955648188247348273 scanned=53327 selected=1481 golden=PASS result=PASS
+ViTeGNN checksum=10299996448774254326 embedding_checksum=10089075522567690942 scanned=53327 selected=1284 golden=PASS result=PASS
+RTGA checksum=10355520401016609456 embedding_checksum=4683986492969258214 scanned=53327 selected=480 golden=PASS result=PASS
+CASE dataset=GT model=JODIE
+MATG checksum=6742095802491733272 embedding_checksum=501044119211179852 scanned=0 selected=0 golden=PASS result=PASS
+ViTeGNN checksum=14536492399608521773 embedding_checksum=501044119211179852 scanned=0 selected=0 golden=PASS result=PASS
+RTGA checksum=6910751327207657160 embedding_checksum=6859977982805269108 scanned=0 selected=0 golden=PASS result=PASS
+CASE dataset=GT model=TGN
+MATG checksum=17417775941540333305 embedding_checksum=15632851067043075907 scanned=24723 selected=3458 golden=PASS result=PASS
+ViTeGNN checksum=18309351450983981072 embedding_checksum=6964501472627296991 scanned=24723 selected=3305 golden=PASS result=PASS
+RTGA checksum=13807822318605736556 embedding_checksum=13672342314963312674 scanned=24723 selected=5594 golden=PASS result=PASS
+CASE dataset=GT model=TGAT
+MATG checksum=18028734036008430097 embedding_checksum=17803649297389303969 scanned=24723 selected=4989 golden=PASS result=PASS
+ViTeGNN checksum=14215076287203824033 embedding_checksum=4062476821385012611 scanned=24723 selected=3305 golden=PASS result=PASS
+RTGA checksum=9372002419722838059 embedding_checksum=4039782220457755440 scanned=24723 selected=5594 golden=PASS result=PASS
+CASE dataset=GT model=APAN
+MATG checksum=11217057260824820204 embedding_checksum=8288625440548750435 scanned=18549 selected=3458 golden=PASS result=PASS
+ViTeGNN checksum=13765463760261071647 embedding_checksum=9334004348415343594 scanned=18549 selected=3270 golden=PASS result=PASS
+RTGA checksum=6323269319659894964 embedding_checksum=13533673546840195218 scanned=18549 selected=3061 golden=PASS result=PASS
+SUMMARY cases=24 expected_pass_rows=72 pass_rows=72 status=PASS
