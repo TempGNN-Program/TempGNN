@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1750" height="560" viewBox="0 0 1750 560"><rect width="100%" height="100%" fill="white"/>
+<text x="875.0" y="26" text-anchor="middle" font-size="18">Fig.11 End-to-end speedup normalized to MATG (fresh U280 run)</text>
+<line x1="70" y1="445" x2="1730" y2="445" stroke="#333"/>
+<line x1="70" y1="45" x2="70" y2="445" stroke="#333"/>
+<line x1="70" y1="445.0" x2="1730" y2="445.0" stroke="#eee"/>
+<text x="62" y="449.0" text-anchor="end" font-size="11">0.0</text>
+<line x1="70" y1="365.0" x2="1730" y2="365.0" stroke="#eee"/>
+<text x="62" y="369.0" text-anchor="end" font-size="11">1.2</text>
+<line x1="70" y1="285.0" x2="1730" y2="285.0" stroke="#eee"/>
+<text x="62" y="289.0" text-anchor="end" font-size="11">2.5</text>
+<line x1="70" y1="205.0" x2="1730" y2="205.0" stroke="#eee"/>
+<text x="62" y="209.0" text-anchor="end" font-size="11">3.7</text>
+<line x1="70" y1="125.0" x2="1730" y2="125.0" stroke="#eee"/>
+<text x="62" y="129.0" text-anchor="end" font-size="11">5.0</text>
+<line x1="70" y1="45.0" x2="1730" y2="45.0" stroke="#eee"/>
+<text x="62" y="49.0" text-anchor="end" font-size="11">6.2</text>
+<text x="103.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 103.0,542)">JODIE-WK</text>
+<rect x="76.6" y="380.9" width="11.2" height="64.1" fill="#4c78a8"><title>JODIE-WK MATG: 1</title></rect>
+<rect x="89.8" y="383.0" width="11.2" height="62.0" fill="#f58518"><title>JODIE-WK ViTeGNN: 0.967</title></rect>
+<rect x="103.0" y="390.5" width="11.2" height="54.5" fill="#54a24b"><title>JODIE-WK RTGA: 0.8493</title></rect>
+<rect x="116.2" y="441.3" width="11.2" height="3.7" fill="#b279a2"><title>JODIE-WK TempGNN: 0.0582</title></rect>
+<text x="169.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 169.0,542)">JODIE-MC</text>
+<rect x="142.6" y="380.9" width="11.2" height="64.1" fill="#4c78a8"><title>JODIE-MC MATG: 1</title></rect>
+<rect x="155.8" y="391.2" width="11.2" height="53.8" fill="#f58518"><title>JODIE-MC ViTeGNN: 0.8395</title></rect>
+<rect x="169.0" y="397.1" width="11.2" height="47.9" fill="#54a24b"><title>JODIE-MC RTGA: 0.7466</title></rect>
+<rect x="182.2" y="443.1" width="11.2" height="1.9" fill="#b279a2"><title>JODIE-MC TempGNN: 0.0301</title></rect>
+<text x="235.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 235.0,542)">JODIE-RT</text>
+<rect x="208.6" y="380.9" width="11.2" height="64.1" fill="#4c78a8"><title>JODIE-RT MATG: 1</title></rect>
+<rect x="221.8" y="383.8" width="11.2" height="61.2" fill="#f58518"><title>JODIE-RT ViTeGNN: 0.9548</title></rect>
+<rect x="235.0" y="391.1" width="11.2" height="53.9" fill="#54a24b"><title>JODIE-RT RTGA: 0.8403</title></rect>
+<rect x="248.2" y="441.9" width="11.2" height="3.1" fill="#b279a2"><title>JODIE-RT TempGNN: 0.0491</title></rect>
+<text x="301.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 301.0,542)">JODIE-LM</text>
+<rect x="274.6" y="380.9" width="11.2" height="64.1" fill="#4c78a8"><title>JODIE-LM MATG: 1</title></rect>
+<rect x="287.8" y="378.8" width="11.2" height="66.2" fill="#f58518"><title>JODIE-LM ViTeGNN: 1.032</title></rect>
+<rect x="301.0" y="387.3" width="11.2" height="57.7" fill="#54a24b"><title>JODIE-LM RTGA: 0.9006</title></rect>
+<rect x="314.2" y="442.1" width="11.2" height="2.9" fill="#b279a2"><title>JODIE-LM TempGNN: 0.046</title></rect>
+<text x="367.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 367.0,542)">JODIE-WT</text>
+<rect x="340.6" y="380.9" width="11.2" height="64.1" fill="#4c78a8"><title>JODIE-WT MATG: 1</title></rect>
+<rect x="353.8" y="388.4" width="11.2" height="56.6" fill="#f58518"><title>JODIE-WT ViTeGNN: 0.8828</title></rect>
+<rect x="367.0" y="394.9" width="11.2" height="50.1" fill="#54a24b"><title>JODIE-WT RTGA: 0.7813</title></rect>
+<rect x="380.2" y="444.4" width="11.2" height="0.6" fill="#b279a2"><title>JODIE-WT TempGNN: 0.0098</title></rect>
+<text x="433.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 433.0,542)">JODIE-GT</text>
+<rect x="406.6" y="380.9" width="11.2" height="64.1" fill="#4c78a8"><title>JODIE-GT MATG: 1</title></rect>
+<rect x="419.8" y="384.1" width="11.2" height="60.9" fill="#f58518"><title>JODIE-GT ViTeGNN: 0.9503</title></rect>
+<rect x="433.0" y="391.3" width="11.2" height="53.7" fill="#54a24b"><title>JODIE-GT RTGA: 0.8378</title></rect>
+<rect x="446.2" y="442.1" width="11.2" height="2.9" fill="#b279a2"><title>JODIE-GT TempGNN: 0.0452</title></rect>
+<text x="499.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 499.0,542)">TGN-WK</text>
+<rect x="472.6" y="380.9" width="11.2" height="64.1" fill="#4c78a8"><title>TGN-WK MATG: 1</title></rect>
+<rect x="485.8" y="208.9" width="11.2" height="236.1" fill="#f58518"><title>TGN-WK ViTeGNN: 3.683</title></rect>
+<rect x="499.0" y="300.4" width="11.2" height="144.6" fill="#54a24b"><title>TGN-WK RTGA: 2.255</title></rect>
+<rect x="512.2" y="444.3" width="11.2" height="0.7" fill="#b279a2"><title>TGN-WK TempGNN: 0.011</title></rect>
+<text x="565.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 565.0,542)">TGN-MC</text>
+<rect x="538.6" y="380.9" width="11.2" height="64.1" fill="#4c78a8"><title>TGN-MC MATG: 1</title></rect>
+<rect x="551.8" y="104.3" width="11.2" height="340.7" fill="#f58518"><title>TGN-MC ViTeGNN: 5.314</title></rect>
+<rect x="565.0" y="176.2" width="11.2" height="268.8" fill="#54a24b"><title>TGN-MC RTGA: 4.193</title></rect>
+<rect x="578.2" y="444.7" width="11.2" height="0.3" fill="#b279a2"><title>TGN-MC TempGNN: 0.0054</title></rect>
+<text x="631.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 631.0,542)">TGN-RT</text>
+<rect x="604.6" y="380.9" width="11.2" height="64.1" fill="#4c78a8"><title>TGN-RT MATG: 1</title></rect>
+<rect x="617.8" y="201.0" width="11.2" height="244.0" fill="#f58518"><title>TGN-RT ViTeGNN: 3.806</title></rect>
+<rect x="631.0" y="304.8" width="11.2" height="140.2" fill="#54a24b"><title>TGN-RT RTGA: 2.187</title></rect>
+<rect x="644.2" y="444.7" width="11.2" height="0.3" fill="#b279a2"><title>TGN-RT TempGNN: 0.005</title></rect>
+<text x="697.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 697.0,542)">TGN-LM</text>
+<rect x="670.6" y="380.9" width="11.2" height="64.1" fill="#4c78a8"><title>TGN-LM MATG: 1</title></rect>
+<rect x="683.8" y="243.3" width="11.2" height="201.7" fill="#f58518"><title>TGN-LM ViTeGNN: 3.146</title></rect>
+<rect x="697.0" y="355.5" width="11.2" height="89.5" fill="#54a24b"><title>TGN-LM RTGA: 1.397</title></rect>
+<rect x="710.2" y="444.9" width="11.2" height="0.1" fill="#b279a2"><title>TGN-LM TempGNN: 0.0015</title></rect>
+<text x="763.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 763.0,542)">TGN-WT</text>
+<rect x="736.6" y="380.9" width="11.2" height="64.1" fill="#4c78a8"><title>TGN-WT MATG: 1</title></rect>
+<rect x="749.8" y="45.5" width="11.2" height="399.5" fill="#f58518"><title>TGN-WT ViTeGNN: 6.231</title></rect>
+<rect x="763.0" y="119.7" width="11.2" height="325.3" fill="#54a24b"><title>TGN-WT RTGA: 5.075</title></rect>
+<rect x="776.2" y="444.7" width="11.2" height="0.3" fill="#b279a2"><title>TGN-WT TempGNN: 0.0051</title></rect>
+<text x="829.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 829.0,542)">TGN-GT</text>
+<rect x="802.6" y="380.9" width="11.2" height="64.1" fill="#4c78a8"><title>TGN-GT MATG: 1</title></rect>
+<rect x="815.8" y="209.4" width="11.2" height="235.6" fill="#f58518"><title>TGN-GT ViTeGNN: 3.675</title></rect>
+<rect x="829.0" y="309.0" width="11.2" height="136.0" fill="#54a24b"><title>TGN-GT RTGA: 2.122</title></rect>
+<rect x="842.2" y="444.8" width="11.2" height="0.2" fill="#b279a2"><title>TGN-GT TempGNN: 0.0032</title></rect>
+<text x="895.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 895.0,542)">TGAT-WK</text>
+<rect x="868.6" y="380.9" width="11.2" height="64.1" fill="#4c78a8"><title>TGAT-WK MATG: 1</title></rect>
+<rect x="881.8" y="208.2" width="11.2" height="236.8" fill="#f58518"><title>TGAT-WK ViTeGNN: 3.694</title></rect>
+<rect x="895.0" y="300.1" width="11.2" height="144.9" fill="#54a24b"><title>TGAT-WK RTGA: 2.26</title></rect>
+<rect x="908.2" y="444.3" width="11.2" height="0.7" fill="#b279a2"><title>TGAT-WK TempGNN: 0.011</title></rect>
+<text x="961.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 961.0,542)">TGAT-MC</text>
+<rect x="934.6" y="380.9" width="11.2" height="64.1" fill="#4c78a8"><title>TGAT-MC MATG: 1</title></rect>
+<rect x="947.8" y="104.0" width="11.2" height="341.0" fill="#f58518"><title>TGAT-MC ViTeGNN: 5.319</title></rect>
+<rect x="961.0" y="175.9" width="11.2" height="269.1" fill="#54a24b"><title>TGAT-MC RTGA: 4.198</title></rect>
+<rect x="974.2" y="444.7" width="11.2" height="0.3" fill="#b279a2"><title>TGAT-MC TempGNN: 0.0054</title></rect>
+<text x="1027.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 1027.0,542)">TGAT-RT</text>
+<rect x="1000.6" y="380.9" width="11.2" height="64.1" fill="#4c78a8"><title>TGAT-RT MATG: 1</title></rect>
+<rect x="1013.8" y="200.5" width="11.2" height="244.5" fill="#f58518"><title>TGAT-RT ViTeGNN: 3.814</title></rect>
+<rect x="1027.0" y="304.6" width="11.2" height="140.4" fill="#54a24b"><title>TGAT-RT RTGA: 2.191</title></rect>
+<rect x="1040.2" y="444.7" width="11.2" height="0.3" fill="#b279a2"><title>TGAT-RT TempGNN: 0.005</title></rect>
+<text x="1093.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 1093.0,542)">TGAT-LM</text>
+<rect x="1066.6" y="380.9" width="11.2" height="64.1" fill="#4c78a8"><title>TGAT-LM MATG: 1</title></rect>
+<rect x="1079.8" y="242.2" width="11.2" height="202.8" fill="#f58518"><title>TGAT-LM ViTeGNN: 3.164</title></rect>
+<rect x="1093.0" y="354.9" width="11.2" height="90.1" fill="#54a24b"><title>TGAT-LM RTGA: 1.405</title></rect>
+<rect x="1106.2" y="444.9" width="11.2" height="0.1" fill="#b279a2"><title>TGAT-LM TempGNN: 0.0015</title></rect>
+<text x="1159.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 1159.0,542)">TGAT-WT</text>
+<rect x="1132.6" y="380.9" width="11.2" height="64.1" fill="#4c78a8"><title>TGAT-WT MATG: 1</title></rect>
+<rect x="1145.8" y="45.0" width="11.2" height="400.0" fill="#f58518"><title>TGAT-WT ViTeGNN: 6.239</title></rect>
+<rect x="1159.0" y="119.6" width="11.2" height="325.4" fill="#54a24b"><title>TGAT-WT RTGA: 5.075</title></rect>
+<rect x="1172.2" y="444.7" width="11.2" height="0.3" fill="#b279a2"><title>TGAT-WT TempGNN: 0.0051</title></rect>
+<text x="1225.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 1225.0,542)">TGAT-GT</text>
+<rect x="1198.6" y="380.9" width="11.2" height="64.1" fill="#4c78a8"><title>TGAT-GT MATG: 1</title></rect>
+<rect x="1211.8" y="208.6" width="11.2" height="236.4" fill="#f58518"><title>TGAT-GT ViTeGNN: 3.688</title></rect>
+<rect x="1225.0" y="308.4" width="11.2" height="136.6" fill="#54a24b"><title>TGAT-GT RTGA: 2.13</title></rect>
+<rect x="1238.2" y="444.8" width="11.2" height="0.2" fill="#b279a2"><title>TGAT-GT TempGNN: 0.0032</title></rect>
+<text x="1291.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 1291.0,542)">APAN-WK</text>
+<rect x="1264.6" y="380.9" width="11.2" height="64.1" fill="#4c78a8"><title>APAN-WK MATG: 1</title></rect>
+<rect x="1277.8" y="251.0" width="11.2" height="194.0" fill="#f58518"><title>APAN-WK ViTeGNN: 3.027</title></rect>
+<rect x="1291.0" y="313.5" width="11.2" height="131.5" fill="#54a24b"><title>APAN-WK RTGA: 2.052</title></rect>
+<rect x="1304.2" y="443.5" width="11.2" height="1.5" fill="#b279a2"><title>APAN-WK TempGNN: 0.024</title></rect>
+<text x="1357.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 1357.0,542)">APAN-MC</text>
+<rect x="1330.6" y="380.9" width="11.2" height="64.1" fill="#4c78a8"><title>APAN-MC MATG: 1</title></rect>
+<rect x="1343.8" y="143.4" width="11.2" height="301.6" fill="#f58518"><title>APAN-MC ViTeGNN: 4.704</title></rect>
+<rect x="1357.0" y="205.5" width="11.2" height="239.5" fill="#54a24b"><title>APAN-MC RTGA: 3.736</title></rect>
+<rect x="1370.2" y="443.6" width="11.2" height="1.4" fill="#b279a2"><title>APAN-MC TempGNN: 0.0211</title></rect>
+<text x="1423.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 1423.0,542)">APAN-RT</text>
+<rect x="1396.6" y="380.9" width="11.2" height="64.1" fill="#4c78a8"><title>APAN-RT MATG: 1</title></rect>
+<rect x="1409.8" y="240.5" width="11.2" height="204.5" fill="#f58518"><title>APAN-RT ViTeGNN: 3.19</title></rect>
+<rect x="1423.0" y="308.8" width="11.2" height="136.2" fill="#54a24b"><title>APAN-RT RTGA: 2.125</title></rect>
+<rect x="1436.2" y="444.0" width="11.2" height="1.0" fill="#b279a2"><title>APAN-RT TempGNN: 0.016</title></rect>
+<text x="1489.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 1489.0,542)">APAN-LM</text>
+<rect x="1462.6" y="380.9" width="11.2" height="64.1" fill="#4c78a8"><title>APAN-LM MATG: 1</title></rect>
+<rect x="1475.8" y="283.8" width="11.2" height="161.2" fill="#f58518"><title>APAN-LM ViTeGNN: 2.515</title></rect>
+<rect x="1489.0" y="356.9" width="11.2" height="88.1" fill="#54a24b"><title>APAN-LM RTGA: 1.373</title></rect>
+<rect x="1502.2" y="444.7" width="11.2" height="0.3" fill="#b279a2"><title>APAN-LM TempGNN: 0.005</title></rect>
+<text x="1555.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 1555.0,542)">APAN-WT</text>
+<rect x="1528.6" y="380.9" width="11.2" height="64.1" fill="#4c78a8"><title>APAN-WT MATG: 1</title></rect>
+<rect x="1541.8" y="60.7" width="11.2" height="384.3" fill="#f58518"><title>APAN-WT ViTeGNN: 5.994</title></rect>
+<rect x="1555.0" y="130.6" width="11.2" height="314.4" fill="#54a24b"><title>APAN-WT RTGA: 4.903</title></rect>
+<rect x="1568.2" y="444.0" width="11.2" height="1.0" fill="#b279a2"><title>APAN-WT TempGNN: 0.0154</title></rect>
+<text x="1621.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 1621.0,542)">APAN-GT</text>
+<rect x="1594.6" y="380.9" width="11.2" height="64.1" fill="#4c78a8"><title>APAN-GT MATG: 1</title></rect>
+<rect x="1607.8" y="250.5" width="11.2" height="194.5" fill="#f58518"><title>APAN-GT ViTeGNN: 3.034</title></rect>
+<rect x="1621.0" y="314.6" width="11.2" height="130.4" fill="#54a24b"><title>APAN-GT RTGA: 2.034</title></rect>
+<rect x="1634.2" y="444.3" width="11.2" height="0.7" fill="#b279a2"><title>APAN-GT TempGNN: 0.0104</title></rect>
+<text x="1687.0" y="542" text-anchor="end" font-size="10" transform="rotate(-55 1687.0,542)">AVG</text>
+<rect x="1660.6" y="380.9" width="11.2" height="64.1" fill="#4c78a8"><title>AVG MATG: 1</title></rect>
+<rect x="1673.8" y="231.7" width="11.2" height="213.3" fill="#f58518"><title>AVG ViTeGNN: 3.328</title></rect>
+<rect x="1687.0" y="296.3" width="11.2" height="148.7" fill="#54a24b"><title>AVG RTGA: 2.319</title></rect>
+<rect x="1700.2" y="443.9" width="11.2" height="1.1" fill="#b279a2"><title>AVG TempGNN: 0.0164</title></rect>
+<rect x="1130.0" y="38.0" width="12" height="12" fill="#4c78a8"/>
+<text x="1148.0" y="48.0" font-size="12">MATG</text>
+<rect x="1320.0" y="38.0" width="12" height="12" fill="#f58518"/>
+<text x="1338.0" y="48.0" font-size="12">ViTeGNN</text>
+<rect x="1510.0" y="38.0" width="12" height="12" fill="#54a24b"/>
+<text x="1528.0" y="48.0" font-size="12">RTGA</text>
+<rect x="1130.0" y="60.0" width="12" height="12" fill="#b279a2"/>
+<text x="1148.0" y="70.0" font-size="12">TempGNN</text>
+</svg>
