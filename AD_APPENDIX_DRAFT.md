@@ -38,7 +38,7 @@ https://github.com/TempGNN-Program/TempGNN/raw/main/ae_export/pap142_tempgnn_sc2
 The version-specific DOI will be inserted before the SC26 artifact freeze on
 August 25, 2026. GitHub alone is not the persistent archive; the frozen release
 will also be deposited in Zenodo, Figshare, or the conference artifact
-repository under a standard open-source license.
+repository. The repository and package are licensed under Apache-2.0.
 
 - `A1`: TempGNN reference model, TDP/DDTC/OATS tests, and real edge-stream
   profiling.
@@ -86,7 +86,7 @@ collisions, synchronization stalls, and off-chip traffic.
 
 ### B. Expected Results
 
-The unit suite must pass all 26 tests. The TDP implementation must agree with a
+The unit suite must pass all 27 tests. The TDP implementation must agree with a
 chronological reference update, fixture generation must be deterministic, and
 artifact paths/provenance must pass their consistency checks. Optional Q14
 profiling produces nonnegative, well-formed per-dataset/model statistics from
@@ -156,7 +156,7 @@ the target batch size, fanout, and depth are recorded in the output CSVs.
 
 ### F. Artifact Analysis
 
-The test command must finish with `Ran 26 tests` and `OK`. Optional Q14 outputs
+The test command must finish with `Ran 27 tests` and `OK`. Optional Q14 outputs
 are written to:
 
 ```text

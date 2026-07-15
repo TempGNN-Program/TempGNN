@@ -224,8 +224,8 @@ recorded in every fresh run's provenance.
 
 Run `make release-preflight` before creating the Zenodo archive. It currently
 refuses a Results Reproduced release claim because the bounded implementation
-is not paper-equivalent; it also requires a license, final citation metadata,
-four distinct U280 artifacts, and a fresh numerical PASS. See
+is not paper-equivalent; Apache-2.0 is included, while final citation metadata,
+four distinct U280 artifacts, and a fresh numerical PASS are still checked. See
 `ZENODO_RELEASE_CHECKLIST.md`.
 
 ## Metric Meaning
@@ -233,3 +233,7 @@ four distinct U280 artifacts, and a fresh numerical PASS. See
 `DDTC` is dependency-driven TDP construction. `OATS` is overlap-aware TDP synchronization.
 
 `packet_reuse_factor` measures how many per-target packet materializations collapse into unique PHLE packets. `memory_bytes` is packet state/metadata traffic. `cycles` is the kernel's cycle proxy used by C-sim and exported fixture stats. HLS reports provide C/RTL latency after synthesis/cosim.
+
+## License
+
+This artifact is licensed under the Apache License 2.0. See `LICENSE`.

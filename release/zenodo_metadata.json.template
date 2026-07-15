@@ -4,7 +4,7 @@
   "version": "1.0.0-sc26-ae",
   "description": "Frozen computational artifact for SC26 paper pap142, including the TempGNN software model, U280 forward-path functional evidence, deterministic reference-figure reconstruction, and bounded independent paper-based U280 baseline comparisons.",
   "access_right": "open",
-  "license": "REPLACE_WITH_SELECTED_LICENSE",
+  "license": "Apache-2.0",
   "creators": [
     {
       "name": "REPLACE_WITH_CREATOR_METADATA_AFTER_ANONYMITY"

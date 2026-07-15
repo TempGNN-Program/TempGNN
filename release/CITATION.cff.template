@@ -2,7 +2,7 @@ cff-version: 1.2.0
 title: "TempGNN: Artifact for SC26 Paper pap142"
 version: "1.0.0-sc26-ae"
 type: software
-license: "REPLACE_WITH_SELECTED_LICENSE"
+license: "Apache-2.0"
 abstract: >-
   Frozen computational artifact for SC26 paper pap142, including the TempGNN
   software model, U280 forward-path functional evidence, deterministic

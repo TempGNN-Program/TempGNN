@@ -15,8 +15,8 @@ credentials are delivered only through the private SC submission channel.
 ## Evaluation Scope and Badge Boundary
 
 The artifact is prepared to support Artifacts Available and Artifacts
-Evaluated-Functional. A version-specific DOI and standard open-source license
-must be present by the August 25, 2026 artifact freeze.
+Evaluated-Functional. Apache-2.0 is included; a version-specific DOI must be
+present by the August 25, 2026 artifact freeze.
 
 The current package does not assert Results Reproduced. The fresh U280 path
 uses bounded 8,192-event prefixes, 8-dimensional Q10 kernels, deterministic
@@ -80,7 +80,7 @@ python3 -m unittest discover -s tests
 Expected terminal summary:
 
 ```text
-Ran 26 tests
+Ran 27 tests
 OK
 ```
 
@@ -97,7 +97,7 @@ when the corresponding edge files are already present.
 
 ### C. Artifact Analysis
 
-All 26 tests must pass. In particular, the recursive TDP state must agree with
+All 27 tests must pass. In particular, the recursive TDP state must agree with
 chronological updates, fixtures must be deterministic, xclbin link requests
 must agree with the Vivado-connected clock and nonnegative post-route WNS/TNS,
 and duplicate xclbins must be rejected by preflight.
@@ -321,7 +321,7 @@ make smoke
 make report
 ```
 
-`make smoke` includes the 26 tests from `A1`.
+`make smoke` includes the 27 tests from `A1`.
 
 ### C. Artifact Analysis
 
@@ -368,6 +368,6 @@ configuration.
 
 | Badge | Current evidence |
 | --- | --- |
-| Artifacts Available | Source, tests, inputs, CSV/SVG records, four metadata-normalized U280 xclbins, reports, and documentation; DOI and license required by freeze |
+| Artifacts Available | Source, tests, inputs, CSV/SVG records, four metadata-normalized U280 xclbins, reports, and documentation; Apache-2.0 included and DOI required by freeze |
 | Artifacts Evaluated-Functional | `A1` tests, baseline C-sim, four-xclbin preflight, board goldens, repeated outputs, power/latency rows, and post-route evidence |
 | Results Reproduced | Not currently asserted because `A2` is a bounded mechanism-level comparison rather than the paper's full precision, checkpoints, streams, and power method |
