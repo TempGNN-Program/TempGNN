@@ -1,0 +1,14 @@
+make[1]: Entering directory '/home/ae_reviewer/TempGNN/hardware/baselines/vitis'
+v++ -c --mode hls \
+	--platform /opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm \
+	--freqhz 225000000 \
+	--config /home/ae_reviewer/TempGNN/hardware/baselines/vitis/matg_kernel_hls.cfg \
+	--work_dir /home/ae_reviewer/TempGNN/build/baselines/matg_hw/hls_component
+cp /home/ae_reviewer/TempGNN/build/baselines/matg_hw/hls_component/matg_kernel.xo /home/ae_reviewer/TempGNN/build/baselines/matg_hw/matg_kernel.hw.xo
+v++ -l -t hw --platform /opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm \
+	--temp_dir /home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x \
+	--remote_ip_cache /home/ae_reviewer/TempGNN/build/baselines/matg_hw/.ipcache \
+	--freqhz 225000000:matg_kernel_1 \
+	--config /home/ae_reviewer/TempGNN/hardware/baselines/vitis/matg_kernel_u280.cfg \
+	/home/ae_reviewer/TempGNN/build/baselines/matg_hw/matg_kernel.hw.xo -o /home/ae_reviewer/TempGNN/build/baselines/matg_hw/matg_kernel.hw.xclbin
+make[1]: Leaving directory '/home/ae_reviewer/TempGNN/hardware/baselines/vitis'

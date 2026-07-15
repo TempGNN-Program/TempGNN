@@ -1,0 +1,1272 @@
+<ENTRY>
+{
+ "thisFile": "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/matg_kernel.hw.xclbin.link_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Wed Jul 15 02:17:55 2026",
+ "timestampMillis": "1784053075218",
+ "buildStep": {
+  "cmdId": "1bf9bc43-0922-445d-a94a-7c191e0595cb",
+  "name": "v++",
+  "logFile": "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/link.steps.log",
+  "commandLine": "/tools/Xilinx/Vitis/2023.2/bin/unwrapped/lnx64.o/v++  --vivado.prop \"run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" -l -t hw --platform /opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm --temp_dir /home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x --remote_ip_cache /home/ae_reviewer/TempGNN/build/baselines/matg_hw/.ipcache --freqhz 225000000:matg_kernel_1 --config /home/ae_reviewer/TempGNN/hardware/baselines/vitis/matg_kernel_u280.cfg /home/ae_reviewer/TempGNN/build/baselines/matg_hw/matg_kernel.hw.xo -o /home/ae_reviewer/TempGNN/build/baselines/matg_hw/matg_kernel.hw.xclbin ",
+  "args": [
+   "-l",
+   "-t",
+   "hw",
+   "--platform",
+   "/opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm",
+   "--temp_dir",
+   "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x",
+   "--remote_ip_cache",
+   "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/.ipcache",
+   "--freqhz",
+   "225000000:matg_kernel_1",
+   "--config",
+   "/home/ae_reviewer/TempGNN/hardware/baselines/vitis/matg_kernel_u280.cfg",
+   "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/matg_kernel.hw.xo",
+   "-o",
+   "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/matg_kernel.hw.xclbin"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/ae_reviewer/TempGNN/hardware/baselines/vitis/matg_kernel_u280.cfg",
+    "content": "[connectivity]\nnk=matg_kernel:1:matg_kernel_1\nsp=matg_kernel_1.event_src:HBM[0]\nsp=matg_kernel_1.event_dst:HBM[1]\nsp=matg_kernel_1.event_ts:HBM[2]\nsp=matg_kernel_1.vertex_offsets:HBM[3]\nsp=matg_kernel_1.history_event_idx:HBM[4]\nsp=matg_kernel_1.history_peer:HBM[5]\nsp=matg_kernel_1.target_vertex:HBM[6]\nsp=matg_kernel_1.target_event_idx:HBM[7]\nsp=matg_kernel_1.initial_memory:HBM[8]\nsp=matg_kernel_1.event_features:HBM[9]\nsp=matg_kernel_1.weight_self:HBM[10]\nsp=matg_kernel_1.weight_peer:HBM[10]\nsp=matg_kernel_1.weight_event:HBM[10]\nsp=matg_kernel_1.bias:HBM[10]\nsp=matg_kernel_1.embedding_out:HBM[11]\nsp=matg_kernel_1.stats_out:HBM[12]\n\n[hls]\nclock=225000000:matg_kernel_1\n"
+   }
+  ],
+  "cwd": "/home/ae_reviewer/TempGNN/hardware/baselines/vitis"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Jul 15 02:17:55 2026",
+ "timestampMillis": "1784053075218",
+ "status": {
+  "cmdId": "1bf9bc43-0922-445d-a94a-7c191e0595cb",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Wed Jul 15 02:18:00 2026",
+ "timestampMillis": "1784053080982",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_u280_gen3x16_xdma_1_202211_1.xpfm",
+  "hardwareDsa": "",
+  "platformDirectory": "/opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_LINK",
+  "target": "TT_HW",
+  "binaryContainer": {
+   "base": {
+    "type": "BT_UKNOWN",
+    "name": "matg_kernel.hw",
+    "file": "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/matg_kernel.hw.xclbin",
+    "reports": [],
+    "uuid": ""
+   },
+   "kernels": []
+  },
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "matg_kernel",
+     "file": "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/matg_kernel.hw.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/int/xo/matg_kernel/matg_kernel/cpu_sources/matg_kernel.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [
+     "matg_kernel_1"
+    ],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "Vitis V++ Compiler Release 2023.2. SW Build 4026344 on 2023-10-11-15:42:10"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Jul 15 02:18:01 2026",
+ "timestampMillis": "1784053081219",
+ "buildStep": {
+  "cmdId": "5640182e-469b-4756-8187-e57063ded5c4",
+  "name": "system_link",
+  "logFile": "",
+  "commandLine": "system_link --xo /home/ae_reviewer/TempGNN/build/baselines/matg_hw/matg_kernel.hw.xo --config /home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/int/syslinkConfig.ini --xpfm /opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm --target hw --output_dir /home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/int --temp_dir /home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/sys_link",
+  "args": [
+   "--xo",
+   "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/matg_kernel.hw.xo",
+   "--config",
+   "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/int/syslinkConfig.ini",
+   "--xpfm",
+   "/opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm",
+   "--target",
+   "hw",
+   "--output_dir",
+   "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/int",
+   "--temp_dir",
+   "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/sys_link"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/int/syslinkConfig.ini",
+    "content": "nk=matg_kernel:1:matg_kernel_1\nsp=matg_kernel_1.event_src:HBM[0]\nsp=matg_kernel_1.event_dst:HBM[1]\nsp=matg_kernel_1.event_ts:HBM[2]\nsp=matg_kernel_1.vertex_offsets:HBM[3]\nsp=matg_kernel_1.history_event_idx:HBM[4]\nsp=matg_kernel_1.history_peer:HBM[5]\nsp=matg_kernel_1.target_vertex:HBM[6]\nsp=matg_kernel_1.target_event_idx:HBM[7]\nsp=matg_kernel_1.initial_memory:HBM[8]\nsp=matg_kernel_1.event_features:HBM[9]\nsp=matg_kernel_1.weight_self:HBM[10]\nsp=matg_kernel_1.weight_peer:HBM[10]\nsp=matg_kernel_1.weight_event:HBM[10]\nsp=matg_kernel_1.bias:HBM[10]\nsp=matg_kernel_1.embedding_out:HBM[11]\nsp=matg_kernel_1.stats_out:HBM[12]\n\nclock.freqHz=225000000:matg_kernel_1\n\n"
+   }
+  ],
+  "cwd": "/home/ae_reviewer/TempGNN/hardware/baselines/vitis"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Jul 15 02:18:01 2026",
+ "timestampMillis": "1784053081220",
+ "status": {
+  "cmdId": "5640182e-469b-4756-8187-e57063ded5c4",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Jul 15 02:18:29 2026",
+ "timestampMillis": "1784053109296",
+ "status": {
+  "cmdId": "5640182e-469b-4756-8187-e57063ded5c4",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Jul 15 02:18:29 2026",
+ "timestampMillis": "1784053109299",
+ "buildStep": {
+  "cmdId": "af5a48a7-2ccd-43c5-b429-b5f4629fbc1e",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -sdsl /home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/int/sdsl.dat -rtd /home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/int/cf2sw.rtd -nofilter /home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/int/cf2sw_full.rtd -xclbin /home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/int/xclbin_orig.xml -o /home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/int/xclbin_orig.1.xml",
+  "args": [
+   "-sdsl",
+   "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/int/sdsl.dat",
+   "-rtd",
+   "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/int/cf2sw.rtd",
+   "-nofilter",
+   "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/int/cf2sw_full.rtd",
+   "-xclbin",
+   "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/int/xclbin_orig.xml",
+   "-o",
+   "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/int/xclbin_orig.1.xml"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/ae_reviewer/TempGNN/hardware/baselines/vitis"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Jul 15 02:18:29 2026",
+ "timestampMillis": "1784053109299",
+ "status": {
+  "cmdId": "af5a48a7-2ccd-43c5-b429-b5f4629fbc1e",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Jul 15 02:18:37 2026",
+ "timestampMillis": "1784053117938",
+ "status": {
+  "cmdId": "af5a48a7-2ccd-43c5-b429-b5f4629fbc1e",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Jul 15 02:18:37 2026",
+ "timestampMillis": "1784053117941",
+ "buildStep": {
+  "cmdId": "feb3c4f6-2c90-4781-9077-f559f0d16431",
+  "name": "rtd2_system_diagram",
+  "logFile": "",
+  "commandLine": "rtd2SystemDiagram",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/ae_reviewer/TempGNN/hardware/baselines/vitis"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Jul 15 02:18:37 2026",
+ "timestampMillis": "1784053117941",
+ "status": {
+  "cmdId": "feb3c4f6-2c90-4781-9077-f559f0d16431",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Jul 15 02:18:38 2026",
+ "timestampMillis": "1784053118393",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/int/systemDiagramModel.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Jul 15 02:18:38 2026",
+ "timestampMillis": "1784053118394",
+ "status": {
+  "cmdId": "feb3c4f6-2c90-4781-9077-f559f0d16431",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Jul 15 02:18:38 2026",
+ "timestampMillis": "1784053118397",
+ "buildStep": {
+  "cmdId": "c8308065-d0f0-4b9e-9da5-1c8d3841f966",
+  "name": "vpl",
+  "logFile": "",
+  "commandLine": "vpl -t hw -f /opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm --remote_ip_cache /home/ae_reviewer/TempGNN/build/baselines/matg_hw/.ipcache --output_dir /home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/int --log_dir /home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/logs/link --report_dir /home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/reports/link --config /home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/int/vplConfig.ini -k /home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link --no-info --iprepo /home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/int/xo/ip_repo/xilinx_com_hls_matg_kernel_1_0 --messageDb /home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/run_link/vpl.pb /home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/int/dr.bd.tcl",
+  "args": [
+   "-t",
+   "hw",
+   "-f",
+   "/opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm",
+   "--remote_ip_cache",
+   "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/.ipcache",
+   "--output_dir",
+   "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/int",
+   "--log_dir",
+   "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/logs/link",
+   "--report_dir",
+   "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/reports/link",
+   "--config",
+   "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/int/vplConfig.ini",
+   "-k",
+   "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/int/kernel_info.dat",
+   "--webtalk_flag",
+   "Vitis",
+   "--temp_dir",
+   "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link",
+   "--no-info",
+   "--iprepo",
+   "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/int/xo/ip_repo/xilinx_com_hls_matg_kernel_1_0",
+   "--messageDb",
+   "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/run_link/vpl.pb",
+   "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/int/dr.bd.tcl"
+  ],
+  "iniFiles": [
+   {
+    "path": "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/int/vplConfig.ini",
+    "content": "[advanced]\nmisc=report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\nmisc=report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\nparam=compiler.enablePerformanceTrace=1\nparam=compiler.vppCurrentWorkingDir=/home/ae_reviewer/TempGNN/hardware/baselines/vitis\nmisc=BinaryName=matg_kernel.hw\n\n[connectivity]\nnk=matg_kernel:1:matg_kernel_1\n\n[vivado]\nprop=run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\n\n"
+   }
+  ],
+  "cwd": "/home/ae_reviewer/TempGNN/hardware/baselines/vitis"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Jul 15 02:18:38 2026",
+ "timestampMillis": "1784053118397",
+ "status": {
+  "cmdId": "c8308065-d0f0-4b9e-9da5-1c8d3841f966",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Wed Jul 15 02:18:40 2026",
+ "timestampMillis": "1784053120510",
+ "buildStep": {
+  "cmdId": "80fd395e-cb7b-4848-91ad-d0c92525b475",
+  "name": "vpl",
+  "logFile": "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/link.steps.log",
+  "commandLine": "/tools/Xilinx/Vitis/2023.2/bin/unwrapped/lnx64.o/vpl -t hw -f /opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm --remote_ip_cache /home/ae_reviewer/TempGNN/build/baselines/matg_hw/.ipcache --output_dir /home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/int --log_dir /home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/logs/link --report_dir /home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/reports/link --config /home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/int/vplConfig.ini -k /home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link --no-info --iprepo /home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/int/xo/ip_repo/xilinx_com_hls_matg_kernel_1_0 --messageDb /home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/run_link/vpl.pb /home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/int/dr.bd.tcl ",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/run_link"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Jul 15 02:18:40 2026",
+ "timestampMillis": "1784053120510",
+ "status": {
+  "cmdId": "80fd395e-cb7b-4848-91ad-d0c92525b475",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_VivadoProject",
+ "dateTimestamp": "Wed Jul 15 02:18:46 2026",
+ "timestampMillis": "1784053126574",
+ "vivadoProject": {
+  "openDir": "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/vivado/vpl",
+  "openScript": "openprj.tcl",
+  "relativeProject": "prj/prj.xpr"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Jul 15 02:18:46 2026",
+ "timestampMillis": "1784053126575",
+ "buildStep": {
+  "cmdId": "324ea2fb-bda0-4727-88fb-560e08b6efea",
+  "name": "vivado",
+  "logFile": "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/vivado/vpl/vivado.log",
+  "commandLine": "vivado -log vivado.log -applog -m64 -messageDb vivado.pb -mode batch -source vpl.tcl -notrace",
+  "args": [
+   "-log",
+   "vivado.log",
+   "-applog",
+   " -m64",
+   "-messageDb",
+   "vivado.pb",
+   "-mode",
+   "batch",
+   "-source",
+   "vpl.tcl",
+   "-notrace"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/run_link"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Jul 15 02:18:46 2026",
+ "timestampMillis": "1784053126575",
+ "status": {
+  "cmdId": "324ea2fb-bda0-4727-88fb-560e08b6efea",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Jul 15 02:22:27 2026",
+ "timestampMillis": "1784053347960",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/int/automation_summary_pre_synthesis.txt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "VITIS_DESIGN_FLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Wed Jul 15 02:32:35 2026",
+ "timestampMillis": "1784053955278",
+ "buildStep": {
+  "cmdId": "dab672db-4952-4a54-8e72-1ff1ba049d87",
+  "name": "vivado.impl",
+  "logFile": "",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/vivado/vpl"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Jul 15 02:32:35 2026",
+ "timestampMillis": "1784053955278",
+ "status": {
+  "cmdId": "dab672db-4952-4a54-8e72-1ff1ba049d87",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Wed Jul 15 02:32:35 2026",
+ "timestampMillis": "1784053955279",
+ "buildStep": {
+  "cmdId": "4c7ce877-9689-4f10-bf73-145cf0762f93",
+  "name": "vivado.impl.impl_1",
+  "logFile": "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/vivado/vpl/prj/prj.runs/impl_1/runme.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/vivado/vpl/prj/prj.runs/impl_1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Jul 15 02:32:35 2026",
+ "timestampMillis": "1784053955279",
+ "status": {
+  "cmdId": "4c7ce877-9689-4f10-bf73-145cf0762f93",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Jul 15 04:08:07 2026",
+ "timestampMillis": "1784059687232",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/vivado/vpl/prj/prj.runs/impl_1/system_diagram.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Jul 15 04:10:12 2026",
+ "timestampMillis": "1784059812590",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/int/kernel_service.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "KERNEL_SERVICE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Jul 15 04:10:12 2026",
+ "timestampMillis": "1784059812591",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/int/kernel_service.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "KERNEL_SERVICE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Jul 15 04:12:45 2026",
+ "timestampMillis": "1784059965542",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/vivado/vpl/prj/prj.runs/impl_1/dr_timing_summary.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY_FAIL",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Jul 15 04:24:22 2026",
+ "timestampMillis": "1784060662086",
+ "status": {
+  "cmdId": "324ea2fb-bda0-4727-88fb-560e08b6efea",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Jul 15 04:24:22 2026",
+ "timestampMillis": "1784060662143",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/reports/link/imp/impl_1_kernel_util_synthed.xutil",
+  "name": "",
+  "fileType": "XUTIL",
+  "reportType": "KERNEL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Jul 15 04:24:22 2026",
+ "timestampMillis": "1784060662144",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/reports/link/imp/impl_1_kernel_util_synthed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Jul 15 04:24:22 2026",
+ "timestampMillis": "1784060662145",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/reports/link/imp/impl_1_full_util_synthed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Jul 15 04:24:22 2026",
+ "timestampMillis": "1784060662145",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/reports/link/imp/impl_1_full_util_synthed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_UTILIZATION_SYNTHESIS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Jul 15 04:24:22 2026",
+ "timestampMillis": "1784060662146",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/reports/link/imp/impl_1_kernel_util_placed.xutil",
+  "name": "",
+  "fileType": "XUTIL",
+  "reportType": "KERNEL_UTILIZATION_PLACEMENT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Jul 15 04:24:22 2026",
+ "timestampMillis": "1784060662146",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/reports/link/imp/impl_1_kernel_util_placed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_UTILIZATION_PLACEMENT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Jul 15 04:24:22 2026",
+ "timestampMillis": "1784060662147",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/reports/link/imp/impl_1_slr_util_placed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SLR_UTIL_PLACED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Jul 15 04:24:22 2026",
+ "timestampMillis": "1784060662148",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/reports/link/imp/impl_1_slr_util_placed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_SLR_UTIL_PLACED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Jul 15 04:24:22 2026",
+ "timestampMillis": "1784060662148",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/reports/link/imp/impl_1_full_util_placed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_UTILIZATION_PLACEMENT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Jul 15 04:24:22 2026",
+ "timestampMillis": "1784060662149",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/reports/link/imp/impl_1_full_util_placed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_UTILIZATION_PLACEMENT",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Jul 15 04:24:22 2026",
+ "timestampMillis": "1784060662149",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/reports/link/imp/impl_1_kernel_util_routed.xutil",
+  "name": "",
+  "fileType": "XUTIL",
+  "reportType": "KERNEL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Jul 15 04:24:22 2026",
+ "timestampMillis": "1784060662150",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/reports/link/imp/impl_1_kernel_util_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "KERNEL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Jul 15 04:24:22 2026",
+ "timestampMillis": "1784060662150",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/reports/link/imp/impl_1_slr_util_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SLR_UTIL_ROUTED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Jul 15 04:24:22 2026",
+ "timestampMillis": "1784060662152",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/reports/link/imp/impl_1_slr_util_routed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_SLR_UTIL_ROUTED",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Jul 15 04:24:22 2026",
+ "timestampMillis": "1784060662152",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/reports/link/imp/impl_1_full_util_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Jul 15 04:24:22 2026",
+ "timestampMillis": "1784060662153",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/reports/link/imp/impl_1_full_util_routed.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_UTILIZATION_ROUTE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Jul 15 04:24:22 2026",
+ "timestampMillis": "1784060662154",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/reports/link/syn/ulp_matg_kernel_1_0_synth_1_ulp_matg_kernel_1_0_utilization_synth.rpt",
+  "name": "matg_kernel",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_UTILIZATION",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Jul 15 04:24:22 2026",
+ "timestampMillis": "1784060662155",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/reports/link/imp/impl_1_system_diagram.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS",
+  "cmdId": "4c7ce877-9689-4f10-bf73-145cf0762f93"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Jul 15 04:24:22 2026",
+ "timestampMillis": "1784060662168",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/reports/link/imp/impl_1_hw_bb_locked_timing_summary_routed.rpt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY",
+  "cmdId": "4c7ce877-9689-4f10-bf73-145cf0762f93"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Jul 15 04:24:22 2026",
+ "timestampMillis": "1784060662180",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/reports/link/imp/impl_1_hw_bb_locked_timing_summary_routed.rpx",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY",
+  "cmdId": "4c7ce877-9689-4f10-bf73-145cf0762f93"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Jul 15 04:24:22 2026",
+ "timestampMillis": "1784060662181",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/reports/link/imp/impl_1_hw_bb_locked_timing_summary_routed.rpv",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_REPORT_TIMING_SUMMARY_CONCISE",
+  "cmdId": "4c7ce877-9689-4f10-bf73-145cf0762f93"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Jul 15 04:24:22 2026",
+ "timestampMillis": "1784060662246",
+ "status": {
+  "cmdId": "80fd395e-cb7b-4848-91ad-d0c92525b475",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Jul 15 04:24:22 2026",
+ "timestampMillis": "1784060662267",
+ "status": {
+  "cmdId": "c8308065-d0f0-4b9e-9da5-1c8d3841f966",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Jul 15 04:24:22 2026",
+ "timestampMillis": "1784060662269",
+ "buildStep": {
+  "cmdId": "cbe3dfda-66cc-48f9-bb3e-cc2e998663de",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "rtdgen",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/ae_reviewer/TempGNN/hardware/baselines/vitis"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Jul 15 04:24:22 2026",
+ "timestampMillis": "1784060662269",
+ "status": {
+  "cmdId": "cbe3dfda-66cc-48f9-bb3e-cc2e998663de",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Jul 15 04:24:22 2026",
+ "timestampMillis": "1784060662274",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/int/matg_kernel.hw_xml.rtd",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "XCLBIN_INFO",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Jul 15 04:24:22 2026",
+ "timestampMillis": "1784060662276",
+ "buildStep": {
+  "cmdId": "d7b28cca-1fe6-4738-8714-896b5546ad5c",
+  "name": "cf2sw",
+  "logFile": "",
+  "commandLine": "cf2sw -a /home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/int/address_map.xml -sdsl /home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/int/sdsl.dat -xclbin /home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/int/xclbin_orig.xml -rtd /home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/int/matg_kernel.hw.rtd -o /home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/int/matg_kernel.hw.xml",
+  "args": [
+   "-a",
+   "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/int/address_map.xml",
+   "-sdsl",
+   "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/int/sdsl.dat",
+   "-xclbin",
+   "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/int/xclbin_orig.xml",
+   "-rtd",
+   "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/int/matg_kernel.hw.rtd",
+   "-o",
+   "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/int/matg_kernel.hw.xml"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/ae_reviewer/TempGNN/hardware/baselines/vitis"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Jul 15 04:24:22 2026",
+ "timestampMillis": "1784060662277",
+ "status": {
+  "cmdId": "d7b28cca-1fe6-4738-8714-896b5546ad5c",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Jul 15 04:24:29 2026",
+ "timestampMillis": "1784060669305",
+ "status": {
+  "cmdId": "d7b28cca-1fe6-4738-8714-896b5546ad5c",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Jul 15 04:24:29 2026",
+ "timestampMillis": "1784060669307",
+ "buildStep": {
+  "cmdId": "bc099e16-62f4-47e8-946f-449ac7a16857",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "writeSystemDiagram",
+  "args": [
+   "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/int/matg_kernel.hw.rtd",
+   "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/int/systemDiagramModelSlrBaseAddress.json"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/ae_reviewer/TempGNN/hardware/baselines/vitis"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Jul 15 04:24:29 2026",
+ "timestampMillis": "1784060669307",
+ "status": {
+  "cmdId": "bc099e16-62f4-47e8-946f-449ac7a16857",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Jul 15 04:24:29 2026",
+ "timestampMillis": "1784060669314",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/int/systemDiagramModelSlrBaseAddress.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM_PLUS",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Jul 15 04:24:29 2026",
+ "timestampMillis": "1784060669315",
+ "status": {
+  "cmdId": "bc099e16-62f4-47e8-946f-449ac7a16857",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Jul 15 04:24:29 2026",
+ "timestampMillis": "1784060669316",
+ "buildStep": {
+  "cmdId": "d3c42889-129a-4f23-ad4b-746a0ffbe3fb",
+  "name": "rtdgen",
+  "logFile": "",
+  "commandLine": "writeAutomationSummary",
+  "args": [
+   "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/int/automation_summary.txt"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/ae_reviewer/TempGNN/hardware/baselines/vitis"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Jul 15 04:24:29 2026",
+ "timestampMillis": "1784060669316",
+ "status": {
+  "cmdId": "d3c42889-129a-4f23-ad4b-746a0ffbe3fb",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Jul 15 04:24:29 2026",
+ "timestampMillis": "1784060669318",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/int/automation_summary.txt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "VITIS_DESIGN_FLOW",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Jul 15 04:24:29 2026",
+ "timestampMillis": "1784060669318",
+ "status": {
+  "cmdId": "d3c42889-129a-4f23-ad4b-746a0ffbe3fb",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Jul 15 04:24:29 2026",
+ "timestampMillis": "1784060669319",
+ "status": {
+  "cmdId": "cbe3dfda-66cc-48f9-bb3e-cc2e998663de",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Jul 15 04:24:29 2026",
+ "timestampMillis": "1784060669321",
+ "buildStep": {
+  "cmdId": "f2fd8064-fbee-4747-aa51-c0a239c2bb07",
+  "name": "xclbinutil",
+  "logFile": "",
+  "commandLine": "xclbinutil --add-section BITSTREAM:RAW:/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/int/partial.bit --force --target hw --key-value SYS:dfx_enable:true --add-section :JSON:/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/int/matg_kernel.hw.rtd --append-section :JSON:/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/int/appendSection.rtd --add-section CLOCK_FREQ_TOPOLOGY:JSON:/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/int/matg_kernel.hw_xml.rtd --add-section BUILD_METADATA:JSON:/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/int/matg_kernel.hw_build.rtd --add-section EMBEDDED_METADATA:RAW:/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/int/matg_kernel.hw.xml --add-section SYSTEM_METADATA:RAW:/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/int/systemDiagramModelSlrBaseAddress.json --key-value SYS:PlatformVBNV:xilinx_u280_gen3x16_xdma_1_202211_1 --output /home/ae_reviewer/TempGNN/build/baselines/matg_hw/matg_kernel.hw.xclbin",
+  "args": [
+   "--add-section",
+   "BITSTREAM:RAW:/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/int/partial.bit",
+   "--force",
+   "--target",
+   "hw",
+   "--key-value",
+   "SYS:dfx_enable:true",
+   "--add-section",
+   ":JSON:/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/int/matg_kernel.hw.rtd",
+   "--append-section",
+   ":JSON:/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/int/appendSection.rtd",
+   "--add-section",
+   "CLOCK_FREQ_TOPOLOGY:JSON:/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/int/matg_kernel.hw_xml.rtd",
+   "--add-section",
+   "BUILD_METADATA:JSON:/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/int/matg_kernel.hw_build.rtd",
+   "--add-section",
+   "EMBEDDED_METADATA:RAW:/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/int/matg_kernel.hw.xml",
+   "--add-section",
+   "SYSTEM_METADATA:RAW:/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/link/int/systemDiagramModelSlrBaseAddress.json",
+   "--key-value",
+   "SYS:PlatformVBNV:xilinx_u280_gen3x16_xdma_1_202211_1",
+   "--output",
+   "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/matg_kernel.hw.xclbin"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/ae_reviewer/TempGNN/hardware/baselines/vitis"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Jul 15 04:24:29 2026",
+ "timestampMillis": "1784060669322",
+ "status": {
+  "cmdId": "f2fd8064-fbee-4747-aa51-c0a239c2bb07",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Jul 15 04:24:29 2026",
+ "timestampMillis": "1784060669591",
+ "status": {
+  "cmdId": "f2fd8064-fbee-4747-aa51-c0a239c2bb07",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Jul 15 04:24:29 2026",
+ "timestampMillis": "1784060669593",
+ "buildStep": {
+  "cmdId": "758eebc1-d522-4e1d-a914-7a00921bf67f",
+  "name": "xclbinutilinfo",
+  "logFile": "",
+  "commandLine": "xclbinutil --quiet --force --info /home/ae_reviewer/TempGNN/build/baselines/matg_hw/matg_kernel.hw.xclbin.info --input /home/ae_reviewer/TempGNN/build/baselines/matg_hw/matg_kernel.hw.xclbin",
+  "args": [
+   "--quiet",
+   "--force",
+   "--info",
+   "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/matg_kernel.hw.xclbin.info",
+   "--input",
+   "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/matg_kernel.hw.xclbin"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/ae_reviewer/TempGNN/hardware/baselines/vitis"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Jul 15 04:24:29 2026",
+ "timestampMillis": "1784060669594",
+ "status": {
+  "cmdId": "758eebc1-d522-4e1d-a914-7a00921bf67f",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Jul 15 04:24:30 2026",
+ "timestampMillis": "1784060670307",
+ "status": {
+  "cmdId": "758eebc1-d522-4e1d-a914-7a00921bf67f",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Wed Jul 15 04:24:30 2026",
+ "timestampMillis": "1784060670310",
+ "buildStep": {
+  "cmdId": "34f90249-3682-4cde-9631-520de89d2b22",
+  "name": "generate_sc_driver",
+  "logFile": "",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/ae_reviewer/TempGNN/hardware/baselines/vitis"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Jul 15 04:24:30 2026",
+ "timestampMillis": "1784060670311",
+ "status": {
+  "cmdId": "34f90249-3682-4cde-9631-520de89d2b22",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Jul 15 04:24:30 2026",
+ "timestampMillis": "1784060670312",
+ "status": {
+  "cmdId": "34f90249-3682-4cde-9631-520de89d2b22",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Jul 15 04:24:30 2026",
+ "timestampMillis": "1784060670357",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/reports/link/system_estimate_matg_kernel.hw.xtxt",
+  "name": "",
+  "fileType": "TEXT",
+  "reportType": "GLOBAL_SYSTEM_ESTIMATE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Jul 15 04:24:30 2026",
+ "timestampMillis": "1784060670773",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/logs/optraceViewer.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "OPERATION_TRACE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Wed Jul 15 04:24:30 2026",
+ "timestampMillis": "1784060670773",
+ "status": {
+  "cmdId": "1bf9bc43-0922-445d-a94a-7c191e0595cb",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Jul 15 04:24:30 2026",
+ "timestampMillis": "1784060670868",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/reports/link/v++_link_matg_kernel.hw_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Wed Jul 15 04:24:30 2026",
+ "timestampMillis": "1784060670868",
+ "report": {
+  "path": "/home/ae_reviewer/TempGNN/build/baselines/matg_hw/_x/v++_link_matg_kernel.hw_guidance.pb3",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

@@ -1,0 +1,388 @@
+INFO: [v++ 60-1548] Creating build summary session with primary output /home/ae_reviewer/TempGNN/build/baselines/matg_hw/hls_component/hls_component.hlscompile_summary, at Wed Jul 15 02:16:13 2026
+INFO: [v++ 74-78] Compiler Version string: 2023.2
+INFO: [v++ 82-31] Launching vitis_hls: vitis_hls -nolog -run csynth -work_dir /home/ae_reviewer/TempGNN/build/baselines/matg_hw/hls_component -config /home/ae_reviewer/TempGNN/hardware/baselines/vitis/matg_kernel_hls.cfg -cmdlineconfig /home/ae_reviewer/TempGNN/build/baselines/matg_hw/hls_component/hls/config.cmdline
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+  **** SW Build 4023990 on Oct 11 2023
+  **** IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+  **** SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source /tools/Xilinx/Vitis_HLS/2023.2/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2023.2/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'ae_reviewer' on host 'u280-ae-host' (Linux_x86_64 version 5.15.0-122-generic) on Wed Jul 15 02:16:19 HKT 2026
+INFO: [HLS 200-10] On os Ubuntu 22.04.5 LTS
+INFO: [HLS 200-10] In directory '/home/ae_reviewer/TempGNN/hardware/baselines/vitis'
+INFO: [HLS 200-1909] Reading HLS ini file /home/ae_reviewer/TempGNN/hardware/baselines/vitis/matg_kernel_hls.cfg
+WARNING: [HLS 200-2059] The 'syn.output.format' name is deprecated, use 'package.output.format' instead /home/ae_reviewer/TempGNN/hardware/baselines/vitis/matg_kernel_hls.cfg(6)
+INFO: [HLS 200-1909] Reading HLS ini file /home/ae_reviewer/TempGNN/build/baselines/matg_hw/hls_component/hls/config.cmdline
+INFO: [HLS 200-2005] Using work_dir /home/ae_reviewer/TempGNN/build/baselines/matg_hw/hls_component 
+INFO: [HLS 200-2006] Changing directory to /home/ae_reviewer/TempGNN/build/baselines/matg_hw
+INFO: [HLS 200-1510] Running: open_project /home/ae_reviewer/TempGNN/build/baselines/matg_hw/hls_component -diskless 
+INFO: [HLS 200-1510] Running: open_solution hls 
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1510] Running: apply_ini /home/ae_reviewer/TempGNN/hardware/baselines/vitis/matg_kernel_hls.cfg 
+INFO: [HLS 200-1909] Reading HLS ini file /home/ae_reviewer/TempGNN/hardware/baselines/vitis/matg_kernel_hls.cfg
+WARNING: [HLS 200-2059] The 'syn.output.format' name is deprecated, use 'package.output.format' instead /home/ae_reviewer/TempGNN/hardware/baselines/vitis/matg_kernel_hls.cfg(6)
+INFO: [HLS 200-1465] Applying ini 'syn.file=../src/matg_kernel.cpp' at /home/ae_reviewer/TempGNN/hardware/baselines/vitis/matg_kernel_hls.cfg(3)
+INFO: [HLS 200-10] Adding design file '/home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp' to the project
+INFO: [HLS 200-1465] Applying ini 'syn.cflags=-I../include' at /home/ae_reviewer/TempGNN/hardware/baselines/vitis/matg_kernel_hls.cfg(5)
+INFO: [HLS 200-1465] Applying ini 'syn.top=matg_kernel' at /home/ae_reviewer/TempGNN/hardware/baselines/vitis/matg_kernel_hls.cfg(4)
+INFO: [HLS 200-1465] Applying ini 'flow_target=vitis' at /home/ae_reviewer/TempGNN/hardware/baselines/vitis/matg_kernel_hls.cfg(2)
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_latency=64
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_alignment_byte_size=64
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_max_widen_bitwidth=512
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_rtl -register_reset_num=3
+INFO: [HLS 200-1465] Applying ini 'package.output.format=xo' at /home/ae_reviewer/TempGNN/hardware/baselines/vitis/matg_kernel_hls.cfg(6)
+INFO: [HLS 200-1510] Running: apply_ini /home/ae_reviewer/TempGNN/build/baselines/matg_hw/hls_component/hls/config.cmdline 
+INFO: [HLS 200-1909] Reading HLS ini file /home/ae_reviewer/TempGNN/build/baselines/matg_hw/hls_component/hls/config.cmdline
+INFO: [HLS 200-1465] Applying ini 'part=xcu280-fsvh2892-2L-e' at /home/ae_reviewer/TempGNN/build/baselines/matg_hw/hls_component/hls/config.cmdline(2)
+INFO: [HLS 200-1611] Setting target device to 'xcu280-fsvh2892-2L-e'
+INFO: [HLS 200-1465] Applying ini 'clock=225000000Hz' at /home/ae_reviewer/TempGNN/build/baselines/matg_hw/hls_component/hls/config.cmdline(7)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 4.444ns.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.11 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.12 seconds; current allocated memory: 265.848 MB.
+INFO: [HLS 200-10] Analyzing design file '/home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.57 seconds. CPU system time: 0.4 seconds. Elapsed time: 0.97 seconds; current allocated memory: 268.672 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vitis' flow target.
+INFO: [HLS 200-1995] There were 666 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /home/ae_reviewer/TempGNN/build/baselines/matg_hw/hls_component/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,883 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /home/ae_reviewer/TempGNN/build/baselines/matg_hw/hls_component/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,432 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /home/ae_reviewer/TempGNN/build/baselines/matg_hw/hls_component/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,440 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /home/ae_reviewer/TempGNN/build/baselines/matg_hw/hls_component/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,440 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /home/ae_reviewer/TempGNN/build/baselines/matg_hw/hls_component/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,622 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /home/ae_reviewer/TempGNN/build/baselines/matg_hw/hls_component/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,474 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /home/ae_reviewer/TempGNN/build/baselines/matg_hw/hls_component/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,474 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /home/ae_reviewer/TempGNN/build/baselines/matg_hw/hls_component/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,472 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /home/ae_reviewer/TempGNN/build/baselines/matg_hw/hls_component/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,528 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /home/ae_reviewer/TempGNN/build/baselines/matg_hw/hls_component/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,465 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /home/ae_reviewer/TempGNN/build/baselines/matg_hw/hls_component/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,465 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /home/ae_reviewer/TempGNN/build/baselines/matg_hw/hls_component/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,465 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /home/ae_reviewer/TempGNN/build/baselines/matg_hw/hls_component/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,465 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /home/ae_reviewer/TempGNN/build/baselines/matg_hw/hls_component/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,666 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /home/ae_reviewer/TempGNN/build/baselines/matg_hw/hls_component/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,627 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /home/ae_reviewer/TempGNN/build/baselines/matg_hw/hls_component/hls/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-131] Inlining function 'baseline_hard_tanh_q10(int)' into 'matg_model_update(unsigned int, short, short, short, short, short, short, short)' (/home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:78:16)
+INFO: [HLS 214-131] Inlining function 'baseline_clamp_i16(int)' into 'matg_model_update(unsigned int, short, short, short, short, short, short, short)' (/home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:89:16)
+INFO: [HLS 214-131] Inlining function 'baseline_hard_tanh_q10(int)' into 'matg_model_update(unsigned int, short, short, short, short, short, short, short)' (/home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:85:29)
+INFO: [HLS 214-131] Inlining function 'baseline_hard_sigmoid_q10(int)' into 'matg_model_update(unsigned int, short, short, short, short, short, short, short)' (/home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:84:26)
+INFO: [HLS 214-131] Inlining function 'baseline_hard_tanh_q10(int)' into 'matg_model_update(unsigned int, short, short, short, short, short, short, short)' (/home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:82:16)
+INFO: [HLS 214-131] Inlining function 'baseline_hard_tanh_q10(int)' into 'matg_model_update(unsigned int, short, short, short, short, short, short, short)' (/home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:80:16)
+INFO: [HLS 214-131] Inlining function 'baseline_min_u32(unsigned int, unsigned int)' into 'matg_kernel' (/home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:158:28)
+INFO: [HLS 214-131] Inlining function 'baseline_mix_checksum(unsigned long, int, unsigned int)' into 'matg_kernel' (/home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:254:24)
+INFO: [HLS 214-131] Inlining function 'matg_model_update(unsigned int, short, short, short, short, short, short, short)' into 'matg_kernel' (/home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:244:30)
+INFO: [HLS 214-131] Inlining function 'baseline_clamp_i16(int)' into 'matg_kernel' (/home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:243:35)
+INFO: [HLS 214-131] Inlining function 'baseline_clamp_i16(int)' into 'matg_kernel' (/home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:242:31)
+INFO: [HLS 214-131] Inlining function 'baseline_min_u32(unsigned int, unsigned int)' into 'matg_kernel' (/home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:165:20)
+INFO: [HLS 214-131] Inlining function 'matg_time_score(unsigned int)' into 'matg_kernel' (/home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:202:31)
+WARNING: [HLS 214-386] A depth specification is required for MAXI interface port 'event_src' for cosimulation. (/home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:94:0)
+WARNING: [HLS 214-386] A depth specification is required for MAXI interface port 'event_dst' for cosimulation. (/home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:94:0)
+WARNING: [HLS 214-386] A depth specification is required for MAXI interface port 'event_ts' for cosimulation. (/home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:94:0)
+WARNING: [HLS 214-386] A depth specification is required for MAXI interface port 'vertex_offsets' for cosimulation. (/home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:94:0)
+WARNING: [HLS 214-386] A depth specification is required for MAXI interface port 'history_event_idx' for cosimulation. (/home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:94:0)
+WARNING: [HLS 214-386] A depth specification is required for MAXI interface port 'history_peer' for cosimulation. (/home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:94:0)
+WARNING: [HLS 214-386] A depth specification is required for MAXI interface port 'target_vertex' for cosimulation. (/home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:94:0)
+WARNING: [HLS 214-386] A depth specification is required for MAXI interface port 'target_event_idx' for cosimulation. (/home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:94:0)
+WARNING: [HLS 214-386] A depth specification is required for MAXI interface port 'initial_memory' for cosimulation. (/home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:94:0)
+WARNING: [HLS 214-386] A depth specification is required for MAXI interface port 'event_features' for cosimulation. (/home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:94:0)
+WARNING: [HLS 214-386] A depth specification is required for MAXI interface port 'weight_self' for cosimulation. (/home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:94:0)
+WARNING: [HLS 214-386] A depth specification is required for MAXI interface port 'weight_peer' for cosimulation. (/home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:94:0)
+WARNING: [HLS 214-386] A depth specification is required for MAXI interface port 'weight_event' for cosimulation. (/home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:94:0)
+WARNING: [HLS 214-386] A depth specification is required for MAXI interface port 'bias' for cosimulation. (/home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:94:0)
+WARNING: [HLS 214-386] A depth specification is required for MAXI interface port 'embedding_out' for cosimulation. (/home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:94:0)
+WARNING: [HLS 214-386] A depth specification is required for MAXI interface port 'stats_out' for cosimulation. (/home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:94:0)
+INFO: [HLS 214-291] Loop 'matg_find_minimum' is marked as complete unroll implied by the pipeline pragma (/home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:50:5)
+INFO: [HLS 214-186] Unrolling loop 'matg_clear_accumulators' (/home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:211:9) in function 'matg_kernel' completely with a factor of 8 (/home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:94:0)
+INFO: [HLS 214-186] Unrolling loop 'matg_aggregate_dims' (/home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:225:13) in function 'matg_kernel' completely with a factor of 8 (/home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:94:0)
+INFO: [HLS 214-186] Unrolling loop 'matg_output_dims' (/home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:239:9) in function 'matg_kernel' completely with a factor of 8 (/home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:94:0)
+INFO: [HLS 214-186] Unrolling loop 'matg_find_minimum' (/home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:50:5) in function 'matg_insert_topk' completely with a factor of 5 (/home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:41:0)
+WARNING: [HLS 214-189] Pipeline directive for loop 'matg_find_minimum' (/home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:50:5) in function 'matg_insert_topk' has been removed because the loop is unrolled completely (/home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:41:0)
+INFO: [HLS 214-178] Inlining function 'baseline_clear_stats(unsigned long*)' into 'matg_kernel' (/home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:94:0)
+INFO: [HLS 214-248] Applying array_partition to 'local_weight_self': Complete partitioning on dimension 1. (/home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:142:13)
+INFO: [HLS 214-248] Applying array_partition to 'local_weight_peer': Complete partitioning on dimension 1. (/home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:143:13)
+INFO: [HLS 214-248] Applying array_partition to 'local_weight_event': Complete partitioning on dimension 1. (/home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:144:13)
+INFO: [HLS 214-248] Applying array_partition to 'local_bias': Complete partitioning on dimension 1. (/home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:145:13)
+INFO: [HLS 214-248] Applying array_partition to 'top.event_idx': Complete partitioning on dimension 1. (/home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:179:22)
+INFO: [HLS 214-248] Applying array_partition to 'top.peer': Complete partitioning on dimension 1. (/home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:179:22)
+INFO: [HLS 214-248] Applying array_partition to 'top.score': Complete partitioning on dimension 1. (/home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:179:22)
+INFO: [HLS 214-376] automatically set the pipeline for Loop< matg_aggregate_neighbors> at /home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:218:9 
+INFO: [HLS 214-115] Multiple burst writes of length 2 and bit width 512 has been inferred on bundle 'gmem12'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (/home/ae_reviewer/TempGNN/hardware/baselines/include/baseline_hls.hpp:118:5)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 32 in loop 'matg_targets'(/home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:168:5) has been inferred on bundle 'gmem6'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (/home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:168:5)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 32 in loop 'matg_targets'(/home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:168:5) has been inferred on bundle 'gmem7'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (/home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:168:5)
+INFO: [HLS 214-115] Multiple burst reads of length 2 and bit width 32 has been inferred on bundle 'gmem3'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (/home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:177:26)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 4.73 seconds. CPU system time: 0.47 seconds. Elapsed time: 9.15 seconds; current allocated memory: 272.523 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 272.523 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.09 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 275.199 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.12 seconds; current allocated memory: 277.004 MB.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (/home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:233:23) to (/home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:258:13) in function 'matg_kernel'... converting 73 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock to (/home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:59:1) in function 'matg_insert_topk'... converting 24 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'matg_kernel' (/home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:94)...24 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'matg_insert_topk' (/home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:43:1)...9 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.7 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.71 seconds; current allocated memory: 304.895 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.7 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.73 seconds; current allocated memory: 356.641 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'matg_kernel' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matg_kernel_Pipeline_baseline_clear_stats_loop' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'baseline_clear_stats_loop'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'baseline_clear_stats_loop'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.16 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.19 seconds; current allocated memory: 357.715 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 357.715 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matg_kernel_Pipeline_matg_load_weights' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'matg_load_weights'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'matg_load_weights'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 359.238 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.04 seconds; current allocated memory: 359.238 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matg_insert_topk' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'matg_insert_topk'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 4, function 'matg_insert_topk'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.13 seconds; current allocated memory: 360.496 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 360.496 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matg_kernel_Pipeline_matg_scan_recent' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'matg_scan_recent'.
+WARNING: [HLS 200-880] The II Violation in module 'matg_kernel_Pipeline_matg_scan_recent' (loop 'matg_scan_recent'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation 0 bit ('valid_candidates_write_ln182', /home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:182) of variable 'valid_candidates', /home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:197 on local variable 'valid_candidates', /home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:182 and 'load' operation 32 bit ('valid_candidates', /home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:187) on local variable 'valid_candidates', /home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:182.
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'matg_kernel_Pipeline_matg_scan_recent' (loop 'matg_scan_recent'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation 0 bit ('valid_candidates_write_ln182', /home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:182) of variable 'valid_candidates', /home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:197 on local variable 'valid_candidates', /home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:182 and 'load' operation 32 bit ('valid_candidates', /home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:187) on local variable 'valid_candidates', /home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:182.
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'matg_kernel_Pipeline_matg_scan_recent' (loop 'matg_scan_recent'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0) between 'store' operation 0 bit ('valid_candidates_write_ln182', /home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:182) of variable 'valid_candidates', /home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:197 on local variable 'valid_candidates', /home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:182 and 'load' operation 32 bit ('valid_candidates', /home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:187) on local variable 'valid_candidates', /home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:182.
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'matg_kernel_Pipeline_matg_scan_recent' (loop 'matg_scan_recent'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 0) between 'store' operation 0 bit ('valid_candidates_write_ln182', /home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:182) of variable 'valid_candidates', /home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:197 on local variable 'valid_candidates', /home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:182 and 'load' operation 32 bit ('valid_candidates', /home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:187) on local variable 'valid_candidates', /home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:182.
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'matg_kernel_Pipeline_matg_scan_recent' (loop 'matg_scan_recent'): Unable to enforce a carried dependence constraint (II = 67, distance = 1, offset = 0) between 'store' operation 0 bit ('valid_candidates_write_ln182', /home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:182) of variable 'valid_candidates', /home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:197 on local variable 'valid_candidates', /home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:182 and 'load' operation 32 bit ('valid_candidates', /home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:187) on local variable 'valid_candidates', /home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:182.
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'matg_kernel_Pipeline_matg_scan_recent' (loop 'matg_scan_recent'): Unable to enforce a carried dependence constraint (II = 70, distance = 1, offset = 0) between 'store' operation 0 bit ('valid_candidates_write_ln182', /home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:182) of variable 'valid_candidates', /home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:197 on local variable 'valid_candidates', /home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:182 and 'load' operation 32 bit ('valid_candidates', /home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:187) on local variable 'valid_candidates', /home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:182.
+Resolution: For help on HLS 200-880 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 71, Depth = 151, loop 'matg_scan_recent'
+WARNING: [HLS 200-871] Estimated clock period (5.271 ns) exceeds the target (target clock period: 4.444 ns, clock uncertainty: 1.200 ns, effective delay budget: 3.244 ns).
+Resolution: For help on HLS 200-871 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&url=ug1448-hls-guidance&resourceid=200-871.html
+WARNING: [HLS 200-1016] The critical path in module 'matg_kernel_Pipeline_matg_scan_recent' consists of the following:
+	'sub' operation 32 bit ('pos', /home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:190) [155]  (0.880 ns)
+	'add' operation 64 bit ('add_ln191', /home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:191) [158]  (1.147 ns)
+	'getelementptr' operation 32 bit ('gmem4_addr', /home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:191) [161]  (0.000 ns)
+	bus request operation ('event_idx_req', /home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:191) on port 'gmem4' (/home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp:191) [162]  (3.244 ns)
+
+Resolution: For help on HLS 200-1016 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&url=ug1448-hls-guidance&resourceid=200-1016.html
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.26 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.27 seconds; current allocated memory: 362.523 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 362.523 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matg_kernel_Pipeline_matg_aggregate_neighbors' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'matg_aggregate_neighbors'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 75, loop 'matg_aggregate_neighbors'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.39 seconds. CPU system time: 0 seconds. Elapsed time: 0.39 seconds; current allocated memory: 365.738 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 365.738 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matg_kernel' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln86_7) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln72_15) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln72_14) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln86_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln72_13) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln72_12) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln86_5) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln72_11) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln72_10) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln86_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln72_9) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln72_8) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln86_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln72_7) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln72_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln86_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln72_5) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln72_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln86_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln72_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln72_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln86) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln72_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln72) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.66 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.68 seconds; current allocated memory: 386.973 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1.47 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.49 seconds; current allocated memory: 390.344 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matg_kernel_Pipeline_baseline_clear_stats_loop' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'matg_kernel_Pipeline_baseline_clear_stats_loop' pipeline 'baseline_clear_stats_loop' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'matg_kernel_Pipeline_baseline_clear_stats_loop/m_axi_gmem12_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matg_kernel_Pipeline_baseline_clear_stats_loop/m_axi_gmem12_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matg_kernel_Pipeline_baseline_clear_stats_loop/m_axi_gmem12_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matg_kernel_Pipeline_baseline_clear_stats_loop/m_axi_gmem12_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matg_kernel_Pipeline_baseline_clear_stats_loop/m_axi_gmem12_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matg_kernel_Pipeline_baseline_clear_stats_loop/m_axi_gmem12_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matg_kernel_Pipeline_baseline_clear_stats_loop/m_axi_gmem12_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matg_kernel_Pipeline_baseline_clear_stats_loop/m_axi_gmem12_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matg_kernel_Pipeline_baseline_clear_stats_loop/m_axi_gmem12_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matg_kernel_Pipeline_baseline_clear_stats_loop/m_axi_gmem12_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matg_kernel_Pipeline_baseline_clear_stats_loop/m_axi_gmem12_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matg_kernel_Pipeline_baseline_clear_stats_loop/m_axi_gmem12_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'matg_kernel_Pipeline_baseline_clear_stats_loop/m_axi_gmem12_BREADY' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matg_kernel_Pipeline_baseline_clear_stats_loop'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.73 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.76 seconds; current allocated memory: 391.605 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matg_kernel_Pipeline_matg_load_weights' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'matg_kernel_Pipeline_matg_load_weights' pipeline 'matg_load_weights' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matg_kernel_Pipeline_matg_load_weights'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 392.551 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matg_insert_topk' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_11_3_32_1_0': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_13_3_32_1_0': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_7_2_32_1_0': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_9_2_32_1_0': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matg_insert_topk'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.15 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.16 seconds; current allocated memory: 397.266 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matg_kernel_Pipeline_matg_scan_recent' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'matg_kernel_Pipeline_matg_scan_recent' pipeline 'matg_scan_recent' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matg_kernel_Pipeline_matg_scan_recent'.
+INFO: [RTMG 210-279] Implementing memory 'matg_kernel_matg_kernel_Pipeline_matg_scan_recent_time_lut_ROM_1P_BRAM_1R' using block ROMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.26 seconds. CPU system time: 0 seconds. Elapsed time: 0.27 seconds; current allocated memory: 403.207 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matg_kernel_Pipeline_matg_aggregate_neighbors' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'matg_kernel_Pipeline_matg_aggregate_neighbors' pipeline 'matg_aggregate_neighbors' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_31ns_16s_32_1_1': 16 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_13_3_29_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_13_3_32_1_0': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matg_kernel_Pipeline_matg_aggregate_neighbors'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.37 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.4 seconds; current allocated memory: 413.645 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matg_kernel' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matg_kernel/gmem0' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matg_kernel/gmem1' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matg_kernel/gmem2' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matg_kernel/gmem3' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matg_kernel/gmem4' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matg_kernel/gmem5' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matg_kernel/gmem6' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matg_kernel/gmem7' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matg_kernel/gmem8' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matg_kernel/gmem9' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matg_kernel/gmem10' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matg_kernel/gmem11' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matg_kernel/gmem12' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matg_kernel/event_src' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matg_kernel/event_dst' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matg_kernel/event_ts' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matg_kernel/num_events' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matg_kernel/vertex_offsets' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matg_kernel/history_event_idx' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matg_kernel/history_peer' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matg_kernel/num_vertices' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matg_kernel/target_vertex' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matg_kernel/target_event_idx' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matg_kernel/num_targets' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matg_kernel/fanout' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matg_kernel/depth' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matg_kernel/model_id' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matg_kernel/inference_mode' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matg_kernel/reproduction_flags' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matg_kernel/initial_memory' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matg_kernel/event_features' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matg_kernel/weight_self' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matg_kernel/weight_peer' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matg_kernel/weight_event' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matg_kernel/bias' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matg_kernel/embedding_out' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matg_kernel/stats_out' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'matg_kernel' to 's_axilite & ap_ctrl_chain'.
+INFO: [RTGEN 206-100] Bundling port 'event_src', 'event_dst', 'event_ts', 'num_events', 'vertex_offsets', 'history_event_idx', 'history_peer', 'num_vertices', 'target_vertex', 'target_event_idx', 'num_targets', 'fanout', 'depth', 'model_id', 'inference_mode', 'reproduction_flags', 'initial_memory', 'event_features', 'weight_self', 'weight_peer', 'weight_event', 'bias', 'embedding_out', 'stats_out' and 'return' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_11ns_12s_27s_27_4_1': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_16s_16s_32ns_32_4_1': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_16s_16s_32s_32_4_1': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_11ns_16s_27_1_1': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_16s_16s_32_1_1': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sdiv_32s_32s_16_36_seq_1': 16 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matg_kernel'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.03 seconds. CPU system time: 0.06 seconds. Elapsed time: 1.1 seconds; current allocated memory: 444.984 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 2.22 seconds. CPU system time: 0.13 seconds. Elapsed time: 2.36 seconds; current allocated memory: 487.562 MB.
+INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 9.99 seconds. CPU system time: 0.05 seconds. Elapsed time: 10.03 seconds; current allocated memory: 507.109 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for matg_kernel.
+INFO: [VLOG 209-307] Generating Verilog RTL for matg_kernel.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 189.71 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 26.3 seconds. CPU system time: 1.4 seconds. Elapsed time: 31.66 seconds; current allocated memory: 241.262 MB.
+INFO: [HLS 200-1510] Running: export_design -flow none -format xo 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2023.2 (64-bit)
+  **** SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+  **** IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+  **** SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+ipx::create_core: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1373.664 ; gain = 0.023 ; free physical = 55411 ; free virtual = 68129
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2023.2/data/ip'.
+Running package_xo -xo_path /home/ae_reviewer/TempGNN/build/baselines/matg_hw/hls_component/matg_kernel.xo -kernel_name matg_kernel -kernel_xml /home/ae_reviewer/TempGNN/build/baselines/matg_hw/hls_component/hls/impl/ip/../kernel/kernel.xml -kernel_files /home/ae_reviewer/TempGNN/hardware/baselines/src/matg_kernel.cpp -ip_directory /home/ae_reviewer/TempGNN/build/baselines/matg_hw/hls_component/hls/impl/ip/ip_unzip_dir -design_xml /home/ae_reviewer/TempGNN/build/baselines/matg_hw/hls_component/hls/.autopilot/db/matg_kernel.design.xml -debug_directory /home/ae_reviewer/TempGNN/build/baselines/matg_hw/hls_component/hls/.debug -hls_directory /home/ae_reviewer/TempGNN/build/baselines/matg_hw/hls_component/hls/impl/ip/hls_files -kernel_json /home/ae_reviewer/TempGNN/build/baselines/matg_hw/hls_component/hls/hls_data.json
+INFO: [Common 17-206] Exiting Vivado at Wed Jul 15 02:17:39 2026...
+INFO: [HLS 200-802] Generated output file hls_component/matg_kernel.xo
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 47.48 seconds. CPU system time: 1.28 seconds. Elapsed time: 57.43 seconds; current allocated memory: 15.016 MB.
+INFO: [HLS 200-1510] Running: close_project 
+INFO: [HLS 200-112] Total CPU user time: 76.31 seconds. Total CPU system time: 3.04 seconds. Total elapsed time: 91.75 seconds; peak allocated memory: 522.125 MB.
+INFO: [Common 17-206] Exiting vitis_hls at Wed Jul 15 02:17:50 2026...
+INFO: [v++ 60-791] Total elapsed time: 0h 1m 39s
