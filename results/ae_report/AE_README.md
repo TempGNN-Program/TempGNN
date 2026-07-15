@@ -29,6 +29,6 @@ make u280-core-preflight
 make ae-core-u280 U280_CORE_DEVICE=0 U280_CORE_REPETITIONS=3
 ```
 
-Fresh status: **NOT RUN**.
+Fresh status: **DIAGNOSTIC FAIL; NOT PAPER-EQUIVALENT**.
 
 Raw rows, logs, per-sample power evidence, hashes, figures, and verification are written under `results/reviewer_u280_runs/<run-id>/`.

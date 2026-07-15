@@ -28,7 +28,7 @@ Preflight requires four distinct xclbin hashes. The measurement harness fetches 
 
 This is not a paper-equivalent rerun because the reduced Q10 kernels, deterministic stand-in weights, bounded prefixes, and power method differ from the paper methodology.
 
-Current recorded tolerance status: **NOT RUN**.
+Current recorded tolerance status: **DIAGNOSTIC FAIL; NOT PAPER-EQUIVALENT**.
 
 ## Optional Rebuild
 

@@ -30,6 +30,10 @@ an absolute home path; the current metadata-normalized, bitstream-verified
 TempGNN xclbin is under `artifacts/u280/`. Fresh runs write new evidence under
 `results/reviewer_u280_runs/`.
 
+The packaged audited runs are `pap142_u280_smoke_20260715T052052Z` and
+`pap142_u280_measured_20260715T052052Z`. The latter is the 3-repetition,
+288-row final run used by the reviewer-facing report.
+
 ## Current Local Vitis Status
 
 Completed on June 10, 2026 with Vitis/Vivado 2025.2 and target clock 4.444 ns:

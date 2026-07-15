@@ -86,7 +86,7 @@ collisions, synchronization stalls, and off-chip traffic.
 
 ### B. Expected Results
 
-The unit suite must pass all 27 tests. The TDP implementation must agree with a
+The unit suite must pass all 28 tests. The TDP implementation must agree with a
 chronological reference update, fixture generation must be deterministic, and
 artifact paths/provenance must pass their consistency checks. Optional Q14
 profiling produces nonnegative, well-formed per-dataset/model statistics from
@@ -156,7 +156,7 @@ the target batch size, fanout, and depth are recorded in the output CSVs.
 
 ### F. Artifact Analysis
 
-The test command must finish with `Ran 27 tests` and `OK`. Optional Q14 outputs
+The test command must finish with `Ran 28 tests` and `OK`. Optional Q14 outputs
 are written to:
 
 ```text
@@ -281,6 +281,10 @@ results/reviewer_u280_runs/<run-id>/derived_comparison_figures/
 results/reviewer_u280_runs/<run-id>/verification.json
 results/reviewer_u280_runs/<run-id>/verification.md
 ```
+
+The package includes smoke run `pap142_u280_smoke_20260715T052052Z` and final
+run `pap142_u280_measured_20260715T052052Z`; the latter contains 288 measured
+rows and is the run cited by the generated AE report.
 
 Latency is XRT launch-to-completion kernel time. Power is total U280 board power
 sampled only during the gated repeated-kernel window. Energy in millijoules is

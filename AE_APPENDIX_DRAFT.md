@@ -80,7 +80,7 @@ python3 -m unittest discover -s tests
 Expected terminal summary:
 
 ```text
-Ran 27 tests
+Ran 28 tests
 OK
 ```
 
@@ -97,7 +97,7 @@ when the corresponding edge files are already present.
 
 ### C. Artifact Analysis
 
-All 27 tests must pass. In particular, the recursive TDP state must agree with
+All 28 tests must pass. In particular, the recursive TDP state must agree with
 chronological updates, fixtures must be deterministic, xclbin link requests
 must agree with the Vivado-connected clock and nonnegative post-route WNS/TNS,
 and duplicate xclbins must be rejected by preflight.
@@ -251,6 +251,11 @@ results/reviewer_u280_runs/<run-id>/verification.json
 results/reviewer_u280_runs/<run-id>/verification.md
 ```
 
+The packaged final run is
+`results/reviewer_u280_runs/pap142_u280_measured_20260715T052052Z/`; its four
+raw CSV files contain 72 rows each (288 total). The packaged one-repetition
+smoke run is `pap142_u280_smoke_20260715T052052Z`.
+
 For 3 repetitions, each implementation must contain 72 rows and the combined
 matrix must contain 288 rows. Every row must report:
 
@@ -321,7 +326,7 @@ make smoke
 make report
 ```
 
-`make smoke` includes the 27 tests from `A1`.
+`make smoke` includes the 28 tests from `A1`.
 
 ### C. Artifact Analysis
 

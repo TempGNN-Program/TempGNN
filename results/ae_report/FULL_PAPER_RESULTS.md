@@ -16,7 +16,7 @@ These files regenerate source-labeled paper plotting inputs; they are not fresh 
 - Four artifacts: `artifacts/u280/TempGNN`, `MATG`, `ViTeGNN`, and `RTGA`
 - Baseline source: `hardware/baselines/`
 - Configuration: `configs/u280_core_reproduction.json`
-- Latest timestamped run: `not available`
+- Latest timestamped run: `results/reviewer_u280_runs/pap142_u280_measured_20260715T052052Z`
 - Raw rows: `results/reviewer_u280_runs/<run-id>/raw/*/measurements.csv`
 - Provenance: `results/reviewer_u280_runs/<run-id>/provenance.json`
 - Derived figures: `results/reviewer_u280_runs/<run-id>/derived_comparison_figures/`

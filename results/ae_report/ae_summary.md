@@ -25,9 +25,12 @@ The Fig.11 vector export contains a 7.7889x TempGNN/MATG AVG bar, while the pape
 
 ## Fresh U280 Status
 
-Latest run: none
+Latest run: `results/reviewer_u280_runs/pap142_u280_measured_20260715T052052Z`
 
-No fresh four-system run is packaged yet.
+| Check | Max relative error | Threshold | Status |
+| --- | ---: | ---: | --- |
+| fig11_speedup_matg | 3.386858 | 0.050000 | FAIL |
+| fig12_energy_tempgnn | 0.999955 | 0.100000 | FAIL |
 
 A numerical tolerance PASS does not establish the Results Reproduced bridge while provenance marks the method as not paper-equivalent. Reference CSV values are never substituted for measured rows.
 

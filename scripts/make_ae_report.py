@@ -80,7 +80,16 @@ def latest_run(runs_dir: Path) -> Path | None:
         and (path / "provenance.json").is_file()
         and (path / "verification.json").is_file()
     ]
-    return max(runs, key=lambda path: path.name) if runs else None
+    return max(runs, key=run_order_key) if runs else None
+
+
+def run_order_key(path: Path) -> tuple[str, int, str]:
+    provenance = json.loads((path / "provenance.json").read_text(encoding="utf-8"))
+    return (
+        str(provenance.get("created_utc", "")),
+        int(provenance.get("repetitions", 0)),
+        path.name,
+    )
 
 
 def fresh_status(state: dict[str, object]) -> str:
@@ -151,7 +160,7 @@ def summary_document(state: dict[str, object]) -> str:
             "",
             "## Fresh U280 Status",
             "",
-            f"Latest run: `{run}`" if isinstance(run, Path) else "Latest run: none",
+            f"Latest run: `{run.as_posix()}`" if isinstance(run, Path) else "Latest run: none",
             "",
             verification_table(state),
             "",
@@ -241,7 +250,7 @@ The Results Reproduced bridge is not asserted for the current bounded implementa
 
 def inventory_document(state: dict[str, object]) -> str:
     run = state["run"]
-    latest = str(run) if isinstance(run, Path) else "not available"
+    latest = run.as_posix() if isinstance(run, Path) else "not available"
     return f"""# Full TempGNN Result Inventory
 
 ## Packaged Reference Reconstruction

@@ -45,7 +45,7 @@ make report
 Expected:
 
 ```text
-Ran 27 tests
+Ran 28 tests
 OK
 Wrote AE report to results/ae_report/ae_summary.md
 ```
@@ -140,6 +140,10 @@ results/reviewer_u280_runs/<run-id>/baselines_u280/
 results/reviewer_u280_runs/<run-id>/derived_comparison_figures/
 results/reviewer_u280_runs/<run-id>/verification.md
 ```
+
+The audited packaged final run is
+`results/reviewer_u280_runs/pap142_u280_measured_20260715T052052Z/`; the
+one-repetition smoke run is `pap142_u280_smoke_20260715T052052Z`.
 
 Expected: preflight prints four different xclbin SHA256 values. Every raw row
 has a kernel and embedding checksum, repeat-consistency status, board-power
