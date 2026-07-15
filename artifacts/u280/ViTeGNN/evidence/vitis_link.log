@@ -1,0 +1,367 @@
+make: Entering directory '/home/ae_reviewer/TempGNN/hardware/baselines/vitis'
+v++ -l -t hw --platform /opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm \
+	--temp_dir /home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/_x \
+	--remote_ip_cache /home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/.ipcache \
+	--freqhz 225000000:vitegnn_kernel_1 \
+	--config /home/ae_reviewer/TempGNN/hardware/baselines/vitis/vitegnn_kernel_u280.cfg \
+	/home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/vitegnn_kernel.hw.xo -o /home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/vitegnn_kernel.hw.xclbin
+Option Map File Used: '/tools/Xilinx/Vitis/2023.2/data/vitis/vpp/optMap.xml'
+
+****** v++ v2023.2 (64-bit)
+  **** SW Build 4026344 on 2023-10-11-15:42:10
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+INFO: [v++ 60-1306] Additional information associated with this v++ link can be found at:
+	Reports: /home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/_x/reports/link
+	Log files: /home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/_x/logs/link
+Running Dispatch Server on port: 34541
+INFO: [v++ 60-1548] Creating build summary session with primary output /home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/vitegnn_kernel.hw.xclbin.link_summary, at Wed Jul 15 04:54:02 2026
+INFO: [v++ 60-1315] Creating rulecheck session with output '/home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/_x/reports/link/v++_link_vitegnn_kernel.hw_guidance.html', at Wed Jul 15 04:54:02 2026
+INFO: [v++ 60-895]   Target platform: /opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm
+INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/hw/hw.xsa'
+INFO: [v++ 74-78] Compiler Version string: 2023.2
+INFO: [v++ 60-629] Linking for hardware target
+INFO: [v++ 60-423]   Target device: xilinx_u280_gen3x16_xdma_1_202211_1
+INFO: [v++ 60-1332] Run 'run_link' status: Not started
+INFO: [v++ 60-1443] [04:54:07] Run run_link: Step system_link: Started
+INFO: [v++ 60-1453] Command Line: system_link --xo /home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/vitegnn_kernel.hw.xo --config /home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/_x/link/int/syslinkConfig.ini --xpfm /opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm --target hw --output_dir /home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/_x/link/int --temp_dir /home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/_x/link/sys_link
+INFO: [v++ 60-1454] Run Directory: /home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/_x/link/run_link
+INFO: [SYSTEM_LINK 82-70] Extracting xo v3 file /home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/vitegnn_kernel.hw.xo
+INFO: [SYSTEM_LINK 82-53] Creating IP database /home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+INFO: [SYSTEM_LINK 82-38] [04:54:10] build_xd_ip_db started: /tools/Xilinx/Vitis/2023.2/bin/build_xd_ip_db -ip_search 0  -sds-pf /home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/_x/link/sys_link/hw.hpfm -clkid 0 -ip /home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/_x/link/sys_link/iprepo/xilinx_com_hls_vitegnn_kernel_1_0,vitegnn_kernel -o /home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+INFO: [SYSTEM_LINK 82-37] [04:54:17] build_xd_ip_db finished successfully
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 455.812 ; gain = 0.000 ; free physical = 16283 ; free virtual = 69069
+INFO: [SYSTEM_LINK 82-51] Create system connectivity graph
+INFO: [SYSTEM_LINK 82-102] Applying explicit connections to the system connectivity graph: /home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/_x/link/sys_link/cfgraph/cfgen_cfgraph.xml
+INFO: [SYSTEM_LINK 82-38] [04:54:17] cfgen started: /tools/Xilinx/Vitis/2023.2/bin/cfgen  -nk vitegnn_kernel:1:vitegnn_kernel_1 -sp vitegnn_kernel_1.event_src:HBM[0] -sp vitegnn_kernel_1.event_dst:HBM[1] -sp vitegnn_kernel_1.event_ts:HBM[2] -sp vitegnn_kernel_1.vertex_offsets:HBM[3] -sp vitegnn_kernel_1.history_event_idx:HBM[4] -sp vitegnn_kernel_1.history_peer:HBM[5] -sp vitegnn_kernel_1.target_vertex:HBM[6] -sp vitegnn_kernel_1.target_event_idx:HBM[7] -sp vitegnn_kernel_1.initial_memory:HBM[8] -sp vitegnn_kernel_1.event_features:HBM[9] -sp vitegnn_kernel_1.weight_self:HBM[10] -sp vitegnn_kernel_1.weight_peer:HBM[10] -sp vitegnn_kernel_1.weight_event:HBM[10] -sp vitegnn_kernel_1.bias:HBM[10] -sp vitegnn_kernel_1.embedding_out:HBM[11] -sp vitegnn_kernel_1.stats_out:HBM[12] -clock.freqHz 225000000:vitegnn_kernel_1 -dpa_mem_offload false -dmclkid 0 -r /home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o /home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/_x/link/sys_link/cfgraph/cfgen_cfgraph.xml
+INFO: [CFGEN 83-0] Kernel Specs: 
+INFO: [CFGEN 83-0]   kernel: vitegnn_kernel, num: 1  {vitegnn_kernel_1}
+INFO: [CFGEN 83-0] Port Specs: 
+INFO: [CFGEN 83-0]   kernel: vitegnn_kernel_1, k_port: event_src, sptag: HBM[0]
+INFO: [CFGEN 83-0]   kernel: vitegnn_kernel_1, k_port: event_dst, sptag: HBM[1]
+INFO: [CFGEN 83-0]   kernel: vitegnn_kernel_1, k_port: event_ts, sptag: HBM[2]
+INFO: [CFGEN 83-0]   kernel: vitegnn_kernel_1, k_port: vertex_offsets, sptag: HBM[3]
+INFO: [CFGEN 83-0]   kernel: vitegnn_kernel_1, k_port: history_event_idx, sptag: HBM[4]
+INFO: [CFGEN 83-0]   kernel: vitegnn_kernel_1, k_port: history_peer, sptag: HBM[5]
+INFO: [CFGEN 83-0]   kernel: vitegnn_kernel_1, k_port: target_vertex, sptag: HBM[6]
+INFO: [CFGEN 83-0]   kernel: vitegnn_kernel_1, k_port: target_event_idx, sptag: HBM[7]
+INFO: [CFGEN 83-0]   kernel: vitegnn_kernel_1, k_port: initial_memory, sptag: HBM[8]
+INFO: [CFGEN 83-0]   kernel: vitegnn_kernel_1, k_port: event_features, sptag: HBM[9]
+INFO: [CFGEN 83-0]   kernel: vitegnn_kernel_1, k_port: weight_self, sptag: HBM[10]
+INFO: [CFGEN 83-0]   kernel: vitegnn_kernel_1, k_port: weight_peer, sptag: HBM[10]
+INFO: [CFGEN 83-0]   kernel: vitegnn_kernel_1, k_port: weight_event, sptag: HBM[10]
+INFO: [CFGEN 83-0]   kernel: vitegnn_kernel_1, k_port: bias, sptag: HBM[10]
+INFO: [CFGEN 83-0]   kernel: vitegnn_kernel_1, k_port: embedding_out, sptag: HBM[11]
+INFO: [CFGEN 83-0]   kernel: vitegnn_kernel_1, k_port: stats_out, sptag: HBM[12]
+INFO: [SYSTEM_LINK 82-37] [04:54:30] cfgen finished successfully
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 455.812 ; gain = 0.000 ; free physical = 15452 ; free virtual = 69068
+INFO: [SYSTEM_LINK 82-52] Create top-level block diagram
+INFO: [SYSTEM_LINK 82-38] [04:54:30] cf2bd started: /tools/Xilinx/Vitis/2023.2/bin/cf2bd  --linux --trace_buffer 1024 --input_file /home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/_x/link/sys_link/cfgraph/cfgen_cfgraph.xml --ip_db /home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml --cf_name dr --working_dir /home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/_x/link/sys_link/_sysl/.xsd --temp_dir /home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/_x/link/sys_link --output_dir /home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/_x/link/int --target_bd ulp.bd
+INFO: [CF2BD 82-31] Launching cf2xd: cf2xd -linux -trace-buffer 1024 -i /home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/_x/link/sys_link/cfgraph/cfgen_cfgraph.xml -r /home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o dr.xml
+INFO: [CF2BD 82-28] cf2xd finished successfully
+INFO: [CF2BD 82-31] Launching cf_xsd: cf_xsd -disable-address-gen -bd ulp.bd -dn dr -dp /home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/_x/link/sys_link/_sysl/.xsd
+INFO: [CF2BD 82-28] cf_xsd finished successfully
+INFO: [SYSTEM_LINK 82-37] [04:54:35] cf2bd finished successfully
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 455.812 ; gain = 0.000 ; free physical = 14921 ; free virtual = 69047
+INFO: [v++ 60-1441] [04:54:35] Run run_link: Step system_link: Completed
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 486.789 ; gain = 0.000 ; free physical = 15010 ; free virtual = 69114
+INFO: [v++ 60-1443] [04:54:35] Run run_link: Step cf2sw: Started
+INFO: [v++ 60-1453] Command Line: cf2sw -sdsl /home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/_x/link/int/sdsl.dat -rtd /home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/_x/link/int/cf2sw.rtd -nofilter /home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/_x/link/int/cf2sw_full.rtd -xclbin /home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/_x/link/int/xclbin_orig.xml -o /home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/_x/link/int/xclbin_orig.1.xml
+INFO: [v++ 60-1454] Run Directory: /home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/_x/link/run_link
+INFO: [v++ 60-1441] [04:54:44] Run run_link: Step cf2sw: Completed
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 486.789 ; gain = 0.000 ; free physical = 14516 ; free virtual = 69099
+INFO: [v++ 60-1443] [04:54:44] Run run_link: Step rtd2_system_diagram: Started
+INFO: [v++ 60-1453] Command Line: rtd2SystemDiagram
+INFO: [v++ 60-1454] Run Directory: /home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/_x/link/run_link
+INFO: [v++ 60-1441] [04:54:45] Run run_link: Step rtd2_system_diagram: Completed
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.4 . Memory (MB): peak = 486.789 ; gain = 0.000 ; free physical = 14498 ; free virtual = 69081
+INFO: [v++ 60-1443] [04:54:45] Run run_link: Step vpl: Started
+INFO: [v++ 60-1453] Command Line: vpl -t hw -f /opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm --remote_ip_cache /home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/.ipcache --output_dir /home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/_x/link/int --log_dir /home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/_x/logs/link --report_dir /home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/_x/reports/link --config /home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/_x/link/int/vplConfig.ini -k /home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/_x/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/_x/link --no-info --iprepo /home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/_x/link/int/xo/ip_repo/xilinx_com_hls_vitegnn_kernel_1_0 --messageDb /home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/_x/link/run_link/vpl.pb /home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/_x/link/int/dr.bd.tcl
+INFO: [v++ 60-1454] Run Directory: /home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/_x/link/run_link
+
+****** vpl v2023.2 (64-bit)
+  **** SW Build 4026344 on 2023-10-11-15:42:10
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+INFO: [VPL 60-839] Read in kernel information from file '/home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/_x/link/int/kernel_info.dat'.
+INFO: [VPL 74-78] Compiler Version string: 2023.2
+INFO: [VPL 60-423]   Target device: xilinx_u280_gen3x16_xdma_1_202211_1
+INFO: [VPL 60-1032] Extracting hardware platform to /home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/_x/link/vivado/vpl/.local/hw_platform
+[04:55:01] Run vpl: Step create_project: Started
+Creating Vivado project.
+[04:55:10] Run vpl: Step create_project: Completed
+[04:55:10] Run vpl: Step create_bd: Started
+[04:55:59] Run vpl: Step create_bd: Completed
+[04:55:59] Run vpl: Step update_bd: Started
+[04:56:00] Run vpl: Step update_bd: Completed
+[04:56:00] Run vpl: Step generate_target: Started
+[04:57:15] Run vpl: Step generate_target: RUNNING...
+[04:58:31] Run vpl: Step generate_target: RUNNING...
+[04:58:45] Run vpl: Step generate_target: Completed
+[04:58:45] Run vpl: Step config_hw_runs: Started
+[05:00:01] Run vpl: Step config_hw_runs: RUNNING...
+[05:00:21] Run vpl: Step config_hw_runs: Completed
+[05:00:21] Run vpl: Step synth: Started
+[05:00:51] Block-level synthesis in progress, 0 of 172 jobs complete, 8 jobs running.
+[05:01:22] Block-level synthesis in progress, 0 of 172 jobs complete, 8 jobs running.
+[05:01:52] Block-level synthesis in progress, 4 of 172 jobs complete, 4 jobs running.
+[05:02:22] Block-level synthesis in progress, 8 of 172 jobs complete, 7 jobs running.
+[05:02:52] Block-level synthesis in progress, 10 of 172 jobs complete, 8 jobs running.
+[05:03:23] Block-level synthesis in progress, 12 of 172 jobs complete, 6 jobs running.
+[05:03:53] Block-level synthesis in progress, 15 of 172 jobs complete, 7 jobs running.
+[05:04:23] Block-level synthesis in progress, 17 of 172 jobs complete, 8 jobs running.
+[05:04:53] Block-level synthesis in progress, 20 of 172 jobs complete, 5 jobs running.
+[05:05:24] Block-level synthesis in progress, 22 of 172 jobs complete, 7 jobs running.
+[05:05:54] Block-level synthesis in progress, 24 of 172 jobs complete, 8 jobs running.
+[05:06:24] Block-level synthesis in progress, 26 of 172 jobs complete, 6 jobs running.
+[05:06:54] Block-level synthesis in progress, 28 of 172 jobs complete, 7 jobs running.
+[05:07:25] Block-level synthesis in progress, 31 of 172 jobs complete, 7 jobs running.
+[05:07:55] Block-level synthesis in progress, 31 of 172 jobs complete, 8 jobs running.
+[05:08:25] Block-level synthesis in progress, 33 of 172 jobs complete, 8 jobs running.
+[05:08:56] Block-level synthesis in progress, 36 of 172 jobs complete, 7 jobs running.
+[05:09:26] Block-level synthesis in progress, 42 of 172 jobs complete, 6 jobs running.
+[05:09:56] Block-level synthesis in progress, 44 of 172 jobs complete, 7 jobs running.
+[05:10:27] Block-level synthesis in progress, 48 of 172 jobs complete, 5 jobs running.
+[05:10:57] Block-level synthesis in progress, 50 of 172 jobs complete, 7 jobs running.
+[05:11:27] Block-level synthesis in progress, 52 of 172 jobs complete, 7 jobs running.
+[05:11:58] Block-level synthesis in progress, 56 of 172 jobs complete, 6 jobs running.
+[05:12:28] Block-level synthesis in progress, 59 of 172 jobs complete, 6 jobs running.
+[05:12:58] Block-level synthesis in progress, 61 of 172 jobs complete, 6 jobs running.
+[05:13:29] Block-level synthesis in progress, 62 of 172 jobs complete, 8 jobs running.
+[05:13:59] Block-level synthesis in progress, 65 of 172 jobs complete, 8 jobs running.
+[05:14:30] Block-level synthesis in progress, 68 of 172 jobs complete, 7 jobs running.
+[05:15:00] Block-level synthesis in progress, 75 of 172 jobs complete, 3 jobs running.
+[05:15:31] Block-level synthesis in progress, 82 of 172 jobs complete, 4 jobs running.
+[05:16:01] Block-level synthesis in progress, 87 of 172 jobs complete, 5 jobs running.
+[05:16:32] Block-level synthesis in progress, 88 of 172 jobs complete, 8 jobs running.
+[05:17:03] Block-level synthesis in progress, 90 of 172 jobs complete, 8 jobs running.
+[05:17:34] Block-level synthesis in progress, 92 of 172 jobs complete, 7 jobs running.
+[05:18:05] Block-level synthesis in progress, 95 of 172 jobs complete, 7 jobs running.
+[05:18:35] Block-level synthesis in progress, 98 of 172 jobs complete, 6 jobs running.
+[05:19:06] Block-level synthesis in progress, 99 of 172 jobs complete, 7 jobs running.
+[05:19:37] Block-level synthesis in progress, 103 of 172 jobs complete, 4 jobs running.
+[05:20:08] Block-level synthesis in progress, 105 of 172 jobs complete, 6 jobs running.
+[05:20:38] Block-level synthesis in progress, 107 of 172 jobs complete, 7 jobs running.
+[05:21:09] Block-level synthesis in progress, 108 of 172 jobs complete, 8 jobs running.
+[05:21:40] Block-level synthesis in progress, 113 of 172 jobs complete, 5 jobs running.
+[05:22:11] Block-level synthesis in progress, 117 of 172 jobs complete, 4 jobs running.
+[05:22:41] Block-level synthesis in progress, 121 of 172 jobs complete, 4 jobs running.
+[05:23:12] Block-level synthesis in progress, 127 of 172 jobs complete, 2 jobs running.
+[05:23:43] Block-level synthesis in progress, 130 of 172 jobs complete, 5 jobs running.
+[05:24:14] Block-level synthesis in progress, 133 of 172 jobs complete, 7 jobs running.
+[05:24:45] Block-level synthesis in progress, 138 of 172 jobs complete, 6 jobs running.
+[05:25:15] Block-level synthesis in progress, 145 of 172 jobs complete, 5 jobs running.
+[05:25:46] Block-level synthesis in progress, 152 of 172 jobs complete, 5 jobs running.
+[05:26:17] Block-level synthesis in progress, 159 of 172 jobs complete, 5 jobs running.
+[05:26:48] Block-level synthesis in progress, 167 of 172 jobs complete, 4 jobs running.
+[05:27:19] Block-level synthesis in progress, 168 of 172 jobs complete, 4 jobs running.
+[05:27:50] Block-level synthesis in progress, 168 of 172 jobs complete, 4 jobs running.
+[05:28:20] Block-level synthesis in progress, 171 of 172 jobs complete, 1 job running.
+[05:28:51] Top-level synthesis in progress.
+[05:29:21] Top-level synthesis in progress.
+[05:29:52] Top-level synthesis in progress.
+[05:30:39] Run vpl: Step synth: Completed
+[05:30:39] Run vpl: Step impl: Started
+[05:43:25] Finished 2nd of 6 tasks (FPGA linking synthesized kernels to platform). Elapsed time: 00h 48m 37s 
+
+[05:43:25] Starting logic optimization..
+[05:43:55] Phase 1 Initialization
+[05:43:55] Phase 1.1 Core Generation And Design Setup
+[05:44:26] Phase 1.2 Setup Constraints And Sort Netlist
+[05:44:56] Phase 2 Timer Update And Timing Data Collection
+[05:44:56] Phase 2.1 Timer Update
+[05:44:56] Phase 2.2 Timing Data Collection
+[05:45:27] Phase 3 Retarget
+[05:45:57] Phase 4 Constant propagation
+[05:46:28] Phase 5 Sweep
+[05:50:02] Phase 6 BUFG optimization
+[05:50:02] Phase 7 Shift Register Optimization
+[05:50:32] Phase 8 Post Processing Netlist
+[05:51:03] Phase 9 Finalization
+[05:51:03] Phase 9.1 Finalizing Design Cores and Updating Shapes
+[05:51:03] Phase 9.2 Verifying Netlist Connectivity
+[05:52:04] Finished 3rd of 6 tasks (FPGA logic optimization). Elapsed time: 00h 08m 39s 
+
+[05:52:04] Starting logic placement..
+[05:52:34] Phase 1 Placer Initialization
+[05:52:34] Phase 1.1 Placer Initialization Netlist Sorting
+[05:57:09] Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+[05:58:10] Phase 1.3 Build Placer Netlist Model
+[06:00:43] Phase 1.4 Constrain Clocks/Macros
+[06:01:14] Phase 2 Global Placement
+[06:01:14] Phase 2.1 Floorplanning
+[06:02:15] Phase 2.1.1 Partition Driven Placement
+[06:02:15] Phase 2.1.1.1 PBP: Partition Driven Placement
+[06:03:16] Phase 2.1.1.2 PBP: Clock Region Placement
+[06:04:17] Phase 2.1.1.3 PBP: Compute Congestion
+[06:04:48] Phase 2.1.1.4 PBP: UpdateTiming
+[06:05:19] Phase 2.1.1.5 PBP: Add part constraints
+[06:05:49] Phase 2.2 Physical Synthesis After Floorplan
+[06:06:20] Phase 2.3 Update Timing before SLR Path Opt
+[06:06:51] Phase 2.4 Post-Processing in Floorplanning
+[06:06:51] Phase 2.5 Global Placement Core
+[06:22:10] Phase 2.5.1 UpdateTiming Before Physical Synthesis
+[06:22:40] Phase 2.5.2 Physical Synthesis In Placer
+[06:26:15] Phase 3 Detail Placement
+[06:26:46] Phase 3.1 Commit Multi Column Macros
+[06:26:46] Phase 3.2 Commit Most Macros & LUTRAMs
+[06:28:49] Phase 3.3 Small Shape DP
+[06:28:49] Phase 3.3.1 Small Shape Clustering
+[06:29:19] Phase 3.3.2 Slice Area Swap
+[06:29:19] Phase 3.3.2.1 Slice Area Swap Initial
+[06:30:51] Phase 3.4 Place Remaining
+[06:31:22] Phase 3.5 Re-assign LUT pins
+[06:32:24] Phase 3.6 Pipeline Register Optimization
+[06:32:24] Phase 3.7 Fast Optimization
+[06:33:56] Phase 4 Post Placement Optimization and Clean-Up
+[06:33:56] Phase 4.1 Post Commit Optimization
+[06:35:28] Phase 4.1.1 Post Placement Optimization
+[06:35:58] Phase 4.1.1.1 BUFG Insertion
+[06:35:58] Phase 1 Physical Synthesis Initialization
+[06:36:29] Phase 4.1.1.2 BUFG Replication
+[06:37:00] Phase 4.1.1.3 Post Placement Timing Optimization
+[06:38:31] Phase 4.1.1.4 Replication
+[06:40:03] Phase 4.2 Post Placement Cleanup
+[06:40:03] Phase 4.3 Placer Reporting
+[06:40:03] Phase 4.3.1 Print Estimated Congestion
+[06:40:34] Phase 4.4 Final Placement Cleanup
+[06:44:09] Finished 4th of 6 tasks (FPGA logic placement). Elapsed time: 00h 52m 04s 
+
+[06:44:09] Starting logic routing..
+[06:44:40] Phase 1 Build RT Design
+[06:46:42] Phase 2 Router Initialization
+[06:46:42] Phase 2.1 Fix Topology Constraints
+[06:46:42] Phase 2.2 Pre Route Cleanup
+[06:46:42] Phase 2.3 Global Clock Net Routing
+[06:47:13] Phase 2.4 Update Timing
+[06:49:15] Phase 2.5 Update Timing for Bus Skew
+[06:49:15] Phase 2.5.1 Update Timing
+[06:49:46] Phase 3 Initial Routing
+[06:49:46] Phase 3.1 Global Routing
+[06:49:46] Phase 3.2 Initial Net Routing
+[06:50:47] Phase 4 Rip-up And Reroute
+[06:50:47] Phase 4.1 Global Iteration 0
+[07:01:00] Phase 4.2 Global Iteration 1
+[07:01:31] Phase 4.3 Global Iteration 2
+[07:02:33] Phase 5 Delay and Skew Optimization
+[07:02:33] Phase 5.1 Delay CleanUp
+[07:02:33] Phase 5.1.1 Update Timing
+[07:03:03] Phase 5.1.2 Update Timing
+[07:03:34] Phase 5.2 Clock Skew Optimization
+[07:03:34] Phase 6 Post Hold Fix
+[07:03:34] Phase 6.1 Hold Fix Iter
+[07:03:34] Phase 6.1.1 Update Timing
+[07:04:04] Phase 7 Leaf Clock Prog Delay Opt
+[07:05:06] Phase 8 Route finalize
+[07:05:06] Phase 9 Verifying routed nets
+[07:05:06] Phase 10 Depositing Routes
+[07:05:36] Phase 11 Resolve XTalk
+[07:05:36] Phase 12 Post Router Timing
+[07:06:07] Finished 5th of 6 tasks (FPGA routing). Elapsed time: 00h 21m 58s 
+
+[07:06:07] Starting bitstream generation..
+[07:06:07] Phase 13 Post-Route Event Processing
+[07:17:52] Creating bitmap...
+[07:23:29] Writing bitstream ./level0_i_ulp_my_rm_partial.bit...
+[07:23:29] Finished 6th of 6 tasks (FPGA bitstream generation). Elapsed time: 00h 17m 21s 
+Check VPL, containing 12 checks, has run: 0 errors, 1 advisory violation
+ADVISORY: [AUTO-FREQ-SCALING-08] For clock hbm_aclk, the auto scaled frequency 454.5 MHz exceeds the original specified frequency. The compiler will select the original specified frequency of 450.0 MHz.
+[07:25:30] Run vpl: Step impl: Completed
+[07:25:31] Run vpl: FINISHED. Run Status: impl Complete!
+INFO: [v++ 60-1441] [07:25:33] Run run_link: Step vpl: Completed
+Time (s): cpu = 00:02:40 ; elapsed = 02:30:48 . Memory (MB): peak = 486.789 ; gain = 0.000 ; free physical = 35754 ; free virtual = 51540
+INFO: [v++ 60-1443] [07:25:33] Run run_link: Step rtdgen: Started
+INFO: [v++ 60-1453] Command Line: rtdgen
+INFO: [v++ 60-1454] Run Directory: /home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/_x/link/run_link
+INFO: [v++ 60-991] clock name 'ulp_ucs/aclk_kernel_01' (clock ID '1') is being mapped to clock name 'KERNEL_CLK' in the xclbin
+INFO: [v++ 60-991] clock name 'ulp_ucs/aclk_kernel_00' (clock ID '0') is being mapped to clock name 'DATA_CLK' in the xclbin
+INFO: [v++ 60-991] clock name 'hbm_aclk' (clock ID '') is being mapped to clock name 'hbm_aclk' in the xclbin
+INFO: [v++ 60-1230] The compiler selected the following frequencies for the runtime controllable kernel clock(s) and scalable system clock(s): System (SYSTEM) clock: hbm_aclk = 450, Kernel (KERNEL) clock: ulp_ucs/aclk_kernel_01 = 500, Kernel (DATA) clock: ulp_ucs/aclk_kernel_00 = 300
+INFO: [v++ 60-1453] Command Line: cf2sw -a /home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/_x/link/int/address_map.xml -sdsl /home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/_x/link/int/sdsl.dat -xclbin /home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/_x/link/int/xclbin_orig.xml -rtd /home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/_x/link/int/vitegnn_kernel.hw.rtd -o /home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/_x/link/int/vitegnn_kernel.hw.xml
+INFO: [v++ 60-1652] Cf2sw returned exit code: 0
+INFO: [v++ 60-1441] [07:25:40] Run run_link: Step rtdgen: Completed
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 486.789 ; gain = 0.000 ; free physical = 35697 ; free virtual = 51544
+INFO: [v++ 60-1443] [07:25:40] Run run_link: Step xclbinutil: Started
+INFO: [v++ 60-1453] Command Line: xclbinutil --add-section BITSTREAM:RAW:/home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/_x/link/int/partial.bit --force --target hw --key-value SYS:dfx_enable:true --add-section :JSON:/home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/_x/link/int/vitegnn_kernel.hw.rtd --append-section :JSON:/home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/_x/link/int/appendSection.rtd --add-section CLOCK_FREQ_TOPOLOGY:JSON:/home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/_x/link/int/vitegnn_kernel.hw_xml.rtd --add-section BUILD_METADATA:JSON:/home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/_x/link/int/vitegnn_kernel.hw_build.rtd --add-section EMBEDDED_METADATA:RAW:/home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/_x/link/int/vitegnn_kernel.hw.xml --add-section SYSTEM_METADATA:RAW:/home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/_x/link/int/systemDiagramModelSlrBaseAddress.json --key-value SYS:PlatformVBNV:xilinx_u280_gen3x16_xdma_1_202211_1 --output /home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/vitegnn_kernel.hw.xclbin
+INFO: [v++ 60-1454] Run Directory: /home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/_x/link/run_link
+XRT Build Version: 2.16.0 (Vitis)
+       Build Date: 2023-07-13 16:00:55
+          Hash ID: 157faa07876c55bb8aa8ec51b28608a6a0f6638e
+Creating a default 'in-memory' xclbin image.
+
+Section: 'BITSTREAM'(0) was successfully added.
+Size   : 47695202 bytes
+Format : RAW
+File   : '/home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/_x/link/int/partial.bit'
+
+Section: 'MEM_TOPOLOGY'(6) was successfully added.
+Format : JSON
+File   : 'mem_topology'
+
+Section: 'IP_LAYOUT'(8) was successfully added.
+Format : JSON
+File   : 'ip_layout'
+
+Section: 'CONNECTIVITY'(7) was successfully added.
+Format : JSON
+File   : 'connectivity'
+
+Section: 'CLOCK_FREQ_TOPOLOGY'(11) was successfully added.
+Size   : 410 bytes
+Format : JSON
+File   : '/home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/_x/link/int/vitegnn_kernel.hw_xml.rtd'
+
+Section: 'BUILD_METADATA'(14) was successfully added.
+Size   : 8302 bytes
+Format : JSON
+File   : '/home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/_x/link/int/vitegnn_kernel.hw_build.rtd'
+
+Section: 'EMBEDDED_METADATA'(2) was successfully added.
+Size   : 13999 bytes
+Format : RAW
+File   : '/home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/_x/link/int/vitegnn_kernel.hw.xml'
+
+Section: 'SYSTEM_METADATA'(22) was successfully added.
+Size   : 45059 bytes
+Format : RAW
+File   : '/home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/_x/link/int/systemDiagramModelSlrBaseAddress.json'
+
+Section: 'PARTITION_METADATA'(20) was successfully appended to.
+Format : JSON
+File   : 'partition_metadata'
+
+Section: 'IP_LAYOUT'(8) was successfully appended to.
+Format : JSON
+File   : 'ip_layout'
+Successfully wrote (47800106 bytes) to the output file: /home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/vitegnn_kernel.hw.xclbin
+Leaving xclbinutil.
+INFO: [v++ 60-1441] [07:25:41] Run run_link: Step xclbinutil: Completed
+Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.36 . Memory (MB): peak = 486.789 ; gain = 0.000 ; free physical = 35620 ; free virtual = 51520
+INFO: [v++ 60-1443] [07:25:41] Run run_link: Step xclbinutilinfo: Started
+INFO: [v++ 60-1453] Command Line: xclbinutil --quiet --force --info /home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/vitegnn_kernel.hw.xclbin.info --input /home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/vitegnn_kernel.hw.xclbin
+INFO: [v++ 60-1454] Run Directory: /home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/_x/link/run_link
+INFO: [v++ 60-1441] [07:25:41] Run run_link: Step xclbinutilinfo: Completed
+Time (s): cpu = 00:00:00.56 ; elapsed = 00:00:00.66 . Memory (MB): peak = 486.789 ; gain = 0.000 ; free physical = 35587 ; free virtual = 51518
+INFO: [v++ 60-1443] [07:25:41] Run run_link: Step generate_sc_driver: Started
+INFO: [v++ 60-1453] Command Line: 
+INFO: [v++ 60-1454] Run Directory: /home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/_x/link/run_link
+INFO: [v++ 60-1441] [07:25:41] Run run_link: Step generate_sc_driver: Completed
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 486.789 ; gain = 0.000 ; free physical = 35585 ; free virtual = 51516
+Check POST-VPL, containing 1 checks, has run: 0 errors
+INFO: [v++ 60-244] Generating system estimate report...
+INFO: [v++ 60-1092] Generated system estimate report: /home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/_x/reports/link/system_estimate_vitegnn_kernel.hw.xtxt
+INFO: [v++ 60-586] Created /home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/vitegnn_kernel.hw.ltx
+INFO: [v++ 60-586] Created /home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/vitegnn_kernel.hw.xclbin
+INFO: [v++ 60-1307] Run completed. Additional information can be found in:
+	Guidance: /home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/_x/reports/link/v++_link_vitegnn_kernel.hw_guidance.html
+	Timing Report: /home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/_x/reports/link/imp/impl_1_hw_bb_locked_timing_summary_routed.rpt
+	Vivado Log: /home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/_x/logs/link/vivado.log
+	Steps Log File: /home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/_x/logs/link/link.steps.log
+
+INFO: [v++ 60-2343] Use the vitis_analyzer tool to visualize and navigate the relevant reports. Run the following command. 
+    vitis_analyzer /home/ae_reviewer/TempGNN/build/baselines/vitegnn_timingfix_v4_hw/vitegnn_kernel.hw.xclbin.link_summary 
+INFO: [v++ 60-791] Total elapsed time: 2h 31m 44s
+INFO: [v++ 60-1653] Closing dispatch client.
+make: Leaving directory '/home/ae_reviewer/TempGNN/hardware/baselines/vitis'
