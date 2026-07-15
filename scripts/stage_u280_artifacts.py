@@ -5,6 +5,7 @@ import argparse
 import getpass
 import hashlib
 import json
+import re
 import shutil
 import socket
 import subprocess
@@ -30,6 +31,10 @@ SYSTEMS = {
     "ViTeGNN": ("vitegnn_kernel", "vitegnn_kernel.hw.xclbin"),
     "RTGA": ("rtga_kernel", "rtga_kernel.hw.xclbin"),
 }
+
+SENSITIVE_ENV_PATTERN = re.compile(
+    r"^(?P<name>SSH_(?:CLIENT|CONNECTION|TTY)|REMOTEHOST)=.*$", re.MULTILINE
+)
 
 REPORT_PATTERNS = {
     "post_route_timing.rpt": (
@@ -307,7 +312,9 @@ def redact_text(text: str, redactions: dict[str, str]) -> str:
     for original, replacement in sorted(redactions.items(), key=lambda item: -len(item[0])):
         if original:
             text = text.replace(original, replacement)
-    return text
+    return SENSITIVE_ENV_PATTERN.sub(
+        lambda match: f"{match.group('name')}=<redacted>", text
+    )
 
 
 def anonymize_xclbin(

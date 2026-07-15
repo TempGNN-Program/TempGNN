@@ -41,6 +41,22 @@ class StageU280ArtifactsTest(unittest.TestCase):
             redacted, "/home/ae_reviewer/TempGNN by ae_reviewer on u280-ae-host"
         )
 
+    def test_redact_text_removes_ssh_environment_values(self) -> None:
+        text = (
+            "SSH_CONNECTION=203.0.113.10 54000 10.0.0.8 22\n"
+            "SSH_CLIENT=203.0.113.10 54000 22\n"
+            "SSH_TTY=/dev/pts/7\n"
+            "PATH=/usr/bin\n"
+        )
+        redacted = redact_text(text, {})
+        self.assertEqual(
+            redacted,
+            "SSH_CONNECTION=<redacted>\n"
+            "SSH_CLIENT=<redacted>\n"
+            "SSH_TTY=<redacted>\n"
+            "PATH=/usr/bin\n",
+        )
+
     def test_find_report_honors_pattern_priority(self) -> None:
         with TemporaryDirectory() as temporary:
             root = Path(temporary)
