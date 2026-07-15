@@ -50,6 +50,7 @@ tar -czf "$pkg" \
   --exclude='*/.Xil/*' \
   --exclude='*/.ipcache' \
   --exclude='*/.ipcache/*' \
+  --exclude='*/v++_*.log' \
   --exclude='hardware/vitis/_x' \
   --exclude='hardware/vitis/.Xil' \
   --exclude='hardware/vitis/.ipcache' \
