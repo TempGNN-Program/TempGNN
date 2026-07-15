@@ -1,0 +1,541 @@
+\documentclass[conference]{IEEEtran}
+
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{fvextra}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{hyperref}
+\usepackage{tagging}
+\usepackage{sc26repro}
+
+\hypersetup{colorlinks=true,linkcolor=black,urlcolor=blue}
+\setlist{nosep,leftmargin=*}
+
+% SC26 final submission: explanation/example tags intentionally disabled.
+% \usetag{explanation}
+% \usetag{example}
+
+\begin{document}
+
+\twocolumn[%
+{\begin{center}
+\Huge
+Appendix: Artifact Evaluation
+\end{center}}
+]
+
+\appendixAE
+
+Paper ID: \texttt{pap142}
+
+
+This appendix evaluates the three computational artifacts defined in the AD:
+
+
+\begin{itemize}
+\item \texttt{A1}: TempGNN reference model, tests, and edge-stream profiling.
+\item \texttt{A2}: four-system U280 forward-path execution and measurement workflow.
+\item \texttt{A3}: source-labeled paper-reference CSV/SVG reconstruction.
+\end{itemize}
+
+The recommended reviewer order is \texttt{A1 -> A3 -> A2}. The first two paths do not
+
+require FPGA access. Artifact \texttt{A2} uses an author-provided Alveo U280 account;
+
+credentials are delivered only through the private SC submission channel.
+
+
+\section{Evaluation Scope and Badge Boundary}
+
+The artifact is prepared to support Artifacts Available and Artifacts
+
+Evaluated-Functional. Apache-2.0 is included; a version-specific DOI must be
+
+present by the August 25, 2026 artifact freeze.
+
+
+The current package does not assert Results Reproduced. The fresh U280 path
+
+uses bounded 8,192-event prefixes, 8-dimensional Q10 kernels, deterministic
+
+stand-in weights, and \texttt{xbutil} total-board power. The paper uses complete model
+
+configurations, default 32-bit floating point, trained checkpoints, full
+
+evaluation streams, and post-route Vivado power estimates. The configuration
+
+therefore records \texttt{results\_reproduced\_eligible: false}. Packaged reference rows
+
+are never substituted for a failed fresh measurement.
+
+
+Expected direct review time, excluding optional Vitis rebuilds:
+
+
+\begin{center}
+\footnotesize
+\begin{tabular}{@{}p{0.34\linewidth}p{0.58\linewidth}@{}}
+\toprule
+Artifact & Setup, execution, and analysis time \\
+\midrule
+\texttt{A1} & 5-10 min setup; less than 2 min execution; less than 2 min analysis \\
+\addlinespace[2pt]
+\texttt{A2} & 10-20 min setup; 30-90 min execution; less than 5 min analysis \\
+\addlinespace[2pt]
+\texttt{A3} & less than 5 min setup; less than 1 min execution; 2-5 min analysis \\
+\addlinespace[2pt]
+\bottomrule
+\end{tabular}
+\normalsize
+\end{center}
+
+\section{Computational Artifact A1}
+
+\subsection{Artifact Setup}
+
+Use Linux x86\_64 with Python 3.10 or newer, GNU Make, and Bash:
+
+
+\begin{Verbatim}[fontsize=\small,breaklines=true,breakanywhere=true]
+git clone https://github.com/TempGNN-Program/TempGNN.git
+cd TempGNN
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+\end{Verbatim}
+
+The frozen package may be used instead of \texttt{git clone}:
+
+
+\begin{Verbatim}[fontsize=\small,breaklines=true,breakanywhere=true]
+tar -xzf pap142_tempgnn_sc26_ae_u280.tgz
+cd pap142_tempgnn_sc26_ae
+\end{Verbatim}
+
+No FPGA is needed. Unit fixtures are generated locally. Optional Q14 profiling
+
+downloads TGL edge streams; packaged U280-prefix samples are already under
+
+\path{external/u280_dataset_samples/} with URL and SHA256 metadata.
+
+
+\subsection{Artifact Execution}
+
+The task dependency chain is:
+
+
+\begin{Verbatim}[fontsize=\small,breaklines=true,breakanywhere=true]
+A1-T1 environment
+  -> A1-T2 unit tests for TDP/DDTC/OATS and artifact contracts
+  -> A1-T3 optional real-edge acquisition
+  -> A1-T4 optional edge-stream profiling
+  -> A1-T5 CSV/Markdown summary generation
+\end{Verbatim}
+
+Run the required fast path:
+
+
+\begin{Verbatim}[fontsize=\small,breaklines=true,breakanywhere=true]
+python3 -m unittest discover -s tests
+\end{Verbatim}
+
+Expected terminal summary:
+
+
+\begin{Verbatim}[fontsize=\small,breaklines=true,breakanywhere=true]
+Ran 28 tests
+OK
+\end{Verbatim}
+
+Run the optional real-edge path:
+
+
+\begin{Verbatim}[fontsize=\small,breaklines=true,breakanywhere=true]
+make data
+make q14
+\end{Verbatim}
+
+The default Q14 parameters are WIKI/MOOC/REDDIT, four models, fanout 20, depth
+
+2, and the batch parameters recorded in each output row. \texttt{make data} is skipped
+
+when the corresponding edge files are already present.
+
+
+\subsection{Artifact Analysis}
+
+All 28 tests must pass. In particular, the recursive TDP state must agree with
+
+chronological updates, fixtures must be deterministic, xclbin link requests
+
+must agree with the Vivado-connected clock and nonnegative post-route WNS/TNS,
+
+and duplicate xclbins must be rejected by preflight.
+
+
+Optional Q14 outputs:
+
+
+\begin{Verbatim}[fontsize=\small,breaklines=true,breakanywhere=true]
+results/q14_real_tgl_edges/q14_dataset_model_summary.csv
+results/q14_real_tgl_edges/q14_batches.csv
+results/q14_real_tgl_edges/q14_summary.md
+\end{Verbatim}
+
+Inspect packet hit/reuse rates, collisions, stalls, and memory traffic. The
+
+latency columns in this CPU path use a 225 MHz cycle model and are not fresh
+
+U280 board timings. Passing \texttt{A1} demonstrates that the mechanisms supporting
+
+contributions \texttt{C1-C3} are executable and internally checked.
+
+
+\section{Computational Artifact A2}
+
+\subsection{Artifact Setup}
+
+Hardware and recorded software environment:
+
+
+\begin{Verbatim}[fontsize=\small,breaklines=true,breakanywhere=true]
+Board: AMD/Xilinx Alveo U280, xcu280-fsvh2892-2L-e
+Platform: xilinx_u280_gen3x16_xdma_1_202211_1
+OS: Ubuntu 22.04 x86_64
+XRT: 2.16.204
+Vitis/Vivado: 2023.2 (rebuild only)
+GCC: 11.4.0
+GNU Make: 4.3
+Python: 3.10 or newer
+\end{Verbatim}
+
+The reviewer receives a dedicated, time-bounded account through the SC private
+
+channel. After login:
+
+
+\begin{Verbatim}[fontsize=\small,breaklines=true,breakanywhere=true]
+source /opt/xilinx/xrt/setup.sh
+cd /path/to/pap142_tempgnn_sc26_ae
+xrt-smi examine
+\end{Verbatim}
+
+The four metadata-normalized artifacts are:
+
+
+\begin{Verbatim}[fontsize=\small,breaklines=true,breakanywhere=true]
+artifacts/u280/TempGNN/bin/tempgnn_forward_kernel.hw.xclbin
+artifacts/u280/MATG/bin/matg_kernel.hw.xclbin
+artifacts/u280/ViTeGNN/bin/vitegnn_kernel.hw.xclbin
+artifacts/u280/RTGA/bin/rtga_kernel.hw.xclbin
+\end{Verbatim}
+
+The common XRT host and baseline C-sim reference binaries are colocated under
+
+the same \path{bin/} directories. Source, paper-mechanism mapping, and limitations
+
+are in \path{hardware/baselines/README.md} and
+
+\path{hardware/baselines/MECHANISM_MAP.md}.
+
+The repository and frozen package also include the exact real-input fixture
+
+metadata and goldens used by the packaged run under
+
+\path{results/generated_u280_comparison_fixtures/}.
+
+
+Optional rebuilds require:
+
+
+\begin{Verbatim}[fontsize=\small,breaklines=true,breakanywhere=true]
+source /tools/Xilinx/Vitis/2023.2/settings64.sh
+\end{Verbatim}
+
+Rebuilding is not required for evaluation and can take several hours per
+
+xclbin. The direct-run path stays within the SC26 review budget.
+
+
+\subsection{Artifact Execution}
+
+The workflow is implemented by \path{scripts/run_u280_core_reproduction.py}:
+
+
+\begin{Verbatim}[fontsize=\small,breaklines=true,breakanywhere=true]
+A2-T1 preflight four source revisions, hosts, and distinct xclbin hashes
+  -> A2-T2 generate fixtures from bundled real-data prefixes
+  -> A2-T3 generate independent software goldens
+  -> A2-T4 load and run each implementation on U280
+  -> A2-T5 gate the repeated-kernel window and sample total board power
+  -> A2-T6 validate checksums, repetitions, energy, provenance, and clocks
+  -> A2-T7 aggregate raw rows and derive diagnostic figure-shaped tables
+  -> A2-T8 compare fresh tables with the paper-reference rows
+\end{Verbatim}
+
+Run preflight:
+
+
+\begin{Verbatim}[fontsize=\small,breaklines=true,breakanywhere=true]
+make u280-core-preflight
+\end{Verbatim}
+
+Expected: U280 four-implementation preflight PASS, followed by four different
+
+xclbin SHA256 values.
+
+
+Run the complete direct measurement:
+
+
+\begin{Verbatim}[fontsize=\small,breaklines=true,breakanywhere=true]
+make ae-core-u280 U280_CORE_DEVICE=0 U280_CORE_REPETITIONS=3
+\end{Verbatim}
+
+Checked parameters are loaded from \path{configs/u280_core_reproduction.json}:
+
+
+\begin{Verbatim}[fontsize=\small,breaklines=true,breakanywhere=true]
+datasets: WK, MC, RT, LM, WT, GT
+models: JODIE, TGN, TGAT, APAN
+implementations: TempGNN, MATG, ViTeGNN, RTGA
+real prefix: 8,192 events per dataset
+target batch: 1,000
+repetitions: 3
+tensor path: 8-dimensional Q10
+requested clock: 225 MHz
+achieved-clock comparison tolerance: 0.5 MHz
+\end{Verbatim}
+
+Each dataset/model pair is calibrated to a repeated-kernel measurement window.
+
+The host performs a warmup, waits at a file gate, and then executes the measured
+
+iterations while the harness samples \texttt{xbutil examine --report electrical}.
+
+
+Optional one-fixture TempGNN sanity command:
+
+
+\begin{Verbatim}[fontsize=\small,breaklines=true,breakanywhere=true]
+make u280-run U280_DEVICE=0
+\end{Verbatim}
+
+Optional rebuild commands:
+
+
+\begin{Verbatim}[fontsize=\small,breaklines=true,breakanywhere=true]
+make u280-build \
+  U280_PLATFORM=/path/to/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm
+make u280-baseline-build
+make u280-stage-artifacts
+\end{Verbatim}
+
+Baseline links should be run serially on a 64 GB host. The staging command
+
+redacts login, host, and absolute paths from textual evidence and the xclbin
+
+\path{BUILD_METADATA}/\path{SYSTEM_METADATA} sections; it verifies that the FPGA
+
+\texttt{BITSTREAM} section is byte identical before and after normalization.
+
+
+\subsection{Artifact Analysis}
+
+The run creates a new directory and never overwrites paper-reference data:
+
+
+\begin{Verbatim}[fontsize=\small,breaklines=true,breakanywhere=true]
+results/reviewer_u280_runs/<run-id>/provenance.json
+results/reviewer_u280_runs/<run-id>/raw/TempGNN/measurements.csv
+results/reviewer_u280_runs/<run-id>/raw/MATG/measurements.csv
+results/reviewer_u280_runs/<run-id>/raw/ViTeGNN/measurements.csv
+results/reviewer_u280_runs/<run-id>/raw/RTGA/measurements.csv
+results/reviewer_u280_runs/<run-id>/baselines_u280/
+results/reviewer_u280_runs/<run-id>/derived_comparison_figures/
+results/reviewer_u280_runs/<run-id>/verification.json
+results/reviewer_u280_runs/<run-id>/verification.md
+\end{Verbatim}
+
+The packaged final run is
+
+\path{results/reviewer_u280_runs/pap142_u280_measured_20260715T052052Z/}; its four
+
+raw CSV files contain 72 rows each (288 total). The packaged one-repetition
+
+smoke run is \path{pap142_u280_smoke_20260715T052052Z}.
+
+
+For 3 repetitions, each implementation must contain 72 rows and the combined
+
+matrix must contain 288 rows. Every row must report:
+
+
+\begin{itemize}
+\item \path{golden_validation=PASS} and \path{repeat_consistency=PASS};
+\item a nonzero kernel and embedding checksum;
+\item a real dataset source URL and 64-character input/golden hashes;
+\item positive latency and power;
+\item energy consistent with \texttt{latency\_ms * power\_w};
+\item requested and xclbin-link-requested clocks, the Vivado-connected post-route
+kernel clock, WNS/TNS, and \path{timing_met=PASS}.
+\end{itemize}
+
+The workflow refuses normalized comparison generation if an implementation's
+
+post-route clock changes between rows or if the four timing-closed clocks
+
+differ by more than 0.5 MHz. \texttt{verification.md} reports the maximum relative error against
+
+paper-reference Fig.11 and the U280 subset of Fig.12. A diagnostic tolerance
+
+FAIL is a valid completed run and must remain visible. It does not demonstrate
+
+paper equivalence and must not be converted to PASS by adjusting measured rows.
+
+
+Passing \texttt{A2} establishes that four distinct implementations execute on the
+
+same U280, produce stable software-checked outputs, and emit traceable raw
+
+measurement data. The bounded reproduction scope prevents this path from independently
+
+supporting a Results Reproduced claim for \texttt{C4}.
+
+
+\section{Computational Artifact A3}
+
+\subsection{Artifact Setup}
+
+Use the Python environment created for \texttt{A1}. No FPGA, GPU, external dataset, or
+
+network access is required. Inputs are:
+
+
+\begin{Verbatim}[fontsize=\small,breaklines=true,breakanywhere=true]
+reference_inputs/paper_figure_values.csv
+reference_inputs/README.md
+\end{Verbatim}
+
+The table has 668 rows. Every row records its source class, locator, and
+
+uncertainty. Original author workbooks and vector files are not distributed
+
+because they contain author metadata; only the anonymized numeric extraction
+
+and source hashes are packaged.
+
+
+\subsection{Artifact Execution}
+
+The dependency chain is:
+
+
+\begin{Verbatim}[fontsize=\small,breaklines=true,breakanywhere=true]
+A3-T1 validate the reference table and source labels
+  -> A3-T2 split records by figure
+  -> A3-T3 generate matching CSV and SVG files
+  -> A3-T4 generate the combined table and manifest
+  -> A3-T5 run consistency tests
+  -> A3-T6 regenerate the reviewer report
+\end{Verbatim}
+
+Commands:
+
+
+\begin{Verbatim}[fontsize=\small,breaklines=true,breakanywhere=true]
+python3 -m scripts.reproduce_paper_figures
+python3 -m scripts.make_ae_report \
+  --q14-summary results/q14_real_tgl_edges/q14_dataset_model_summary.csv \
+  --board-json results/board_u280/summary.json \
+  --out results/ae_report
+\end{Verbatim}
+
+Equivalent Make target:
+
+
+\begin{Verbatim}[fontsize=\small,breaklines=true,breakanywhere=true]
+make smoke
+make report
+\end{Verbatim}
+
+\texttt{make smoke} includes the 28 tests from \texttt{A1}.
+
+
+\subsection{Artifact Analysis}
+
+Expected outputs:
+
+
+\begin{Verbatim}[fontsize=\small,breaklines=true,breakanywhere=true]
+results/paper_reproduction/all_figure_data.csv
+results/paper_reproduction/figure_data_manifest.csv
+results/paper_reproduction/fig2_execution_breakdown.csv/.svg
+results/paper_reproduction/fig4a_branch_parallelism_ratio.csv/.svg
+results/paper_reproduction/fig9b_gpu_overhead_breakdown.csv/.svg
+results/paper_reproduction/fig10_speedup_tglite_cpu.csv/.svg
+results/paper_reproduction/fig11_speedup_matg.csv/.svg
+results/paper_reproduction/fig12_energy_tempgnn.csv/.svg
+results/paper_reproduction/fig13_ablation_time.csv/.svg
+results/paper_reproduction/fig14a_batch_sensitivity.csv/.svg
+results/paper_reproduction/fig14b_tdp_entries.csv/.svg
+\end{Verbatim}
+
+Expected summary checks:
+
+
+\begin{Verbatim}[fontsize=\small,breaklines=true,breakanywhere=true]
+TempGNN vs TGLite-CPU: 132.80x
+TempGNN-G vs TGLite-CPU: 10.85x
+Cascade vs TGLite-CPU: 5.22x
+TempGNN vs MATG, explicit plotted AVG: 7.7889x
+Paper prose for TempGNN vs MATG: 7.6x
+Energy, Cascade/TempGNN, explicit plotted AVG: 33.545x
+w/o DDTC normalized time: 3.08x
+w/o OATS normalized time: 1.77x
+\end{Verbatim}
+
+The Fig.11 explicit AVG and the paper's rounded prose value are both preserved.
+
+The generator must not alter individual values to force agreement. Generated
+
+SVG titles contain \texttt{Paper-reference}, and the manifest identifies whether each
+
+series came from exact workbook cells or axis-calibrated vector geometry.
+
+
+Passing \texttt{A3} demonstrates deterministic reconstruction and provenance of the
+
+packaged paper plotting records for \texttt{C4}. It does not demonstrate a fresh rerun
+
+of MATG, ViTeGNN, RTGA, Cascade, TGLite-CPU, or the complete TempGNN paper
+
+configuration.
+
+
+\section{Badge Evidence Summary}
+
+\begin{center}
+\footnotesize
+\begin{tabular}{@{}p{0.34\linewidth}p{0.58\linewidth}@{}}
+\toprule
+Badge & Current evidence \\
+\midrule
+Artifacts Available & Source, tests, inputs, CSV/SVG records, four metadata-normalized U280 xclbins, reports, and documentation; Apache-2.0 included and DOI required by freeze \\
+\addlinespace[2pt]
+Artifacts Evaluated-Functional & \texttt{A1} tests, baseline C-sim, four-xclbin preflight, board goldens, repeated outputs, power/latency rows, and post-route evidence \\
+\addlinespace[2pt]
+Results Reproduced & Not currently asserted because \texttt{A2} is a bounded mechanism-level comparison rather than the paper's full precision, checkpoints, streams, and power method \\
+\addlinespace[2pt]
+\bottomrule
+\end{tabular}
+\normalsize
+\end{center}
+\end{document}
