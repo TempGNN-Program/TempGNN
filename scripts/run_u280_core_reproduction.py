@@ -251,6 +251,11 @@ def preflight(config: dict[str, object], repo_root: Path) -> list[dict[str, obje
     records = []
     xclbin_hashes: dict[str, str] = {}
     rendered_commands = set()
+    command_probe_output = repo_root / ".u280_preflight_measurements.csv"
+    command_probe_device = "0"
+    command_probe_repetitions = int(config.get("repetitions", 3))
+    command_probe_datasets = tuple(str(value) for value in config["datasets"])
+    command_probe_models = tuple(str(value) for value in config["models"])
     for system in systems:
         assert isinstance(system, dict)
         name = str(system["name"])
@@ -260,7 +265,16 @@ def preflight(config: dict[str, object], repo_root: Path) -> list[dict[str, obje
         command = system.get("command")
         if not isinstance(command, list) or not command or not all(isinstance(item, str) for item in command):
             raise SystemExit(f"{name}: command must be a non-empty JSON string array")
-        command_key = json.dumps(command, sort_keys=True)
+        rendered_command = render_command(
+            system,
+            repo_root=repo_root,
+            raw_csv=command_probe_output,
+            device=command_probe_device,
+            repetitions=command_probe_repetitions,
+            datasets=command_probe_datasets,
+            models=command_probe_models,
+        )
+        command_key = json.dumps(rendered_command, sort_keys=True)
         if command_key in rendered_commands:
             raise SystemExit(f"{name}: command duplicates another implementation")
         rendered_commands.add(command_key)

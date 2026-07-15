@@ -47,7 +47,15 @@ class U280CoreReproductionTests(unittest.TestCase):
                         "runner": runner.name,
                         "host": host.name,
                         "xclbin": shared_xclbin.name,
-                        "command": [runner.name, name],
+                        "command": [
+                            "{runner}",
+                            "--host",
+                            "{host}",
+                            "--xclbin",
+                            "{xclbin}",
+                            "--output",
+                            "{raw_csv}",
+                        ],
                     }
                 )
             config = {"datasets": ["WK"], "models": ["TGN"], "systems": systems}
