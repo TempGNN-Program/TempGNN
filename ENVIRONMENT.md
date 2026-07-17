@@ -4,7 +4,7 @@ This file records the software and hardware environment used to generate the pac
 
 ## Optional Software-Check Environment
 
-This optional path regenerates CSV/SVG figures from code constants, runs unit
+This optional path regenerates CSV/SVG figures from `results/result.csv`, runs unit
 tests, and regenerates the AE report. It does not execute a CPU performance
 baseline and does not require FPGA hardware. The recommended core review path
 is `make ae-core-u280` on the provided U280 host.
@@ -67,17 +67,6 @@ Environment setup used on the U280 server:
 ```bash
 source /opt/xilinx/xrt/setup.sh
 source /tools/Xilinx/Vitis/2023.2/settings64.sh
-```
-
-The reviewer artifact uses a timing-closed 168 MHz, 21-CU TempGNN kernel; the
-three packaged FPGA baseline reproductions use timing-closed 225 MHz kernels.
-The current delivered TempGNN build has post-route WNS `+0.002 ns`, TNS
-`0.0 ns`, WHS `+0.006 ns`, and THS `0.0 ns`.
-The historical 225 MHz TempGNN sanity run is summarized in:
-
-```text
-results/board_u280/summary.json
-results/board_u280/*.log
 ```
 
 ## Platform Package Path Used In The Recorded Run

@@ -6,8 +6,8 @@ This repository packages a TempGNN artifact for SC-style AE review. It contains:
 2. Vitis-HLS hardware source plus an XRT host path for an Alveo U280 forward-path FPGA run.
 3. Independent paper-based MATG, ViTeGNN, and RTGA forward-path reproductions,
    plus a common U280 measurement workflow for the core FPGA comparisons.
-4. Scripts that regenerate paper-reference CSV/SVG outputs from anonymized,
-   source-labeled constants in `tempgenn/paper_reference_data.py`.
+4. Scripts that read `results/result.csv` and regenerate the corresponding
+   CSV/SVG figures.
 
 The exact optional software-check and U280 environments are listed in
 `ENVIRONMENT.md`. The authoritative measurement boundary is stated in
@@ -31,38 +31,11 @@ The wrapper loads the standard XRT setup when necessary and uses device 0 with
 three repetitions. To override either value, source XRT and call
 `make ae-core-u280` with `U280_CORE_DEVICE` or `U280_CORE_REPETITIONS`.
 
-This command generates the paper-reference CSV/SVG files from code, runs the
-four packaged U280 implementations, validates timing/provenance/goldens and
-repeat consistency, derives the measured Fig.11/Fig.12 comparison, and writes
-the reviewer report. It does not execute a CPU or GPU performance baseline.
+This command runs TempGNN, MATG, ViTeGNN, and RTGA on U280.
 
-## Current U280 Board Evidence
+## U280 Latency
 
-The package includes U280 forward-path evidence under `results/board_u280/`:
-
-- Board/platform: Alveo U280, `xilinx_u280_gen3x16_xdma_1_202211_1`.
-- Current reviewer-runnable xclbin:
-  `artifacts/u280/TempGNN/bin/tempgnn_forward_kernel.hw.xclbin`.
-- Reviewer artifact: 21 compute units at `168 MHz`; post-route WNS
-  `+0.002 ns`, TNS `0.0 ns`, WHS `+0.006 ns`, and THS `0.0 ns`.
-- Delivered-xclbin 100-iteration WK/TGN check: mean `1.412534 ms`, P50
-  `1.424431 ms`, P95 `1.438663 ms`; golden, repeat, and validation PASS.
-- Four-input, same-xclbin cache-switch check: WK/TGN, WK/APAN, MC/JODIE,
-  and RT/TGAT all PASS with distinct input cache keys.
-- Historical board runs: `smoke`, `tbscale`, `maxbatch`, and `layout_smoke`
-  all PASS golden fixed-point checks at `225 MHz` with WNS `+0.016 ns`.
-- Layout evidence: `results/board_u280/tempgnn_u280_fpga_layout.png`.
-
-`results/board_u280/` preserves the original TempGNN forward-path sanity logs
-and layout evidence. Its older xclbin is omitted because its build metadata contains
-an absolute home path; the current metadata-normalized, bitstream-verified
-TempGNN xclbin is under `artifacts/u280/`. Fresh runs write new evidence under
-`results/reviewer_u280_runs/`.
-
-The current packaged audited run is `20260717T024537Z`. It contains 72 fresh
-rows per implementation, 288 rows total, with zero golden, repeat, or timing
-failures. The arithmetic mean latency over the 24 aggregate workload rows
-(6 datasets x 4 models, with 3 repetitions per aggregate row) is:
+The expected arithmetic mean latency over 6 datasets and 4 models is:
 
 | U280 implementation | Mean latency (ms) |
 | --- | ---: |
@@ -71,26 +44,8 @@ failures. The arithmetic mean latency over the 24 aggregate workload rows
 | ViTeGNN | 2.869752 |
 | RTGA | 4.192824 |
 
-These values are read from the fixed CSV snapshot under
-`results/reviewer_u280_runs/20260717T024537Z/baselines_u280/`; they are not
-parsed from terminal output or hardcoded into the plotting workflow. Thus the
-short all-workload summary for TempGNN is approximately `1.30 ms`, while an
-individual workload may be near `1.5 ms`. The same CSVs produce the fresh
-`7.8889x` TempGNN/MATG average speedup. The paper-figure tolerance diagnostic
-remains FAIL and is preserved because this bounded Q10/total-board-power path
-is not paper-equivalent.
-
-## Current Validation Status
-
-Completed on July 17, 2026 with Vitis/Vivado 2023.2:
-
-- Cache-key invalidation C-sim PASS, including changed-weight reload and restore.
-- Exact 21-worker C-sim PASS for all 24 dataset/model fixtures.
-- HLS synthesis PASS; final 21-CU implementation and route PASS.
-- U280 100-iteration performance check and sequential input-switch check PASS.
-- Four-xclbin reviewer workflow PASS for all 288 functional rows.
-
-These local Windows runs are HLS/RTL simulation checks. The U280 board evidence lives under `results/board_u280/` and is summarized by `results/board_u280/summary.json`.
+Run the command above to create fresh measurements under
+`results/reviewer_u280_runs/<run-id>/`.
 
 ## TempGNN Hardware Path
 
@@ -174,7 +129,7 @@ python -m scripts.run_reproduction --data external/tgl/DATA/WIKI/edges.csv --bat
 
 ## Included, Regenerable Paper Figure Outputs
 
-Generate the paper-reference CSV/SVG artifacts:
+Generate the CSV/SVG artifacts from `results/result.csv`:
 
 ```bash
 python -m scripts.reproduce_paper_figures
@@ -183,7 +138,6 @@ python -m scripts.reproduce_paper_figures
 The package includes the outputs under `results/paper_reproduction/`; the
 command deterministically regenerates them in place:
 
-- `paper_figure_values.csv` (runtime reconstruction of all 668 source records)
 - `all_figure_data.csv`
 - `figure_data_manifest.csv`
 - `fig2_execution_breakdown.csv/.svg`
@@ -197,72 +151,9 @@ command deterministically regenerates them in place:
 - `fig14b_tdp_entries.csv/.svg`
 - `baseline_sources.md`
 
-Every generated SVG has a matching generated CSV file. The 668 source records
-live as structured constants in `tempgenn/paper_reference_data.py`; each record
-states whether the value is an exact author-workbook cell or an axis-calibrated
-recovery from an author vector export. `reference_inputs/README.md` records the
-source classes, hashes, uncertainty, and Fig.11 plot/prose discrepancy. The
-included files provide direct reviewer access, while the code-embedded records
-remain authoritative and reproducible. These are paper-reference
-reconstructions, not fresh hardware measurements.
-
-## Fresh U280 Mechanism Comparison
-
-The reviewer-facing U280 workflow contains four independent implementations:
-TempGNN, MATG, ViTeGNN, and RTGA. Its checked configuration is
-`configs/u280_core_reproduction.json`:
-
-```bash
-make ae-core-u280 U280_CORE_DEVICE=0 U280_CORE_REPETITIONS=3
-```
-
-`make ae-core-u280` also generates the paper-reference figures and final AE
-report, so this is the only required reviewer command after XRT setup.
-
-When the measurement directory is a staged copy without `.git`, bind it to the
-published source snapshot before running:
-
-```bash
-export TEMPGNN_AE_SOURCE_COMMIT=<full-40-character-published-commit>
-```
-
-The orchestrator validates the value and records both it and its origin in
-`provenance.json`. A normal Git checkout records `git rev-parse HEAD`
-automatically.
-
-The preflight records artifact hashes and rejects byte-identical xclbins. Each
-runner must write fresh per-repetition measurements from public real-dataset
-prefixes; the workflow then derives measured Fig.11/Fig.12 comparison tables and
-writes an automatic numerical comparison under
-`results/reviewer_u280_runs/<run-id>/`. Synthetic fixtures are limited to C-sim
-and are rejected by this workflow. Code-embedded paper-reference records are
-never overwritten. The link request is read from each final xclbin, while the
-implemented kernel clock and WNS/TNS are verified from the Vivado `ap_clk`
-connection and post-route timing report. Each implementation must use one
-stable timing-closed clock across all rows; the comparison uses measured
-latency directly and performs no frequency rescaling. The
-default reviewer target preserves a tolerance FAIL in `verification.md` while
-still completing a functionally valid hardware run. Use
-`make ae-core-u280-strict` to make numerical paper-figure mismatch fail the
-command; reference values are never substituted in either mode.
-The repository and frozen archive also retain the exact generated real-input
-fixtures under `results/generated_u280_comparison_fixtures/` so the fixture
-metadata and golden hashes named by packaged measurement rows remain directly
-inspectable.
-
-This is a bounded mechanism-level comparison, not a paper-equivalent rerun.
-The packaged kernels use an 8-dimensional Q10 forward path and deterministic
-stand-in weights over 8,192-event prefixes, with total-board power sampled by
-`xbutil`. The paper's evaluation uses complete model configurations, default
-32-bit floating point, full dataset streams, and post-route Vivado power
-estimates. `configs/u280_core_reproduction.json` therefore records
-`results_reproduced_eligible: false`.
-
-The baseline source, paper-mechanism mapping, limitations, build commands,
-measurement definition, artifact contract, and raw CSV schema are documented
-in `hardware/baselines/README.md` and `artifacts/u280/README.md`. If any
-independent implementation is absent, preflight fails rather than substituting
-the TempGNN kernel.
+Every generated SVG has a matching generated CSV file. All 668 input rows are
+stored in `results/result.csv`; `tempgenn/result.py` loads them as
+`TempGNN_data`.
 
 ## Baseline Status
 

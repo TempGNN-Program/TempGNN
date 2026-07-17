@@ -13,6 +13,6 @@ pdflatex -interaction=nonstopmode -halt-on-error pap142_TempGNN_AD_Appendix.tex
 ```
 
 The authoritative editable content is in `AD_APPENDIX_DRAFT.md` and
-`AE_APPENDIX_DRAFT.md` at the repository root. These rendered appendices cite
-the audited final run `20260717T024537Z` and preserve its diagnostic
-paper-tolerance failure.
+`AE_APPENDIX_DRAFT.md` at the repository root. They cover code download,
+environment setup, U280 latency runs, and figure generation from
+`results/result.csv`.

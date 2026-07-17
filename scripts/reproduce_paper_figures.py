@@ -18,7 +18,6 @@ from tempgenn.paper_reproduction import (
     figure14_batch_rows,
     figure14_sync_rows,
     platform_notes_as_dicts,
-    reference_csv_bytes,
     reference_csv_sha256,
     reference_input_path,
 )
@@ -115,7 +114,6 @@ def main() -> None:
     notes = platform_notes_as_dicts()
     _write_figure_data_manifest(OUT_DIR, figure_titles)
     _write_combined_figure_data(OUT_DIR, figures)
-    (OUT_DIR / "paper_figure_values.csv").write_bytes(reference_csv_bytes())
     (OUT_DIR / "baseline_sources.md").write_text(_format_notes(notes), encoding="utf-8")
     print(f"Wrote paper reproduction artifacts to {OUT_DIR.resolve()}")
 
@@ -141,7 +139,7 @@ def _write_figure_data_manifest(out_dir: Path, figure_titles: Dict[str, str]) ->
                 "csv_file": f"{figure_id}.csv",
                 "svg_file": f"{figure_id}.svg",
                 "input_file": input_path.relative_to(input_path.parents[1]).as_posix(),
-                "input_form": "source-labeled Python constants",
+                "input_form": "result.csv",
                 "input_sha256": input_sha256,
                 "reconstructed_source_csv_sha256": source_csv_sha256,
                 "data_status": "paper-reference reconstruction; not a fresh execution",

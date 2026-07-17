@@ -1,22 +1,18 @@
 # Paper Figure Reference Provenance
 
-`tempgenn/paper_reference_data.py` contains the 668 source-labeled numeric
-records used by `python3 -m scripts.reproduce_paper_figures`. The records are
+`results/result.csv` contains the 668 source-labeled numeric records used by
+`python3 -m scripts.reproduce_paper_figures`. The records are
 an anonymized transcription of the accepted-paper plotting sources. They are
-code constants, not a packaged source CSV and not output from the fresh U280
-measurement workflow.
+loaded by `tempgenn/result.py`.
 
-The canonical LF-normalized CSV used for the mechanical migration had SHA-256
+The LF-normalized `results/result.csv` has SHA-256
 `b92cafe211f9f001f097898b1aae59c3c132ed6e9956176394fd14c034b3d147`;
-the same digest is recorded beside the constants as `MIGRATED_CSV_SHA256`.
-The unit suite reserializes all code records in the original field order and
-requires the resulting digest to match, so any numeric or provenance edit is
-detected without shipping the source CSV.
+the same digest is recorded in `tempgenn/result.py` as `RESULT_CSV_SHA256`.
 
 The reference figures and fresh measurements are deliberately separate:
 
-- `results/paper_reproduction/`: runtime-only deterministic regeneration of
-  paper-reference CSV/SVG files from the code constants. The directory is not
+- `results/paper_reproduction/`: deterministic regeneration of
+  CSV/SVG files from `results/result.csv`. The directory is not
   pre-populated in the AE archive.
 - `results/reviewer_u280_runs/<run-id>/`: rows freshly emitted by four distinct
   U280 xclbins, including board logs, checksums, power samples, and provenance.

@@ -12,6 +12,7 @@ entries=(
   README.md ENVIRONMENT.md AD_APPENDIX_DRAFT.md AE_APPENDIX_DRAFT.md SC26_AE_REVIEWER_GUIDE.md ZENODO_RELEASE_CHECKLIST.md requirements.txt .gitattributes .gitignore Makefile
   scripts tempgenn tests hardware configs artifacts release reference_inputs
   results/ae_report
+  results/result.csv
   results/paper_reproduction
   results/board_u280
   results/fixtures
@@ -57,12 +58,16 @@ tar -czf "$pkg" \
   "${entries[@]}"
 
 archive_contents="$(tar -tzf "$pkg")"
-if ! grep -q '/tempgenn/paper_reference_data.py$' <<<"$archive_contents"; then
-  echo "AE package is missing code-embedded paper-reference data" >&2
+if ! grep -q '/tempgenn/result.py$' <<<"$archive_contents"; then
+  echo "AE package is missing the result.csv loader" >&2
+  exit 1
+fi
+if ! grep -q '/results/result.csv$' <<<"$archive_contents"; then
+  echo "AE package is missing results/result.csv" >&2
   exit 1
 fi
 required_paper_outputs=(
-  paper_figure_values.csv all_figure_data.csv figure_data_manifest.csv
+  all_figure_data.csv figure_data_manifest.csv
   fig2_execution_breakdown.csv fig2_execution_breakdown.svg
   fig4a_branch_parallelism_ratio.csv fig4a_branch_parallelism_ratio.svg
   fig9b_gpu_overhead_breakdown.csv fig9b_gpu_overhead_breakdown.svg

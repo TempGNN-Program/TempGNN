@@ -8,10 +8,10 @@ from pathlib import Path
 
 import scripts.reproduce_paper_figures as figure_script
 import tempgenn.paper_reproduction as paper
-from tempgenn.paper_reference_data import MIGRATED_CSV_SHA256
+from tempgenn.result import RESULT_CSV_SHA256
 
 
-class PaperReferenceDataTests(unittest.TestCase):
+class ResultDataTests(unittest.TestCase):
     def test_reference_table_is_complete_and_source_labeled(self) -> None:
         rows = paper.reference_rows()
 
@@ -22,9 +22,9 @@ class PaperReferenceDataTests(unittest.TestCase):
             {row["source_kind"] for row in rows},
         )
         self.assertTrue(all(isinstance(row["value"], float) for row in rows))
-        self.assertEqual("paper_reference_data.py", paper.reference_input_path().name)
-        self.assertEqual(64, len(MIGRATED_CSV_SHA256))
-        self.assertEqual(MIGRATED_CSV_SHA256, paper.reference_csv_sha256())
+        self.assertEqual("result.csv", paper.reference_input_path().name)
+        self.assertEqual(64, len(RESULT_CSV_SHA256))
+        self.assertEqual(RESULT_CSV_SHA256, paper.reference_csv_sha256())
         self.assertFalse(hasattr(paper, "_scaled_grid"))
 
     def test_figure10_uses_exact_workbook_blocks(self) -> None:
@@ -65,17 +65,17 @@ class PaperReferenceDataTests(unittest.TestCase):
         self.assertIn("  results/paper_reproduction\n", package_script)
         self.assertIn("required_paper_outputs=(", package_script)
         self.assertNotIn("  results/q14_real_tgl_edges\n", package_script)
-        self.assertFalse((root / "reference_inputs" / "paper_figure_values.csv").exists())
-        self.assertTrue((root / "tempgenn" / "paper_reference_data.py").is_file())
+        self.assertTrue((root / "results" / "result.csv").is_file())
+        self.assertTrue((root / "tempgenn" / "result.py").is_file())
         with tempfile.TemporaryDirectory() as temp_dir:
             output = Path(temp_dir) / "paper_reproduction"
             with mock.patch.object(figure_script, "OUT_DIR", output):
                 figure_script.main()
-            generated = output / "paper_figure_values.csv"
+            generated = output / "all_figure_data.csv"
             self.assertTrue(generated.is_file())
             self.assertEqual(
-                MIGRATED_CSV_SHA256,
-                hashlib.sha256(generated.read_bytes()).hexdigest(),
+                RESULT_CSV_SHA256,
+                hashlib.sha256((root / "results" / "result.csv").read_bytes()).hexdigest(),
             )
 
 

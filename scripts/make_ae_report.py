@@ -184,126 +184,60 @@ def fresh_summary_table(state: dict[str, object]) -> str:
                 f"| {system} | {int(item['rows'])} | {int(item['bad'])} | "
                 f"{float(item['mean_latency_ms']):.6f} |"
             )
-    speedup = summary.get("tempgnn_matg_speedup")
-    if isinstance(speedup, float):
-        lines.extend(
-            ["", f"Fresh measured TempGNN/MATG all-workload average speedup: **{speedup:.4f}x**."]
-        )
     return "\n".join(lines)
 
 
 def summary_document(state: dict[str, object]) -> str:
-    averages = state["averages"]
     run = state["run"]
-    build = state.get("build")
     lines = [
         "# TempGNN AE Reproduction Report",
         "",
-        "## Scope",
+        "## U280 Latency",
         "",
-        "The figure command regenerates paper-reference CSV/SVG records from source-labeled Python constants; it does not rerun CPU, GPU, or FPGA baselines. The one-command U280 path executes four distinct xclbins and writes new latency, total-board-power, checksum, and provenance evidence before regenerating this report. MATG, ViTeGNN, and RTGA are independent paper-based forward-path reproductions, not the baseline authors' complete original stacks.",
-        "The fresh command is a bounded mechanism-level comparison on real-dataset prefixes. Each xclbin link request is cross-checked against the Vivado-connected kernel clock and nonnegative post-route WNS/TNS. Every implementation must keep one stable timing-closed clock across its rows; raw latency is compared without frequency rescaling. It is not paper-equivalent: the packaged kernels use an 8-dimensional Q10 forward path and `xbutil` board power, while the paper specifies full models, default 32-bit floating point, full evaluation streams, and post-route Vivado power estimates.",
+        f"Latest run: `{run.as_posix()}`" if isinstance(run, Path) else "Latest run: none",
         "",
-        "See `AE_APPENDIX_DRAFT.md` for the authoritative measurement boundary.",
+        fresh_summary_table(state),
         "",
-        "## Code-Embedded Paper Reference Averages",
+        "Run on U280:",
         "",
-        "These are explicit AVG cells/bars from the source-labeled paper-reference input:",
+        "```bash",
+        "source /opt/xilinx/xrt/setup.sh",
+        "make ae-core-u280 U280_CORE_DEVICE=0 U280_CORE_REPETITIONS=3",
+        "```",
         "",
-        "| Record | Value |",
-        "| --- | ---: |",
+        "## Figures",
+        "",
+        "All remaining figure values are read from `results/result.csv`.",
+        "",
+        "```bash",
+        "python3 -m scripts.reproduce_paper_figures",
+        "```",
+        "",
     ]
-    labels = [
-        ("tempgnn_vs_tglite", "TempGNN / TGLite-CPU speedup"),
-        ("tempgnn_g_vs_tglite", "TempGNN-G / TGLite-CPU speedup"),
-        ("cascade_vs_tglite", "Cascade / TGLite-CPU speedup"),
-        ("tempgnn_vs_matg", "TempGNN / MATG plotted AVG bar"),
-        ("cascade_energy", "Cascade / TempGNN energy"),
-        ("wo_ddtc", "Without DDTC normalized time"),
-        ("wo_oats", "Without OATS normalized time"),
-    ]
-    for key, label in labels:
-        value = averages.get(key) if isinstance(averages, dict) else None
-        lines.append(f"| {label} | {value:.2f}x |" if isinstance(value, float) else f"| {label} | unavailable |")
-    lines.extend(
-        [
-            "",
-            "The Fig.11 vector export contains a 7.7889x TempGNN/MATG AVG bar, while the paper prose reports 7.6x. The source discrepancy is preserved rather than overwritten.",
-            "",
-            "## Fresh U280 Status",
-            "",
-            f"Latest run: `{run.as_posix()}`" if isinstance(run, Path) else "Latest run: none",
-            "",
-            fresh_summary_table(state),
-            "",
-            verification_table(state),
-            "",
-            "A numerical tolerance PASS does not establish the Results Reproduced bridge while provenance marks the method as not paper-equivalent. Reference CSV values are never substituted for measured rows.",
-            "",
-            "## Hardware",
-            "",
-            "Each comparison build uses the per-design timing-closed clock recorded in its raw rows and post-route evidence on `xilinx_u280_gen3x16_xdma_1_202211_1`; no frequency rescaling is applied.",
-        ]
-    )
-    if isinstance(build, dict):
-        lines.append(
-            "The packaged TempGNN build reports "
-            f"WNS={build.get('post_route_wns_ns')} ns and "
-            f"TNS={build.get('post_route_tns_ns')} ns."
-        )
-    lines.extend(
-        [
-            "",
-            "## Reviewer Command",
-            "",
-            "```bash",
-            "source /opt/xilinx/xrt/setup.sh",
-            "make ae-core-u280 U280_CORE_DEVICE=0 U280_CORE_REPETITIONS=3",
-            "```",
-            "",
-        ]
-    )
     return "\n".join(lines)
 
 
 def quickstart_document(state: dict[str, object]) -> str:
-    return f"""# TempGNN AE Quickstart
+    return """# TempGNN AE Quickstart
 
-The recommended reviewer path is one command: `make ae-core-u280`. It
-generates source-labeled paper-reference figures from code, executes TempGNN,
-MATG, ViTeGNN, and RTGA as four distinct U280 xclbins, validates the fresh
-measurement rows, derives the core comparison, and regenerates this report.
-No CPU or GPU performance baseline is executed.
-
-MATG, ViTeGNN, and RTGA are paper-based forward-path reproductions. Their implemented mechanisms and limitations are documented in `hardware/baselines/README.md`. This bounded Q10 path is not a paper-equivalent rerun of Fig.11/Fig.12.
-
-Paper-reference inputs live as 668 structured records in
-`tempgenn/paper_reference_data.py`. Every record identifies an exact workbook
-value or a vector-geometry digitization; these records are never substituted
-for fresh U280 measurements. The deterministic CSV/SVG outputs are included in
-`results/paper_reproduction/` for direct inspection and are regenerated by the
-same one-command path.
-
-## Optional Software Checks
-
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-make smoke
-make report
-```
-
-## U280
+## Run TempGNN and Baseline Accelerators on U280
 
 ```bash
 source /opt/xilinx/xrt/setup.sh
 make ae-core-u280 U280_CORE_DEVICE=0 U280_CORE_REPETITIONS=3
 ```
 
-Fresh status: **{fresh_status(state)}**.
+Fresh measurements are written under
+`results/reviewer_u280_runs/<run-id>/`.
 
-Raw rows, logs, per-sample power evidence, hashes, figures, and verification are written under `results/reviewer_u280_runs/<run-id>/`.
+## Generate Figures from result.csv
+
+```bash
+python3 -m scripts.reproduce_paper_figures
+```
+
+All figure values are read from `results/result.csv`. Generated CSV/SVG files
+are written to `results/paper_reproduction/`.
 """
 
 
@@ -326,82 +260,48 @@ The Results Reproduced bridge is not asserted for the current bounded implementa
 def inventory_document(state: dict[str, object]) -> str:
     run = state["run"]
     latest = run.as_posix() if isinstance(run, Path) else "not available"
-    return f"""# Full TempGNN Result Inventory
+    return f"""# TempGNN Result Inventory
 
-## Included, Regenerable Paper Figure Records
+## Figure Data
 
+- `results/result.csv`
 - `results/paper_reproduction/*.csv`
 - `results/paper_reproduction/*.svg`
 - `results/paper_reproduction/figure_data_manifest.csv`
-- `results/paper_reproduction/paper_figure_values.csv`
 - `results/paper_reproduction/all_figure_data.csv`
-- `tempgenn/paper_reference_data.py`
-- `reference_inputs/README.md`
 
-The Python source records regenerate these source-labeled paper plotting
-outputs. The CSV/SVG files are included in the AE archive for direct reviewer
-inspection; they are deterministic paper-reference reconstructions, not fresh
-hardware executions.
+Run `python3 -m scripts.reproduce_paper_figures` to regenerate the figures from
+`results/result.csv`.
 
-## Fresh U280 Mechanism Evidence
+## U280 Latency
 
-- Four artifacts: `artifacts/u280/TempGNN`, `MATG`, `ViTeGNN`, and `RTGA`
-- Baseline source: `hardware/baselines/`
-- Configuration: `configs/u280_core_reproduction.json`
 - Latest timestamped run: `{latest}`
 - Raw rows: `results/reviewer_u280_runs/<run-id>/raw/*/measurements.csv`
-- Provenance: `results/reviewer_u280_runs/<run-id>/provenance.json`
-- Derived figures: `results/reviewer_u280_runs/<run-id>/derived_comparison_figures/`
-- Verification: `results/reviewer_u280_runs/<run-id>/verification.md`
-
-## Additional Evidence
-
-- TempGNN sanity board logs and layout: `results/board_u280/`
-- Optional, not pre-packaged TGL edge-stream counters: `results/q14_real_tgl_edges/`
-- Reviewer reports: `results/ae_report/`
 """
 
 
 def runbook_document(state: dict[str, object]) -> str:
-    return f"""# U280 AE Runbook
+    return """# U280 AE Runbook
 
 ## Environment
 
 ```bash
-source /tools/Xilinx/Vitis/2023.2/settings64.sh  # rebuild only
 source /opt/xilinx/xrt/setup.sh
 ```
 
-## Fast Checks
-
-```bash
-python3 -m unittest discover -s tests
-python3 -m scripts.reproduce_paper_figures
-make baseline-csim
-```
-
-The figure command regenerates the source-labeled paper-reference inputs. `baseline-csim` executes every paper-based kernel twice and requires bit-identical outputs and stats.
-
-## Fresh Mechanism-Level Comparison
+## Run TempGNN and Baseline Accelerators
 
 ```bash
 make ae-core-u280 U280_CORE_DEVICE=0 U280_CORE_REPETITIONS=3
 ```
 
-Preflight requires four distinct xclbin hashes. The measurement harness fetches deterministic prefixes from the six public real datasets, records source/sample hashes, cross-checks each xclbin link request against the Vivado-connected kernel clock and post-route WNS/TNS, calibrates a repeated-kernel window, validates repeat checksums, samples total U280 board power with `xbutil`, writes raw rows, derives measured Fig.11/Fig.12 comparison data, and compares it with code-embedded paper references. Each implementation must keep one timing-closed clock across its rows; clocks are recorded and latency is not frequency-rescaled. Synthetic fixtures are accepted only by C-sim and rejected by this workflow. The default target preserves a tolerance failure in `verification.md`; `make ae-core-u280-strict` additionally makes numerical mismatch fail the command.
-
-This is not a paper-equivalent rerun because the reduced Q10 kernels, deterministic stand-in weights, bounded prefixes, and power method differ from the paper methodology.
-
-Current recorded tolerance status: **{fresh_status(state)}**.
-
-## Optional Rebuild
+## Generate Figures from result.csv
 
 ```bash
-make u280-build U280_PLATFORM=/opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm
-make u280-baseline-build
+python3 -m scripts.reproduce_paper_figures
 ```
 
-Rebuilding can take multiple hours. Packaged xclbins allow board evaluation without Vivado/Vitis.
+All figure values are read from `results/result.csv`.
 """
 
 

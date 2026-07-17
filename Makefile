@@ -46,8 +46,8 @@ AE_PACKAGE ?= ae_export/pap142_tempgnn_sc26_ae_u280.tgz
 
 help:
 	@echo "TempGNN AE targets"
-	@echo "  make figures     - generate paper-reference CSV/SVG files from code constants"
-	@echo "  make smoke       - run unit tests and generate paper-reference figures"
+	@echo "  make figures     - generate CSV/SVG figures from results/result.csv"
+	@echo "  make smoke       - run unit tests and generate figures from results/result.csv"
 	@echo "  make data        - download TGL edge streams for Q14 (WIKI/MOOC/REDDIT by default)"
 	@echo "  make q14         - run real edge-stream OATS/Q14 profiling"
 	@echo "  make baseline-csim - compile and run the three paper-based baseline kernels on a generated fixture"
