@@ -81,12 +81,16 @@ def main() -> None:
     repo_root = Path(__file__).resolve().parents[1]
     builds = parse_assignments(args.build, "--build", required=set(SYSTEMS))
     logs = parse_assignments(args.build_log, "--build-log")
+    system_hosts = parse_assignments(args.system_host, "--system-host")
     config_path = repo_root / args.config
     config = json.loads(config_path.read_text(encoding="utf-8"))
     config_by_system = {item["name"]: item for item in config["systems"]}
 
     if not args.host.is_file():
         raise SystemExit(f"common XRT host does not exist: {args.host}")
+    for system, host in system_hosts.items():
+        if not host.is_file():
+            raise SystemExit(f"{system}: XRT host override does not exist: {host}")
     if not args.baseline_reference.is_file():
         raise SystemExit(f"baseline C-sim reference does not exist: {args.baseline_reference}")
     xclbinutil = shutil.which(args.xclbinutil)
@@ -125,6 +129,7 @@ def main() -> None:
         }
 
     for system, (kernel, xclbin_name) in SYSTEMS.items():
+        system_config = config_by_system[system]
         build_dir = builds[system].resolve()
         raw_xclbin = build_dir / xclbin_name
         if not raw_xclbin.is_file():
@@ -147,7 +152,8 @@ def main() -> None:
             redactions=redactions,
         )
         host_out = bin_dir / "u280_forward_benchmark_host"
-        shutil.copy2(args.host, host_out)
+        selected_host = system_hosts.get(system, args.host)
+        shutil.copy2(selected_host, host_out)
         ensure_binary_is_anonymous(host_out, redactions)
         if system != "TempGNN":
             reference_out = bin_dir / "baseline_csim"
@@ -183,7 +189,9 @@ def main() -> None:
         info_path = evidence_dir / "packaged_xclbin_info.txt"
         info_path.write_text(redact_text(info, redactions), encoding="utf-8")
         evidence_files[info_path.name] = sha256_file(info_path)
-        expected_frequency = float(config.get("requested_frequency_mhz", 225))
+        expected_frequency = float(
+            system_config.get("requested_frequency_mhz", config.get("requested_frequency_mhz", 225))
+        )
         frequency_tolerance = float(config.get("frequency_comparison_tolerance_mhz", 0.5))
         xclbin_requested_mhz = parse_xclbin_link_requested_frequency(info, kernel)
         vivado_requested_mhz, post_route_frequency_mhz = parse_vivado_kernel_clock(
@@ -208,7 +216,6 @@ def main() -> None:
                 f"TNS={post_route_tns_ns:.3f} ns"
             )
 
-        system_config = config_by_system[system]
         source_hashes = {
             source: sha256_file(repo_root / source) for source in system_config["sources"]
         }
@@ -223,7 +230,7 @@ def main() -> None:
             "kernel": kernel,
             "source_revision": system_config["source_revision"],
             "platform": config.get("platform"),
-            "requested_frequency_mhz": config.get("requested_frequency_mhz", 225),
+            "requested_frequency_mhz": expected_frequency,
             "xclbin_link_requested_frequency_mhz": xclbin_requested_mhz,
             "vivado_kernel_requested_frequency_mhz": vivado_requested_mhz,
             "post_route_kernel_frequency_mhz": post_route_frequency_mhz,
@@ -236,7 +243,8 @@ def main() -> None:
             "raw_build_xclbin_sha256": sha256_file(raw_xclbin),
             "distributed_xclbin_sha256": sha256_file(distributed_xclbin),
             "bitstream_section_sha256": bitstream_sha,
-            "common_host_sha256": sha256_file(host_out),
+            "host_sha256": sha256_file(host_out),
+            "host_selection": "system_override" if system in system_hosts else "common",
             "baseline_reference_sha256": (
                 sha256_file(bin_dir / "baseline_csim") if system != "TempGNN" else None
             ),
@@ -269,6 +277,13 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--build-log", action="append", default=[], metavar="SYSTEM=PATH")
     parser.add_argument("--host", type=Path, required=True)
+    parser.add_argument(
+        "--system-host",
+        action="append",
+        default=[],
+        metavar="SYSTEM=PATH",
+        help="optional per-system XRT host override",
+    )
     parser.add_argument("--baseline-reference", type=Path, required=True)
     parser.add_argument("--baseline-validation-log", type=Path)
     parser.add_argument("--config", type=Path, default=Path("configs/u280_core_reproduction.json"))

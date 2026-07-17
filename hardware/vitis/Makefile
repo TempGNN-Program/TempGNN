@@ -10,6 +10,7 @@ CXX ?= g++
 XILINX_XRT ?= /opt/xilinx/xrt
 KERNEL ?= stats
 FREQ_HZ ?= 225000000
+KERNEL_CLOCK_CUS ?= $(KERNEL_NAME)_1
 
 ifeq ($(KERNEL),forward)
 KERNEL_NAME := tempgnn_forward_kernel
@@ -17,9 +18,10 @@ KERNEL_SRC := $(ROOT_DIR)/hardware/src/tempgnn_forward_kernel.cpp
 KERNEL_XO := $(BUILD_DIR)/tempgnn_forward_kernel.$(TARGET).xo
 XCLBIN := $(BUILD_DIR)/tempgnn_forward_kernel.$(TARGET).xclbin
 HOST := $(BUILD_DIR)/u280_forward_benchmark_host
-HOST_SRC := $(ROOT_DIR)/hardware/baselines/host/u280_forward_benchmark_host.cpp
-HOST_HEADER := $(ROOT_DIR)/hardware/baselines/include/baseline_hls.hpp
-HOST_INCLUDES := -I$(ROOT_DIR)/hardware/baselines/include
+HOST_SRC := $(ROOT_DIR)/hardware/host/tempgnn_forward_parallel_xrt_host.cpp
+HOST_HEADER := $(ROOT_DIR)/hardware/include/tempgnn_hls.hpp \
+	$(ROOT_DIR)/hardware/host/tempgnn_forward_cache_key.hpp
+HOST_INCLUDES := -I$(ROOT_DIR)/hardware/include
 CFG := $(ROOT_DIR)/hardware/vitis/tempgnn_forward_u280.cfg
 HLS_CFG := $(ROOT_DIR)/hardware/vitis/tempgnn_forward_hls.cfg
 else
@@ -62,6 +64,7 @@ $(XCLBIN): $(KERNEL_XO) $(CFG)
 	$(VPP) -l -t $(TARGET) --platform $(PLATFORM) \
 		--temp_dir $(BUILD_DIR)/_x \
 		--remote_ip_cache $(IP_CACHE_DIR) \
+		--freqhz $(FREQ_HZ):$(KERNEL_CLOCK_CUS) \
 		$(VPP_LINK_FLAGS) \
 		--config $(CFG) \
 		$(KERNEL_XO) -o $@

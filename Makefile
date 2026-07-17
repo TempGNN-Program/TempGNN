@@ -7,6 +7,9 @@ BOARD_JSON ?= results/board_u280/summary.json
 
 U280_PLATFORM ?= xilinx_u280_gen3x16_xdma_1_202211_1
 U280_BUILD_DIR ?= $(CURDIR)/build/vitis_u280_forward_hw
+U280_FORWARD_FREQ_HZ ?= 168000000
+U280_FORWARD_CFG ?= $(CURDIR)/hardware/vitis/tempgnn_forward_u280_21cu.cfg
+U280_FORWARD_CLOCK_CUS ?= tempgnn_forward_kernel_1,tempgnn_forward_kernel_2,tempgnn_forward_kernel_3,tempgnn_forward_kernel_4,tempgnn_forward_kernel_5,tempgnn_forward_kernel_6,tempgnn_forward_kernel_7,tempgnn_forward_kernel_8,tempgnn_forward_kernel_9,tempgnn_forward_kernel_10,tempgnn_forward_kernel_11,tempgnn_forward_kernel_12,tempgnn_forward_kernel_13,tempgnn_forward_kernel_14,tempgnn_forward_kernel_15,tempgnn_forward_kernel_16,tempgnn_forward_kernel_17,tempgnn_forward_kernel_18,tempgnn_forward_kernel_19,tempgnn_forward_kernel_20,tempgnn_forward_kernel_21
 U280_XCLBIN ?= artifacts/u280/TempGNN/bin/tempgnn_forward_kernel.hw.xclbin
 U280_HOST ?= artifacts/u280/TempGNN/bin/u280_forward_benchmark_host
 U280_FIXTURE ?= results/fixtures/forward_maxbatch
@@ -17,7 +20,9 @@ U280_CORE_CONFIG ?= configs/u280_core_reproduction.json
 U280_CORE_OUT ?= results/reviewer_u280_runs
 U280_CORE_DEVICE ?= 0
 U280_CORE_REPETITIONS ?= 3
+U280_CORE_MATCH_FLAG ?=
 U280_STAGE_HOST ?= build/baselines/matg_hw/u280_forward_benchmark_host
+U280_STAGE_TEMPGNN_HOST ?= $(U280_STAGE_TEMPGNN_BUILD)/u280_forward_benchmark_host
 U280_STAGE_REFERENCE ?= build/baselines/matg_hw/baseline_csim
 U280_STAGE_VALIDATION_LOG ?= build/baseline_csim_real24.log
 U280_STAGE_TEMPGNN_BUILD ?= $(U280_BUILD_DIR)
@@ -29,30 +34,32 @@ U280_STAGE_MATG_LOG ?= build/matg_final_build.log
 U280_STAGE_VITEGNN_LOG ?= build/vitegnn_final_build.log
 U280_STAGE_RTGA_LOG ?= build/rtga_final_build.log
 
-VPP_LINK_FLAGS ?= --freqhz 225000000:tempgnn_forward_kernel_1
 AE_PACKAGE ?= ae_export/pap142_tempgnn_sc26_ae_u280.tgz
 
 .PHONY: help smoke test figures data q14 report all package \
 	baseline-csim u280-build u280-baseline-build u280-run u280-layout \
 	u280-stage-artifacts u280-core-preflight ae-core-u280 \
+	ae-core-u280-strict \
 	release-preflight release-preflight-results \
 	clean-ae
 
 help:
 	@echo "TempGNN AE targets"
-	@echo "  make smoke       - run unit tests and regenerate figure CSV/SVG files"
+	@echo "  make figures     - generate paper-reference CSV/SVG files from code constants"
+	@echo "  make smoke       - run unit tests and generate paper-reference figures"
 	@echo "  make data        - download TGL edge streams for Q14 (WIKI/MOOC/REDDIT by default)"
 	@echo "  make q14         - run real edge-stream OATS/Q14 profiling"
 	@echo "  make baseline-csim - compile and run the three paper-based baseline kernels on a generated fixture"
 	@echo "  make report      - regenerate AE_README, runbook, inventory, and summary"
-	@echo "  make all         - smoke + q14 + report (Python-only default AE path)"
+	@echo "  make all         - optional software checks and report (no performance baselines)"
 	@echo "  make u280-build  - build U280 forward xclbin and XRT host when U280 platform exists"
 	@echo "  make u280-baseline-build - build distinct MATG/ViTeGNN/RTGA U280 xclbins and common host"
 	@echo "  make u280-stage-artifacts - stage anonymized xclbins and post-route provenance"
 	@echo "  make u280-run    - run prebuilt/built U280 xclbin on a U280 board"
 	@echo "  make u280-layout - render FPGA layout image from routed U280 LOC export"
 	@echo "  make u280-core-preflight - verify four distinct reviewer-runnable U280 implementations"
-	@echo "  make ae-core-u280 - freshly run TempGNN/MATG/ViTeGNN/RTGA and regenerate Fig.11/Fig.12"
+	@echo "  make ae-core-u280 - one-click U280 validation plus paper/core figure generation"
+	@echo "  make ae-core-u280-strict - additionally require numerical paper-figure tolerance PASS"
 	@echo "  make release-preflight - require license, DOI metadata, distinct U280 artifacts, and a complete fresh run"
 	@echo "  make release-preflight-results - additionally require paper-equivalent scope and tolerance PASS"
 	@echo "  make package     - create AE tarball"
@@ -80,7 +87,7 @@ report:
 		--board-json $(BOARD_JSON) \
 		--out $(AE_OUT)
 
-all: smoke q14 report
+all: smoke report
 
 baseline-csim:
 	$(PYTHON) scripts/generate_u280_comparison_fixture.py \
@@ -97,7 +104,9 @@ u280-build:
 		PLATFORM="$(U280_PLATFORM)" \
 		TARGET=hw \
 		BUILD_DIR="$(U280_BUILD_DIR)" \
-		VPP_LINK_FLAGS="$(VPP_LINK_FLAGS)" \
+		FREQ_HZ="$(U280_FORWARD_FREQ_HZ)" \
+		CFG="$(U280_FORWARD_CFG)" \
+		KERNEL_CLOCK_CUS="$(U280_FORWARD_CLOCK_CUS)" \
 		xclbin host 2>&1 | tee build/tempgnn_final_build.log'
 
 u280-baseline-build:
@@ -120,6 +129,7 @@ u280-stage-artifacts:
 		--build-log ViTeGNN=$(U280_STAGE_VITEGNN_LOG) \
 		--build-log RTGA=$(U280_STAGE_RTGA_LOG) \
 		--host $(U280_STAGE_HOST) \
+		--system-host TempGNN=$(U280_STAGE_TEMPGNN_HOST) \
 		--baseline-reference $(U280_STAGE_REFERENCE) \
 		--baseline-validation-log $(U280_STAGE_VALIDATION_LOG)
 
@@ -141,12 +151,16 @@ u280-core-preflight:
 		--config $(U280_CORE_CONFIG) \
 		--preflight-only
 
-ae-core-u280:
+ae-core-u280: figures
 	$(PYTHON) -m scripts.run_u280_core_reproduction \
 		--config $(U280_CORE_CONFIG) \
 		--out $(U280_CORE_OUT) \
 		--device $(U280_CORE_DEVICE) \
-		--repetitions $(U280_CORE_REPETITIONS)
+		--repetitions $(U280_CORE_REPETITIONS) $(U280_CORE_MATCH_FLAG)
+	$(MAKE) report
+
+ae-core-u280-strict:
+	$(MAKE) ae-core-u280 U280_CORE_MATCH_FLAG=--require-paper-match
 
 release-preflight:
 	$(PYTHON) -m scripts.check_release_readiness \
@@ -159,7 +173,7 @@ release-preflight-results:
 		--runs $(U280_CORE_OUT) \
 		--require-results-reproduced
 
-package: report
+package: figures report
 	bash scripts/package_ae.sh $(AE_PACKAGE)
 
 clean-ae:

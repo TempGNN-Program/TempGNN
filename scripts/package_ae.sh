@@ -12,7 +12,6 @@ entries=(
   README.md ENVIRONMENT.md AD_APPENDIX_DRAFT.md AE_APPENDIX_DRAFT.md SC26_AE_REVIEWER_GUIDE.md ZENODO_RELEASE_CHECKLIST.md requirements.txt .gitattributes .gitignore Makefile
   scripts tempgenn tests hardware configs artifacts release reference_inputs
   results/ae_report
-  results/q14_real_tgl_edges
   results/paper_reproduction
   results/board_u280
   results/fixtures
@@ -41,8 +40,6 @@ tar -czf "$pkg" \
   --exclude='*.pyc' \
   --exclude='results/ae_report/old_*' \
   --exclude='results/ae_report/ae_summary.json' \
-  --exclude='results/paper_reproduction/summary.json' \
-  --exclude='results/q14_real_tgl_edges/q14_dataset_model_summary.json' \
   --exclude='external/tgl/DATA' \
   --exclude='*/_x' \
   --exclude='*/_x/*' \
@@ -58,6 +55,30 @@ tar -czf "$pkg" \
   --exclude='hardware/vitis/xcd.log' \
   --exclude='results/board_u280/layout_hook/*.dcp' \
   "${entries[@]}"
+
+archive_contents="$(tar -tzf "$pkg")"
+if ! grep -q '/tempgenn/paper_reference_data.py$' <<<"$archive_contents"; then
+  echo "AE package is missing code-embedded paper-reference data" >&2
+  exit 1
+fi
+required_paper_outputs=(
+  paper_figure_values.csv all_figure_data.csv figure_data_manifest.csv
+  fig2_execution_breakdown.csv fig2_execution_breakdown.svg
+  fig4a_branch_parallelism_ratio.csv fig4a_branch_parallelism_ratio.svg
+  fig9b_gpu_overhead_breakdown.csv fig9b_gpu_overhead_breakdown.svg
+  fig10_speedup_tglite_cpu.csv fig10_speedup_tglite_cpu.svg
+  fig11_speedup_matg.csv fig11_speedup_matg.svg
+  fig12_energy_tempgnn.csv fig12_energy_tempgnn.svg
+  fig13_ablation_time.csv fig13_ablation_time.svg
+  fig14a_batch_sensitivity.csv fig14a_batch_sensitivity.svg
+  fig14b_tdp_entries.csv fig14b_tdp_entries.svg
+)
+for output in "${required_paper_outputs[@]}"; do
+  if ! grep -q "/results/paper_reproduction/${output}$" <<<"$archive_contents"; then
+    echo "AE package is missing results/paper_reproduction/${output}" >&2
+    exit 1
+  fi
+done
 
 ls -lh "$pkg"
 sha256sum "$pkg" > "${pkg}.sha256"

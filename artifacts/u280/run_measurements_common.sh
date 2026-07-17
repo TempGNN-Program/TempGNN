@@ -11,6 +11,7 @@ MODELS=""
 REPETITIONS="3"
 OUTPUT=""
 BASELINE_REFERENCE=""
+REQUESTED_FREQUENCY_MHZ="225"
 
 while [[ $# -gt 0 ]]; do
   case "$1" in
@@ -24,6 +25,7 @@ while [[ $# -gt 0 ]]; do
     --repetitions) REPETITIONS="$2"; shift 2 ;;
     --output) OUTPUT="$2"; shift 2 ;;
     --baseline-reference) BASELINE_REFERENCE="$2"; shift 2 ;;
+    --requested-frequency-mhz) REQUESTED_FREQUENCY_MHZ="$2"; shift 2 ;;
     *) echo "Unknown argument: $1" >&2; exit 2 ;;
   esac
 done
@@ -52,5 +54,6 @@ exec python3 "${ROOT_DIR}/scripts/measure_u280_forward.py" \
   --datasets "${DATASETS}" \
   --models "${MODELS}" \
   --repetitions "${REPETITIONS}" \
+  --requested-frequency-mhz "${REQUESTED_FREQUENCY_MHZ}" \
   --output "${OUTPUT}" \
   "${EXTRA_ARGS[@]}"

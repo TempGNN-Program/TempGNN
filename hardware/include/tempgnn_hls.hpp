@@ -8,7 +8,7 @@
 #endif
 
 #ifndef TEMPGNN_MAX_VERTICES
-#define TEMPGNN_MAX_VERTICES 16384
+#define TEMPGNN_MAX_VERTICES 4096
 #endif
 
 #define TEMPGNN_MAX_VERTEX_OFFSETS (TEMPGNN_MAX_VERTICES + 1)
@@ -88,6 +88,7 @@ enum TempGNNStatIndex {
     TEMPGNN_STAT_ENABLE_DDTC = 12,
     TEMPGNN_STAT_ENABLE_OATS = 13,
     TEMPGNN_STAT_TDP_ENTRIES = 14,
+    TEMPGNN_STAT_PARTIAL_REDUCTIONS = 15,
     TEMPGNN_STAT_COUNT = 16
 };
 
@@ -127,6 +128,7 @@ extern "C" void tempgnn_forward_kernel(
     uint32_t tdp_entries,
     uint32_t enable_ddtc,
     uint32_t enable_oats,
+    uint64_t input_cache_key,
     const int16_t *initial_memory,
     const int16_t *event_features,
     const int16_t *weight_self,

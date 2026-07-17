@@ -11,8 +11,9 @@ method, U280 shell, requested 225 MHz clock, and board-power sampling method
 constant. Each baseline has a separate top-level kernel, synthesis result, and
 xclbin. `scripts/run_u280_core_reproduction.py` rejects byte-identical xclbins.
 It cross-checks each xclbin link request against the Vivado `ap_clk` connection
-and nonnegative post-route WNS/TNS, then rejects normalized comparison
-generation if the four implemented kernel clocks differ.
+and nonnegative post-route WNS/TNS. Every implementation must keep one stable
+timing-closed clock across its rows; raw latency is compared without frequency
+rescaling.
 Each sampler scans at most 64 recent history slots to collect up to the requested
 20 temporally valid candidates, so events after the target timestamp do not
 silently consume the comparison fanout.

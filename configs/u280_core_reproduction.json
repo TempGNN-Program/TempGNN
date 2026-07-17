@@ -11,6 +11,7 @@
   ],
   "platform": "xilinx_u280_gen3x16_xdma_1_202211_1",
   "requested_frequency_mhz": 225,
+  "require_equal_post_route_frequencies": false,
   "frequency_comparison_tolerance_mhz": 0.5,
   "repetitions": 3,
   "energy_consistency_tolerance": 0.02,
@@ -19,20 +20,24 @@
   "systems": [
     {
       "name": "TempGNN",
-      "source_revision": "pap142-forward-path-reproduction-v1",
+      "expected_compute_units": 21,
+      "requested_frequency_mhz": 168,
+      "source_revision": "pap142-forward-path-cache-key-v3-21cu",
       "build_sources": [
         "hardware/src/tempgnn_forward_kernel.cpp",
         "hardware/include/tempgnn_hls.hpp",
         "hardware/vitis/tempgnn_forward_hls.cfg",
-        "hardware/vitis/tempgnn_forward_u280.cfg"
+        "hardware/vitis/tempgnn_forward_u280_21cu.cfg"
       ],
       "sources": [
         "hardware/src/tempgnn_forward_kernel.cpp",
         "hardware/include/tempgnn_hls.hpp",
         "hardware/vitis/Makefile",
         "hardware/vitis/tempgnn_forward_hls.cfg",
-        "hardware/vitis/tempgnn_forward_u280.cfg",
-        "hardware/baselines/host/u280_forward_benchmark_host.cpp",
+        "hardware/vitis/tempgnn_forward_u280_21cu.cfg",
+        "hardware/host/tempgnn_forward_cache_key.hpp",
+        "hardware/host/tempgnn_forward_parallel_xrt_host.cpp",
+        "hardware/tb/tempgnn_forward_fixture_tb.cpp",
         "scripts/fetch_u280_dataset_samples.py",
         "scripts/generate_u280_comparison_fixture.py",
         "scripts/measure_u280_forward.py",
@@ -47,11 +52,14 @@
       "command": [
         "bash", "{runner}", "--host", "{host}", "--xclbin", "{xclbin}",
         "--device", "{device}", "--datasets", "{datasets}", "--models", "{models}",
+        "--requested-frequency-mhz", "{requested_frequency_mhz}",
         "--repetitions", "{repetitions}", "--output", "{raw_csv}"
       ]
     },
     {
       "name": "MATG",
+      "expected_compute_units": 1,
+      "requested_frequency_mhz": 225,
       "source_revision": "pap142-paper-based-matg-reproduction-v4",
       "build_sources": [
         "hardware/baselines/src/matg_kernel.cpp",
@@ -81,11 +89,14 @@
       "command": [
         "bash", "{runner}", "--host", "{host}", "--xclbin", "{xclbin}",
         "--device", "{device}", "--datasets", "{datasets}", "--models", "{models}",
+        "--requested-frequency-mhz", "{requested_frequency_mhz}",
         "--repetitions", "{repetitions}", "--output", "{raw_csv}"
       ]
     },
     {
       "name": "ViTeGNN",
+      "expected_compute_units": 1,
+      "requested_frequency_mhz": 225,
       "source_revision": "pap142-paper-based-vitegnn-reproduction-v4",
       "build_sources": [
         "hardware/baselines/src/vitegnn_kernel.cpp",
@@ -115,11 +126,14 @@
       "command": [
         "bash", "{runner}", "--host", "{host}", "--xclbin", "{xclbin}",
         "--device", "{device}", "--datasets", "{datasets}", "--models", "{models}",
+        "--requested-frequency-mhz", "{requested_frequency_mhz}",
         "--repetitions", "{repetitions}", "--output", "{raw_csv}"
       ]
     },
     {
       "name": "RTGA",
+      "expected_compute_units": 1,
+      "requested_frequency_mhz": 225,
       "source_revision": "pap142-paper-based-rtga-reproduction-v3",
       "build_sources": [
         "hardware/baselines/src/rtga_kernel.cpp",
@@ -149,6 +163,7 @@
       "command": [
         "bash", "{runner}", "--host", "{host}", "--xclbin", "{xclbin}",
         "--device", "{device}", "--datasets", "{datasets}", "--models", "{models}",
+        "--requested-frequency-mhz", "{requested_frequency_mhz}",
         "--repetitions", "{repetitions}", "--output", "{raw_csv}"
       ]
     }

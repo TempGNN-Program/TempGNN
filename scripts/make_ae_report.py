@@ -129,12 +129,12 @@ def summary_document(state: dict[str, object]) -> str:
         "",
         "## Scope",
         "",
-        "The CPU-only command regenerates paper-reference CSV/SVG records from a source-labeled table; it does not rerun CPU, GPU, or FPGA baselines. The fresh U280 command executes four distinct xclbins and writes new latency, total-board-power, checksum, and provenance evidence. MATG, ViTeGNN, and RTGA are independent paper-based forward-path reproductions, not the baseline authors' complete original stacks.",
-        "The fresh command is a bounded mechanism-level comparison on real-dataset prefixes. Each xclbin link request is cross-checked against the Vivado-connected kernel clock and nonnegative post-route WNS/TNS; unequal timing-closed clocks block normalized comparison generation. It is not paper-equivalent: the packaged kernels use an 8-dimensional Q10 forward path and `xbutil` board power, while the paper specifies full models, default 32-bit floating point, full evaluation streams, and post-route Vivado power estimates.",
+        "The figure command regenerates paper-reference CSV/SVG records from source-labeled Python constants; it does not rerun CPU, GPU, or FPGA baselines. The one-command U280 path executes four distinct xclbins and writes new latency, total-board-power, checksum, and provenance evidence before regenerating this report. MATG, ViTeGNN, and RTGA are independent paper-based forward-path reproductions, not the baseline authors' complete original stacks.",
+        "The fresh command is a bounded mechanism-level comparison on real-dataset prefixes. Each xclbin link request is cross-checked against the Vivado-connected kernel clock and nonnegative post-route WNS/TNS. Every implementation must keep one stable timing-closed clock across its rows; raw latency is compared without frequency rescaling. It is not paper-equivalent: the packaged kernels use an 8-dimensional Q10 forward path and `xbutil` board power, while the paper specifies full models, default 32-bit floating point, full evaluation streams, and post-route Vivado power estimates.",
         "",
         "See `AE_APPENDIX_DRAFT.md` for the authoritative measurement boundary.",
         "",
-        "## Packaged Reference Averages",
+        "## Code-Embedded Paper Reference Averages",
         "",
         "These are explicit AVG cells/bars from the source-labeled paper-reference input:",
         "",
@@ -168,7 +168,7 @@ def summary_document(state: dict[str, object]) -> str:
             "",
             "## Hardware",
             "",
-            "All four comparison builds request 225 MHz on `xilinx_u280_gen3x16_xdma_1_202211_1`.",
+            "Each comparison build uses the per-design timing-closed clock recorded in its raw rows and post-route evidence on `xilinx_u280_gen3x16_xdma_1_202211_1`; no frequency rescaling is applied.",
         ]
     )
     if isinstance(board, dict):
@@ -179,13 +179,10 @@ def summary_document(state: dict[str, object]) -> str:
     lines.extend(
         [
             "",
-            "## Commands",
+            "## Reviewer Command",
             "",
             "```bash",
-            "python3 -m unittest discover -s tests",
-            "python3 -m scripts.reproduce_paper_figures",
-            "make baseline-csim",
-            "make u280-core-preflight",
+            "source /opt/xilinx/xrt/setup.sh",
             "make ae-core-u280 U280_CORE_DEVICE=0 U280_CORE_REPETITIONS=3",
             "```",
             "",
@@ -197,18 +194,22 @@ def summary_document(state: dict[str, object]) -> str:
 def quickstart_document(state: dict[str, object]) -> str:
     return f"""# TempGNN AE Quickstart
 
-The package has two deliberately separate paths:
-
-1. `make smoke` regenerates source-labeled paper-reference figures and runs software tests.
-2. `make ae-core-u280` executes TempGNN, MATG, ViTeGNN, and RTGA as four distinct U280 xclbins and derives fresh mechanism-level comparison rows. A diagnostic tolerance FAIL is recorded without failing an otherwise complete hardware run.
+The recommended reviewer path is one command: `make ae-core-u280`. It
+generates source-labeled paper-reference figures from code, executes TempGNN,
+MATG, ViTeGNN, and RTGA as four distinct U280 xclbins, validates the fresh
+measurement rows, derives the core comparison, and regenerates this report.
+No CPU or GPU performance baseline is executed.
 
 MATG, ViTeGNN, and RTGA are paper-based forward-path reproductions. Their implemented mechanisms and limitations are documented in `hardware/baselines/README.md`. This bounded Q10 path is not a paper-equivalent rerun of Fig.11/Fig.12.
 
-Paper-reference inputs live in `reference_inputs/paper_figure_values.csv`.
-Every row identifies an exact workbook value or a vector-geometry digitization;
-these rows are never substituted for fresh U280 measurements.
+Paper-reference inputs live as 668 structured records in
+`tempgenn/paper_reference_data.py`. Every record identifies an exact workbook
+value or a vector-geometry digitization; these records are never substituted
+for fresh U280 measurements. The deterministic CSV/SVG outputs are included in
+`results/paper_reproduction/` for direct inspection and are regenerated by the
+same one-command path.
 
-## CPU-Only
+## Optional Software Checks
 
 ```bash
 python3 -m venv .venv
@@ -222,7 +223,6 @@ make report
 
 ```bash
 source /opt/xilinx/xrt/setup.sh
-make u280-core-preflight
 make ae-core-u280 U280_CORE_DEVICE=0 U280_CORE_REPETITIONS=3
 ```
 
@@ -241,7 +241,7 @@ See `AE_APPENDIX_DRAFT.md` for the measurement boundary.
 | Bridge | Evidence | Verification |
 | --- | --- | --- |
 | Artifacts Available | Source, tests, fixtures, four hosts/xclbins, build provenance, board logs, and CSV/SVG records | Inspect `hardware/`, `hardware/baselines/`, `artifacts/u280/`, `scripts/`, and `results/` |
-| Artifacts Evaluated Functional | Python tests, three-baseline C-sim, distinct-xclbin preflight, XRT checksum validation, gated board-power sampling, and post-route reports | Run `make smoke`, `make baseline-csim`, and `make u280-core-preflight` |
+| Artifacts Evaluated Functional | Distinct-xclbin preflight, XRT checksum validation, repeat checks, gated board-power sampling, and post-route reports | Run `make ae-core-u280 U280_CORE_DEVICE=0 U280_CORE_REPETITIONS=3` |
 | Results Reproduced | Not currently asserted: the available bounded reproduction path differs from the paper's precision, model checkpoints, full-stream coverage, and power method | Current diagnostic tolerance status is **{status}** |
 
 The Results Reproduced bridge is not asserted for the current bounded implementation, even if its diagnostic tolerance check passes.
@@ -253,16 +253,20 @@ def inventory_document(state: dict[str, object]) -> str:
     latest = run.as_posix() if isinstance(run, Path) else "not available"
     return f"""# Full TempGNN Result Inventory
 
-## Packaged Reference Reconstruction
+## Included, Regenerable Paper Figure Records
 
 - `results/paper_reproduction/*.csv`
 - `results/paper_reproduction/*.svg`
 - `results/paper_reproduction/figure_data_manifest.csv`
+- `results/paper_reproduction/paper_figure_values.csv`
 - `results/paper_reproduction/all_figure_data.csv`
-- `reference_inputs/paper_figure_values.csv`
+- `tempgenn/paper_reference_data.py`
 - `reference_inputs/README.md`
 
-These files regenerate source-labeled paper plotting inputs; they are not fresh hardware executions.
+The Python source records regenerate these source-labeled paper plotting
+outputs. The CSV/SVG files are included in the AE archive for direct reviewer
+inspection; they are deterministic paper-reference reconstructions, not fresh
+hardware executions.
 
 ## Fresh U280 Mechanism Evidence
 
@@ -278,7 +282,7 @@ These files regenerate source-labeled paper plotting inputs; they are not fresh 
 ## Additional Evidence
 
 - TempGNN sanity board logs and layout: `results/board_u280/`
-- Real TGL edge-stream counters: `results/q14_real_tgl_edges/`
+- Optional, not pre-packaged TGL edge-stream counters: `results/q14_real_tgl_edges/`
 - Reviewer reports: `results/ae_report/`
 """
 
@@ -306,11 +310,10 @@ The figure command regenerates the source-labeled paper-reference inputs. `basel
 ## Fresh Mechanism-Level Comparison
 
 ```bash
-make u280-core-preflight
 make ae-core-u280 U280_CORE_DEVICE=0 U280_CORE_REPETITIONS=3
 ```
 
-Preflight requires four distinct xclbin hashes. The measurement harness fetches deterministic prefixes from the six public real datasets, records source/sample hashes, cross-checks each xclbin link request against the Vivado-connected kernel clock and post-route WNS/TNS, calibrates a repeated-kernel window, validates repeat checksums, samples total U280 board power with `xbutil`, writes raw rows, derives diagnostic Fig.11/Fig.12-shaped data, and compares it with packaged references. Unequal timing-closed clocks block normalized comparison generation. Synthetic fixtures are accepted only by C-sim and rejected by this workflow. Diagnostic tolerance failures are recorded in `verification.md`; strict paper-match enforcement requires the explicit `--require-paper-match` option.
+Preflight requires four distinct xclbin hashes. The measurement harness fetches deterministic prefixes from the six public real datasets, records source/sample hashes, cross-checks each xclbin link request against the Vivado-connected kernel clock and post-route WNS/TNS, calibrates a repeated-kernel window, validates repeat checksums, samples total U280 board power with `xbutil`, writes raw rows, derives measured Fig.11/Fig.12 comparison data, and compares it with code-embedded paper references. Each implementation must keep one timing-closed clock across its rows; clocks are recorded and latency is not frequency-rescaled. Synthetic fixtures are accepted only by C-sim and rejected by this workflow. The default target preserves a tolerance failure in `verification.md`; `make ae-core-u280-strict` additionally makes numerical mismatch fail the command.
 
 This is not a paper-equivalent rerun because the reduced Q10 kernels, deterministic stand-in weights, bounded prefixes, and power method differ from the paper methodology.
 

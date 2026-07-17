@@ -27,6 +27,10 @@ class StageU280ArtifactsTest(unittest.TestCase):
         )
         self.assertEqual(parsed["RTGA"], Path("/tmp/r"))
 
+    def test_parse_assignments_accepts_one_host_override(self) -> None:
+        parsed = parse_assignments(["TempGNN=/tmp/parallel-host"], "--system-host")
+        self.assertEqual(parsed, {"TempGNN": Path("/tmp/parallel-host")})
+
     def test_redact_text_prefers_long_paths(self) -> None:
         text = "/home/private/repo by private on private-host"
         redacted = redact_text(

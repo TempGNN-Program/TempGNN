@@ -1,16 +1,25 @@
 from __future__ import annotations
 
 import csv
+import hashlib
+import io
 import math
 from dataclasses import asdict, dataclass
 from functools import lru_cache
 from pathlib import Path
 from typing import Dict, List
 
+from tempgenn.paper_reference_data import (
+    PAPER_REFERENCE_RECORD_COUNT,
+    PAPER_REFERENCE_ROWS,
+    SOURCE_METADATA,
+    VALUE_NOTES,
+)
+
 
 DATASETS = ["WK", "MC", "RT", "LM", "WT", "GT"]
 MODELS = ["JODIE", "TGN", "TGAT", "APAN"]
-REFERENCE_INPUTS = Path(__file__).resolve().parents[1] / "reference_inputs" / "paper_figure_values.csv"
+REFERENCE_INPUTS = Path(__file__).resolve().with_name("paper_reference_data.py")
 
 FIGURE_IDS = {
     "fig2_execution_breakdown",
@@ -23,6 +32,20 @@ FIGURE_IDS = {
     "fig14a_batch_sensitivity",
     "fig14b_tdp_entries",
 }
+
+REFERENCE_CSV_FIELDS = (
+    "figure",
+    "model",
+    "dataset",
+    "solution",
+    "x",
+    "value",
+    "source_id",
+    "source_kind",
+    "source_locator",
+    "source_sha256",
+    "value_note",
+)
 
 
 @dataclass(frozen=True)
@@ -143,6 +166,22 @@ def reference_input_path() -> Path:
     return REFERENCE_INPUTS
 
 
+def reference_rows() -> List[Dict[str, object]]:
+    return [dict(row) for row in _reference_rows()]
+
+
+def reference_csv_bytes() -> bytes:
+    buffer = io.StringIO(newline="")
+    writer = csv.DictWriter(buffer, fieldnames=REFERENCE_CSV_FIELDS, lineterminator="\n")
+    writer.writeheader()
+    writer.writerows(reference_rows())
+    return buffer.getvalue().encode("utf-8")
+
+
+def reference_csv_sha256() -> str:
+    return hashlib.sha256(reference_csv_bytes()).hexdigest()
+
+
 def _figure_rows(figure_id: str) -> List[Dict[str, object]]:
     if figure_id not in FIGURE_IDS:
         raise ValueError(f"unknown paper figure id: {figure_id}")
@@ -151,31 +190,53 @@ def _figure_rows(figure_id: str) -> List[Dict[str, object]]:
 
 @lru_cache(maxsize=1)
 def _reference_rows() -> tuple[Dict[str, object], ...]:
-    if not REFERENCE_INPUTS.is_file():
-        raise FileNotFoundError(f"paper reference input is missing: {REFERENCE_INPUTS}")
-
+    if len(PAPER_REFERENCE_ROWS) != PAPER_REFERENCE_RECORD_COUNT:
+        raise ValueError(
+            "paper reference constants are incomplete: "
+            f"{len(PAPER_REFERENCE_ROWS)} != {PAPER_REFERENCE_RECORD_COUNT}"
+        )
     parsed: list[Dict[str, object]] = []
-    with REFERENCE_INPUTS.open(newline="", encoding="utf-8") as handle:
-        for line_number, raw in enumerate(csv.DictReader(handle), start=2):
-            figure = raw.get("figure", "")
-            if figure not in FIGURE_IDS:
-                raise ValueError(f"{REFERENCE_INPUTS}:{line_number}: unknown figure {figure!r}")
-            if raw.get("source_kind") not in {"exact_workbook_value", "vector_geometry_digitization"}:
-                raise ValueError(f"{REFERENCE_INPUTS}:{line_number}: invalid source kind")
+    for row_number, raw in enumerate(PAPER_REFERENCE_ROWS, start=1):
+        (
+            figure,
+            model,
+            dataset,
+            solution,
+            x_value,
+            value,
+            source_id,
+            source_locator,
+            note_id,
+        ) = raw
+        if figure not in FIGURE_IDS:
+            raise ValueError(f"paper reference row {row_number}: unknown figure {figure!r}")
+        try:
+            source_kind, source_sha256 = SOURCE_METADATA[source_id]
+            value_note = VALUE_NOTES[note_id]
+        except KeyError as exc:
+            raise ValueError(
+                f"paper reference row {row_number}: unknown provenance key {exc.args[0]!r}"
+            ) from exc
+        if source_kind not in {"exact_workbook_value", "vector_geometry_digitization"}:
+            raise ValueError(f"paper reference row {row_number}: invalid source kind")
+        if not math.isfinite(value):
+            raise ValueError(f"paper reference row {row_number}: non-finite value")
 
-            value = float(raw["value"])
-            if not math.isfinite(value):
-                raise ValueError(f"{REFERENCE_INPUTS}:{line_number}: non-finite value")
-
-            row: Dict[str, object] = dict(raw)
-            row["value"] = value
-            x_value = raw.get("x", "")
-            if x_value != "":
-                parsed_x = float(x_value)
-                row["x"] = int(parsed_x) if parsed_x.is_integer() else parsed_x
-            else:
-                row.pop("x", None)
-            parsed.append(row)
+        row: Dict[str, object] = {
+            "figure": figure,
+            "model": model,
+            "dataset": dataset,
+            "solution": solution,
+            "value": value,
+            "source_id": source_id,
+            "source_kind": source_kind,
+            "source_locator": source_locator,
+            "source_sha256": source_sha256,
+            "value_note": value_note,
+        }
+        if x_value is not None:
+            row["x"] = x_value
+        parsed.append(row)
 
     present = {str(row["figure"]) for row in parsed}
     if present != FIGURE_IDS:

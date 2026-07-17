@@ -5,7 +5,7 @@ This directory contains the TempGNN hardware path:
 - `src/tempgnn_kernel.cpp`: Vitis-HLS kernel implementing recent sampling, TDP expansion, PHLE packet reuse, DDTC/OATS modes, and cycle/memory stats.
 - `src/tempgnn_forward_kernel.cpp`: Vitis-HLS kernel that adds a fixed-point TGNN memory-update/embedding forward path on top of TDP construction and PHLE/OATS reuse.
 - `tb/tempgnn_tb.cpp`: deterministic C-sim testbench with golden stats for TempGNN, WO/OATS, and WO/DDTC.
-- `tb/tempgnn_forward_tb.cpp`: deterministic forward testbench checking that DDTC/OATS ablations preserve target embeddings while changing work/memory stats.
+- `tb/tempgnn_forward_tb.cpp`: deterministic forward testbench checking the primary DDTC/OATS path, ablation work/memory statistics, and exact repeat consistency across generation-tag wraparound.
 - `hls/tempgnn_hls.tcl`: Vitis/Vivado HLS project script for U280, 225 MHz target.
 - `hls/tempgnn_forward_hls.tcl`: Vitis/Vivado HLS project script for the full-forward kernel.
 - `host/tempgnn_xrt_host.cpp`: XRT host for board execution.

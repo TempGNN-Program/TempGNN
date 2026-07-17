@@ -75,6 +75,7 @@ int main() {
     const uint32_t fanout = 4;
     const uint32_t depth = TEMPGNN_FWD_MAX_DEPTH;
     const uint32_t tdp_entries = 8;
+    const uint64_t input_cache_key = 0x54474e4e46574431ull;
 
     static const uint32_t event_src[TEMPGNN_MAX_EVENTS] = {
         0, 1, 0, 2, 1, 3, 0, 4, 2, 1, 5, 0,
@@ -119,6 +120,8 @@ int main() {
     static int16_t embeddings_oats[TEMPGNN_MAX_TARGET_EMBED_WORDS] = {};
     static int16_t embeddings_no_oats[TEMPGNN_MAX_TARGET_EMBED_WORDS] = {};
     static int16_t embeddings_no_ddtc[TEMPGNN_MAX_TARGET_EMBED_WORDS] = {};
+    static int16_t embeddings_repeat[TEMPGNN_MAX_TARGET_EMBED_WORDS] = {};
+    static int16_t embeddings_changed[TEMPGNN_MAX_TARGET_EMBED_WORDS] = {};
 
     for (uint32_t vertex = 0; vertex < num_vertices; ++vertex) {
         for (uint32_t dim = 0; dim < TEMPGNN_FWD_DIM; ++dim) {
@@ -158,6 +161,7 @@ int main() {
         tdp_entries,
         1,
         1,
+        input_cache_key,
         initial_memory,
         event_features,
         weight_self,
@@ -184,6 +188,7 @@ int main() {
         tdp_entries,
         1,
         0,
+        input_cache_key,
         initial_memory,
         event_features,
         weight_self,
@@ -210,6 +215,7 @@ int main() {
         tdp_entries,
         0,
         1,
+        input_cache_key,
         initial_memory,
         event_features,
         weight_self,
@@ -232,8 +238,116 @@ int main() {
         std::cerr << "OATS memory should not exceed no-OATS memory\n";
         ok = false;
     }
-    ok &= embeddings_equal(embeddings_oats, embeddings_no_oats, num_targets);
-    ok &= embeddings_equal(embeddings_oats, embeddings_no_ddtc, num_targets);
+    for (uint32_t repeat = 0; repeat < 70; ++repeat) {
+        uint64_t stats_repeat[TEMPGNN_STAT_COUNT] = {};
+        tempgnn_forward_kernel(
+            event_src,
+            event_dst,
+            event_ts,
+            num_events,
+            vertex_offsets,
+            history_event_idx,
+            history_peer,
+            num_vertices,
+            target_vertex,
+            target_event_idx,
+            num_targets,
+            fanout,
+            depth,
+            tdp_entries,
+            1,
+            1,
+            input_cache_key,
+            initial_memory,
+            event_features,
+            weight_self,
+            weight_peer,
+            weight_event,
+            bias,
+            embeddings_repeat,
+            stats_repeat);
+        if (!embeddings_equal(embeddings_oats, embeddings_repeat, num_targets)) {
+            std::cerr << "repeat embedding mismatch at invocation " << repeat << "\n";
+            ok = false;
+            break;
+        }
+        if (!std::equal(stats_oats, stats_oats + TEMPGNN_STAT_COUNT, stats_repeat)) {
+            std::cerr << "repeat stats mismatch at invocation " << repeat << "\n";
+            ok = false;
+            break;
+        }
+    }
+
+    uint64_t stats_changed[TEMPGNN_STAT_COUNT] = {};
+    int16_t original_bias = bias[0];
+    bias[0] = (int16_t)(bias[0] + 64);
+    tempgnn_forward_kernel(
+        event_src,
+        event_dst,
+        event_ts,
+        num_events,
+        vertex_offsets,
+        history_event_idx,
+        history_peer,
+        num_vertices,
+        target_vertex,
+        target_event_idx,
+        num_targets,
+        fanout,
+        depth,
+        tdp_entries,
+        1,
+        1,
+        input_cache_key + 1,
+        initial_memory,
+        event_features,
+        weight_self,
+        weight_peer,
+        weight_event,
+        bias,
+        embeddings_changed,
+        stats_changed);
+    if (std::equal(
+            embeddings_oats,
+            embeddings_oats + num_targets * TEMPGNN_FWD_DIM,
+            embeddings_changed)) {
+        std::cerr << "cache-key change did not refresh modified inputs\n";
+        ok = false;
+    }
+
+    uint64_t stats_restored[TEMPGNN_STAT_COUNT] = {};
+    bias[0] = original_bias;
+    tempgnn_forward_kernel(
+        event_src,
+        event_dst,
+        event_ts,
+        num_events,
+        vertex_offsets,
+        history_event_idx,
+        history_peer,
+        num_vertices,
+        target_vertex,
+        target_event_idx,
+        num_targets,
+        fanout,
+        depth,
+        tdp_entries,
+        1,
+        1,
+        input_cache_key + 2,
+        initial_memory,
+        event_features,
+        weight_self,
+        weight_peer,
+        weight_event,
+        bias,
+        embeddings_repeat,
+        stats_restored);
+    if (!embeddings_equal(embeddings_oats, embeddings_repeat, num_targets) ||
+        !std::equal(stats_oats, stats_oats + TEMPGNN_STAT_COUNT, stats_restored)) {
+        std::cerr << "cache-key refresh did not restore original inputs\n";
+        ok = false;
+    }
 
     if (!ok) {
         std::cerr << "TempGNN forward HLS C-sim test failed\n";

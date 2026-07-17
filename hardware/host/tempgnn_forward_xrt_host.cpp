@@ -1,4 +1,5 @@
 #include "tempgnn_hls.hpp"
+#include "tempgnn_forward_cache_key.hpp"
 
 #include <algorithm>
 #include <chrono>
@@ -127,6 +128,18 @@ int main(int argc, char **argv) {
     auto weight_peer = read_binary_file<int16_t>(join_path(fixture_dir, "weight_peer.bin"));
     auto weight_event = read_binary_file<int16_t>(join_path(fixture_dir, "weight_event.bin"));
     auto bias = read_binary_file<int16_t>(join_path(fixture_dir, "bias.bin"));
+    uint64_t input_cache_key = tempgnn_forward_cache_key(
+        event_src,
+        event_dst,
+        event_ts,
+        vertex_offsets,
+        history_event_idx,
+        initial_memory,
+        event_features,
+        weight_self,
+        weight_peer,
+        weight_event,
+        bias);
 
     if (event_src.size() != event_dst.size() || event_src.size() != event_ts.size()) {
         throw std::runtime_error("event arrays have inconsistent sizes");
@@ -163,16 +176,16 @@ int main(int argc, char **argv) {
     auto bo_history_peer = make_and_copy_bo(device, kernel, history_peer, 6);
     auto bo_target_vertex = make_and_copy_bo(device, kernel, target_vertex, 8);
     auto bo_target_event_idx = make_and_copy_bo(device, kernel, target_event_idx, 9);
-    auto bo_initial_memory = make_and_copy_bo(device, kernel, initial_memory, 16);
-    auto bo_event_features = make_and_copy_bo(device, kernel, event_features, 17);
-    auto bo_weight_self = make_and_copy_bo(device, kernel, weight_self, 18);
-    auto bo_weight_peer = make_and_copy_bo(device, kernel, weight_peer, 19);
-    auto bo_weight_event = make_and_copy_bo(device, kernel, weight_event, 20);
-    auto bo_bias = make_and_copy_bo(device, kernel, bias, 21);
+    auto bo_initial_memory = make_and_copy_bo(device, kernel, initial_memory, 17);
+    auto bo_event_features = make_and_copy_bo(device, kernel, event_features, 18);
+    auto bo_weight_self = make_and_copy_bo(device, kernel, weight_self, 19);
+    auto bo_weight_peer = make_and_copy_bo(device, kernel, weight_peer, 20);
+    auto bo_weight_event = make_and_copy_bo(device, kernel, weight_event, 21);
+    auto bo_bias = make_and_copy_bo(device, kernel, bias, 22);
 
     const size_t embedding_words = target_vertex.size() * TEMPGNN_FWD_DIM;
-    xrt::bo bo_embedding(device, embedding_words * sizeof(int16_t), kernel.group_id(22));
-    xrt::bo bo_stats(device, TEMPGNN_STAT_COUNT * sizeof(uint64_t), kernel.group_id(23));
+    xrt::bo bo_embedding(device, embedding_words * sizeof(int16_t), kernel.group_id(23));
+    xrt::bo bo_stats(device, TEMPGNN_STAT_COUNT * sizeof(uint64_t), kernel.group_id(24));
 
     const auto kernel_start = std::chrono::steady_clock::now();
     auto run = kernel(
@@ -192,6 +205,7 @@ int main(int argc, char **argv) {
         tdp_entries,
         enable_ddtc,
         enable_oats,
+        input_cache_key,
         bo_initial_memory,
         bo_event_features,
         bo_weight_self,
@@ -214,6 +228,7 @@ int main(int argc, char **argv) {
 
     std::cout << "kernel_time_ms=" << kernel_ms << "\n";
     std::cout << "throughput_targets_per_s=" << targets_per_second << "\n";
+    std::cout << "input_cache_key=" << input_cache_key << "\n";
     print_stats(stats);
     print_embedding0(embedding, embedding_words);
 

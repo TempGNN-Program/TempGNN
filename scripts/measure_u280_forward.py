@@ -220,6 +220,7 @@ def main() -> None:
                     "dataset": dataset,
                     "model": model,
                     "solution": args.solution,
+                    "compute_units": values.get("compute_units", "1"),
                     "repetition": repetition,
                     "batch_size": args.batch_size,
                     "latency_ms": f"{latency_ms:.9f}",

@@ -27,6 +27,7 @@ REQUIRED_COLUMNS = {
     "dataset",
     "model",
     "solution",
+    "compute_units",
     "repetition",
     "batch_size",
     "latency_ms",
@@ -74,6 +75,8 @@ def main() -> None:
     if args.preflight_only:
         print_preflight(artifact_records)
         return
+
+    ensure_reference_figures(args.reference_dir, repo_root)
 
     run_id = args.run_id or datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
     run_dir = args.out / run_id
@@ -128,7 +131,10 @@ def main() -> None:
             models=models,
             repetitions=repetitions,
             energy_tolerance=float(config.get("energy_consistency_tolerance", 0.05)),
-            requested_frequency_mhz=float(config.get("requested_frequency_mhz", 225)),
+            expected_compute_units=int(system.get("expected_compute_units", 1)),
+            requested_frequency_mhz=float(
+                system.get("requested_frequency_mhz", config.get("requested_frequency_mhz", 225))
+            ),
             frequency_tolerance_mhz=float(
                 config.get("frequency_comparison_tolerance_mhz", 0.5)
             ),
@@ -153,6 +159,7 @@ def main() -> None:
     validate_frequency_comparability(
         all_measurement_rows,
         tolerance_mhz=float(config.get("frequency_comparison_tolerance_mhz", 0.5)),
+        require_equal=bool(config.get("require_equal_post_route_frequencies", True)),
     )
 
     derived_dir = run_dir / "derived_comparison_figures"
@@ -219,6 +226,25 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--preflight-only", action="store_true")
     return parser.parse_args()
+
+
+def ensure_reference_figures(reference_dir: Path, repo_root: Path) -> None:
+    resolved = resolve_repo_path(repo_root, str(reference_dir))
+    required = (
+        resolved / "fig11_speedup_matg.csv",
+        resolved / "fig12_energy_tempgnn.csv",
+    )
+    if all(path.is_file() for path in required):
+        return
+    default_dir = repo_root / "results" / "paper_reproduction"
+    if resolved != default_dir:
+        missing = ", ".join(str(path) for path in required if not path.is_file())
+        raise SystemExit(f"Missing custom paper-reference output: {missing}")
+    subprocess.run(
+        [sys.executable, "-m", "scripts.reproduce_paper_figures"],
+        cwd=repo_root,
+        check=True,
+    )
 
 
 def load_config(path: Path) -> dict[str, object]:
@@ -336,6 +362,12 @@ def preflight(config: dict[str, object], repo_root: Path) -> list[dict[str, obje
             {
                 "name": name,
                 "source_revision": revision,
+                "requested_frequency_mhz": float(
+                    system.get(
+                        "requested_frequency_mhz",
+                        config.get("requested_frequency_mhz", 225),
+                    )
+                ),
                 "paths": {
                     key: (
                         value
@@ -347,7 +379,6 @@ def preflight(config: dict[str, object], repo_root: Path) -> list[dict[str, obje
                 "sha256": hashes,
             }
         )
-    expected_frequency = float(config.get("requested_frequency_mhz", 225))
     frequency_tolerance = float(config.get("frequency_comparison_tolerance_mhz", 0.5))
     for record in records:
         paths = record["paths"]
@@ -361,7 +392,7 @@ def preflight(config: dict[str, object], repo_root: Path) -> list[dict[str, obje
             xclbin_sha256=str(hashes["xclbin"]),
             source_hashes=hashes["sources"],
             build_source_hashes=hashes["build_sources"],
-            expected_frequency_mhz=expected_frequency,
+            expected_frequency_mhz=float(record["requested_frequency_mhz"]),
             frequency_tolerance_mhz=frequency_tolerance,
         )
         record["clock_evidence"] = clock_evidence
@@ -441,6 +472,7 @@ def render_command(
         "repetitions": str(repetitions),
         "datasets": ",".join(datasets),
         "models": ",".join(models),
+        "requested_frequency_mhz": str(system.get("requested_frequency_mhz", 225)),
     }
     return [str(part).format(**replacements) for part in system["command"]]
 
@@ -453,6 +485,7 @@ def validate_measurements(
     models: tuple[str, ...],
     repetitions: int,
     energy_tolerance: float,
+    expected_compute_units: int | None = None,
     requested_frequency_mhz: float | None = None,
     frequency_tolerance_mhz: float = 0.5,
     expected_xclbin_sha256: str | None = None,
@@ -482,6 +515,12 @@ def validate_measurements(
         latency = positive_float(row, "latency_ms", name)
         power = positive_float(row, "power_w", name)
         energy = positive_float(row, "energy_mj", name)
+        compute_units = positive_int(row, "compute_units", name)
+        if expected_compute_units is not None and compute_units != expected_compute_units:
+            raise SystemExit(
+                f"{name}: host used {compute_units} compute units, expected "
+                f"{expected_compute_units}"
+            )
         post_route_frequency = positive_float(row, "frequency_mhz", name)
         recorded_request = positive_float(row, "requested_frequency_mhz", name)
         xclbin_request = positive_float(row, "xclbin_link_requested_frequency_mhz", name)
@@ -599,7 +638,7 @@ def validate_measurements(
 
 
 def validate_frequency_comparability(
-    rows: Iterable[dict[str, str]], *, tolerance_mhz: float
+    rows: Iterable[dict[str, str]], *, tolerance_mhz: float, require_equal: bool = True
 ) -> None:
     by_solution: dict[str, set[float]] = defaultdict(set)
     for row in rows:
@@ -608,7 +647,11 @@ def validate_frequency_comparability(
     if inconsistent:
         raise SystemExit(f"post-route frequency changed within an implementation: {inconsistent}")
     implemented = {name: next(iter(values)) for name, values in by_solution.items()}
-    if implemented and max(implemented.values()) - min(implemented.values()) > tolerance_mhz:
+    if (
+        require_equal
+        and implemented
+        and max(implemented.values()) - min(implemented.values()) > tolerance_mhz
+    ):
         raise SystemExit(
             "the four implementations do not have comparable post-route clocks: "
             + ", ".join(
@@ -635,13 +678,17 @@ def aggregate_measurements(rows: Iterable[dict[str, str]], path: Path) -> None:
         post_route_wns = [float(row["post_route_wns_ns"]) for row in group]
         post_route_tns = [float(row["post_route_tns_ns"]) for row in group]
         batch_sizes = {int(row["batch_size"]) for row in group}
+        compute_units = {int(row["compute_units"]) for row in group}
         if len(batch_sizes) != 1:
             raise SystemExit(f"{solution}: inconsistent batch sizes for {dataset}/{model}")
+        if len(compute_units) != 1:
+            raise SystemExit(f"{solution}: inconsistent compute-unit counts for {dataset}/{model}")
         output.append(
             {
                 "dataset": dataset,
                 "model": model,
                 "solution": solution,
+                "compute_units": compute_units.pop(),
                 "batch_size": batch_sizes.pop(),
                 "latency_ms": rounded_mean(latencies),
                 "power_w": rounded_mean(powers),

@@ -63,6 +63,70 @@ class U280CoreReproductionTests(unittest.TestCase):
                 preflight(config, root)
             self.assertIn("byte-identical", str(context.exception))
 
+    def test_preflight_validates_each_system_at_its_configured_clock(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            systems = []
+            frequencies = {
+                "TempGNN": 168,
+                "MATG": 225,
+                "ViTeGNN": 225,
+                "RTGA": 225,
+            }
+            for index, (name, frequency) in enumerate(frequencies.items()):
+                runner = root / f"runner-{index}.sh"
+                host = root / f"host-{index}"
+                source = root / f"source-{index}.cpp"
+                xclbin = root / f"kernel-{index}.xclbin"
+                runner.write_text("#!/bin/sh\n", encoding="utf-8")
+                host.write_bytes(f"host-{index}".encode())
+                source.write_text(f"// source {index}\n", encoding="utf-8")
+                xclbin.write_bytes(f"kernel-{index}".encode())
+                systems.append(
+                    {
+                        "name": name,
+                        "requested_frequency_mhz": frequency,
+                        "source_revision": f"revision-{index}",
+                        "sources": [source.name],
+                        "runner": runner.name,
+                        "host": host.name,
+                        "xclbin": xclbin.name,
+                        "command": [
+                            "{runner}",
+                            "--xclbin",
+                            "{xclbin}",
+                            "--output",
+                            "{raw_csv}",
+                        ],
+                    }
+                )
+            config = {
+                "datasets": ["WK"],
+                "models": ["TGN"],
+                "requested_frequency_mhz": 225,
+                "systems": systems,
+            }
+            timing = {
+                "xclbin_link_requested_frequency_mhz": 225,
+                "post_route_kernel_frequency_mhz": 225,
+                "post_route_wns_ns": 0.0,
+                "post_route_tns_ns": 0.0,
+                "timing_met": True,
+            }
+            with mock.patch(
+                "scripts.run_u280_core_reproduction.validate_packaged_build_provenance",
+                return_value=timing,
+            ) as validate:
+                records = preflight(config, root)
+
+            requested = [
+                call.kwargs["expected_frequency_mhz"] for call in validate.call_args_list
+            ]
+            self.assertEqual(requested, [168.0, 225.0, 225.0, 225.0])
+            self.assertEqual(
+                [record["requested_frequency_mhz"] for record in records], requested
+            )
+
     def test_validate_and_aggregate_repeated_measurements(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
             root = Path(temp_dir)
@@ -71,6 +135,7 @@ class U280CoreReproductionTests(unittest.TestCase):
                 "dataset",
                 "model",
                 "solution",
+                "compute_units",
                 "repetition",
                 "batch_size",
                 "latency_ms",
@@ -112,6 +177,7 @@ class U280CoreReproductionTests(unittest.TestCase):
                         "dataset": "WK",
                         "model": "TGN",
                         "solution": "TempGNN",
+                        "compute_units": 12,
                         "repetition": repetition,
                         "batch_size": 1000,
                         "latency_ms": latency,
@@ -159,6 +225,7 @@ class U280CoreReproductionTests(unittest.TestCase):
                 models=("TGN",),
                 repetitions=2,
                 energy_tolerance=0.01,
+                expected_compute_units=12,
             )
             aggregate = root / "aggregate.csv"
             aggregate_measurements(validated, aggregate)
@@ -206,6 +273,18 @@ class U280CoreReproductionTests(unittest.TestCase):
         ]
         with self.assertRaises(SystemExit):
             validate_frequency_comparability(rows, tolerance_mhz=0.5)
+
+    def test_frequency_contract_allows_recorded_per_design_clocks(self) -> None:
+        rows = [
+            {"solution": "TempGNN", "post_route_kernel_frequency_mhz": "175"},
+            {"solution": "TempGNN", "post_route_kernel_frequency_mhz": "175"},
+            {"solution": "MATG", "post_route_kernel_frequency_mhz": "225"},
+        ]
+        validate_frequency_comparability(
+            rows,
+            tolerance_mhz=0.5,
+            require_equal=False,
+        )
 
     def test_compare_can_limit_expected_solutions(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
