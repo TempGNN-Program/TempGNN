@@ -92,8 +92,8 @@ Expected arithmetic mean latency:
 | --- | ---: |
 | TempGNN | 1.296553 |
 | MATG | 9.966618 |
-| ViTeGNN | 2.869752 |
-| RTGA | 4.192824 |
+| ViTeGNN | 7.022530 |
+| RTGA | 4.914013 |
 
 A successful run exits with status zero, records all four implementations, and
 writes fresh measurements under `results/reviewer_u280_runs/<run-id>/`.

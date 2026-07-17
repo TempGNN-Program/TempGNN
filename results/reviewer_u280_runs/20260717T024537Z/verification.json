@@ -1,19 +1,19 @@
 {
   "fig11_speedup_matg": {
-    "actual_csv": "results/reviewer_u280_runs/20260717T024537Z/derived_comparison_figures/fig11_speedup_matg.csv",
-    "expected_csv": "results/paper_reproduction/fig11_speedup_matg.csv",
+    "actual_csv": "results\\reviewer_u280_runs\\20260717T024537Z\\derived_comparison_figures\\fig11_speedup_matg.csv",
+    "expected_csv": "results\\paper_reproduction\\fig11_speedup_matg.csv",
     "extra_keys": [],
-    "max_relative_error": 3.3894640467638566,
+    "max_relative_error": 1.5478923011279717,
     "missing_keys": [],
     "pass": false,
     "threshold": 0.05,
-    "worst_key": "WT|TGAT|ViTeGNN"
+    "worst_key": "WT|APAN|TempGNN"
   },
   "fig12_energy_tempgnn": {
-    "actual_csv": "results/reviewer_u280_runs/20260717T024537Z/derived_comparison_figures/fig12_energy_tempgnn.csv",
-    "expected_csv": "results/paper_reproduction/fig12_energy_tempgnn.csv",
+    "actual_csv": "results\\reviewer_u280_runs\\20260717T024537Z\\derived_comparison_figures\\fig12_energy_tempgnn.csv",
+    "expected_csv": "results\\paper_reproduction\\fig12_energy_tempgnn.csv",
     "extra_keys": [],
-    "max_relative_error": 0.9331246646395994,
+    "max_relative_error": 0.8296637453049543,
     "missing_keys": [],
     "pass": false,
     "threshold": 0.1,

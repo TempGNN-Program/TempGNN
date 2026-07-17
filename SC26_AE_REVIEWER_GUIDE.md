@@ -58,8 +58,8 @@ three repetitions, writes raw CSVs, and aggregates latency under
 | --- | ---: |
 | TempGNN | 1.296553 |
 | MATG | 9.966618 |
-| ViTeGNN | 2.869752 |
-| RTGA | 4.192824 |
+| ViTeGNN | 7.022530 |
+| RTGA | 4.914013 |
 
 The run is successful when the command exits with status zero, all four
 implementations are present, and TempGNN retains the lowest mean latency close

@@ -8,8 +8,8 @@ Latest run: `results/reviewer_u280_runs/20260717T024537Z`
 | --- | ---: | ---: | ---: |
 | TempGNN | 72 | 0 | 1.296553 |
 | MATG | 72 | 0 | 9.966618 |
-| ViTeGNN | 72 | 0 | 2.869752 |
-| RTGA | 72 | 0 | 4.192824 |
+| ViTeGNN | 72 | 0 | 7.022530 |
+| RTGA | 72 | 0 | 4.914013 |
 
 Run on U280:
 

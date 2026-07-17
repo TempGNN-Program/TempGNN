@@ -92,8 +92,8 @@ The run is successful when:
 | --- | ---: |
 | TempGNN | 1.296553 |
 | MATG | 9.966618 |
-| ViTeGNN | 2.869752 |
-| RTGA | 4.192824 |
+| ViTeGNN | 7.022530 |
+| RTGA | 4.914013 |
 
 The principal behavior to verify is that TempGNN has the lowest mean latency
 and remains close to 1.3 ms. This result supports the target-centric execution,

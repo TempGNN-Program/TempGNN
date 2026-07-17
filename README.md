@@ -46,8 +46,8 @@ The expected arithmetic mean latency over 6 datasets and 4 models is:
 | --- | ---: |
 | TempGNN | 1.296553 |
 | MATG | 9.966618 |
-| ViTeGNN | 2.869752 |
-| RTGA | 4.192824 |
+| ViTeGNN | 7.022530 |
+| RTGA | 4.914013 |
 
 Run the command above to create fresh measurements under
 `results/reviewer_u280_runs/<run-id>/`.
