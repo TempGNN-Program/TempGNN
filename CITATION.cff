@@ -35,9 +35,3 @@ authors:
     family-names: "Xu"
     affiliation: "The Hong Kong University of Science and Technology (Guangzhou)"
 repository-code: "https://github.com/TempGNN-Program/TempGNN"
-keywords:
-  - temporal graph neural network
-  - FPGA
-  - Alveo U280
-  - artifact evaluation
-  - reproducibility

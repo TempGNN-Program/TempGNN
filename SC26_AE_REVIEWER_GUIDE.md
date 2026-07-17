@@ -15,8 +15,10 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-The frozen archive DOI will be added to the SC26 submission before the
-artifact freeze.
+Artifact DOI:
+`https://doi.org/10.5281/zenodo.21417187`.
+
+Frozen release: `sc26-ae-pap142-v1.0`.
 
 ## Environment
 

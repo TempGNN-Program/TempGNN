@@ -1,5 +1,10 @@
 # TempGNN Reproduction
 
+Artifact DOI:
+[10.5281/zenodo.21417187](https://doi.org/10.5281/zenodo.21417187).
+
+Frozen release: `sc26-ae-pap142-v1.0`.
+
 This repository packages a TempGNN artifact for SC-style AE review. It contains:
 
 1. A Python reference model for Target Dependency Packet (TDP) construction, DDTC scheduling, and OATS packet reuse.

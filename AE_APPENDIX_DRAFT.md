@@ -7,6 +7,14 @@ This workflow evaluates the two artifacts defined in the AD:
 - `A1`: TempGNN and the three U280 accelerator baselines.
 - `A2`: `results/result.csv` and the paper-figure generator.
 
+Artifact DOI:
+`https://doi.org/10.5281/zenodo.21417187`.
+
+Development repository:
+`https://github.com/TempGNN-Program/TempGNN`.
+
+Frozen release: `sc26-ae-pap142-v1.0`.
+
 ## 1. Download and Setup
 
 ```bash

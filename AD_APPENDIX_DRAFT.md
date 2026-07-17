@@ -24,11 +24,13 @@ Requested SC26 badge review: all three artifact badges.
 | `A1` | TempGNN, MATG, ViTeGNN, and RTGA U280 sources, xclbins, XRT hosts, inputs, tests, and measurement workflow | Supports `C1-C4`; reproduces the U280 latency behavior used in the accelerator comparison |
 | `A2` | `results/result.csv`, `tempgenn/result.py`, and the CSV/SVG figure generator | Supports inspection of `C1-C4`; regenerates Fig.2, Fig.4(a), Fig.9(b), and Fig.10-Fig.14 |
 
+Artifact DOI:
+`https://doi.org/10.5281/zenodo.21417187`.
+
 Development repository:
 `https://github.com/TempGNN-Program/TempGNN`.
 
-The frozen archive DOI will be added to the SC26 submission before the
-August 25, 2026 artifact freeze.
+Frozen release: `sc26-ae-pap142-v1.0`.
 
 ## Part 2: Artifact Identification
 

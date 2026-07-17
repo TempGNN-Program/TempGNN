@@ -21,9 +21,7 @@ only the AD/AE PDF and LaTeX files.
 
 5. Confirm that the fresh reviewer-style run contains `provenance.json`, raw
    per-repetition CSV files, derived CSV/SVG files, and `verification.md`.
-6. Replace the creator placeholders in `release/zenodo_metadata.json.template`
-   and `release/CITATION.cff.template` only when the conference anonymity rules
-   permit publication of author metadata.
+6. Verify the creators and affiliations in `.zenodo.json` and `CITATION.cff`.
 
 ## Reserve And Publish
 
@@ -44,7 +42,7 @@ Changes to artifact files require a new Zenodo version.
 
 ```text
 Persistent frozen artifact:
-https://doi.org/10.5281/zenodo.REPLACE_ME
+https://doi.org/10.5281/zenodo.21417187
 
 Development repository:
 https://github.com/TempGNN-Program/TempGNN
