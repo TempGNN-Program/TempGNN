@@ -1,10 +1,12 @@
 \documentclass[conference]{IEEEtran}
 
 \usepackage{booktabs}
+\usepackage{balance}
 \usepackage{enumitem}
 \usepackage{fvextra}
 \usepackage{hyperref}
 \usepackage{microtype}
+\usepackage{tabularx}
 \usepackage{tagging}
 \usepackage{sc26repro}
 
@@ -24,6 +26,47 @@ Appendix: Artifact Description
 
 Paper ID: \texttt{pap142}
 
+\noindent Requested SC26 badge review: all three artifact badges.
+
+\section{Contributions and Artifacts}
+
+\subsection{Main Contributions}
+
+\begin{itemize}
+\item \texttt{C1}: Target Dependency Packets (TDPs) expose target-centric
+temporal dependencies and branch-level parallelism.
+\item \texttt{C2}: DDTC constructs TDPs on demand to reduce target-irrelevant
+work and data movement.
+\item \texttt{C3}: OATS and PHLE reuse overlapping dependency packets while
+preserving ordered target updates.
+\item \texttt{C4}: TempGNN is evaluated on an Alveo U280 across six temporal
+datasets and four TGNN models, including accelerator-baseline comparisons.
+\end{itemize}
+
+\subsection{Computational Artifacts}
+
+\begin{table}[h]
+\caption{Artifact-to-result map.}
+\centering
+\footnotesize
+\begin{tabularx}{\columnwidth}{@{}lXX@{}}
+\toprule
+ID & Contents & Contributions and results \\
+\midrule
+\texttt{A1} & Four U280 sources, xclbins, hosts, inputs, tests, and measurement
+workflow & \texttt{C1-C4}; U280 latency behavior used in the accelerator
+comparison \\
+\texttt{A2} & \path{results/result.csv} and the CSV/SVG generator &
+\texttt{C1-C4}; Fig.2, Fig.4(a), Fig.9(b), and Fig.10-Fig.14 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\noindent Development repository:
+\url{https://github.com/TempGNN-Program/TempGNN}.
+The frozen archive DOI will be added to the SC26 submission before the
+August 25, 2026 artifact freeze.
+
 \section{Download}
 
 \begin{Verbatim}[fontsize=\small,breaklines=true,breakanywhere=true]
@@ -34,33 +77,53 @@ source .venv/bin/activate
 pip install -r requirements.txt
 \end{Verbatim}
 
-\section{Environment}
+\section{Environment and Inputs}
 
 \begin{Verbatim}[fontsize=\small,breaklines=true,breakanywhere=true]
 Board: AMD/Xilinx Alveo U280, xcu280-fsvh2892-2L-e
 Platform: xilinx_u280_gen3x16_xdma_1_202211_1
 OS: Ubuntu 22.04 x86_64
 XRT: 2.16.204
-Vitis/Vivado: 2023.2 (only for rebuilding xclbins)
+Vitis/Vivado: 2023.2 (xclbin rebuild only)
 GCC: 11.4.0
 GNU Make: 4.3
 Python: 3.10 or newer
 \end{Verbatim}
 
+XRT is available from \url{https://github.com/Xilinx/XRT}; Python is available
+from \url{https://www.python.org/}. A reviewer account on the matching U280
+host is provided through the private SC26 submission channel.
+
+\texttt{A1} uses bundled prefixes of WK, MC, RT, LM, WT, and GT with JODIE,
+TGN, TGAT, and APAN. Input source metadata and hashes are under
+\path{external/u280_dataset_samples/}. \texttt{A2} uses
+\path{results/result.csv}.
+
 \section{Run on U280}
+
+\texttt{A1} exercises the TempGNN mechanisms and U280 evaluation supporting
+\texttt{C1-C4}.
 
 \begin{Verbatim}[fontsize=\small,breaklines=true,breakanywhere=true]
 source /opt/xilinx/xrt/setup.sh
 make ae-core-u280 U280_CORE_DEVICE=0 U280_CORE_REPETITIONS=3
 \end{Verbatim}
 
-The command runs TempGNN, MATG, ViTeGNN, and RTGA. The expected arithmetic
-mean latency over six datasets and four models is:
+\noindent Workflow:
+\begin{enumerate}
+\item check four U280 artifacts;
+\item prepare the six-dataset/four-model inputs;
+\item run TempGNN, MATG, ViTeGNN, and RTGA three times;
+\item write raw measurement CSVs; and
+\item aggregate mean latency.
+\end{enumerate}
 
-\begin{center}
+\begin{table}[h]
+\caption{Expected U280 mean latency.}
+\centering
 \begin{tabular}{lr}
 \toprule
-U280 implementation & Mean latency (ms) \\
+Implementation & Latency (ms) \\
 \midrule
 TempGNN & 1.296553 \\
 MATG & 9.966618 \\
@@ -68,22 +131,55 @@ ViTeGNN & 2.869752 \\
 RTGA & 4.192824 \\
 \bottomrule
 \end{tabular}
-\end{center}
+\end{table}
 
-Fresh measurements are written under
-\path{results/reviewer_u280_runs/<run-id>/}.
+A successful run exits with status zero, records all four implementations, and
+writes fresh measurements under
+\path{results/reviewer_u280_runs/<run-id>/}. TempGNN should retain the lowest
+mean latency and remain close to 1.3 ms.
+
+\begin{table}[h]
+\caption{Expected A1 review time.}
+\centering
+\begin{tabular}{rrr}
+\toprule
+Setup & Execution & Analysis \\
+\midrule
+10--20 min & 30--90 min & $<$5 min \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Rebuilding xclbins is optional and is not part of the direct review workflow.
 
 \section{Generate Figures from result.csv}
 
-All remaining figure values are read from \path{results/result.csv}.
+\texttt{A2} regenerates the paper-result plots associated with
+\texttt{C1-C4}.
 
 \begin{Verbatim}[fontsize=\small,breaklines=true,breakanywhere=true]
 python3 -m scripts.reproduce_paper_figures
 \end{Verbatim}
 
-The generated CSV/SVG files are written to
-\path{results/paper_reproduction/}.
+The command reads \path{results/result.csv}, validates and groups the rows, and
+generates per-figure CSV files, matching SVG figures, and a manifest. Expected
+output is nine CSV/SVG pairs for Fig.2, Fig.4(a), Fig.9(b), and Fig.10-Fig.14
+under \path{results/paper_reproduction/}. The manifest must identify
+\path{results/result.csv} as the input.
 
+\begin{table}[h]
+\caption{Expected A2 review time.}
+\centering
+\begin{tabular}{rrr}
+\toprule
+Setup & Execution & Analysis \\
+\midrule
+$<$5 min & $<$1 min & 2--5 min \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\balance
 \section{Baseline Status}
 
 \begin{itemize}

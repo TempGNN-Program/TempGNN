@@ -1,5 +1,10 @@
 # TempGNN SC26 AE Reviewer Guide
 
+The AD defines two artifacts:
+
+- `A1`: TempGNN, MATG, ViTeGNN, and RTGA on U280.
+- `A2`: `results/result.csv` and the CSV/SVG figure generator.
+
 ## Download
 
 ```bash
@@ -9,6 +14,9 @@ python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 ```
+
+The frozen archive DOI will be added to the SC26 submission before the
+artifact freeze.
 
 ## Environment
 
@@ -23,12 +31,26 @@ GNU Make: 4.3
 Python: 3.10 or newer
 ```
 
+The U280 account is provided through the private SC26 submission channel.
+
+## Review Tasks
+
+| Task | Execution | Expected result |
+| --- | ---: | --- |
+| U280 latency | 30-90 min | Four fresh latency results; TempGNN is lowest at about 1.3 ms |
+| Figure generation | less than 1 min | Nine CSV/SVG pairs generated from `results/result.csv` |
+
 ## Run TempGNN and Baseline Accelerators on U280
 
 ```bash
 source /opt/xilinx/xrt/setup.sh
+xrt-smi examine
 make ae-core-u280 U280_CORE_DEVICE=0 U280_CORE_REPETITIONS=3
 ```
+
+The workflow checks four artifacts, runs six datasets and four models with
+three repetitions, writes raw CSVs, and aggregates latency under
+`results/reviewer_u280_runs/<run-id>/`.
 
 | U280 implementation | Mean latency (ms) |
 | --- | ---: |
@@ -37,8 +59,9 @@ make ae-core-u280 U280_CORE_DEVICE=0 U280_CORE_REPETITIONS=3
 | ViTeGNN | 2.869752 |
 | RTGA | 4.192824 |
 
-Fresh measurements are written under
-`results/reviewer_u280_runs/<run-id>/`.
+The run is successful when the command exits with status zero, all four
+implementations are present, and TempGNN retains the lowest mean latency close
+to 1.3 ms.
 
 ## Generate Figures from result.csv
 
@@ -46,8 +69,10 @@ Fresh measurements are written under
 python3 -m scripts.reproduce_paper_figures
 ```
 
-All figure values are read from `results/result.csv`. Generated CSV/SVG files
-are written to `results/paper_reproduction/`.
+The workflow reads `results/result.csv` and generates the CSV/SVG pairs for
+Fig.2, Fig.4(a), Fig.9(b), and Fig.10-Fig.14 under
+`results/paper_reproduction/`. The run is successful when all nine pairs exist
+and `figure_data_manifest.csv` identifies `results/result.csv` as the input.
 
 ## Baseline Status
 
@@ -63,8 +88,7 @@ are written to `results/paper_reproduction/`.
   code, U280 forward-path board logs, and its own U280 xclbin.
 
 The three baselines are independent, paper-based forward-path reproductions,
-not the authors' complete original stacks. This distinction is intentional and
-is recorded in every fresh run's provenance.
+not the authors' complete original stacks.
 
 ## Metric Meaning
 

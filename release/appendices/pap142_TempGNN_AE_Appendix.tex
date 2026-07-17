@@ -5,6 +5,7 @@
 \usepackage{fvextra}
 \usepackage{hyperref}
 \usepackage{microtype}
+\usepackage{tabularx}
 \usepackage{tagging}
 \usepackage{sc26repro}
 
@@ -20,11 +21,18 @@ Appendix: Artifact Evaluation
 \end{center}}
 ]
 
+\small
+
 \appendixAE
+\enlargethispage{4\baselineskip}
 
 Paper ID: \texttt{pap142}
 
-\section{Download}
+This workflow evaluates \texttt{A1} (TempGNN and three U280 accelerator
+baselines) and \texttt{A2} (\path{results/result.csv} and the paper-figure
+generator).
+
+\section{Download and Setup}
 
 \begin{Verbatim}[fontsize=\small,breaklines=true,breakanywhere=true]
 git clone https://github.com/TempGNN-Program/TempGNN.git
@@ -34,33 +42,85 @@ source .venv/bin/activate
 pip install -r requirements.txt
 \end{Verbatim}
 
-\section{Environment}
-
 \begin{Verbatim}[fontsize=\small,breaklines=true,breakanywhere=true]
 Board: AMD/Xilinx Alveo U280, xcu280-fsvh2892-2L-e
 Platform: xilinx_u280_gen3x16_xdma_1_202211_1
 OS: Ubuntu 22.04 x86_64
 XRT: 2.16.204
-Vitis/Vivado: 2023.2 (only for rebuilding xclbins)
+Vitis/Vivado: 2023.2 (xclbin rebuild only)
 GCC: 11.4.0
 GNU Make: 4.3
 Python: 3.10 or newer
 \end{Verbatim}
 
-\section{Run on U280}
+The U280 account and login instructions are delivered through the private
+SC26 submission channel. No credentials are stored in the artifact.
+
+\section{Review Plan}
+
+\begin{table}[h]
+\caption{Expected direct review time.}
+\centering
+\footnotesize
+\begin{tabularx}{\columnwidth}{@{}lrrrX@{}}
+\toprule
+Artifact & Setup & Run & Analysis & Expected result \\
+\midrule
+\texttt{A1} & 10--20 & 30--90 & $<$5 & Four fresh latency results; TempGNN
+lowest at about 1.3 ms \\
+\texttt{A2} & $<$5 & $<$1 & 2--5 & Nine CSV/SVG pairs from
+\path{results/result.csv} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+All times are minutes. Optional xclbin rebuilding is excluded from the direct
+review path.
+
+\section{Execute A1: U280 Latency}
 
 \begin{Verbatim}[fontsize=\small,breaklines=true,breakanywhere=true]
 source /opt/xilinx/xrt/setup.sh
+xrt-smi examine
 make ae-core-u280 U280_CORE_DEVICE=0 U280_CORE_REPETITIONS=3
 \end{Verbatim}
 
-The command runs TempGNN, MATG, ViTeGNN, and RTGA. The expected arithmetic
-mean latency over six datasets and four models is:
+\noindent The command performs:
+\begin{enumerate}
+\item \texttt{A1-T1}: check the four packaged U280 artifacts;
+\item \texttt{A1-T2}: load six datasets and four models;
+\item \texttt{A1-T3}: run TempGNN, MATG, ViTeGNN, and RTGA three times;
+\item \texttt{A1-T4}: write per-implementation raw measurement CSVs; and
+\item \texttt{A1-T5}: aggregate latency and update the AE report.
+\end{enumerate}
 
-\begin{center}
+\begin{Verbatim}[fontsize=\small,breaklines=true,breakanywhere=true]
+Datasets: WK, MC, RT, LM, WT, GT
+Models: JODIE, TGN, TGAT, APAN
+Repetitions: 3
+\end{Verbatim}
+
+Fresh results are written to
+\path{results/reviewer_u280_runs/<run-id>/}.
+
+\section{Analyze A1}
+
+The run is successful when:
+\begin{enumerate}
+\item the command exits with status zero;
+\item fresh rows exist for all four implementations;
+\item all six datasets and four models are present; and
+\item the aggregate latency follows the expected U280 behavior in
+Table~\ref{tab:ae-latency}.
+\end{enumerate}
+
+\begin{table}[h]
+\caption{Expected U280 mean latency.}
+\label{tab:ae-latency}
+\centering
 \begin{tabular}{lr}
 \toprule
-U280 implementation & Mean latency (ms) \\
+Implementation & Latency (ms) \\
 \midrule
 TempGNN & 1.296553 \\
 MATG & 9.966618 \\
@@ -68,21 +128,36 @@ ViTeGNN & 2.869752 \\
 RTGA & 4.192824 \\
 \bottomrule
 \end{tabular}
-\end{center}
+\end{table}
 
-Fresh measurements are written under
-\path{results/reviewer_u280_runs/<run-id>/}.
+The principal behavior is that TempGNN has the lowest mean latency and remains
+close to 1.3 ms. This supports the target-centric execution, DDTC/OATS
+mechanisms, and U280 accelerator comparison in \texttt{C1-C4}.
 
-\section{Generate Figures from result.csv}
-
-All remaining figure values are read from \path{results/result.csv}.
+\section{Execute and Analyze A2}
 
 \begin{Verbatim}[fontsize=\small,breaklines=true,breakanywhere=true]
 python3 -m scripts.reproduce_paper_figures
 \end{Verbatim}
 
-The generated CSV/SVG files are written to
-\path{results/paper_reproduction/}.
+\noindent The command performs:
+\begin{enumerate}
+\item \texttt{A2-T1}: read \path{results/result.csv};
+\item \texttt{A2-T2}: validate and group rows by paper figure;
+\item \texttt{A2-T3}: generate a CSV and SVG for each figure; and
+\item \texttt{A2-T4}: write \path{figure_data_manifest.csv}.
+\end{enumerate}
+
+Expected output under \path{results/paper_reproduction/}:
+\begin{itemize}
+\item Fig.2, Fig.4(a), and Fig.9(b);
+\item Fig.10, Fig.11, Fig.12, and Fig.13; and
+\item Fig.14(a), Fig.14(b), and the figure-data manifest.
+\end{itemize}
+
+The evaluation is successful when all nine CSV/SVG pairs exist and the
+manifest records \path{results/result.csv} as their input. These outputs
+provide the paper-result views associated with \texttt{C1-C4}.
 
 \section{Baseline Status}
 
