@@ -61,10 +61,24 @@ TempGNN xclbin is under `artifacts/u280/`. Fresh runs write new evidence under
 
 The current packaged audited run is `20260717T024537Z`. It contains 72 fresh
 rows per implementation, 288 rows total, with zero golden, repeat, or timing
-failures. Its measured all-workload averages are `1.296553 ms` for TempGNN and
-`9.966618 ms` for MATG, producing a fresh `7.8889x` TempGNN/MATG average
-speedup. The paper-figure tolerance diagnostic remains FAIL and is preserved
-because this bounded Q10/total-board-power path is not paper-equivalent.
+failures. The arithmetic mean latency over the 24 aggregate workload rows
+(6 datasets x 4 models, with 3 repetitions per aggregate row) is:
+
+| U280 implementation | Mean latency (ms) |
+| --- | ---: |
+| TempGNN | 1.296553 |
+| MATG | 9.966618 |
+| ViTeGNN | 2.869752 |
+| RTGA | 4.192824 |
+
+These values are read from the fixed CSV snapshot under
+`results/reviewer_u280_runs/20260717T024537Z/baselines_u280/`; they are not
+parsed from terminal output or hardcoded into the plotting workflow. Thus the
+short all-workload summary for TempGNN is approximately `1.30 ms`, while an
+individual workload may be near `1.5 ms`. The same CSVs produce the fresh
+`7.8889x` TempGNN/MATG average speedup. The paper-figure tolerance diagnostic
+remains FAIL and is preserved because this bounded Q10/total-board-power path
+is not paper-equivalent.
 
 ## Current Validation Status
 

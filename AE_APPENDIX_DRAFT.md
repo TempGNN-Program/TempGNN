@@ -199,6 +199,10 @@ make ae-core-u280 U280_CORE_DEVICE=0 U280_CORE_REPETITIONS=3
 ```
 
 The default-device wrapper is `bash scripts/run_all.sh u280-core`.
+This command runs TempGNN and all three accelerator baselines (MATG, ViTeGNN,
+and RTGA) on the U280. It is a reviewer validation run: it writes a new
+timestamped result directory and does not replace the packaged result snapshot
+used for the reported values below.
 
 Checked parameters are loaded from `configs/u280_core_reproduction.json`:
 
@@ -254,11 +258,46 @@ results/reviewer_u280_runs/<run-id>/verification.json
 results/reviewer_u280_runs/<run-id>/verification.md
 ```
 
-The packaged final run is
-`results/reviewer_u280_runs/20260717T024537Z/`; its four raw CSV files contain
-72 rows each (288 total), with zero golden, repeat, or timing failures. The
-fresh all-workload averages are `1.296553 ms` for TempGNN and `9.966618 ms`
-for MATG, yielding `7.8889x` measured average speedup. The paper-tolerance
+The canonical packaged result snapshot is
+`results/reviewer_u280_runs/20260717T024537Z/`. All reported U280 values and
+comparison figures are read from CSV files under this fixed directory; terminal
+output and values written in this appendix are not independent result sources.
+The following latency values are arithmetic means of the 24 aggregate
+`latency_ms` rows (six datasets times four models, with three repetitions per
+aggregate row):
+
+| U280 implementation | Mean latency (ms) |
+| --- | ---: |
+| TempGNN | 1.296553 |
+| MATG | 9.966618 |
+| ViTeGNN | 2.869752 |
+| RTGA | 4.192824 |
+
+Thus the appropriate short summary is that TempGNN averages approximately
+`1.30 ms` on this bounded U280 workload, rather than assigning a universal
+`1.5 ms` latency. The source CSVs are
+`baselines_u280/raw_tempgnn_u280.csv` and
+`baselines_u280/{MATG,ViTeGNN,RTGA}/raw_latency_power_energy.csv` beneath the
+snapshot directory. Its four raw per-repetition CSVs contain 72 rows each
+(288 total), with zero golden, repeat, or timing failures.
+
+To regenerate the comparison CSV/SVG files from the packaged result CSVs
+without rerunning the board:
+
+```bash
+python3 - <<'PY'
+from pathlib import Path
+from scripts.derive_comparison_figures import derive_u280_core
+
+run = Path("results/reviewer_u280_runs/20260717T024537Z")
+derive_u280_core(
+    run / "baselines_u280",
+    run / "derived_comparison_figures",
+)
+PY
+```
+
+The generated TempGNN/MATG average speedup is `7.8889x`. The paper-tolerance
 diagnostic remains FAIL and is preserved.
 
 For 3 repetitions, each implementation must contain 72 rows and the combined
