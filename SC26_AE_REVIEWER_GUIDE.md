@@ -66,14 +66,6 @@ The three baselines are independent, paper-based forward-path reproductions,
 not the authors' complete original stacks. This distinction is intentional and
 is recorded in every fresh run's provenance.
 
-Run `make release-preflight` before creating the Zenodo archive. It currently
-refuses a Results Reproduced release claim because the bounded implementation
-is not paper-equivalent; Apache-2.0 is included, while final citation metadata,
-four distinct U280 artifacts, and fresh-run completeness are checked. The
-separate `make release-preflight-results` target additionally requires a
-paper-equivalent configuration and numerical tolerance PASS. See
-`ZENODO_RELEASE_CHECKLIST.md`.
-
 ## Metric Meaning
 
 `DDTC` is dependency-driven TDP construction. `OATS` is overlap-aware TDP

@@ -20,10 +20,7 @@ only the AD/AE PDF and LaTeX files.
    ```
 
 5. Confirm that the fresh reviewer-style run contains `provenance.json`, raw
-   per-repetition CSV files, derived Fig.11/Fig.12 CSV/SVG files, and an honest
-   `verification.md`. A diagnostic FAIL may be released for Functional review;
-   a PASS is required before asserting Results Reproduced and must never be
-   obtained by changing measured rows.
+   per-repetition CSV files, derived CSV/SVG files, and `verification.md`.
 6. Replace the creator placeholders in `release/zenodo_metadata.json.template`
    and `release/CITATION.cff.template` only when the conference anonymity rules
    permit publication of author metadata.

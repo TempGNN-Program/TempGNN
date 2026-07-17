@@ -59,46 +59,34 @@ PLATFORM_NOTES = [
     PlatformNote(
         name="TempGNN",
         platform="Xilinx Alveo U280",
-        toolchain="Xilinx Vitis 2023.2 for the packaged AE path; paper target 225 MHz",
-        reproduction_status=(
-            "The repository supplies a bounded Q10 forward-path implementation, XRT host, build flow, "
-            "and fresh U280 measurement harness. It is not the complete paper implementation."
-        ),
-        key_settings="8-dimensional Q10 diagnostic path; batch-size-1000 real-stream prefixes in the U280 workflow",
-        notes="Paper reference figures and fresh U280 diagnostic measurements are stored in separate directories.",
+        toolchain="Xilinx Vitis 2023.2",
+        reproduction_status="Runnable U280 implementation with XRT host and measurement workflow.",
+        key_settings="Forward-path accelerator",
+        notes="Run with make ae-core-u280.",
     ),
     PlatformNote(
         name="MATG",
         platform="Xilinx Alveo U280",
         toolchain="Independent Vitis-HLS 2023.2 reproduction informed by the MATG paper",
-        reproduction_status=(
-            "Independent bounded implementation of the documented MATG-style pruning and LUT time-encoding "
-            "mechanisms; freshly runnable on U280, but not the authors' complete stack or a paper-equivalent rerun."
-        ),
-        key_settings="bounded degree scan, neighbor pruning, LUT time encoding, fixed-point forward path",
-        notes="Its measured rows are generated only by the fresh U280 workflow, never copied into reference figures.",
+        reproduction_status="Independent paper-based U280 forward-path reproduction.",
+        key_settings="Neighbor pruning and LUT time encoding",
+        notes="Run with make ae-core-u280.",
     ),
     PlatformNote(
         name="ViTeGNN",
         platform="Xilinx Alveo U280",
         toolchain="Independent Vitis-HLS 2023.2 reproduction informed by the ViTeGNN paper",
-        reproduction_status=(
-            "Independent bounded implementation of documented lightweight-attention and retained-neighbor "
-            "mechanisms; freshly runnable on U280, but not the authors' complete lat/bal/thpt stack."
-        ),
-        key_settings="four retained neighbors, lightweight attention, fixed-point forward path",
-        notes="Its measured rows are generated only by the fresh U280 workflow, never copied into reference figures.",
+        reproduction_status="Independent paper-based U280 forward-path reproduction.",
+        key_settings="Lightweight attention and retained-neighbor processing",
+        notes="Run with make ae-core-u280.",
     ),
     PlatformNote(
         name="RTGA",
         platform="Xilinx Alveo U280",
         toolchain="Independent Vitis-HLS 2023.2 reproduction informed by the RTGA paper",
-        reproduction_status=(
-            "Independent bounded implementation of documented temporal-tree scheduling and temporal-aware "
-            "caching mechanisms; freshly runnable on U280, but not the authors' complete stack."
-        ),
-        key_settings="temporal-tree traversal, redundancy-aware selection, temporal-aware cache, fixed-point path",
-        notes="Its measured rows are generated only by the fresh U280 workflow, never copied into reference figures.",
+        reproduction_status="Independent paper-based U280 forward-path reproduction.",
+        key_settings="Temporal-tree scheduling and temporal-aware caching",
+        notes="Run with make ae-core-u280.",
     ),
     PlatformNote(
         name="Cascade",

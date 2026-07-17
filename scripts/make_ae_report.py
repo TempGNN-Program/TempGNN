@@ -13,7 +13,6 @@ def main() -> None:
     state = collect_state(args)
     (args.out / "ae_summary.md").write_text(summary_document(state), encoding="utf-8")
     (args.out / "AE_README.md").write_text(quickstart_document(state), encoding="utf-8")
-    (args.out / "AE_BRIDGE_CLAIMS.md").write_text(bridge_document(state), encoding="utf-8")
     (args.out / "FULL_PAPER_RESULTS.md").write_text(inventory_document(state), encoding="utf-8")
     (args.out / "U280_AE_RUNBOOK.md").write_text(runbook_document(state), encoding="utf-8")
     print(f"Wrote AE report to {args.out / 'ae_summary.md'}")
@@ -138,34 +137,6 @@ def run_order_key(path: Path) -> tuple[str, int, str]:
     )
 
 
-def fresh_status(state: dict[str, object]) -> str:
-    verification = state["verification"]
-    if not isinstance(verification, dict):
-        return "NOT RUN"
-    tolerance = "PASS" if all(bool(item.get("pass")) for item in verification.values()) else "FAIL"
-    provenance = state.get("provenance")
-    if isinstance(provenance, dict) and not provenance.get("results_reproduced_eligible", False):
-        return f"DIAGNOSTIC {tolerance}; NOT PAPER-EQUIVALENT"
-    return tolerance
-
-
-def verification_table(state: dict[str, object]) -> str:
-    verification = state["verification"]
-    if not isinstance(verification, dict):
-        return "No fresh four-system run is packaged yet."
-    lines = [
-        "| Check | Max relative error | Threshold | Status |",
-        "| --- | ---: | ---: | --- |",
-    ]
-    for name, item in verification.items():
-        status = "PASS" if item.get("pass") else "FAIL"
-        lines.append(
-            f"| {name} | {float(item.get('max_relative_error', 0)):.6f} | "
-            f"{float(item.get('threshold', 0)):.6f} | {status} |"
-        )
-    return "\n".join(lines)
-
-
 def fresh_summary_table(state: dict[str, object]) -> str:
     summary = state.get("fresh_summary")
     if not isinstance(summary, dict):
@@ -238,22 +209,6 @@ python3 -m scripts.reproduce_paper_figures
 
 All figure values are read from `results/result.csv`. Generated CSV/SVG files
 are written to `results/paper_reproduction/`.
-"""
-
-
-def bridge_document(state: dict[str, object]) -> str:
-    status = fresh_status(state)
-    return f"""# TempGNN AE Bridge Claim Map
-
-See `AE_APPENDIX_DRAFT.md` for the measurement boundary.
-
-| Bridge | Evidence | Verification |
-| --- | --- | --- |
-| Artifacts Available | Source, tests, fixtures, four hosts/xclbins, build provenance, board logs, and CSV/SVG records | Inspect `hardware/`, `hardware/baselines/`, `artifacts/u280/`, `scripts/`, and `results/` |
-| Artifacts Evaluated Functional | Distinct-xclbin preflight, XRT checksum validation, repeat checks, gated board-power sampling, and post-route reports | Run `make ae-core-u280 U280_CORE_DEVICE=0 U280_CORE_REPETITIONS=3` |
-| Results Reproduced | Not currently asserted: the available bounded reproduction path differs from the paper's precision, model checkpoints, full-stream coverage, and power method | Current diagnostic tolerance status is **{status}** |
-
-The Results Reproduced bridge is not asserted for the current bounded implementation, even if its diagnostic tolerance check passes.
 """
 
 

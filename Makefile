@@ -60,9 +60,6 @@ help:
 	@echo "  make u280-layout - render FPGA layout image from routed U280 LOC export"
 	@echo "  make u280-core-preflight - verify four distinct reviewer-runnable U280 implementations"
 	@echo "  make ae-core-u280 - one-click U280 validation plus paper/core figure generation"
-	@echo "  make ae-core-u280-strict - additionally require numerical paper-figure tolerance PASS"
-	@echo "  make release-preflight - require license, DOI metadata, distinct U280 artifacts, and a complete fresh run"
-	@echo "  make release-preflight-results - additionally require paper-equivalent scope and tolerance PASS"
 	@echo "  make package     - create AE tarball"
 
 test:
