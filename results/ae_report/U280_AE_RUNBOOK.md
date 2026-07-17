@@ -20,11 +20,10 @@ The figure command regenerates the source-labeled paper-reference inputs. `basel
 ## Fresh Mechanism-Level Comparison
 
 ```bash
-make u280-core-preflight
 make ae-core-u280 U280_CORE_DEVICE=0 U280_CORE_REPETITIONS=3
 ```
 
-Preflight requires four distinct xclbin hashes. The measurement harness fetches deterministic prefixes from the six public real datasets, records source/sample hashes, cross-checks each xclbin link request against the Vivado-connected kernel clock and post-route WNS/TNS, calibrates a repeated-kernel window, validates repeat checksums, samples total U280 board power with `xbutil`, writes raw rows, derives diagnostic Fig.11/Fig.12-shaped data, and compares it with packaged references. Unequal timing-closed clocks block normalized comparison generation. Synthetic fixtures are accepted only by C-sim and rejected by this workflow. Diagnostic tolerance failures are recorded in `verification.md`; strict paper-match enforcement requires the explicit `--require-paper-match` option.
+Preflight requires four distinct xclbin hashes. The measurement harness fetches deterministic prefixes from the six public real datasets, records source/sample hashes, cross-checks each xclbin link request against the Vivado-connected kernel clock and post-route WNS/TNS, calibrates a repeated-kernel window, validates repeat checksums, samples total U280 board power with `xbutil`, writes raw rows, derives measured Fig.11/Fig.12 comparison data, and compares it with code-embedded paper references. Each implementation must keep one timing-closed clock across its rows; clocks are recorded and latency is not frequency-rescaled. Synthetic fixtures are accepted only by C-sim and rejected by this workflow. The default target preserves a tolerance failure in `verification.md`; `make ae-core-u280-strict` additionally makes numerical mismatch fail the command.
 
 This is not a paper-equivalent rerun because the reduced Q10 kernels, deterministic stand-in weights, bounded prefixes, and power method differ from the paper methodology.
 

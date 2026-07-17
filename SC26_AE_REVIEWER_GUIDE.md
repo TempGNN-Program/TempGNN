@@ -6,16 +6,18 @@ This document is a reviewer-facing guide for evaluating the TempGNN artifact. It
 
 The artifact demonstrates three things:
 
-1. The TempGNN execution model can be run and checked through Python TDP/DDTC/OATS tests.
+1. TempGNN and three paper-based FPGA baseline reproductions can be executed
+   and checked on the same U280 through one command.
 2. The paper-reference execution, workload, GPU-overhead, speedup, energy,
-   ablation, and sensitivity inputs can be regenerated as source-labeled
-   CSV/SVG files without hardware.
+   ablation, and sensitivity inputs can be regenerated from source-labeled
+   Python constants as CSV/SVG files without running CPU or GPU baselines.
 3. A bounded FPGA mechanism comparison can be rerun using four distinct U280 xclbins:
    TempGNN plus independent paper-based MATG, ViTeGNN, and RTGA reproductions.
    The fresh path records timing, total board power, checksums, post-route
    evidence, real-dataset-prefix provenance, and diagnostic normalized rows.
 
-The measurement boundary is stated once in `AE_APPENDIX_DRAFT.md`. The exact CPU-only and U280 hardware/software environment is recorded in `ENVIRONMENT.md`.
+The measurement boundary is stated once in `AE_APPENDIX_DRAFT.md`. The exact
+optional software-check and U280 environments are recorded in `ENVIRONMENT.md`.
 
 ## Package
 
@@ -30,24 +32,32 @@ tar -xzf pap142_tempgnn_sc26_ae_u280.tgz
 cd pap142_tempgnn_sc26_ae
 ```
 
-## Fast Path Without FPGA
+## Core One-Command U280 Path
 
-This path is the recommended default review workflow.
+This is the recommended reviewer workflow. Credentials for the anonymous U280
+account are delivered through the conference's private AE channel.
 
 ```bash
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-make smoke
-make report
+bash scripts/run_all.sh u280-core
 ```
 
-Expected:
+The wrapper loads `/opt/xilinx/xrt/setup.sh` when necessary and uses device 0
+with three repetitions. The explicit `make ae-core-u280` form can override
+`U280_CORE_DEVICE` or `U280_CORE_REPETITIONS`.
+
+The command generates paper-reference figures from code, runs TempGNN, MATG,
+ViTeGNN, and RTGA on U280, validates every fresh measurement row, derives the
+measured core comparison figures, and regenerates the AE report. It does not
+execute a CPU or GPU performance baseline.
+
+The command exits nonzero on missing artifacts, failed goldens, unstable
+outputs, incomplete measurements, invalid timing provenance, or a failed
+required paper-match gate when the strict target is selected. The default
+target records numerical mismatch without hiding it. On success it finishes by writing:
 
 ```text
-Ran 28 tests
-OK
-Wrote AE report to results/ae_report/ae_summary.md
+results/reviewer_u280_runs/<run-id>/verification.md
+results/ae_report/ae_summary.md
 ```
 
 The main generated files are:
@@ -61,7 +71,7 @@ results/ae_report/FULL_PAPER_RESULTS.md
 results/ae_report/U280_AE_RUNBOOK.md
 ```
 
-## Reconstruct Packaged Figures
+## Generate Paper Figures From Code
 
 ```bash
 python3 -m scripts.reproduce_paper_figures
@@ -71,6 +81,7 @@ Outputs:
 
 | Result | File |
 | --- | --- |
+| Reconstructed 668-row source table | `results/paper_reproduction/paper_figure_values.csv` |
 | Figure data manifest | `results/paper_reproduction/figure_data_manifest.csv` |
 | Combined figure source data | `results/paper_reproduction/all_figure_data.csv` |
 | Fig.2 execution breakdown | `results/paper_reproduction/fig2_execution_breakdown.svg` |
@@ -94,10 +105,13 @@ w/o DDTC normalized time: 3.08x
 w/o OATS normalized time: 1.77x
 ```
 
-The sole reference input is `reference_inputs/paper_figure_values.csv`. Exact
-workbook cells and values digitized from vector geometry have different
-`source_kind` values. The Fig.11 plot/prose difference is retained rather than
-silently forced to match.
+The 668 reference records are structured constants in
+`tempgenn/paper_reference_data.py`. The deterministic CSV/SVG outputs,
+including `paper_figure_values.csv`, are included under
+`results/paper_reproduction/` for direct inspection and are regenerated in
+place with the recorded migration hash. Exact workbook cells and values
+digitized from vector geometry have different `source_kind` values. The Fig.11 plot/prose difference
+is retained rather than silently forced to match.
 
 ## Optional Q14 Edge-Stream Profiling
 
@@ -127,7 +141,6 @@ no login names, passwords, institutional hostnames, or personal SSH keys.
 
 ```bash
 source /opt/xilinx/xrt/setup.sh
-make u280-core-preflight
 make ae-core-u280 U280_CORE_DEVICE=0 U280_CORE_REPETITIONS=3
 ```
 
@@ -142,18 +155,21 @@ results/reviewer_u280_runs/<run-id>/verification.md
 ```
 
 The audited packaged final run is
-`results/reviewer_u280_runs/pap142_u280_measured_20260715T052052Z/`; the
-one-repetition smoke run is `pap142_u280_smoke_20260715T052052Z`.
+`results/reviewer_u280_runs/20260717T024537Z/`. It contains 72 rows per
+implementation and 288 rows total; every row passes golden, repeat, and timing
+validation. The measured all-workload TempGNN/MATG average speedup is
+`7.8889x`. Its paper-figure tolerance diagnostic remains FAIL and is retained.
 
 Expected: preflight prints four different xclbin SHA256 values. Every raw row
 has a kernel and embedding checksum, repeat-consistency status, board-power
 samples, xclbin link request, Vivado-connected post-route clock, WNS/TNS, real
-input URL, and input/fixture hashes. Unequal timing-closed clocks block
-comparison-figure generation.
+input URL, and input/fixture hashes. Each implementation must keep one
+timing-closed clock across all rows; its actual clock remains in every row and
+the workflow performs no frequency rescaling.
 `verification.md` reports the
-observed diagnostic comparison error. The command never substitutes packaged
-reference values. A tolerance FAIL is recorded without turning an otherwise
-complete diagnostic hardware run into a command failure.
+observed comparison error. The command never substitutes paper-reference
+values. `make ae-core-u280-strict` adds the numerical paper-match gate and
+makes a tolerance FAIL fail the command.
 
 This path is not paper-equivalent: it uses bounded real-data prefixes,
 8-dimensional Q10 kernels, deterministic stand-in weights, and `xbutil` power,
@@ -179,6 +195,8 @@ results/board_u280/smoke.log
 results/board_u280/tbscale.log
 results/board_u280/maxbatch.log
 results/board_u280/layout_smoke.log
+results/board_u280/tempgnn_21cu_wk_tgn_100iter.log
+results/board_u280/tempgnn_21cu_input_switch.log
 results/board_u280/tempgnn_u280_fpga_layout.png
 ```
 
@@ -186,9 +204,13 @@ Expected U280 forward-path values:
 
 | Metric | Value |
 | --- | ---: |
-| Frequency | 225 MHz |
-| Timing | PASS |
-| WNS | +0.016 ns |
+| Reviewer TempGNN frequency | 168 MHz (21 CUs) |
+| Reviewer TempGNN timing | PASS |
+| Reviewer TempGNN WNS/TNS | +0.002 ns / 0.0 ns |
+| Delivered WK/TGN mean, 100 iterations | 1.412534 ms |
+| Fresh all-workload TempGNN/MATG average | 7.8889x |
+| Historical sanity frequency | 225 MHz |
+| Historical sanity WNS | +0.016 ns |
 
 The board logs should show PASS against the packaged golden fixed-point fixtures.
 

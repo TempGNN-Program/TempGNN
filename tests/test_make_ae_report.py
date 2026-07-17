@@ -28,6 +28,7 @@ class MakeAeReportTests(unittest.TestCase):
             state = {
                 "averages": {},
                 "board": None,
+                "build": None,
                 "run": Path("results/reviewer_u280_runs/final"),
                 "verification": {},
                 "provenance": {},

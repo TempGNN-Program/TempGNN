@@ -43,7 +43,7 @@ repository. The repository and package are licensed under Apache-2.0.
 - `A1`: TempGNN reference model, TDP/DDTC/OATS tests, and real edge-stream
   profiling.
 - `A2`: TempGNN plus independent paper-based MATG, ViTeGNN, and RTGA U280
-  forward paths, common XRT host, xclbins, reports, and measurement workflow.
+  forward paths, validated XRT hosts, xclbins, reports, and measurement workflow.
 - `A3`: Source-labeled paper-reference data and deterministic CSV/SVG
   generator.
 
@@ -55,10 +55,10 @@ repository. The repository and package are licensed under Apache-2.0.
 
 ### Measurement Boundary
 
-The packaged TempGNN board logs, timing report, and layout are historical U280
-sanity evidence. Artifact `A2` additionally executes four distinct xclbins and
-collects fresh U280 latency, total-board power, clock, checksum, and input
-provenance rows. MATG, ViTeGNN, and RTGA are independently written,
+The package includes current 21-CU TempGNN board logs and post-route reports,
+plus historical U280 sanity/layout evidence. Artifact `A2` executes four
+distinct xclbins and collects fresh U280 latency, total-board power, clock,
+checksum, and input provenance rows. MATG, ViTeGNN, and RTGA are independently written,
 paper-based forward-path reproductions, not the baseline authors' complete
 source trees.
 
@@ -86,7 +86,7 @@ collisions, synchronization stalls, and off-chip traffic.
 
 ### B. Expected Results
 
-The unit suite must pass all 28 tests. The TDP implementation must agree with a
+The unit suite must pass all 34 tests. The TDP implementation must agree with a
 chronological reference update, fixture generation must be deterministic, and
 artifact paths/provenance must pass their consistency checks. Optional Q14
 profiling produces nonnegative, well-formed per-dataset/model statistics from
@@ -137,7 +137,7 @@ The default dependency chain is:
 
 ```text
 T1: create environment
-  -> T2: run 26 unit tests
+  -> T2: run 34 unit and artifact-contract tests
   -> T3: optionally fetch real edge streams
   -> T4: profile TDP/DDTC/OATS behavior
   -> T5: generate CSV and Markdown summaries
@@ -156,7 +156,7 @@ the target batch size, fanout, and depth are recorded in the output CSVs.
 
 ### F. Artifact Analysis
 
-The test command must finish with `Ran 28 tests` and `OK`. Optional Q14 outputs
+The test command must finish with `Ran 34 tests` and `OK`. Optional Q14 outputs
 are written to:
 
 ```text
@@ -190,6 +190,11 @@ With 3 repetitions, the full matrix contains 288 raw rows:
 ```text
 4 implementations x 6 datasets x 4 models x 3 repetitions
 ```
+
+The packaged run `20260717T024537Z` satisfies this functional contract: all
+288 rows pass golden, repeat-consistency, and timing validation. Its fresh
+all-workload averages are `1.296553 ms` for TempGNN and `9.966618 ms` for
+MATG, corresponding to `7.8889x` measured average speedup.
 
 The workflow derives fresh Fig.11/Fig.12-shaped CSV/SVG tables and a numerical
 tolerance report. A tolerance failure is retained as evidence and is not
@@ -250,24 +255,25 @@ The direct-run dependency chain is:
 ```text
 T1: preflight hashes, files, source revisions, and four xclbins
   -> T2: generate deterministic real-prefix fixtures and software goldens
-  -> T3: run each xclbin with a common XRT host
+  -> T3: run each xclbin with its packaged validated XRT host
   -> T4: sample gated U280 power and record per-repetition raw rows
   -> T5: validate completeness, checksums, energy, and timing-closed clocks
-  -> T6: aggregate rows and derive diagnostic Fig.11/Fig.12 tables
+  -> T6: aggregate rows and derive measured Fig.11/Fig.12 comparison tables
   -> T7: compare with source-labeled paper-reference values
 ```
 
 Commands:
 
 ```bash
-make u280-core-preflight
 make ae-core-u280 U280_CORE_DEVICE=0 U280_CORE_REPETITIONS=3
 ```
 
-The checked parameters are in `configs/u280_core_reproduction.json`: requested
-225 MHz, achieved-clock tolerance 0.5 MHz, batch size 1,000, six datasets, four
-models, three repetitions, 8-dimensional Q10 tensors, and bounded real-data
-prefixes.
+The equivalent default-device wrapper is `bash scripts/run_all.sh u280-core`.
+
+The checked parameters are in `configs/u280_core_reproduction.json`: each
+design's requested timing-closed clock and CU count, no frequency rescaling,
+batch size 1,000, six datasets, four models, three repetitions, 8-dimensional
+Q10 tensors, and bounded real-data prefixes.
 
 ### F. Artifact Analysis
 
@@ -282,16 +288,18 @@ results/reviewer_u280_runs/<run-id>/verification.json
 results/reviewer_u280_runs/<run-id>/verification.md
 ```
 
-The package includes smoke run `pap142_u280_smoke_20260715T052052Z` and final
-run `pap142_u280_measured_20260715T052052Z`; the latter contains 288 measured
-rows and is the run cited by the generated AE report.
+The packaged final run is `20260717T024537Z`; it contains 288 measured rows and
+is the run cited by the generated AE report. All functional checks pass. The
+Fig.11/Fig.12 paper-tolerance diagnostic remains FAIL and is preserved rather
+than replacing fresh rows with paper-reference values.
 
 Latency is XRT launch-to-completion kernel time. Power is total U280 board power
 sampled only during the gated repeated-kernel window. Energy in millijoules is
 `latency_ms * power_w`. The orchestrator rejects incomplete matrices, failed
-goldens, inconsistent energy, synthetic core inputs, and incomparable achieved
-clocks. Post-route timing, utilization, HLS, route, build, and xclbin metadata
-evidence is staged with SHA256 records.
+goldens, inconsistent energy, synthetic core inputs, and unstable or unverified
+achieved clocks. Each implementation's timing-closed clock is recorded without
+frequency rescaling. Post-route timing, utilization, HLS, route, build, and
+xclbin metadata evidence is staged with SHA256 records.
 
 ## Computational Artifact A3
 
@@ -342,10 +350,12 @@ Python 3.10 or newer. Core CSV/SVG generation uses the Python standard library.
 
 #### Datasets and Inputs
 
-The sole numeric input is `reference_inputs/paper_figure_values.csv` with 668
-source-labeled rows. `reference_inputs/README.md` records source hashes,
-workbook cell or vector geometry locators, uncertainty, and the Fig.11
-plot/prose discrepancy.
+The 668 source-labeled numeric records are structured constants in
+`tempgenn/paper_reference_data.py`. `reference_inputs/README.md` records source
+hashes, workbook cell or vector geometry locators, uncertainty, and the Fig.11
+plot/prose discrepancy. Deterministic CSV/SVG outputs are included under
+`results/paper_reproduction/` for direct inspection and regenerated from the
+code-embedded records.
 
 #### Installation and Deployment
 
@@ -354,7 +364,7 @@ Use the environment prepared for `A1`; no additional deployment is required.
 ### E. Artifact Evaluation
 
 ```text
-T1: read and validate the source-labeled reference table
+T1: read and validate the source-labeled code constants
   -> T2: group rows by figure, dataset, model, and solution
   -> T3: emit matching CSV and SVG files
   -> T4: write a manifest and combined source table
@@ -369,8 +379,9 @@ python3 -m scripts.reproduce_paper_figures
 
 ### F. Artifact Analysis
 
-Outputs are under `results/paper_reproduction/`, including Fig.2, Fig.4(a),
+Included, regenerable outputs are under `results/paper_reproduction/`, including Fig.2, Fig.4(a),
 Fig.9(b), and Fig.10-Fig.14 CSV/SVG pairs, `all_figure_data.csv`, and
-`figure_data_manifest.csv`. The manifest identifies the input file and data
+`figure_data_manifest.csv`. The command also reconstructs the complete 668-row
+`paper_figure_values.csv` with the migration SHA-256. The manifest identifies the source module and data
 status for every figure. The explicit Fig.11 AVG bar and the rounded 7.6x prose
 statement are both preserved rather than forced to agree.

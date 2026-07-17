@@ -150,7 +150,7 @@ Expected terminal summary:
 
 
 \begin{Verbatim}[fontsize=\small,breaklines=true,breakanywhere=true]
-Ran 28 tests
+Ran 34 tests
 OK
 \end{Verbatim}
 
@@ -171,7 +171,7 @@ when the corresponding edge files are already present.
 
 \subsection{Artifact Analysis}
 
-All 28 tests must pass. In particular, the recursive TDP state must agree with
+All 34 tests must pass. In particular, the recursive TDP state must agree with
 
 chronological updates, fixtures must be deterministic, xclbin link requests
 
@@ -237,9 +237,11 @@ artifacts/u280/ViTeGNN/bin/vitegnn_kernel.hw.xclbin
 artifacts/u280/RTGA/bin/rtga_kernel.hw.xclbin
 \end{Verbatim}
 
-The common XRT host and baseline C-sim reference binaries are colocated under
+Each validated XRT host and the baseline C-sim reference binaries are colocated
 
-the same \path{bin/} directories. Source, paper-mechanism mapping, and limitations
+under the same \path{bin/} directories. TempGNN uses its 21-CU parallel host;
+
+the baselines use the common single-CU host. Source, paper-mechanism mapping, and limitations
 
 are in \path{hardware/baselines/README.md} and
 
@@ -276,7 +278,7 @@ A2-T1 preflight four source revisions, hosts, and distinct xclbin hashes
   -> A2-T4 load and run each implementation on U280
   -> A2-T5 gate the repeated-kernel window and sample total board power
   -> A2-T6 validate checksums, repetitions, energy, provenance, and clocks
-  -> A2-T7 aggregate raw rows and derive diagnostic figure-shaped tables
+  -> A2-T7 aggregate raw rows and derive measured core comparison tables
   -> A2-T8 compare fresh tables with the paper-reference rows
 \end{Verbatim}
 
@@ -299,6 +301,8 @@ Run the complete direct measurement:
 make ae-core-u280 U280_CORE_DEVICE=0 U280_CORE_REPETITIONS=3
 \end{Verbatim}
 
+The default-device wrapper is \path{bash scripts/run_all.sh u280-core}.
+
 Checked parameters are loaded from \path{configs/u280_core_reproduction.json}:
 
 
@@ -310,7 +314,7 @@ real prefix: 8,192 events per dataset
 target batch: 1,000
 repetitions: 3
 tensor path: 8-dimensional Q10
-requested clock: 225 MHz
+requested clocks: TempGNN 168 MHz; MATG/ViTeGNN/RTGA 225 MHz
 achieved-clock comparison tolerance: 0.5 MHz
 \end{Verbatim}
 
@@ -366,11 +370,11 @@ results/reviewer_u280_runs/<run-id>/verification.md
 
 The packaged final run is
 
-\path{results/reviewer_u280_runs/pap142_u280_measured_20260715T052052Z/}; its four
-
-raw CSV files contain 72 rows each (288 total). The packaged one-repetition
-
-smoke run is \path{pap142_u280_smoke_20260715T052052Z}.
+\path{results/reviewer_u280_runs/20260717T024537Z/}; its four raw CSV files
+contain 72 rows each (288 total), with zero golden, repeat, or timing failures.
+The fresh all-workload averages are \texttt{1.296553 ms} for TempGNN
+and \texttt{9.966618 ms} for MATG, yielding \textbf{7.8889x} measured
+average speedup. The paper-tolerance diagnostic remains FAIL and is preserved.
 
 
 For 3 repetitions, each implementation must contain 72 rows and the combined
@@ -390,15 +394,19 @@ kernel clock, WNS/TNS, and \path{timing_met=PASS}.
 
 The workflow refuses normalized comparison generation if an implementation's
 
-post-route clock changes between rows or if the four timing-closed clocks
+post-route clock changes between rows or lacks timing closure. Each actual
 
-differ by more than 0.5 MHz. \texttt{verification.md} reports the maximum relative error against
+clock remains in the raw rows and no frequency rescaling is applied.
 
-paper-reference Fig.11 and the U280 subset of Fig.12. A diagnostic tolerance
+\texttt{verification.md} reports the maximum relative error against
 
-FAIL is a valid completed run and must remain visible. It does not demonstrate
+paper-reference Fig.11 and the U280 subset of Fig.12. The reviewer Make target
 
-paper equivalence and must not be converted to PASS by adjusting measured rows.
+default one-command path preserves a tolerance FAIL while still completing a
+
+functionally valid hardware run. \texttt{make ae-core-u280-strict} makes that
+
+mismatch fail the command. It must not be converted to PASS by adjusting measured rows.
 
 
 Passing \texttt{A2} establishes that four distinct implementations execute on the
@@ -420,17 +428,19 @@ network access is required. Inputs are:
 
 
 \begin{Verbatim}[fontsize=\small,breaklines=true,breakanywhere=true]
-reference_inputs/paper_figure_values.csv
+tempgenn/paper_reference_data.py
 reference_inputs/README.md
 \end{Verbatim}
 
-The table has 668 rows. Every row records its source class, locator, and
+The source module has 668 structured records. Every record identifies its source class, locator, and
 
 uncertainty. Original author workbooks and vector files are not distributed
 
 because they contain author metadata; only the anonymized numeric extraction
 
-and source hashes are packaged.
+and source hashes are embedded in code. The AE archive also includes
+deterministic CSV/SVG outputs under \path{results/paper_reproduction/} for
+direct inspection; the code-embedded records remain their authoritative source.
 
 
 \subsection{Artifact Execution}
@@ -439,7 +449,7 @@ The dependency chain is:
 
 
 \begin{Verbatim}[fontsize=\small,breaklines=true,breakanywhere=true]
-A3-T1 validate the reference table and source labels
+A3-T1 validate the code-embedded records and source labels
   -> A3-T2 split records by figure
   -> A3-T3 generate matching CSV and SVG files
   -> A3-T4 generate the combined table and manifest
@@ -466,15 +476,17 @@ make smoke
 make report
 \end{Verbatim}
 
-\texttt{make smoke} includes the 28 tests from \texttt{A1}.
+\texttt{make smoke} includes the 34 unit and artifact-contract tests from \texttt{A1-A3}.
 
 
 \subsection{Artifact Analysis}
 
-Expected outputs:
+The following outputs are included for direct inspection and regenerated in
+place by the commands above:
 
 
 \begin{Verbatim}[fontsize=\small,breaklines=true,breakanywhere=true]
+results/paper_reproduction/paper_figure_values.csv
 results/paper_reproduction/all_figure_data.csv
 results/paper_reproduction/figure_data_manifest.csv
 results/paper_reproduction/fig2_execution_breakdown.csv/.svg
@@ -513,7 +525,7 @@ series came from exact workbook cells or axis-calibrated vector geometry.
 
 Passing \texttt{A3} demonstrates deterministic reconstruction and provenance of the
 
-packaged paper plotting records for \texttt{C4}. It does not demonstrate a fresh rerun
+code-embedded paper plotting records for \texttt{C4}. It does not demonstrate a fresh rerun
 
 of MATG, ViTeGNN, RTGA, Cascade, TGLite-CPU, or the complete TempGNN paper
 

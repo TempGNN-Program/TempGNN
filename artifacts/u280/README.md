@@ -35,7 +35,7 @@ The runner receives the arguments shown in
 repetition. The comparison columns are:
 
 ```text
-dataset,model,solution,repetition,batch_size,latency_ms,power_w,energy_mj,frequency_mhz,requested_frequency_mhz,xclbin_link_requested_frequency_mhz,post_route_kernel_frequency_mhz,post_route_wns_ns,post_route_tns_ns,timing_met,fixture_input_kind,fixture_input_sha256,fixture_source_url
+dataset,model,solution,compute_units,repetition,batch_size,latency_ms,power_w,energy_mj,frequency_mhz,requested_frequency_mhz,xclbin_link_requested_frequency_mhz,post_route_kernel_frequency_mhz,post_route_wns_ns,post_route_tns_ns,timing_met,fixture_input_kind,fixture_input_sha256,fixture_source_url
 ```
 
 Every row also carries the evidence fields checked by the orchestrator:
@@ -48,7 +48,7 @@ For every row, `power_w` is total U280 board power sampled with
 `xbutil examine --report electrical` only during the gated repeated-kernel
 window. `energy_mj` must be consistent with `latency_ms * power_w`. The
 orchestrator validates completeness, units, and real-input provenance,
-aggregates repetitions, derives diagnostic Fig.11/Fig.12-shaped tables, and
+aggregates repetitions, derives measured Fig.11/Fig.12 comparison tables, and
 writes a numerical tolerance report under
 `results/reviewer_u280_runs/<run-id>/`.
 
@@ -56,12 +56,17 @@ writes a numerical tolerance report under
 clock. `xclbin_link_requested_frequency_mhz` comes from the final xclbin build
 metadata; `post_route_kernel_frequency_mhz` comes from the Vivado `ap_clk`
 connection and is accepted only with nonnegative post-route WNS/TNS. The
-orchestrator rejects comparison-figure generation when the four implemented
-clocks differ by more than the configured tolerance.
+orchestrator rejects an implementation whose clock changes between rows. Each
+design uses its recorded timing-closed clock, and latency is compared without
+frequency rescaling. `compute_units` is checked against the configuration so
+the TempGNN 21-CU host cannot silently fall back to one CU.
 
 The current contract is explicitly mechanism-level and not paper-equivalent;
 see `hardware/baselines/README.md` and the configuration's
 `results_reproduced_eligible` field.
 
-The packaged paper CSV files are reference outputs only. A reviewer run must
-write a new run directory and must never overwrite the packaged references.
+Paper-reference inputs are source-labeled constants in
+`tempgenn/paper_reference_data.py`; deterministic paper CSV/SVG outputs are
+included under `results/paper_reproduction/` and can be regenerated in place.
+A reviewer run writes a new timestamped directory and never substitutes those
+paper-reference outputs for fresh hardware rows.

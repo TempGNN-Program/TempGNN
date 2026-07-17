@@ -1,6 +1,6 @@
-XRT Build Version: 2.16.0 (Vitis)
-       Build Date: 2023-07-13 16:00:55
-          Hash ID: 157faa07876c55bb8aa8ec51b28608a6a0f6638e
+XRT Build Version: 2.16.204 (2023.2)
+       Build Date: 2023-10-11 23:45:57
+          Hash ID: fa4c0045003fed0acea4593788dce5ef6d0b66ee
 ------------------------------------------------------------------------------
 Warning: The option '--output' has not been specified. All operations will    
          be done in memory with the exception of the '--dump-section' command.
@@ -8,9 +8,9 @@ Warning: The option '--output' has not been specified. All operations will
 Reading xclbin file into memory.  File: /home/ae_reviewer/TempGNN/artifacts/u280/ViTeGNN/bin/vitegnn_kernel.hw.xclbin
 
 ==============================================================================
-XRT Build Version: 2.16.0 (Vitis)
-       Build Date: 2023-07-13 16:00:55
-          Hash ID: 157faa07876c55bb8aa8ec51b28608a6a0f6638e
+XRT Build Version: 2.16.204 (2023.2)
+       Build Date: 2023-10-11 23:45:57
+          Hash ID: fa4c0045003fed0acea4593788dce5ef6d0b66ee
 ==============================================================================
 xclbin Information
 ------------------
@@ -19,7 +19,7 @@ xclbin Information
    Kernels:                vitegnn_kernel
    Signature:              
    Content:                Bitstream
-   UUID (xclbin):          24e0d534-0e53-ab43-eefb-d6367829d8a9
+   UUID (xclbin):          b9fb72d5-29e6-90d4-c187-fc7306b2652e
    UUID (IINTF):           fb2b2c5a19ed63593fea95f51fbc8eb9
    Sections:               BITSTREAM, MEM_TOPOLOGY, IP_LAYOUT, CONNECTIVITY, 
                            CLOCK_FREQ_TOPOLOGY, BUILD_METADATA, 

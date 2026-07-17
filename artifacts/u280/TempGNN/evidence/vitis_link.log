@@ -1,0 +1,734 @@
+Option Map File Used: '/tools/Xilinx/Vitis/2023.2/data/vitis/vpp/optMap.xml'
+
+****** v++ v2023.2 (64-bit)
+  **** SW Build 4026344 on 2023-10-11-15:42:10
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+INFO: [v++ 60-1306] Additional information associated with this v++ link can be found at:
+	Reports: /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/reports/link
+	Log files: /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/logs/link
+Running Dispatch Server on port: 34123
+INFO: [v++ 60-1548] Creating build summary session with primary output /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/tempgnn_forward_kernel.hw.xclbin.link_summary, at Fri Jul 17 02:46:24 2026
+INFO: [v++ 60-1315] Creating rulecheck session with output '/home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/reports/link/v++_link_tempgnn_forward_kernel.hw_guidance.html', at Fri Jul 17 02:46:24 2026
+INFO: [v++ 60-895]   Target platform: /opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm
+INFO: [v++ 60-1578]   This platform contains Xilinx Shell Archive '/opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/hw/hw.xsa'
+INFO: [v++ 74-78] Compiler Version string: 2023.2
+INFO: [v++ 60-629] Linking for hardware target
+INFO: [v++ 60-423]   Target device: xilinx_u280_gen3x16_xdma_1_202211_1
+INFO: [v++ 60-1332] Run 'run_link' status: Not started
+INFO: [v++ 60-1443] [02:46:31] Run run_link: Step system_link: Started
+INFO: [v++ 60-1453] Command Line: system_link --xo /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/tempgnn_forward_kernel.hw.xo -keep --config /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/int/syslinkConfig.ini --xpfm /opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm --target hw --output_dir /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/int --temp_dir /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/sys_link
+INFO: [v++ 60-1454] Run Directory: /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/run_link
+INFO: [SYSTEM_LINK 82-70] Extracting xo v3 file /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/tempgnn_forward_kernel.hw.xo
+INFO: [SYSTEM_LINK 82-53] Creating IP database /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+INFO: [SYSTEM_LINK 82-38] [02:46:33] build_xd_ip_db started: /tools/Xilinx/Vitis/2023.2/bin/build_xd_ip_db -ip_search 0  -sds-pf /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/sys_link/hw.hpfm -clkid 0 -ip /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/sys_link/iprepo/xilinx_com_hls_tempgnn_forward_kernel_1_0,tempgnn_forward_kernel -o /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml
+INFO: [SYSTEM_LINK 82-37] [02:46:41] build_xd_ip_db finished successfully
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 455.812 ; gain = 0.000 ; free physical = 30520 ; free virtual = 68734
+INFO: [SYSTEM_LINK 82-51] Create system connectivity graph
+INFO: [SYSTEM_LINK 82-102] Applying explicit connections to the system connectivity graph: /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/sys_link/cfgraph/cfgen_cfgraph.xml
+INFO: [SYSTEM_LINK 82-38] [02:46:41] cfgen started: /tools/Xilinx/Vitis/2023.2/bin/cfgen  -nk tempgnn_forward_kernel:21:tempgnn_forward_kernel_1,tempgnn_forward_kernel_2,tempgnn_forward_kernel_3,tempgnn_forward_kernel_4,tempgnn_forward_kernel_5,tempgnn_forward_kernel_6,tempgnn_forward_kernel_7,tempgnn_forward_kernel_8,tempgnn_forward_kernel_9,tempgnn_forward_kernel_10,tempgnn_forward_kernel_11,tempgnn_forward_kernel_12,tempgnn_forward_kernel_13,tempgnn_forward_kernel_14,tempgnn_forward_kernel_15,tempgnn_forward_kernel_16,tempgnn_forward_kernel_17,tempgnn_forward_kernel_18,tempgnn_forward_kernel_19,tempgnn_forward_kernel_20,tempgnn_forward_kernel_21 -slr tempgnn_forward_kernel_1:SLR0 -slr tempgnn_forward_kernel_2:SLR0 -slr tempgnn_forward_kernel_3:SLR0 -slr tempgnn_forward_kernel_4:SLR0 -slr tempgnn_forward_kernel_5:SLR0 -slr tempgnn_forward_kernel_6:SLR0 -slr tempgnn_forward_kernel_7:SLR0 -slr tempgnn_forward_kernel_8:SLR1 -slr tempgnn_forward_kernel_9:SLR1 -slr tempgnn_forward_kernel_10:SLR1 -slr tempgnn_forward_kernel_11:SLR1 -slr tempgnn_forward_kernel_12:SLR1 -slr tempgnn_forward_kernel_13:SLR1 -slr tempgnn_forward_kernel_14:SLR1 -slr tempgnn_forward_kernel_15:SLR2 -slr tempgnn_forward_kernel_16:SLR2 -slr tempgnn_forward_kernel_17:SLR2 -slr tempgnn_forward_kernel_18:SLR2 -slr tempgnn_forward_kernel_19:SLR2 -slr tempgnn_forward_kernel_20:SLR2 -slr tempgnn_forward_kernel_21:SLR2 -sp tempgnn_forward_kernel_1.event_src:HBM[0] -sp tempgnn_forward_kernel_1.event_dst:HBM[0] -sp tempgnn_forward_kernel_1.event_ts:HBM[0] -sp tempgnn_forward_kernel_1.vertex_offsets:HBM[0] -sp tempgnn_forward_kernel_1.history_event_idx:HBM[0] -sp tempgnn_forward_kernel_1.history_peer:HBM[0] -sp tempgnn_forward_kernel_1.target_vertex:HBM[0] -sp tempgnn_forward_kernel_1.target_event_idx:HBM[0] -sp tempgnn_forward_kernel_1.initial_memory:HBM[0] -sp tempgnn_forward_kernel_1.event_features:HBM[0] -sp tempgnn_forward_kernel_1.weight_self:HBM[0] -sp tempgnn_forward_kernel_1.weight_peer:HBM[0] -sp tempgnn_forward_kernel_1.weight_event:HBM[0] -sp tempgnn_forward_kernel_1.bias:HBM[0] -sp tempgnn_forward_kernel_1.embedding_out:HBM[0] -sp tempgnn_forward_kernel_1.stats_out:HBM[0] -sp tempgnn_forward_kernel_2.event_src:HBM[1] -sp tempgnn_forward_kernel_2.event_dst:HBM[1] -sp tempgnn_forward_kernel_2.event_ts:HBM[1] -sp tempgnn_forward_kernel_2.vertex_offsets:HBM[1] -sp tempgnn_forward_kernel_2.history_event_idx:HBM[1] -sp tempgnn_forward_kernel_2.history_peer:HBM[1] -sp tempgnn_forward_kernel_2.target_vertex:HBM[1] -sp tempgnn_forward_kernel_2.target_event_idx:HBM[1] -sp tempgnn_forward_kernel_2.initial_memory:HBM[1] -sp tempgnn_forward_kernel_2.event_features:HBM[1] -sp tempgnn_forward_kernel_2.weight_self:HBM[1] -sp tempgnn_forward_kernel_2.weight_peer:HBM[1] -sp tempgnn_forward_kernel_2.weight_event:HBM[1] -sp tempgnn_forward_kernel_2.bias:HBM[1] -sp tempgnn_forward_kernel_2.embedding_out:HBM[1] -sp tempgnn_forward_kernel_2.stats_out:HBM[1] -sp tempgnn_forward_kernel_3.event_src:HBM[18] -sp tempgnn_forward_kernel_3.event_dst:HBM[18] -sp tempgnn_forward_kernel_3.event_ts:HBM[18] -sp tempgnn_forward_kernel_3.vertex_offsets:HBM[18] -sp tempgnn_forward_kernel_3.history_event_idx:HBM[18] -sp tempgnn_forward_kernel_3.history_peer:HBM[18] -sp tempgnn_forward_kernel_3.target_vertex:HBM[18] -sp tempgnn_forward_kernel_3.target_event_idx:HBM[18] -sp tempgnn_forward_kernel_3.initial_memory:HBM[18] -sp tempgnn_forward_kernel_3.event_features:HBM[18] -sp tempgnn_forward_kernel_3.weight_self:HBM[18] -sp tempgnn_forward_kernel_3.weight_peer:HBM[18] -sp tempgnn_forward_kernel_3.weight_event:HBM[18] -sp tempgnn_forward_kernel_3.bias:HBM[18] -sp tempgnn_forward_kernel_3.embedding_out:HBM[18] -sp tempgnn_forward_kernel_3.stats_out:HBM[18] -sp tempgnn_forward_kernel_4.event_src:HBM[19] -sp tempgnn_forward_kernel_4.event_dst:HBM[19] -sp tempgnn_forward_kernel_4.event_ts:HBM[19] -sp tempgnn_forward_kernel_4.vertex_offsets:HBM[19] -sp tempgnn_forward_kernel_4.history_event_idx:HBM[19] -sp tempgnn_forward_kernel_4.history_peer:HBM[19] -sp tempgnn_forward_kernel_4.target_vertex:HBM[19] -sp tempgnn_forward_kernel_4.target_event_idx:HBM[19] -sp tempgnn_forward_kernel_4.initial_memory:HBM[19] -sp tempgnn_forward_kernel_4.event_features:HBM[19] -sp tempgnn_forward_kernel_4.weight_self:HBM[19] -sp tempgnn_forward_kernel_4.weight_peer:HBM[19] -sp tempgnn_forward_kernel_4.weight_event:HBM[19] -sp tempgnn_forward_kernel_4.bias:HBM[19] -sp tempgnn_forward_kernel_4.embedding_out:HBM[19] -sp tempgnn_forward_kernel_4.stats_out:HBM[19] -sp tempgnn_forward_kernel_5.event_src:HBM[20] -sp tempgnn_forward_kernel_5.event_dst:HBM[20] -sp tempgnn_forward_kernel_5.event_ts:HBM[20] -sp tempgnn_forward_kernel_5.vertex_offsets:HBM[20] -sp tempgnn_forward_kernel_5.history_event_idx:HBM[20] -sp tempgnn_forward_kernel_5.history_peer:HBM[20] -sp tempgnn_forward_kernel_5.target_vertex:HBM[20] -sp tempgnn_forward_kernel_5.target_event_idx:HBM[20] -sp tempgnn_forward_kernel_5.initial_memory:HBM[20] -sp tempgnn_forward_kernel_5.event_features:HBM[20] -sp tempgnn_forward_kernel_5.weight_self:HBM[20] -sp tempgnn_forward_kernel_5.weight_peer:HBM[20] -sp tempgnn_forward_kernel_5.weight_event:HBM[20] -sp tempgnn_forward_kernel_5.bias:HBM[20] -sp tempgnn_forward_kernel_5.embedding_out:HBM[20] -sp tempgnn_forward_kernel_5.stats_out:HBM[20] -sp tempgnn_forward_kernel_6.event_src:HBM[21] -sp tempgnn_forward_kernel_6.event_dst:HBM[21] -sp tempgnn_forward_kernel_6.event_ts:HBM[21] -sp tempgnn_forward_kernel_6.vertex_offsets:HBM[21] -sp tempgnn_forward_kernel_6.history_event_idx:HBM[21] -sp tempgnn_forward_kernel_6.history_peer:HBM[21] -sp tempgnn_forward_kernel_6.target_vertex:HBM[21] -sp tempgnn_forward_kernel_6.target_event_idx:HBM[21] -sp tempgnn_forward_kernel_6.initial_memory:HBM[21] -sp tempgnn_forward_kernel_6.event_features:HBM[21] -sp tempgnn_forward_kernel_6.weight_self:HBM[21] -sp tempgnn_forward_kernel_6.weight_peer:HBM[21] -sp tempgnn_forward_kernel_6.weight_event:HBM[21] -sp tempgnn_forward_kernel_6.bias:HBM[21] -sp tempgnn_forward_kernel_6.embedding_out:HBM[21] -sp tempgnn_forward_kernel_6.stats_out:HBM[21] -sp tempgnn_forward_kernel_7.event_src:HBM[22] -sp tempgnn_forward_kernel_7.event_dst:HBM[22] -sp tempgnn_forward_kernel_7.event_ts:HBM[22] -sp tempgnn_forward_kernel_7.vertex_offsets:HBM[22] -sp tempgnn_forward_kernel_7.history_event_idx:HBM[22] -sp tempgnn_forward_kernel_7.history_peer:HBM[22] -sp tempgnn_forward_kernel_7.target_vertex:HBM[22] -sp tempgnn_forward_kernel_7.target_event_idx:HBM[22] -sp tempgnn_forward_kernel_7.initial_memory:HBM[22] -sp tempgnn_forward_kernel_7.event_features:HBM[22] -sp tempgnn_forward_kernel_7.weight_self:HBM[22] -sp tempgnn_forward_kernel_7.weight_peer:HBM[22] -sp tempgnn_forward_kernel_7.weight_event:HBM[22] -sp tempgnn_forward_kernel_7.bias:HBM[22] -sp tempgnn_forward_kernel_7.embedding_out:HBM[22] -sp tempgnn_forward_kernel_7.stats_out:HBM[22] -sp tempgnn_forward_kernel_8.event_src:HBM[2] -sp tempgnn_forward_kernel_8.event_dst:HBM[2] -sp tempgnn_forward_kernel_8.event_ts:HBM[2] -sp tempgnn_forward_kernel_8.vertex_offsets:HBM[2] -sp tempgnn_forward_kernel_8.history_event_idx:HBM[2] -sp tempgnn_forward_kernel_8.history_peer:HBM[2] -sp tempgnn_forward_kernel_8.target_vertex:HBM[2] -sp tempgnn_forward_kernel_8.target_event_idx:HBM[2] -sp tempgnn_forward_kernel_8.initial_memory:HBM[2] -sp tempgnn_forward_kernel_8.event_features:HBM[2] -sp tempgnn_forward_kernel_8.weight_self:HBM[2] -sp tempgnn_forward_kernel_8.weight_peer:HBM[2] -sp tempgnn_forward_kernel_8.weight_event:HBM[2] -sp tempgnn_forward_kernel_8.bias:HBM[2] -sp tempgnn_forward_kernel_8.embedding_out:HBM[2] -sp tempgnn_forward_kernel_8.stats_out:HBM[2] -sp tempgnn_forward_kernel_9.event_src:HBM[3] -sp tempgnn_forward_kernel_9.event_dst:HBM[3] -sp tempgnn_forward_kernel_9.event_ts:HBM[3] -sp tempgnn_forward_kernel_9.vertex_offsets:HBM[3] -sp tempgnn_forward_kernel_9.history_event_idx:HBM[3] -sp tempgnn_forward_kernel_9.history_peer:HBM[3] -sp tempgnn_forward_kernel_9.target_vertex:HBM[3] -sp tempgnn_forward_kernel_9.target_event_idx:HBM[3] -sp tempgnn_forward_kernel_9.initial_memory:HBM[3] -sp tempgnn_forward_kernel_9.event_features:HBM[3] -sp tempgnn_forward_kernel_9.weight_self:HBM[3] -sp tempgnn_forward_kernel_9.weight_peer:HBM[3] -sp tempgnn_forward_kernel_9.weight_event:HBM[3] -sp tempgnn_forward_kernel_9.bias:HBM[3] -sp tempgnn_forward_kernel_9.embedding_out:HBM[3] -sp tempgnn_forward_kernel_9.stats_out:HBM[3] -sp tempgnn_forward_kernel_10.event_src:HBM[4] -sp tempgnn_forward_kernel_10.event_dst:HBM[4] -sp tempgnn_forward_kernel_10.event_ts:HBM[4] -sp tempgnn_forward_kernel_10.vertex_offsets:HBM[4] -sp tempgnn_forward_kernel_10.history_event_idx:HBM[4] -sp tempgnn_forward_kernel_10.history_peer:HBM[4] -sp tempgnn_forward_kernel_10.target_vertex:HBM[4] -sp tempgnn_forward_kernel_10.target_event_idx:HBM[4] -sp tempgnn_forward_kernel_10.initial_memory:HBM[4] -sp tempgnn_forward_kernel_10.event_features:HBM[4] -sp tempgnn_forward_kernel_10.weight_self:HBM[4] -sp tempgnn_forward_kernel_10.weight_peer:HBM[4] -sp tempgnn_forward_kernel_10.weight_event:HBM[4] -sp tempgnn_forward_kernel_10.bias:HBM[4] -sp tempgnn_forward_kernel_10.embedding_out:HBM[4] -sp tempgnn_forward_kernel_10.stats_out:HBM[4] -sp tempgnn_forward_kernel_11.event_src:HBM[5] -sp tempgnn_forward_kernel_11.event_dst:HBM[5] -sp tempgnn_forward_kernel_11.event_ts:HBM[5] -sp tempgnn_forward_kernel_11.vertex_offsets:HBM[5] -sp tempgnn_forward_kernel_11.history_event_idx:HBM[5] -sp tempgnn_forward_kernel_11.history_peer:HBM[5] -sp tempgnn_forward_kernel_11.target_vertex:HBM[5] -sp tempgnn_forward_kernel_11.target_event_idx:HBM[5] -sp tempgnn_forward_kernel_11.initial_memory:HBM[5] -sp tempgnn_forward_kernel_11.event_features:HBM[5] -sp tempgnn_forward_kernel_11.weight_self:HBM[5] -sp tempgnn_forward_kernel_11.weight_peer:HBM[5] -sp tempgnn_forward_kernel_11.weight_event:HBM[5] -sp tempgnn_forward_kernel_11.bias:HBM[5] -sp tempgnn_forward_kernel_11.embedding_out:HBM[5] -sp tempgnn_forward_kernel_11.stats_out:HBM[5] -sp tempgnn_forward_kernel_12.event_src:HBM[6] -sp tempgnn_forward_kernel_12.event_dst:HBM[6] -sp tempgnn_forward_kernel_12.event_ts:HBM[6] -sp tempgnn_forward_kernel_12.vertex_offsets:HBM[6] -sp tempgnn_forward_kernel_12.history_event_idx:HBM[6] -sp tempgnn_forward_kernel_12.history_peer:HBM[6] -sp tempgnn_forward_kernel_12.target_vertex:HBM[6] -sp tempgnn_forward_kernel_12.target_event_idx:HBM[6] -sp tempgnn_forward_kernel_12.initial_memory:HBM[6] -sp tempgnn_forward_kernel_12.event_features:HBM[6] -sp tempgnn_forward_kernel_12.weight_self:HBM[6] -sp tempgnn_forward_kernel_12.weight_peer:HBM[6] -sp tempgnn_forward_kernel_12.weight_event:HBM[6] -sp tempgnn_forward_kernel_12.bias:HBM[6] -sp tempgnn_forward_kernel_12.embedding_out:HBM[6] -sp tempgnn_forward_kernel_12.stats_out:HBM[6] -sp tempgnn_forward_kernel_13.event_src:HBM[7] -sp tempgnn_forward_kernel_13.event_dst:HBM[7] -sp tempgnn_forward_kernel_13.event_ts:HBM[7] -sp tempgnn_forward_kernel_13.vertex_offsets:HBM[7] -sp tempgnn_forward_kernel_13.history_event_idx:HBM[7] -sp tempgnn_forward_kernel_13.history_peer:HBM[7] -sp tempgnn_forward_kernel_13.target_vertex:HBM[7] -sp tempgnn_forward_kernel_13.target_event_idx:HBM[7] -sp tempgnn_forward_kernel_13.initial_memory:HBM[7] -sp tempgnn_forward_kernel_13.event_features:HBM[7] -sp tempgnn_forward_kernel_13.weight_self:HBM[7] -sp tempgnn_forward_kernel_13.weight_peer:HBM[7] -sp tempgnn_forward_kernel_13.weight_event:HBM[7] -sp tempgnn_forward_kernel_13.bias:HBM[7] -sp tempgnn_forward_kernel_13.embedding_out:HBM[7] -sp tempgnn_forward_kernel_13.stats_out:HBM[7] -sp tempgnn_forward_kernel_14.event_src:HBM[8] -sp tempgnn_forward_kernel_14.event_dst:HBM[8] -sp tempgnn_forward_kernel_14.event_ts:HBM[8] -sp tempgnn_forward_kernel_14.vertex_offsets:HBM[8] -sp tempgnn_forward_kernel_14.history_event_idx:HBM[8] -sp tempgnn_forward_kernel_14.history_peer:HBM[8] -sp tempgnn_forward_kernel_14.target_vertex:HBM[8] -sp tempgnn_forward_kernel_14.target_event_idx:HBM[8] -sp tempgnn_forward_kernel_14.initial_memory:HBM[8] -sp tempgnn_forward_kernel_14.event_features:HBM[8] -sp tempgnn_forward_kernel_14.weight_self:HBM[8] -sp tempgnn_forward_kernel_14.weight_peer:HBM[8] -sp tempgnn_forward_kernel_14.weight_event:HBM[8] -sp tempgnn_forward_kernel_14.bias:HBM[8] -sp tempgnn_forward_kernel_14.embedding_out:HBM[8] -sp tempgnn_forward_kernel_14.stats_out:HBM[8] -sp tempgnn_forward_kernel_15.event_src:HBM[10] -sp tempgnn_forward_kernel_15.event_dst:HBM[10] -sp tempgnn_forward_kernel_15.event_ts:HBM[10] -sp tempgnn_forward_kernel_15.vertex_offsets:HBM[10] -sp tempgnn_forward_kernel_15.history_event_idx:HBM[10] -sp tempgnn_forward_kernel_15.history_peer:HBM[10] -sp tempgnn_forward_kernel_15.target_vertex:HBM[10] -sp tempgnn_forward_kernel_15.target_event_idx:HBM[10] -sp tempgnn_forward_kernel_15.initial_memory:HBM[10] -sp tempgnn_forward_kernel_15.event_features:HBM[10] -sp tempgnn_forward_kernel_15.weight_self:HBM[10] -sp tempgnn_forward_kernel_15.weight_peer:HBM[10] -sp tempgnn_forward_kernel_15.weight_event:HBM[10] -sp tempgnn_forward_kernel_15.bias:HBM[10] -sp tempgnn_forward_kernel_15.embedding_out:HBM[10] -sp tempgnn_forward_kernel_15.stats_out:HBM[10] -sp tempgnn_forward_kernel_16.event_src:HBM[11] -sp tempgnn_forward_kernel_16.event_dst:HBM[11] -sp tempgnn_forward_kernel_16.event_ts:HBM[11] -sp tempgnn_forward_kernel_16.vertex_offsets:HBM[11] -sp tempgnn_forward_kernel_16.history_event_idx:HBM[11] -sp tempgnn_forward_kernel_16.history_peer:HBM[11] -sp tempgnn_forward_kernel_16.target_vertex:HBM[11] -sp tempgnn_forward_kernel_16.target_event_idx:HBM[11] -sp tempgnn_forward_kernel_16.initial_memory:HBM[11] -sp tempgnn_forward_kernel_16.event_features:HBM[11] -sp tempgnn_forward_kernel_16.weight_self:HBM[11] -sp tempgnn_forward_kernel_16.weight_peer:HBM[11] -sp tempgnn_forward_kernel_16.weight_event:HBM[11] -sp tempgnn_forward_kernel_16.bias:HBM[11] -sp tempgnn_forward_kernel_16.embedding_out:HBM[11] -sp tempgnn_forward_kernel_16.stats_out:HBM[11] -sp tempgnn_forward_kernel_17.event_src:HBM[12] -sp tempgnn_forward_kernel_17.event_dst:HBM[12] -sp tempgnn_forward_kernel_17.event_ts:HBM[12] -sp tempgnn_forward_kernel_17.vertex_offsets:HBM[12] -sp tempgnn_forward_kernel_17.history_event_idx:HBM[12] -sp tempgnn_forward_kernel_17.history_peer:HBM[12] -sp tempgnn_forward_kernel_17.target_vertex:HBM[12] -sp tempgnn_forward_kernel_17.target_event_idx:HBM[12] -sp tempgnn_forward_kernel_17.initial_memory:HBM[12] -sp tempgnn_forward_kernel_17.event_features:HBM[12] -sp tempgnn_forward_kernel_17.weight_self:HBM[12] -sp tempgnn_forward_kernel_17.weight_peer:HBM[12] -sp tempgnn_forward_kernel_17.weight_event:HBM[12] -sp tempgnn_forward_kernel_17.bias:HBM[12] -sp tempgnn_forward_kernel_17.embedding_out:HBM[12] -sp tempgnn_forward_kernel_17.stats_out:HBM[12] -sp tempgnn_forward_kernel_18.event_src:HBM[13] -sp tempgnn_forward_kernel_18.event_dst:HBM[13] -sp tempgnn_forward_kernel_18.event_ts:HBM[13] -sp tempgnn_forward_kernel_18.vertex_offsets:HBM[13] -sp tempgnn_forward_kernel_18.history_event_idx:HBM[13] -sp tempgnn_forward_kernel_18.history_peer:HBM[13] -sp tempgnn_forward_kernel_18.target_vertex:HBM[13] -sp tempgnn_forward_kernel_18.target_event_idx:HBM[13] -sp tempgnn_forward_kernel_18.initial_memory:HBM[13] -sp tempgnn_forward_kernel_18.event_features:HBM[13] -sp tempgnn_forward_kernel_18.weight_self:HBM[13] -sp tempgnn_forward_kernel_18.weight_peer:HBM[13] -sp tempgnn_forward_kernel_18.weight_event:HBM[13] -sp tempgnn_forward_kernel_18.bias:HBM[13] -sp tempgnn_forward_kernel_18.embedding_out:HBM[13] -sp tempgnn_forward_kernel_18.stats_out:HBM[13] -sp tempgnn_forward_kernel_19.event_src:HBM[14] -sp tempgnn_forward_kernel_19.event_dst:HBM[14] -sp tempgnn_forward_kernel_19.event_ts:HBM[14] -sp tempgnn_forward_kernel_19.vertex_offsets:HBM[14] -sp tempgnn_forward_kernel_19.history_event_idx:HBM[14] -sp tempgnn_forward_kernel_19.history_peer:HBM[14] -sp tempgnn_forward_kernel_19.target_vertex:HBM[14] -sp tempgnn_forward_kernel_19.target_event_idx:HBM[14] -sp tempgnn_forward_kernel_19.initial_memory:HBM[14] -sp tempgnn_forward_kernel_19.event_features:HBM[14] -sp tempgnn_forward_kernel_19.weight_self:HBM[14] -sp tempgnn_forward_kernel_19.weight_peer:HBM[14] -sp tempgnn_forward_kernel_19.weight_event:HBM[14] -sp tempgnn_forward_kernel_19.bias:HBM[14] -sp tempgnn_forward_kernel_19.embedding_out:HBM[14] -sp tempgnn_forward_kernel_19.stats_out:HBM[14] -sp tempgnn_forward_kernel_20.event_src:HBM[15] -sp tempgnn_forward_kernel_20.event_dst:HBM[15] -sp tempgnn_forward_kernel_20.event_ts:HBM[15] -sp tempgnn_forward_kernel_20.vertex_offsets:HBM[15] -sp tempgnn_forward_kernel_20.history_event_idx:HBM[15] -sp tempgnn_forward_kernel_20.history_peer:HBM[15] -sp tempgnn_forward_kernel_20.target_vertex:HBM[15] -sp tempgnn_forward_kernel_20.target_event_idx:HBM[15] -sp tempgnn_forward_kernel_20.initial_memory:HBM[15] -sp tempgnn_forward_kernel_20.event_features:HBM[15] -sp tempgnn_forward_kernel_20.weight_self:HBM[15] -sp tempgnn_forward_kernel_20.weight_peer:HBM[15] -sp tempgnn_forward_kernel_20.weight_event:HBM[15] -sp tempgnn_forward_kernel_20.bias:HBM[15] -sp tempgnn_forward_kernel_20.embedding_out:HBM[15] -sp tempgnn_forward_kernel_20.stats_out:HBM[15] -sp tempgnn_forward_kernel_21.event_src:HBM[16] -sp tempgnn_forward_kernel_21.event_dst:HBM[16] -sp tempgnn_forward_kernel_21.event_ts:HBM[16] -sp tempgnn_forward_kernel_21.vertex_offsets:HBM[16] -sp tempgnn_forward_kernel_21.history_event_idx:HBM[16] -sp tempgnn_forward_kernel_21.history_peer:HBM[16] -sp tempgnn_forward_kernel_21.target_vertex:HBM[16] -sp tempgnn_forward_kernel_21.target_event_idx:HBM[16] -sp tempgnn_forward_kernel_21.initial_memory:HBM[16] -sp tempgnn_forward_kernel_21.event_features:HBM[16] -sp tempgnn_forward_kernel_21.weight_self:HBM[16] -sp tempgnn_forward_kernel_21.weight_peer:HBM[16] -sp tempgnn_forward_kernel_21.weight_event:HBM[16] -sp tempgnn_forward_kernel_21.bias:HBM[16] -sp tempgnn_forward_kernel_21.embedding_out:HBM[16] -sp tempgnn_forward_kernel_21.stats_out:HBM[16] -clock.freqHz 168000000:tempgnn_forward_kernel_1,tempgnn_forward_kernel_2,tempgnn_forward_kernel_3,tempgnn_forward_kernel_4,tempgnn_forward_kernel_5,tempgnn_forward_kernel_6,tempgnn_forward_kernel_7,tempgnn_forward_kernel_8,tempgnn_forward_kernel_9,tempgnn_forward_kernel_10,tempgnn_forward_kernel_11,tempgnn_forward_kernel_12,tempgnn_forward_kernel_13,tempgnn_forward_kernel_14,tempgnn_forward_kernel_15,tempgnn_forward_kernel_16,tempgnn_forward_kernel_17,tempgnn_forward_kernel_18,tempgnn_forward_kernel_19,tempgnn_forward_kernel_20,tempgnn_forward_kernel_21 -dpa_mem_offload false -dmclkid 0 -r /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/sys_link/cfgraph/cfgen_cfgraph.xml
+INFO: [CFGEN 83-0] Kernel Specs: 
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel, num: 21  {tempgnn_forward_kernel_1 tempgnn_forward_kernel_2 tempgnn_forward_kernel_3 tempgnn_forward_kernel_4 tempgnn_forward_kernel_5 tempgnn_forward_kernel_6 tempgnn_forward_kernel_7 tempgnn_forward_kernel_8 tempgnn_forward_kernel_9 tempgnn_forward_kernel_10 tempgnn_forward_kernel_11 tempgnn_forward_kernel_12 tempgnn_forward_kernel_13 tempgnn_forward_kernel_14 tempgnn_forward_kernel_15 tempgnn_forward_kernel_16 tempgnn_forward_kernel_17 tempgnn_forward_kernel_18 tempgnn_forward_kernel_19 tempgnn_forward_kernel_20 tempgnn_forward_kernel_21}
+INFO: [CFGEN 83-0] Port Specs: 
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_1, k_port: event_src, sptag: HBM[0]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_1, k_port: event_dst, sptag: HBM[0]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_1, k_port: event_ts, sptag: HBM[0]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_1, k_port: vertex_offsets, sptag: HBM[0]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_1, k_port: history_event_idx, sptag: HBM[0]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_1, k_port: history_peer, sptag: HBM[0]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_1, k_port: target_vertex, sptag: HBM[0]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_1, k_port: target_event_idx, sptag: HBM[0]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_1, k_port: initial_memory, sptag: HBM[0]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_1, k_port: event_features, sptag: HBM[0]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_1, k_port: weight_self, sptag: HBM[0]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_1, k_port: weight_peer, sptag: HBM[0]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_1, k_port: weight_event, sptag: HBM[0]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_1, k_port: bias, sptag: HBM[0]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_1, k_port: embedding_out, sptag: HBM[0]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_1, k_port: stats_out, sptag: HBM[0]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_2, k_port: event_src, sptag: HBM[1]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_2, k_port: event_dst, sptag: HBM[1]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_2, k_port: event_ts, sptag: HBM[1]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_2, k_port: vertex_offsets, sptag: HBM[1]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_2, k_port: history_event_idx, sptag: HBM[1]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_2, k_port: history_peer, sptag: HBM[1]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_2, k_port: target_vertex, sptag: HBM[1]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_2, k_port: target_event_idx, sptag: HBM[1]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_2, k_port: initial_memory, sptag: HBM[1]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_2, k_port: event_features, sptag: HBM[1]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_2, k_port: weight_self, sptag: HBM[1]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_2, k_port: weight_peer, sptag: HBM[1]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_2, k_port: weight_event, sptag: HBM[1]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_2, k_port: bias, sptag: HBM[1]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_2, k_port: embedding_out, sptag: HBM[1]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_2, k_port: stats_out, sptag: HBM[1]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_3, k_port: event_src, sptag: HBM[18]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_3, k_port: event_dst, sptag: HBM[18]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_3, k_port: event_ts, sptag: HBM[18]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_3, k_port: vertex_offsets, sptag: HBM[18]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_3, k_port: history_event_idx, sptag: HBM[18]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_3, k_port: history_peer, sptag: HBM[18]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_3, k_port: target_vertex, sptag: HBM[18]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_3, k_port: target_event_idx, sptag: HBM[18]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_3, k_port: initial_memory, sptag: HBM[18]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_3, k_port: event_features, sptag: HBM[18]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_3, k_port: weight_self, sptag: HBM[18]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_3, k_port: weight_peer, sptag: HBM[18]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_3, k_port: weight_event, sptag: HBM[18]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_3, k_port: bias, sptag: HBM[18]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_3, k_port: embedding_out, sptag: HBM[18]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_3, k_port: stats_out, sptag: HBM[18]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_4, k_port: event_src, sptag: HBM[19]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_4, k_port: event_dst, sptag: HBM[19]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_4, k_port: event_ts, sptag: HBM[19]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_4, k_port: vertex_offsets, sptag: HBM[19]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_4, k_port: history_event_idx, sptag: HBM[19]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_4, k_port: history_peer, sptag: HBM[19]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_4, k_port: target_vertex, sptag: HBM[19]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_4, k_port: target_event_idx, sptag: HBM[19]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_4, k_port: initial_memory, sptag: HBM[19]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_4, k_port: event_features, sptag: HBM[19]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_4, k_port: weight_self, sptag: HBM[19]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_4, k_port: weight_peer, sptag: HBM[19]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_4, k_port: weight_event, sptag: HBM[19]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_4, k_port: bias, sptag: HBM[19]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_4, k_port: embedding_out, sptag: HBM[19]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_4, k_port: stats_out, sptag: HBM[19]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_5, k_port: event_src, sptag: HBM[20]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_5, k_port: event_dst, sptag: HBM[20]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_5, k_port: event_ts, sptag: HBM[20]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_5, k_port: vertex_offsets, sptag: HBM[20]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_5, k_port: history_event_idx, sptag: HBM[20]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_5, k_port: history_peer, sptag: HBM[20]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_5, k_port: target_vertex, sptag: HBM[20]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_5, k_port: target_event_idx, sptag: HBM[20]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_5, k_port: initial_memory, sptag: HBM[20]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_5, k_port: event_features, sptag: HBM[20]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_5, k_port: weight_self, sptag: HBM[20]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_5, k_port: weight_peer, sptag: HBM[20]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_5, k_port: weight_event, sptag: HBM[20]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_5, k_port: bias, sptag: HBM[20]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_5, k_port: embedding_out, sptag: HBM[20]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_5, k_port: stats_out, sptag: HBM[20]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_6, k_port: event_src, sptag: HBM[21]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_6, k_port: event_dst, sptag: HBM[21]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_6, k_port: event_ts, sptag: HBM[21]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_6, k_port: vertex_offsets, sptag: HBM[21]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_6, k_port: history_event_idx, sptag: HBM[21]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_6, k_port: history_peer, sptag: HBM[21]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_6, k_port: target_vertex, sptag: HBM[21]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_6, k_port: target_event_idx, sptag: HBM[21]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_6, k_port: initial_memory, sptag: HBM[21]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_6, k_port: event_features, sptag: HBM[21]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_6, k_port: weight_self, sptag: HBM[21]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_6, k_port: weight_peer, sptag: HBM[21]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_6, k_port: weight_event, sptag: HBM[21]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_6, k_port: bias, sptag: HBM[21]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_6, k_port: embedding_out, sptag: HBM[21]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_6, k_port: stats_out, sptag: HBM[21]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_7, k_port: event_src, sptag: HBM[22]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_7, k_port: event_dst, sptag: HBM[22]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_7, k_port: event_ts, sptag: HBM[22]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_7, k_port: vertex_offsets, sptag: HBM[22]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_7, k_port: history_event_idx, sptag: HBM[22]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_7, k_port: history_peer, sptag: HBM[22]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_7, k_port: target_vertex, sptag: HBM[22]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_7, k_port: target_event_idx, sptag: HBM[22]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_7, k_port: initial_memory, sptag: HBM[22]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_7, k_port: event_features, sptag: HBM[22]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_7, k_port: weight_self, sptag: HBM[22]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_7, k_port: weight_peer, sptag: HBM[22]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_7, k_port: weight_event, sptag: HBM[22]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_7, k_port: bias, sptag: HBM[22]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_7, k_port: embedding_out, sptag: HBM[22]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_7, k_port: stats_out, sptag: HBM[22]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_8, k_port: event_src, sptag: HBM[2]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_8, k_port: event_dst, sptag: HBM[2]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_8, k_port: event_ts, sptag: HBM[2]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_8, k_port: vertex_offsets, sptag: HBM[2]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_8, k_port: history_event_idx, sptag: HBM[2]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_8, k_port: history_peer, sptag: HBM[2]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_8, k_port: target_vertex, sptag: HBM[2]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_8, k_port: target_event_idx, sptag: HBM[2]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_8, k_port: initial_memory, sptag: HBM[2]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_8, k_port: event_features, sptag: HBM[2]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_8, k_port: weight_self, sptag: HBM[2]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_8, k_port: weight_peer, sptag: HBM[2]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_8, k_port: weight_event, sptag: HBM[2]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_8, k_port: bias, sptag: HBM[2]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_8, k_port: embedding_out, sptag: HBM[2]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_8, k_port: stats_out, sptag: HBM[2]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_9, k_port: event_src, sptag: HBM[3]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_9, k_port: event_dst, sptag: HBM[3]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_9, k_port: event_ts, sptag: HBM[3]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_9, k_port: vertex_offsets, sptag: HBM[3]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_9, k_port: history_event_idx, sptag: HBM[3]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_9, k_port: history_peer, sptag: HBM[3]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_9, k_port: target_vertex, sptag: HBM[3]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_9, k_port: target_event_idx, sptag: HBM[3]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_9, k_port: initial_memory, sptag: HBM[3]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_9, k_port: event_features, sptag: HBM[3]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_9, k_port: weight_self, sptag: HBM[3]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_9, k_port: weight_peer, sptag: HBM[3]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_9, k_port: weight_event, sptag: HBM[3]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_9, k_port: bias, sptag: HBM[3]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_9, k_port: embedding_out, sptag: HBM[3]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_9, k_port: stats_out, sptag: HBM[3]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_10, k_port: event_src, sptag: HBM[4]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_10, k_port: event_dst, sptag: HBM[4]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_10, k_port: event_ts, sptag: HBM[4]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_10, k_port: vertex_offsets, sptag: HBM[4]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_10, k_port: history_event_idx, sptag: HBM[4]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_10, k_port: history_peer, sptag: HBM[4]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_10, k_port: target_vertex, sptag: HBM[4]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_10, k_port: target_event_idx, sptag: HBM[4]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_10, k_port: initial_memory, sptag: HBM[4]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_10, k_port: event_features, sptag: HBM[4]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_10, k_port: weight_self, sptag: HBM[4]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_10, k_port: weight_peer, sptag: HBM[4]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_10, k_port: weight_event, sptag: HBM[4]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_10, k_port: bias, sptag: HBM[4]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_10, k_port: embedding_out, sptag: HBM[4]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_10, k_port: stats_out, sptag: HBM[4]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_11, k_port: event_src, sptag: HBM[5]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_11, k_port: event_dst, sptag: HBM[5]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_11, k_port: event_ts, sptag: HBM[5]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_11, k_port: vertex_offsets, sptag: HBM[5]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_11, k_port: history_event_idx, sptag: HBM[5]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_11, k_port: history_peer, sptag: HBM[5]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_11, k_port: target_vertex, sptag: HBM[5]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_11, k_port: target_event_idx, sptag: HBM[5]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_11, k_port: initial_memory, sptag: HBM[5]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_11, k_port: event_features, sptag: HBM[5]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_11, k_port: weight_self, sptag: HBM[5]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_11, k_port: weight_peer, sptag: HBM[5]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_11, k_port: weight_event, sptag: HBM[5]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_11, k_port: bias, sptag: HBM[5]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_11, k_port: embedding_out, sptag: HBM[5]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_11, k_port: stats_out, sptag: HBM[5]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_12, k_port: event_src, sptag: HBM[6]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_12, k_port: event_dst, sptag: HBM[6]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_12, k_port: event_ts, sptag: HBM[6]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_12, k_port: vertex_offsets, sptag: HBM[6]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_12, k_port: history_event_idx, sptag: HBM[6]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_12, k_port: history_peer, sptag: HBM[6]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_12, k_port: target_vertex, sptag: HBM[6]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_12, k_port: target_event_idx, sptag: HBM[6]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_12, k_port: initial_memory, sptag: HBM[6]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_12, k_port: event_features, sptag: HBM[6]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_12, k_port: weight_self, sptag: HBM[6]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_12, k_port: weight_peer, sptag: HBM[6]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_12, k_port: weight_event, sptag: HBM[6]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_12, k_port: bias, sptag: HBM[6]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_12, k_port: embedding_out, sptag: HBM[6]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_12, k_port: stats_out, sptag: HBM[6]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_13, k_port: event_src, sptag: HBM[7]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_13, k_port: event_dst, sptag: HBM[7]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_13, k_port: event_ts, sptag: HBM[7]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_13, k_port: vertex_offsets, sptag: HBM[7]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_13, k_port: history_event_idx, sptag: HBM[7]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_13, k_port: history_peer, sptag: HBM[7]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_13, k_port: target_vertex, sptag: HBM[7]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_13, k_port: target_event_idx, sptag: HBM[7]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_13, k_port: initial_memory, sptag: HBM[7]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_13, k_port: event_features, sptag: HBM[7]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_13, k_port: weight_self, sptag: HBM[7]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_13, k_port: weight_peer, sptag: HBM[7]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_13, k_port: weight_event, sptag: HBM[7]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_13, k_port: bias, sptag: HBM[7]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_13, k_port: embedding_out, sptag: HBM[7]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_13, k_port: stats_out, sptag: HBM[7]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_14, k_port: event_src, sptag: HBM[8]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_14, k_port: event_dst, sptag: HBM[8]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_14, k_port: event_ts, sptag: HBM[8]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_14, k_port: vertex_offsets, sptag: HBM[8]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_14, k_port: history_event_idx, sptag: HBM[8]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_14, k_port: history_peer, sptag: HBM[8]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_14, k_port: target_vertex, sptag: HBM[8]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_14, k_port: target_event_idx, sptag: HBM[8]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_14, k_port: initial_memory, sptag: HBM[8]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_14, k_port: event_features, sptag: HBM[8]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_14, k_port: weight_self, sptag: HBM[8]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_14, k_port: weight_peer, sptag: HBM[8]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_14, k_port: weight_event, sptag: HBM[8]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_14, k_port: bias, sptag: HBM[8]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_14, k_port: embedding_out, sptag: HBM[8]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_14, k_port: stats_out, sptag: HBM[8]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_15, k_port: event_src, sptag: HBM[10]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_15, k_port: event_dst, sptag: HBM[10]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_15, k_port: event_ts, sptag: HBM[10]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_15, k_port: vertex_offsets, sptag: HBM[10]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_15, k_port: history_event_idx, sptag: HBM[10]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_15, k_port: history_peer, sptag: HBM[10]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_15, k_port: target_vertex, sptag: HBM[10]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_15, k_port: target_event_idx, sptag: HBM[10]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_15, k_port: initial_memory, sptag: HBM[10]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_15, k_port: event_features, sptag: HBM[10]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_15, k_port: weight_self, sptag: HBM[10]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_15, k_port: weight_peer, sptag: HBM[10]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_15, k_port: weight_event, sptag: HBM[10]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_15, k_port: bias, sptag: HBM[10]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_15, k_port: embedding_out, sptag: HBM[10]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_15, k_port: stats_out, sptag: HBM[10]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_16, k_port: event_src, sptag: HBM[11]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_16, k_port: event_dst, sptag: HBM[11]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_16, k_port: event_ts, sptag: HBM[11]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_16, k_port: vertex_offsets, sptag: HBM[11]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_16, k_port: history_event_idx, sptag: HBM[11]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_16, k_port: history_peer, sptag: HBM[11]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_16, k_port: target_vertex, sptag: HBM[11]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_16, k_port: target_event_idx, sptag: HBM[11]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_16, k_port: initial_memory, sptag: HBM[11]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_16, k_port: event_features, sptag: HBM[11]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_16, k_port: weight_self, sptag: HBM[11]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_16, k_port: weight_peer, sptag: HBM[11]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_16, k_port: weight_event, sptag: HBM[11]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_16, k_port: bias, sptag: HBM[11]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_16, k_port: embedding_out, sptag: HBM[11]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_16, k_port: stats_out, sptag: HBM[11]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_17, k_port: event_src, sptag: HBM[12]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_17, k_port: event_dst, sptag: HBM[12]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_17, k_port: event_ts, sptag: HBM[12]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_17, k_port: vertex_offsets, sptag: HBM[12]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_17, k_port: history_event_idx, sptag: HBM[12]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_17, k_port: history_peer, sptag: HBM[12]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_17, k_port: target_vertex, sptag: HBM[12]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_17, k_port: target_event_idx, sptag: HBM[12]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_17, k_port: initial_memory, sptag: HBM[12]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_17, k_port: event_features, sptag: HBM[12]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_17, k_port: weight_self, sptag: HBM[12]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_17, k_port: weight_peer, sptag: HBM[12]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_17, k_port: weight_event, sptag: HBM[12]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_17, k_port: bias, sptag: HBM[12]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_17, k_port: embedding_out, sptag: HBM[12]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_17, k_port: stats_out, sptag: HBM[12]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_18, k_port: event_src, sptag: HBM[13]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_18, k_port: event_dst, sptag: HBM[13]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_18, k_port: event_ts, sptag: HBM[13]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_18, k_port: vertex_offsets, sptag: HBM[13]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_18, k_port: history_event_idx, sptag: HBM[13]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_18, k_port: history_peer, sptag: HBM[13]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_18, k_port: target_vertex, sptag: HBM[13]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_18, k_port: target_event_idx, sptag: HBM[13]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_18, k_port: initial_memory, sptag: HBM[13]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_18, k_port: event_features, sptag: HBM[13]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_18, k_port: weight_self, sptag: HBM[13]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_18, k_port: weight_peer, sptag: HBM[13]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_18, k_port: weight_event, sptag: HBM[13]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_18, k_port: bias, sptag: HBM[13]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_18, k_port: embedding_out, sptag: HBM[13]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_18, k_port: stats_out, sptag: HBM[13]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_19, k_port: event_src, sptag: HBM[14]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_19, k_port: event_dst, sptag: HBM[14]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_19, k_port: event_ts, sptag: HBM[14]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_19, k_port: vertex_offsets, sptag: HBM[14]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_19, k_port: history_event_idx, sptag: HBM[14]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_19, k_port: history_peer, sptag: HBM[14]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_19, k_port: target_vertex, sptag: HBM[14]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_19, k_port: target_event_idx, sptag: HBM[14]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_19, k_port: initial_memory, sptag: HBM[14]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_19, k_port: event_features, sptag: HBM[14]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_19, k_port: weight_self, sptag: HBM[14]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_19, k_port: weight_peer, sptag: HBM[14]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_19, k_port: weight_event, sptag: HBM[14]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_19, k_port: bias, sptag: HBM[14]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_19, k_port: embedding_out, sptag: HBM[14]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_19, k_port: stats_out, sptag: HBM[14]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_20, k_port: event_src, sptag: HBM[15]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_20, k_port: event_dst, sptag: HBM[15]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_20, k_port: event_ts, sptag: HBM[15]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_20, k_port: vertex_offsets, sptag: HBM[15]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_20, k_port: history_event_idx, sptag: HBM[15]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_20, k_port: history_peer, sptag: HBM[15]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_20, k_port: target_vertex, sptag: HBM[15]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_20, k_port: target_event_idx, sptag: HBM[15]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_20, k_port: initial_memory, sptag: HBM[15]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_20, k_port: event_features, sptag: HBM[15]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_20, k_port: weight_self, sptag: HBM[15]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_20, k_port: weight_peer, sptag: HBM[15]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_20, k_port: weight_event, sptag: HBM[15]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_20, k_port: bias, sptag: HBM[15]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_20, k_port: embedding_out, sptag: HBM[15]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_20, k_port: stats_out, sptag: HBM[15]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_21, k_port: event_src, sptag: HBM[16]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_21, k_port: event_dst, sptag: HBM[16]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_21, k_port: event_ts, sptag: HBM[16]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_21, k_port: vertex_offsets, sptag: HBM[16]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_21, k_port: history_event_idx, sptag: HBM[16]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_21, k_port: history_peer, sptag: HBM[16]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_21, k_port: target_vertex, sptag: HBM[16]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_21, k_port: target_event_idx, sptag: HBM[16]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_21, k_port: initial_memory, sptag: HBM[16]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_21, k_port: event_features, sptag: HBM[16]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_21, k_port: weight_self, sptag: HBM[16]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_21, k_port: weight_peer, sptag: HBM[16]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_21, k_port: weight_event, sptag: HBM[16]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_21, k_port: bias, sptag: HBM[16]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_21, k_port: embedding_out, sptag: HBM[16]
+INFO: [CFGEN 83-0]   kernel: tempgnn_forward_kernel_21, k_port: stats_out, sptag: HBM[16]
+INFO: [CFGEN 83-0] SLR Specs: 
+INFO: [CFGEN 83-0]   instance: tempgnn_forward_kernel_1, SLR: SLR0
+INFO: [CFGEN 83-0]   instance: tempgnn_forward_kernel_10, SLR: SLR1
+INFO: [CFGEN 83-0]   instance: tempgnn_forward_kernel_11, SLR: SLR1
+INFO: [CFGEN 83-0]   instance: tempgnn_forward_kernel_12, SLR: SLR1
+INFO: [CFGEN 83-0]   instance: tempgnn_forward_kernel_13, SLR: SLR1
+INFO: [CFGEN 83-0]   instance: tempgnn_forward_kernel_14, SLR: SLR1
+INFO: [CFGEN 83-0]   instance: tempgnn_forward_kernel_15, SLR: SLR2
+INFO: [CFGEN 83-0]   instance: tempgnn_forward_kernel_16, SLR: SLR2
+INFO: [CFGEN 83-0]   instance: tempgnn_forward_kernel_17, SLR: SLR2
+INFO: [CFGEN 83-0]   instance: tempgnn_forward_kernel_18, SLR: SLR2
+INFO: [CFGEN 83-0]   instance: tempgnn_forward_kernel_19, SLR: SLR2
+INFO: [CFGEN 83-0]   instance: tempgnn_forward_kernel_2, SLR: SLR0
+INFO: [CFGEN 83-0]   instance: tempgnn_forward_kernel_20, SLR: SLR2
+INFO: [CFGEN 83-0]   instance: tempgnn_forward_kernel_21, SLR: SLR2
+INFO: [CFGEN 83-0]   instance: tempgnn_forward_kernel_3, SLR: SLR0
+INFO: [CFGEN 83-0]   instance: tempgnn_forward_kernel_4, SLR: SLR0
+INFO: [CFGEN 83-0]   instance: tempgnn_forward_kernel_5, SLR: SLR0
+INFO: [CFGEN 83-0]   instance: tempgnn_forward_kernel_6, SLR: SLR0
+INFO: [CFGEN 83-0]   instance: tempgnn_forward_kernel_7, SLR: SLR0
+INFO: [CFGEN 83-0]   instance: tempgnn_forward_kernel_8, SLR: SLR1
+INFO: [CFGEN 83-0]   instance: tempgnn_forward_kernel_9, SLR: SLR1
+INFO: [SYSTEM_LINK 82-37] [02:46:57] cfgen finished successfully
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 455.812 ; gain = 0.000 ; free physical = 30516 ; free virtual = 68732
+INFO: [SYSTEM_LINK 82-52] Create top-level block diagram
+INFO: [SYSTEM_LINK 82-38] [02:46:57] cf2bd started: /tools/Xilinx/Vitis/2023.2/bin/cf2bd  --linux --trace_buffer 1024 --input_file /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/sys_link/cfgraph/cfgen_cfgraph.xml --ip_db /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml --cf_name dr --working_dir /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/sys_link/_sysl/.xsd --temp_dir /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/sys_link --output_dir /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/int --target_bd ulp.bd
+INFO: [CF2BD 82-31] Launching cf2xd: cf2xd -linux -trace-buffer 1024 -i /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/sys_link/cfgraph/cfgen_cfgraph.xml -r /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/sys_link/_sysl/.cdb/xd_ip_db.xml -o dr.xml
+INFO: [CF2BD 82-28] cf2xd finished successfully
+INFO: [CF2BD 82-31] Launching cf_xsd: cf_xsd -disable-address-gen -bd ulp.bd -dn dr -dp /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/sys_link/_sysl/.xsd
+INFO: [CF2BD 82-28] cf_xsd finished successfully
+INFO: [SYSTEM_LINK 82-37] [02:47:14] cf2bd finished successfully
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 455.812 ; gain = 0.000 ; free physical = 30514 ; free virtual = 68737
+INFO: [v++ 60-1441] [02:47:14] Run run_link: Step system_link: Completed
+Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 487.094 ; gain = 0.000 ; free physical = 30577 ; free virtual = 68800
+INFO: [v++ 60-1443] [02:47:14] Run run_link: Step cf2sw: Started
+INFO: [v++ 60-1453] Command Line: cf2sw -sdsl /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/int/sdsl.dat -rtd /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/int/cf2sw.rtd -nofilter /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/int/cf2sw_full.rtd -xclbin /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/int/xclbin_orig.xml -o /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/int/xclbin_orig.1.xml
+INFO: [v++ 60-1454] Run Directory: /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/run_link
+INFO: [v++ 60-1441] [02:47:48] Run run_link: Step cf2sw: Completed
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:34 . Memory (MB): peak = 487.094 ; gain = 0.000 ; free physical = 30565 ; free virtual = 68790
+INFO: [v++ 60-1443] [02:47:48] Run run_link: Step rtd2_system_diagram: Started
+INFO: [v++ 60-1453] Command Line: rtd2SystemDiagram
+INFO: [v++ 60-1454] Run Directory: /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/run_link
+INFO: [v++ 60-1441] [02:47:48] Run run_link: Step rtd2_system_diagram: Completed
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.48 . Memory (MB): peak = 487.094 ; gain = 0.000 ; free physical = 30543 ; free virtual = 68768
+INFO: [v++ 60-1443] [02:47:48] Run run_link: Step vpl: Started
+INFO: [v++ 60-1453] Command Line: vpl -t hw -f xilinx_u280_gen3x16_xdma_1_202211_1 -s --remote_ip_cache /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_cached_finalopt_12cu_175mhz/.ipcache --output_dir /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/int --log_dir /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/logs/link --report_dir /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/reports/link --config /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/int/vplConfig.ini -k /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link --no-info --iprepo /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/int/xo/ip_repo/xilinx_com_hls_tempgnn_forward_kernel_1_0 --messageDb /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/run_link/vpl.pb /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/int/dr.bd.tcl
+INFO: [v++ 60-1454] Run Directory: /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/run_link
+
+****** vpl v2023.2 (64-bit)
+  **** SW Build 4026344 on 2023-10-11-15:42:10
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+INFO: [VPL 60-839] Read in kernel information from file '/home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/int/kernel_info.dat'.
+INFO: [VPL 74-78] Compiler Version string: 2023.2
+INFO: [VPL 60-423]   Target device: xilinx_u280_gen3x16_xdma_1_202211_1
+INFO: [VPL 60-1032] Extracting hardware platform to /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/vivado/vpl/.local/hw_platform
+[02:48:05] Run vpl: Step create_project: Started
+Creating Vivado project.
+[02:48:14] Run vpl: Step create_project: Completed
+[02:48:14] Run vpl: Step create_bd: Started
+[02:49:25] Run vpl: Step create_bd: Completed
+[02:49:25] Run vpl: Step update_bd: Started
+[02:49:26] Run vpl: Step update_bd: Completed
+[02:49:26] Run vpl: Step generate_target: Started
+[02:50:41] Run vpl: Step generate_target: RUNNING...
+[02:51:56] Run vpl: Step generate_target: RUNNING...
+[02:53:12] Run vpl: Step generate_target: RUNNING...
+[02:54:27] Run vpl: Step generate_target: RUNNING...
+[02:54:48] Run vpl: Step generate_target: Completed
+[02:54:48] Run vpl: Step config_hw_runs: Started
+[02:55:39] Run vpl: Step config_hw_runs: Completed
+[02:55:39] Run vpl: Step synth: Started
+[02:56:09] Block-level synthesis in progress, 0 of 21 jobs complete, 3 jobs running.
+[02:56:40] Block-level synthesis in progress, 0 of 21 jobs complete, 3 jobs running.
+[02:57:10] Block-level synthesis in progress, 0 of 21 jobs complete, 3 jobs running.
+[02:57:40] Block-level synthesis in progress, 0 of 21 jobs complete, 3 jobs running.
+[02:58:11] Block-level synthesis in progress, 0 of 21 jobs complete, 3 jobs running.
+[02:58:41] Block-level synthesis in progress, 0 of 21 jobs complete, 3 jobs running.
+[02:59:11] Block-level synthesis in progress, 0 of 21 jobs complete, 3 jobs running.
+[02:59:41] Block-level synthesis in progress, 0 of 21 jobs complete, 3 jobs running.
+[03:00:11] Block-level synthesis in progress, 0 of 21 jobs complete, 3 jobs running.
+[03:00:42] Block-level synthesis in progress, 0 of 21 jobs complete, 3 jobs running.
+[03:01:12] Block-level synthesis in progress, 0 of 21 jobs complete, 3 jobs running.
+[03:01:42] Block-level synthesis in progress, 0 of 21 jobs complete, 3 jobs running.
+[03:02:12] Block-level synthesis in progress, 0 of 21 jobs complete, 3 jobs running.
+[03:02:42] Block-level synthesis in progress, 0 of 21 jobs complete, 3 jobs running.
+[03:03:13] Block-level synthesis in progress, 0 of 21 jobs complete, 3 jobs running.
+[03:03:43] Block-level synthesis in progress, 0 of 21 jobs complete, 3 jobs running.
+[03:04:13] Block-level synthesis in progress, 0 of 21 jobs complete, 3 jobs running.
+[03:04:43] Block-level synthesis in progress, 0 of 21 jobs complete, 3 jobs running.
+[03:05:13] Block-level synthesis in progress, 0 of 21 jobs complete, 3 jobs running.
+[03:05:44] Block-level synthesis in progress, 0 of 21 jobs complete, 3 jobs running.
+[03:06:14] Block-level synthesis in progress, 0 of 21 jobs complete, 3 jobs running.
+[03:06:44] Block-level synthesis in progress, 0 of 21 jobs complete, 3 jobs running.
+[03:07:14] Block-level synthesis in progress, 0 of 21 jobs complete, 3 jobs running.
+[03:07:44] Block-level synthesis in progress, 0 of 21 jobs complete, 3 jobs running.
+[03:08:15] Block-level synthesis in progress, 0 of 21 jobs complete, 3 jobs running.
+[03:08:45] Block-level synthesis in progress, 0 of 21 jobs complete, 3 jobs running.
+[03:09:15] Block-level synthesis in progress, 0 of 21 jobs complete, 3 jobs running.
+[03:09:45] Block-level synthesis in progress, 2 of 21 jobs complete, 7 jobs running.
+[03:10:15] Block-level synthesis in progress, 10 of 21 jobs complete, 7 jobs running.
+[03:10:46] Block-level synthesis in progress, 19 of 21 jobs complete, 2 jobs running.
+[03:11:16] Top-level synthesis in progress.
+[03:11:46] Top-level synthesis in progress.
+[03:12:16] Top-level synthesis in progress.
+[03:12:47] Top-level synthesis in progress.
+[03:13:16] Run vpl: Step synth: Completed
+[03:13:16] Run vpl: Step impl: Started
+[03:47:09] Finished 2nd of 6 tasks (FPGA linking synthesized kernels to platform). Elapsed time: 00h 59m 18s 
+
+[03:47:09] Starting logic optimization..
+[03:48:13] Phase 1 Initialization
+[03:48:13] Phase 1.1 Core Generation And Design Setup
+[03:49:17] Phase 1.2 Setup Constraints And Sort Netlist
+[03:49:17] Phase 2 Timer Update And Timing Data Collection
+[03:49:17] Phase 2.1 Timer Update
+[03:50:21] Phase 2.2 Timing Data Collection
+[03:50:53] Phase 3 Retarget
+[03:51:57] Phase 4 Constant propagation
+[03:52:29] Phase 5 Sweep
+[03:58:52] Phase 6 BUFG optimization
+[03:59:24] Phase 7 Shift Register Optimization
+[03:59:56] Phase 8 Post Processing Netlist
+[04:00:28] Phase 9 Finalization
+[04:00:28] Phase 9.1 Finalizing Design Cores and Updating Shapes
+[04:01:32] Phase 9.2 Verifying Netlist Connectivity
+[04:03:39] Phase 1 Process Reference Checkpoint Netlist
+[04:12:42] Finished 3rd of 6 tasks (FPGA logic optimization). Elapsed time: 00h 25m 33s 
+
+[04:12:42] Starting logic placement..
+[04:14:18] Phase 1 Placer Initialization
+[04:14:18] Phase 1.1 Placer Initialization Netlist Sorting
+[04:19:38] Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+[04:22:50] Phase 1.3 Build Placer Netlist Model
+[04:30:17] Phase 1.4 Constrain Clocks/Macros
+[04:31:21] Phase 2 Global Placement
+[04:31:21] Phase 2.1 Floorplanning
+[04:34:01] Phase 2.1.1 Partition Driven Placement
+[04:34:01] Phase 2.1.1.1 PBP: Partition Driven Placement
+[04:45:46] Phase 2.1.1.2 PBP: Clock Region Placement
+[04:47:55] Phase 2.1.1.3 PBP: Discrete Incremental
+[04:48:27] Phase 2.1.1.4 PBP: Compute Congestion
+[04:49:32] Phase 2.1.1.5 PBP: Macro Placement
+[04:50:04] Phase 2.1.1.6 PBP: UpdateTiming
+[04:51:08] Phase 2.1.1.7 PBP: Add part constraints
+[04:51:41] Phase 2.2 Physical Synthesis After Floorplan
+[04:53:50] Phase 2.3 Update Timing before SLR Path Opt
+[04:53:50] Phase 2.4 Post-Processing in Floorplanning
+[04:54:22] Phase 2.5 Global Placement Core
+[05:37:25] Phase 2.5.1 UpdateTiming Before Physical Synthesis
+[05:38:29] Phase 2.5.2 Physical Synthesis In Placer
+[05:49:14] Phase 3 Detail Placement
+[05:49:14] Phase 3.1 Commit Multi Column Macros
+[05:49:47] Phase 3.2 Commit Most Macros & LUTRAMs
+[05:55:42] Phase 3.3 Small Shape DP
+[05:55:42] Phase 3.3.1 Small Shape Clustering
+[05:57:51] Phase 3.3.2 Slice Area Swap
+[05:58:23] Phase 3.3.2.1 Slice Area Swap Initial
+[06:04:51] Phase 3.4 Place Remaining
+[06:05:55] Phase 3.5 Re-assign LUT pins
+[06:07:32] Phase 3.6 Pipeline Register Optimization
+[06:07:32] Phase 3.7 Fast Optimization
+[06:11:51] Phase 4 Post Placement Optimization and Clean-Up
+[06:12:23] Phase 4.1 Post Commit Optimization
+[06:18:19] Phase 4.1.1 Post Placement Optimization
+[06:19:24] Phase 4.1.1.1 BUFG Insertion
+[06:19:24] Phase 1 Physical Synthesis Initialization
+[06:24:15] Phase 4.1.1.2 BUFG Replication
+[06:24:15] Phase 4.1.1.3 Post Placement Timing Optimization
+[06:43:40] Phase 4.1.1.4 Replication
+[06:47:59] Phase 4.2 Post Placement Cleanup
+[06:48:31] Phase 4.3 Placer Reporting
+[06:48:31] Phase 4.3.1 Print Estimated Congestion
+[06:49:04] Phase 4.4 Final Placement Cleanup
+[07:01:58] Finished 4th of 6 tasks (FPGA logic placement). Elapsed time: 02h 49m 15s 
+
+[07:01:58] Starting logic routing..
+[07:04:40] Phase 1 Build RT Design
+[07:12:45] Phase 2 Router Initialization
+[07:12:45] Phase 2.1 Fix Topology Constraints
+[07:12:45] Phase 2.2 Pre Route Cleanup
+[07:13:18] Phase 2.3 Global Clock Net Routing
+[07:14:54] Phase 2.4 Update Timing
+[07:24:03] Phase 2.5 Update Timing for Bus Skew
+[07:24:03] Phase 2.5.1 Update Timing
+[07:26:45] Phase 3 Initial Routing
+[07:26:45] Phase 3.1 Global Routing
+[07:26:45] Phase 3.1.1 SLL Assignment
+[07:27:49] Phase 3.2 Initial Net Routing
+[07:31:03] Phase 4 Rip-up And Reroute
+[07:31:03] Phase 4.1 Global Iteration 0
+[08:30:22] Phase 4.2 Global Iteration 1
+[08:40:37] Phase 4.3 Global Iteration 2
+[08:45:28] Phase 5 Delay and Skew Optimization
+[08:45:28] Phase 5.1 Delay CleanUp
+[08:45:28] Phase 5.1.1 Update Timing
+[08:48:10] Phase 5.1.2 Update Timing
+[08:50:19] Phase 5.1.3 Update Timing
+[08:52:29] Phase 5.2 Clock Skew Optimization
+[08:53:01] Phase 6 Post Hold Fix
+[08:53:01] Phase 6.1 Hold Fix Iter
+[08:53:01] Phase 6.1.1 Update Timing
+[08:55:43] Phase 6.2 Non Free Resource Hold Fix Iter
+[08:55:43] Phase 7 Leaf Clock Prog Delay Opt
+[08:58:24] Phase 7.1 Optimize Skews
+[08:58:24] Phase 7.1.1 Leaf ClockOpt Init
+[09:02:43] Phase 7.2 Post SkewOpt Delay Cleanup
+[09:02:43] Phase 7.2.1 Delay CleanUp
+[09:02:43] Phase 7.2.1.1 Update Timing
+[09:04:53] Phase 7.2.1.2 Update Timing
+[09:07:35] Phase 7.2.1.3 Update Timing
+[09:09:44] Phase 7.3 Post SkewOpt Hold Fix
+[09:09:44] Phase 7.3.1 Hold Fix Iter
+[09:09:44] Phase 7.3.1.1 Update Timing
+[09:17:17] Phase 8 Route finalize
+[09:17:17] Phase 9 Verifying routed nets
+[09:17:49] Phase 10 Depositing Routes
+[09:19:59] Phase 11 Resolve XTalk
+[09:19:59] Phase 12 Post Router Timing
+[09:24:50] Phase 13 Physical Synthesis in Router
+[09:24:50] Phase 13.1 Physical Synthesis Initialization
+[09:27:32] Phase 13.2 Critical Path Optimization
+[09:30:46] Finished 5th of 6 tasks (FPGA routing). Elapsed time: 02h 28m 47s 
+
+[09:30:46] Starting bitstream generation..
+[09:30:46] Phase 14 Post-Route Event Processing
+[10:16:03] Creating bitmap...
+[10:25:46] Writing bitstream ./level0_i_ulp_my_rm_partial.bit...
+[10:25:46] Finished 6th of 6 tasks (FPGA bitstream generation). Elapsed time: 00h 54m 59s 
+Check VPL, containing 12 checks, has run: 0 errors, 1 critical warning violation, 14 warning violations, 1 advisory violation
+WARNING: [ACCELERATOR-SLR-01] The compute unit tempgnn_forward_kernel_10 is located in SLR1 while its port tempgnn_forward_kernel_10/m_axi_gmem0 is connected to a memory in SLR0.
+WARNING: [ACCELERATOR-SLR-01] The compute unit tempgnn_forward_kernel_11 is located in SLR1 while its port tempgnn_forward_kernel_11/m_axi_gmem0 is connected to a memory in SLR0.
+WARNING: [ACCELERATOR-SLR-01] The compute unit tempgnn_forward_kernel_12 is located in SLR1 while its port tempgnn_forward_kernel_12/m_axi_gmem0 is connected to a memory in SLR0.
+WARNING: [ACCELERATOR-SLR-01] The compute unit tempgnn_forward_kernel_13 is located in SLR1 while its port tempgnn_forward_kernel_13/m_axi_gmem0 is connected to a memory in SLR0.
+WARNING: [ACCELERATOR-SLR-01] The compute unit tempgnn_forward_kernel_14 is located in SLR1 while its port tempgnn_forward_kernel_14/m_axi_gmem0 is connected to a memory in SLR0.
+WARNING: [ACCELERATOR-SLR-01] The compute unit tempgnn_forward_kernel_15 is located in SLR2 while its port tempgnn_forward_kernel_15/m_axi_gmem0 is connected to a memory in SLR0.
+WARNING: [ACCELERATOR-SLR-01] The compute unit tempgnn_forward_kernel_16 is located in SLR2 while its port tempgnn_forward_kernel_16/m_axi_gmem0 is connected to a memory in SLR0.
+WARNING: [ACCELERATOR-SLR-01] The compute unit tempgnn_forward_kernel_17 is located in SLR2 while its port tempgnn_forward_kernel_17/m_axi_gmem0 is connected to a memory in SLR0.
+WARNING: [ACCELERATOR-SLR-01] The compute unit tempgnn_forward_kernel_18 is located in SLR2 while its port tempgnn_forward_kernel_18/m_axi_gmem0 is connected to a memory in SLR0.
+WARNING: [ACCELERATOR-SLR-01] The compute unit tempgnn_forward_kernel_19 is located in SLR2 while its port tempgnn_forward_kernel_19/m_axi_gmem0 is connected to a memory in SLR0.
+WARNING: [ACCELERATOR-SLR-01] The compute unit tempgnn_forward_kernel_20 is located in SLR2 while its port tempgnn_forward_kernel_20/m_axi_gmem0 is connected to a memory in SLR0.
+WARNING: [ACCELERATOR-SLR-01] The compute unit tempgnn_forward_kernel_21 is located in SLR2 while its port tempgnn_forward_kernel_21/m_axi_gmem0 is connected to a memory in SLR0.
+WARNING: [ACCELERATOR-SLR-01] The compute unit tempgnn_forward_kernel_8 is located in SLR1 while its port tempgnn_forward_kernel_8/m_axi_gmem0 is connected to a memory in SLR0.
+WARNING: [ACCELERATOR-SLR-01] The compute unit tempgnn_forward_kernel_9 is located in SLR1 while its port tempgnn_forward_kernel_9/m_axi_gmem0 is connected to a memory in SLR0.
+CRITICAL WARNING: [ACCELERATOR-FIT-02] The design requires more BlockRAM resources than are available. The total number of BlockRAM elements required by all kernels is 1621.000000, out of 1776.000000 available (utilization threshold 0.800000). 
+ADVISORY: [AUTO-FREQ-SCALING-08] For clock hbm_aclk, the auto scaled frequency 450.4 MHz exceeds the original specified frequency. The compiler will select the original specified frequency of 450.0 MHz.
+[10:28:00] Run vpl: Step impl: Completed
+[10:28:03] Run vpl: FINISHED. Run Status: impl Complete!
+INFO: [v++ 60-1441] [10:28:04] Run run_link: Step vpl: Completed
+Time (s): cpu = 00:28:19 ; elapsed = 07:40:15 . Memory (MB): peak = 487.094 ; gain = 0.000 ; free physical = 29572 ; free virtual = 65553
+INFO: [v++ 60-1443] [10:28:04] Run run_link: Step rtdgen: Started
+INFO: [v++ 60-1453] Command Line: rtdgen
+INFO: [v++ 60-1454] Run Directory: /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/run_link
+INFO: [v++ 60-991] clock name 'ulp_ucs/aclk_kernel_01' (clock ID '1') is being mapped to clock name 'KERNEL_CLK' in the xclbin
+INFO: [v++ 60-991] clock name 'ulp_ucs/aclk_kernel_00' (clock ID '0') is being mapped to clock name 'DATA_CLK' in the xclbin
+INFO: [v++ 60-991] clock name 'hbm_aclk' (clock ID '') is being mapped to clock name 'hbm_aclk' in the xclbin
+INFO: [v++ 60-1230] The compiler selected the following frequencies for the runtime controllable kernel clock(s) and scalable system clock(s): System (SYSTEM) clock: hbm_aclk = 450, Kernel (KERNEL) clock: ulp_ucs/aclk_kernel_01 = 500, Kernel (DATA) clock: ulp_ucs/aclk_kernel_00 = 300
+INFO: [v++ 60-1453] Command Line: cf2sw -a /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/int/address_map.xml -sdsl /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/int/sdsl.dat -xclbin /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/int/xclbin_orig.xml -rtd /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/int/tempgnn_forward_kernel.hw.rtd -o /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/int/tempgnn_forward_kernel.hw.xml
+INFO: [v++ 60-1652] Cf2sw returned exit code: 0
+INFO: [v++ 60-1441] [10:28:31] Run run_link: Step rtdgen: Completed
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 487.094 ; gain = 0.000 ; free physical = 32896 ; free virtual = 68881
+INFO: [v++ 60-1443] [10:28:31] Run run_link: Step xclbinutil: Started
+INFO: [v++ 60-1453] Command Line: xclbinutil --add-section BITSTREAM:RAW:/home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/int/partial.bit --force --target hw --key-value SYS:dfx_enable:true --add-section :JSON:/home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/int/tempgnn_forward_kernel.hw.rtd --append-section :JSON:/home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/int/appendSection.rtd --add-section CLOCK_FREQ_TOPOLOGY:JSON:/home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/int/tempgnn_forward_kernel.hw_xml.rtd --add-section BUILD_METADATA:JSON:/home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/int/tempgnn_forward_kernel.hw_build.rtd --add-section EMBEDDED_METADATA:RAW:/home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/int/tempgnn_forward_kernel.hw.xml --add-section SYSTEM_METADATA:RAW:/home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/int/systemDiagramModelSlrBaseAddress.json --key-value SYS:PlatformVBNV:xilinx_u280_gen3x16_xdma_1_202211_1 --output /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/tempgnn_forward_kernel.hw.xclbin
+INFO: [v++ 60-1454] Run Directory: /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/run_link
+XRT Build Version: 2.16.0 (Vitis)
+       Build Date: 2023-07-13 16:00:55
+          Hash ID: 157faa07876c55bb8aa8ec51b28608a6a0f6638e
+Creating a default 'in-memory' xclbin image.
+
+Section: 'BITSTREAM'(0) was successfully added.
+Size   : 78981578 bytes
+Format : RAW
+File   : '/home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/int/partial.bit'
+
+Section: 'MEM_TOPOLOGY'(6) was successfully added.
+Format : JSON
+File   : 'mem_topology'
+
+Section: 'IP_LAYOUT'(8) was successfully added.
+Format : JSON
+File   : 'ip_layout'
+
+Section: 'CONNECTIVITY'(7) was successfully added.
+Format : JSON
+File   : 'connectivity'
+
+Section: 'CLOCK_FREQ_TOPOLOGY'(11) was successfully added.
+Size   : 410 bytes
+Format : JSON
+File   : '/home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/int/tempgnn_forward_kernel.hw_xml.rtd'
+
+Section: 'BUILD_METADATA'(14) was successfully added.
+Size   : 30589 bytes
+Format : JSON
+File   : '/home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/int/tempgnn_forward_kernel.hw_build.rtd'
+
+Section: 'EMBEDDED_METADATA'(2) was successfully added.
+Size   : 73323 bytes
+Format : RAW
+File   : '/home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/int/tempgnn_forward_kernel.hw.xml'
+
+Section: 'SYSTEM_METADATA'(22) was successfully added.
+Size   : 327915 bytes
+Format : RAW
+File   : '/home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/int/systemDiagramModelSlrBaseAddress.json'
+
+Section: 'PARTITION_METADATA'(20) was successfully appended to.
+Format : JSON
+File   : 'partition_metadata'
+
+Section: 'IP_LAYOUT'(8) was successfully appended to.
+Format : JSON
+File   : 'ip_layout'
+Successfully wrote (79552080 bytes) to the output file: /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/tempgnn_forward_kernel.hw.xclbin
+Leaving xclbinutil.
+INFO: [v++ 60-1441] [10:28:31] Run run_link: Step xclbinutil: Completed
+Time (s): cpu = 00:00:00.18 ; elapsed = 00:00:00.42 . Memory (MB): peak = 487.094 ; gain = 0.000 ; free physical = 32816 ; free virtual = 68876
+INFO: [v++ 60-1443] [10:28:31] Run run_link: Step xclbinutilinfo: Started
+INFO: [v++ 60-1453] Command Line: xclbinutil --quiet --force --info /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/tempgnn_forward_kernel.hw.xclbin.info --input /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/tempgnn_forward_kernel.hw.xclbin
+INFO: [v++ 60-1454] Run Directory: /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/run_link
+INFO: [v++ 60-1441] [10:28:32] Run run_link: Step xclbinutilinfo: Completed
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 487.094 ; gain = 0.000 ; free physical = 32815 ; free virtual = 68875
+INFO: [v++ 60-1443] [10:28:32] Run run_link: Step generate_sc_driver: Started
+INFO: [v++ 60-1453] Command Line: 
+INFO: [v++ 60-1454] Run Directory: /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/run_link
+INFO: [v++ 60-1441] [10:28:32] Run run_link: Step generate_sc_driver: Completed
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 487.094 ; gain = 0.000 ; free physical = 32815 ; free virtual = 68875
+INFO: [v++ 60-2331] SLR0 was specfied for compute unit tempgnn_forward_kernel_1, and verified as such in implementation.
+INFO: [v++ 60-2331] SLR1 was specfied for compute unit tempgnn_forward_kernel_10, and verified as such in implementation.
+INFO: [v++ 60-2331] SLR1 was specfied for compute unit tempgnn_forward_kernel_11, and verified as such in implementation.
+INFO: [v++ 60-2331] SLR1 was specfied for compute unit tempgnn_forward_kernel_12, and verified as such in implementation.
+INFO: [v++ 60-2331] SLR1 was specfied for compute unit tempgnn_forward_kernel_13, and verified as such in implementation.
+INFO: [v++ 60-2331] SLR1 was specfied for compute unit tempgnn_forward_kernel_14, and verified as such in implementation.
+INFO: [v++ 60-2331] SLR2 was specfied for compute unit tempgnn_forward_kernel_15, and verified as such in implementation.
+INFO: [v++ 60-2331] SLR2 was specfied for compute unit tempgnn_forward_kernel_16, and verified as such in implementation.
+INFO: [v++ 60-2331] SLR2 was specfied for compute unit tempgnn_forward_kernel_17, and verified as such in implementation.
+INFO: [v++ 60-2331] SLR2 was specfied for compute unit tempgnn_forward_kernel_18, and verified as such in implementation.
+INFO: [v++ 60-2331] SLR2 was specfied for compute unit tempgnn_forward_kernel_19, and verified as such in implementation.
+INFO: [v++ 60-2331] SLR0 was specfied for compute unit tempgnn_forward_kernel_2, and verified as such in implementation.
+INFO: [v++ 60-2331] SLR2 was specfied for compute unit tempgnn_forward_kernel_20, and verified as such in implementation.
+INFO: [v++ 60-2331] SLR2 was specfied for compute unit tempgnn_forward_kernel_21, and verified as such in implementation.
+INFO: [v++ 60-2331] SLR0 was specfied for compute unit tempgnn_forward_kernel_3, and verified as such in implementation.
+INFO: [v++ 60-2331] SLR0 was specfied for compute unit tempgnn_forward_kernel_4, and verified as such in implementation.
+INFO: [v++ 60-2331] SLR0 was specfied for compute unit tempgnn_forward_kernel_5, and verified as such in implementation.
+INFO: [v++ 60-2331] SLR0 was specfied for compute unit tempgnn_forward_kernel_6, and verified as such in implementation.
+INFO: [v++ 60-2331] SLR0 was specfied for compute unit tempgnn_forward_kernel_7, and verified as such in implementation.
+INFO: [v++ 60-2331] SLR1 was specfied for compute unit tempgnn_forward_kernel_8, and verified as such in implementation.
+INFO: [v++ 60-2331] SLR1 was specfied for compute unit tempgnn_forward_kernel_9, and verified as such in implementation.
+Check POST-VPL, containing 1 checks, has run: 0 errors
+INFO: [v++ 60-244] Generating system estimate report...
+INFO: [v++ 60-1092] Generated system estimate report: /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/reports/link/system_estimate_tempgnn_forward_kernel.hw.xtxt
+INFO: [v++ 60-586] Created /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/tempgnn_forward_kernel.hw.ltx
+INFO: [v++ 60-586] Created /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/tempgnn_forward_kernel.hw.xclbin
+INFO: [v++ 60-1307] Run completed. Additional information can be found in:
+	Guidance: /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/reports/link/v++_link_tempgnn_forward_kernel.hw_guidance.html
+	Timing Report: /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/reports/link/imp/impl_1_hw_bb_locked_timing_summary_routed.rpt
+	Vivado Log: /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/logs/link/vivado.log
+	Steps Log File: /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/logs/link/link.steps.log
+
+INFO: [v++ 60-2343] Use the vitis_analyzer tool to visualize and navigate the relevant reports. Run the following command. 
+    vitis_analyzer /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/tempgnn_forward_kernel.hw.xclbin.link_summary 
+INFO: [v++ 60-791] Total elapsed time: 7h 42m 11s
+INFO: [v++ 60-1653] Closing dispatch client.
+FINAL_KEY_VPP_LINK_RC=0

@@ -4,6 +4,7 @@ Q14_MODELS ?= JODIE TGAT TGN APAN
 Q14_OUT ?= results/q14_real_tgl_edges
 AE_OUT ?= results/ae_report
 BOARD_JSON ?= results/board_u280/summary.json
+U280_BUILD_PROVENANCE ?= artifacts/u280/TempGNN/evidence/build_provenance.json
 
 U280_PLATFORM ?= xilinx_u280_gen3x16_xdma_1_202211_1
 U280_BUILD_DIR ?= $(CURDIR)/build/vitis_u280_forward_hw
@@ -85,6 +86,7 @@ report:
 	$(PYTHON) -m scripts.make_ae_report \
 		--q14-summary $(Q14_OUT)/q14_dataset_model_summary.csv \
 		--board-json $(BOARD_JSON) \
+		--build-provenance $(U280_BUILD_PROVENANCE) \
 		--out $(AE_OUT)
 
 all: smoke report

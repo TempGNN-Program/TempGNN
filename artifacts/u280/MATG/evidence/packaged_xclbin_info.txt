@@ -1,6 +1,6 @@
-XRT Build Version: 2.16.0 (Vitis)
-       Build Date: 2023-07-13 16:00:55
-          Hash ID: 157faa07876c55bb8aa8ec51b28608a6a0f6638e
+XRT Build Version: 2.16.204 (2023.2)
+       Build Date: 2023-10-11 23:45:57
+          Hash ID: fa4c0045003fed0acea4593788dce5ef6d0b66ee
 ------------------------------------------------------------------------------
 Warning: The option '--output' has not been specified. All operations will    
          be done in memory with the exception of the '--dump-section' command.
@@ -8,9 +8,9 @@ Warning: The option '--output' has not been specified. All operations will
 Reading xclbin file into memory.  File: /home/ae_reviewer/TempGNN/artifacts/u280/MATG/bin/matg_kernel.hw.xclbin
 
 ==============================================================================
-XRT Build Version: 2.16.0 (Vitis)
-       Build Date: 2023-07-13 16:00:55
-          Hash ID: 157faa07876c55bb8aa8ec51b28608a6a0f6638e
+XRT Build Version: 2.16.204 (2023.2)
+       Build Date: 2023-10-11 23:45:57
+          Hash ID: fa4c0045003fed0acea4593788dce5ef6d0b66ee
 ==============================================================================
 xclbin Information
 ------------------
@@ -19,7 +19,7 @@ xclbin Information
    Kernels:                matg_kernel
    Signature:              
    Content:                Bitstream
-   UUID (xclbin):          5a14d75f-5bc7-8e91-a52c-535941f6fd22
+   UUID (xclbin):          6207e6b4-932d-e90c-e7d6-1abea1560ceb
    UUID (IINTF):           fb2b2c5a19ed63593fea95f51fbc8eb9
    Sections:               BITSTREAM, MEM_TOPOLOGY, IP_LAYOUT, CONNECTIVITY, 
                            CLOCK_FREQ_TOPOLOGY, BUILD_METADATA, 

@@ -6,12 +6,35 @@ This repository packages a TempGNN artifact for SC-style AE review. It contains:
 2. Vitis-HLS hardware source plus an XRT host path for an Alveo U280 forward-path FPGA run.
 3. Independent paper-based MATG, ViTeGNN, and RTGA forward-path reproductions,
    plus a common U280 measurement workflow for the core FPGA comparisons.
-4. Scripts that regenerate paper-reference CSV/SVG outputs from an anonymized,
-   source-labeled numeric table.
+4. Scripts that regenerate paper-reference CSV/SVG outputs from anonymized,
+   source-labeled constants in `tempgenn/paper_reference_data.py`.
 
-The exact CPU-only and U280 hardware/software environments are listed in
+The exact optional software-check and U280 environments are listed in
 `ENVIRONMENT.md`. The authoritative measurement boundary is stated in
-`AE_APPENDIX_DRAFT.md` and summarized in the reference-data manifest.
+`AE_APPENDIX_DRAFT.md` and summarized in every generated manifest.
+
+Reviewer-facing documents are available as
+[AD PDF](release/appendices/pap142_TempGNN_AD_Appendix.pdf),
+[AE PDF](release/appendices/pap142_TempGNN_AE_Appendix.pdf), and
+[combined AD/AE PDF](release/appendices/pap142_TempGNN_AD_AE_Appendix.pdf),
+with the matching LaTeX sources in `release/appendices/`.
+
+## Reviewer One-Command Path
+
+On the provided U280 host, the complete core path is:
+
+```bash
+bash scripts/run_all.sh u280-core
+```
+
+The wrapper loads the standard XRT setup when necessary and uses device 0 with
+three repetitions. To override either value, source XRT and call
+`make ae-core-u280` with `U280_CORE_DEVICE` or `U280_CORE_REPETITIONS`.
+
+This command generates the paper-reference CSV/SVG files from code, runs the
+four packaged U280 implementations, validates timing/provenance/goldens and
+repeat consistency, derives the measured Fig.11/Fig.12 comparison, and writes
+the reviewer report. It does not execute a CPU or GPU performance baseline.
 
 ## Current U280 Board Evidence
 
@@ -20,27 +43,38 @@ The package includes U280 forward-path evidence under `results/board_u280/`:
 - Board/platform: Alveo U280, `xilinx_u280_gen3x16_xdma_1_202211_1`.
 - Current reviewer-runnable xclbin:
   `artifacts/u280/TempGNN/bin/tempgnn_forward_kernel.hw.xclbin`.
-- Board runs: `smoke`, `tbscale`, `maxbatch`, and `layout_smoke` all PASS golden fixed-point checks.
-- Frequency/timing: target `225 MHz`, post-route WNS `+0.016 ns`, TNS `0.0 ns`.
+- Reviewer artifact: 21 compute units at `168 MHz`; post-route WNS
+  `+0.002 ns`, TNS `0.0 ns`, WHS `+0.006 ns`, and THS `0.0 ns`.
+- Delivered-xclbin 100-iteration WK/TGN check: mean `1.412534 ms`, P50
+  `1.424431 ms`, P95 `1.438663 ms`; golden, repeat, and validation PASS.
+- Four-input, same-xclbin cache-switch check: WK/TGN, WK/APAN, MC/JODIE,
+  and RT/TGAT all PASS with distinct input cache keys.
+- Historical board runs: `smoke`, `tbscale`, `maxbatch`, and `layout_smoke`
+  all PASS golden fixed-point checks at `225 MHz` with WNS `+0.016 ns`.
 - Layout evidence: `results/board_u280/tempgnn_u280_fpga_layout.png`.
 
-This directory preserves the original TempGNN forward-path sanity logs and
-layout evidence. Its older xclbin is omitted because its build metadata contains
+`results/board_u280/` preserves the original TempGNN forward-path sanity logs
+and layout evidence. Its older xclbin is omitted because its build metadata contains
 an absolute home path; the current metadata-normalized, bitstream-verified
 TempGNN xclbin is under `artifacts/u280/`. Fresh runs write new evidence under
 `results/reviewer_u280_runs/`.
 
-The packaged audited runs are `pap142_u280_smoke_20260715T052052Z` and
-`pap142_u280_measured_20260715T052052Z`. The latter is the 3-repetition,
-288-row final run used by the reviewer-facing report.
+The current packaged audited run is `20260717T024537Z`. It contains 72 fresh
+rows per implementation, 288 rows total, with zero golden, repeat, or timing
+failures. Its measured all-workload averages are `1.296553 ms` for TempGNN and
+`9.966618 ms` for MATG, producing a fresh `7.8889x` TempGNN/MATG average
+speedup. The paper-figure tolerance diagnostic remains FAIL and is preserved
+because this bounded Q10/total-board-power path is not paper-equivalent.
 
-## Current Local Vitis Status
+## Current Validation Status
 
-Completed on June 10, 2026 with Vitis/Vivado 2025.2 and target clock 4.444 ns:
+Completed on July 17, 2026 with Vitis/Vivado 2023.2:
 
-- `tempgnn_kernel`: C-sim PASS, C-synthesis PASS, Verilog RTL cosim PASS.
-- `tempgnn_forward_kernel`: C-sim PASS, C-synthesis PASS, Verilog RTL cosim PASS.
-- Forward fixture result: DDTC/OATS and ablated modes produce identical target embeddings in the testbench. OATS reduces fixture memory traffic from 18,432 bytes to 3,312 bytes, or 5.565x, without changing the fixed-point output.
+- Cache-key invalidation C-sim PASS, including changed-weight reload and restore.
+- Exact 21-worker C-sim PASS for all 24 dataset/model fixtures.
+- HLS synthesis PASS; final 21-CU implementation and route PASS.
+- U280 100-iteration performance check and sequential input-switch check PASS.
+- Four-xclbin reviewer workflow PASS for all 288 functional rows.
 
 These local Windows runs are HLS/RTL simulation checks. The U280 board evidence lives under `results/board_u280/` and is summarized by `results/board_u280/summary.json`.
 
@@ -124,16 +158,18 @@ Run on a TGL edge stream:
 python -m scripts.run_reproduction --data external/tgl/DATA/WIKI/edges.csv --batch-size 1000 --fanout 20 --depth 2
 ```
 
-## Packaged Reference Figure Outputs
+## Included, Regenerable Paper Figure Outputs
 
-Regenerate the packaged reference CSV/SVG artifacts:
+Generate the paper-reference CSV/SVG artifacts:
 
 ```bash
 python -m scripts.reproduce_paper_figures
 ```
 
-Outputs are written to `results/paper_reproduction/`:
+The package includes the outputs under `results/paper_reproduction/`; the
+command deterministically regenerates them in place:
 
+- `paper_figure_values.csv` (runtime reconstruction of all 668 source records)
 - `all_figure_data.csv`
 - `figure_data_manifest.csv`
 - `fig2_execution_breakdown.csv/.svg`
@@ -147,13 +183,14 @@ Outputs are written to `results/paper_reproduction/`:
 - `fig14b_tdp_entries.csv/.svg`
 - `baseline_sources.md`
 
-Every generated SVG has a matching CSV source file. The sole input is
-`reference_inputs/paper_figure_values.csv`; each row records whether the value
-is an exact author-workbook cell or an axis-calibrated recovery from an author
-vector export. `reference_inputs/README.md` records source hashes, cell/geometry
-locators, uncertainty, and the Fig.11 plot/prose discrepancy. No per-point value
-is synthesized from a reported mean or range. This command checks deterministic
-paper-reference reconstruction; it is not the fresh U280 measurement command.
+Every generated SVG has a matching generated CSV file. The 668 source records
+live as structured constants in `tempgenn/paper_reference_data.py`; each record
+states whether the value is an exact author-workbook cell or an axis-calibrated
+recovery from an author vector export. `reference_inputs/README.md` records the
+source classes, hashes, uncertainty, and Fig.11 plot/prose discrepancy. The
+included files provide direct reviewer access, while the code-embedded records
+remain authoritative and reproducible. These are paper-reference
+reconstructions, not fresh hardware measurements.
 
 ## Fresh U280 Mechanism Comparison
 
@@ -162,9 +199,11 @@ TempGNN, MATG, ViTeGNN, and RTGA. Its checked configuration is
 `configs/u280_core_reproduction.json`:
 
 ```bash
-make u280-core-preflight
 make ae-core-u280 U280_CORE_DEVICE=0 U280_CORE_REPETITIONS=3
 ```
+
+`make ae-core-u280` also generates the paper-reference figures and final AE
+report, so this is the only required reviewer command after XRT setup.
 
 When the measurement directory is a staged copy without `.git`, bind it to the
 published source snapshot before running:
@@ -179,17 +218,19 @@ automatically.
 
 The preflight records artifact hashes and rejects byte-identical xclbins. Each
 runner must write fresh per-repetition measurements from public real-dataset
-prefixes; the workflow then derives Fig.11/Fig.12-shaped diagnostic tables and
+prefixes; the workflow then derives measured Fig.11/Fig.12 comparison tables and
 writes an automatic numerical comparison under
 `results/reviewer_u280_runs/<run-id>/`. Synthetic fixtures are limited to C-sim
-and are rejected by this workflow. Packaged reference CSV files are never
-overwritten. The link request is read from each final xclbin, while the
+and are rejected by this workflow. Code-embedded paper-reference records are
+never overwritten. The link request is read from each final xclbin, while the
 implemented kernel clock and WNS/TNS are verified from the Vivado `ap_clk`
-connection and post-route timing report. Comparison-figure generation is
-rejected if the four timing-closed kernel clocks are not comparable. Because
-this configuration is explicitly diagnostic, a completed
-run remains successful even when `verification.md` records a tolerance FAIL;
-use `--require-paper-match` only when auditing a paper-equivalent configuration.
+connection and post-route timing report. Each implementation must use one
+stable timing-closed clock across all rows; the comparison uses measured
+latency directly and performs no frequency rescaling. The
+default reviewer target preserves a tolerance FAIL in `verification.md` while
+still completing a functionally valid hardware run. Use
+`make ae-core-u280-strict` to make numerical paper-figure mismatch fail the
+command; reference values are never substituted in either mode.
 The repository and frozen archive also retain the exact generated real-input
 fixtures under `results/generated_u280_comparison_fixtures/` so the fixture
 metadata and golden hashes named by packaged measurement rows remain directly
@@ -229,7 +270,9 @@ recorded in every fresh run's provenance.
 Run `make release-preflight` before creating the Zenodo archive. It currently
 refuses a Results Reproduced release claim because the bounded implementation
 is not paper-equivalent; Apache-2.0 is included, while final citation metadata,
-four distinct U280 artifacts, and a fresh numerical PASS are still checked. See
+four distinct U280 artifacts, and fresh-run completeness are checked. The
+separate `make release-preflight-results` target additionally requires a
+paper-equivalent configuration and numerical tolerance PASS. See
 `ZENODO_RELEASE_CHECKLIST.md`.
 
 ## Metric Meaning

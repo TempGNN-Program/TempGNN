@@ -80,7 +80,7 @@ python3 -m unittest discover -s tests
 Expected terminal summary:
 
 ```text
-Ran 28 tests
+Ran 34 tests
 OK
 ```
 
@@ -97,7 +97,7 @@ when the corresponding edge files are already present.
 
 ### C. Artifact Analysis
 
-All 28 tests must pass. In particular, the recursive TDP state must agree with
+All 34 tests must pass. In particular, the recursive TDP state must agree with
 chronological updates, fixtures must be deterministic, xclbin link requests
 must agree with the Vivado-connected clock and nonnegative post-route WNS/TNS,
 and duplicate xclbins must be rejected by preflight.
@@ -150,8 +150,9 @@ artifacts/u280/ViTeGNN/bin/vitegnn_kernel.hw.xclbin
 artifacts/u280/RTGA/bin/rtga_kernel.hw.xclbin
 ```
 
-The common XRT host and baseline C-sim reference binaries are colocated under
-the same `bin/` directories. Source, paper-mechanism mapping, and limitations
+Each validated XRT host and the baseline C-sim reference binaries are
+colocated under the same `bin/` directories. TempGNN uses its 21-CU parallel
+host; the baselines use the common single-CU host. Source, paper-mechanism mapping, and limitations
 are in `hardware/baselines/README.md` and
 `hardware/baselines/MECHANISM_MAP.md`.
 The repository and frozen package also include the exact real-input fixture
@@ -178,7 +179,7 @@ A2-T1 preflight four source revisions, hosts, and distinct xclbin hashes
   -> A2-T4 load and run each implementation on U280
   -> A2-T5 gate the repeated-kernel window and sample total board power
   -> A2-T6 validate checksums, repetitions, energy, provenance, and clocks
-  -> A2-T7 aggregate raw rows and derive diagnostic figure-shaped tables
+  -> A2-T7 aggregate raw rows and derive measured core comparison tables
   -> A2-T8 compare fresh tables with the paper-reference rows
 ```
 
@@ -197,6 +198,8 @@ Run the complete direct measurement:
 make ae-core-u280 U280_CORE_DEVICE=0 U280_CORE_REPETITIONS=3
 ```
 
+The default-device wrapper is `bash scripts/run_all.sh u280-core`.
+
 Checked parameters are loaded from `configs/u280_core_reproduction.json`:
 
 ```text
@@ -207,7 +210,7 @@ real prefix: 8,192 events per dataset
 target batch: 1,000
 repetitions: 3
 tensor path: 8-dimensional Q10
-requested clock: 225 MHz
+requested clocks: TempGNN 168 MHz; MATG/ViTeGNN/RTGA 225 MHz
 achieved-clock comparison tolerance: 0.5 MHz
 ```
 
@@ -252,9 +255,11 @@ results/reviewer_u280_runs/<run-id>/verification.md
 ```
 
 The packaged final run is
-`results/reviewer_u280_runs/pap142_u280_measured_20260715T052052Z/`; its four
-raw CSV files contain 72 rows each (288 total). The packaged one-repetition
-smoke run is `pap142_u280_smoke_20260715T052052Z`.
+`results/reviewer_u280_runs/20260717T024537Z/`; its four raw CSV files contain
+72 rows each (288 total), with zero golden, repeat, or timing failures. The
+fresh all-workload averages are `1.296553 ms` for TempGNN and `9.966618 ms`
+for MATG, yielding `7.8889x` measured average speedup. The paper-tolerance
+diagnostic remains FAIL and is preserved.
 
 For 3 repetitions, each implementation must contain 72 rows and the combined
 matrix must contain 288 rows. Every row must report:
@@ -268,11 +273,13 @@ matrix must contain 288 rows. Every row must report:
   kernel clock, WNS/TNS, and `timing_met=PASS`.
 
 The workflow refuses normalized comparison generation if an implementation's
-post-route clock changes between rows or if the four timing-closed clocks
-differ by more than 0.5 MHz. `verification.md` reports the maximum relative error against
-paper-reference Fig.11 and the U280 subset of Fig.12. A diagnostic tolerance
-FAIL is a valid completed run and must remain visible. It does not demonstrate
-paper equivalence and must not be converted to PASS by adjusting measured rows.
+post-route clock changes between rows or lacks timing closure. Each actual
+clock remains in the raw rows and no frequency rescaling is applied.
+`verification.md` reports the maximum relative
+error against paper-reference Fig.11 and the U280 subset of Fig.12. The
+default one-command path preserves a tolerance FAIL while still completing a
+functionally valid hardware run. `make ae-core-u280-strict` makes that mismatch
+fail the command. It must not be converted to PASS by adjusting measured rows.
 
 Passing `A2` establishes that four distinct implementations execute on the
 same U280, produce stable software-checked outputs, and emit traceable raw
@@ -287,21 +294,24 @@ Use the Python environment created for `A1`. No FPGA, GPU, external dataset, or
 network access is required. Inputs are:
 
 ```text
-reference_inputs/paper_figure_values.csv
+tempgenn/paper_reference_data.py
 reference_inputs/README.md
 ```
 
-The table has 668 rows. Every row records its source class, locator, and
-uncertainty. Original author workbooks and vector files are not distributed
-because they contain author metadata; only the anonymized numeric extraction
-and source hashes are packaged.
+The source module has 668 structured records. Every record identifies its
+source class, locator, and uncertainty. Original author workbooks and vector
+files are not distributed because they contain author metadata; only the
+anonymized numeric extraction and source hashes are embedded in code. The AE
+archive also includes deterministic CSV/SVG outputs under
+`results/paper_reproduction/` for direct inspection; the code-embedded records
+remain their authoritative source.
 
 ### B. Artifact Execution
 
 The dependency chain is:
 
 ```text
-A3-T1 validate the reference table and source labels
+A3-T1 validate the code-embedded records and source labels
   -> A3-T2 split records by figure
   -> A3-T3 generate matching CSV and SVG files
   -> A3-T4 generate the combined table and manifest
@@ -326,13 +336,15 @@ make smoke
 make report
 ```
 
-`make smoke` includes the 28 tests from `A1`.
+`make smoke` includes the 34 unit and artifact-contract tests from `A1-A3`.
 
 ### C. Artifact Analysis
 
-Expected outputs:
+The following outputs are included for direct inspection and regenerated in
+place by the commands above:
 
 ```text
+results/paper_reproduction/paper_figure_values.csv
 results/paper_reproduction/all_figure_data.csv
 results/paper_reproduction/figure_data_manifest.csv
 results/paper_reproduction/fig2_execution_breakdown.csv/.svg
@@ -365,7 +377,7 @@ SVG titles contain `Paper-reference`, and the manifest identifies whether each
 series came from exact workbook cells or axis-calibrated vector geometry.
 
 Passing `A3` demonstrates deterministic reconstruction and provenance of the
-packaged paper plotting records for `C4`. It does not demonstrate a fresh rerun
+code-embedded paper plotting records for `C4`. It does not demonstrate a fresh rerun
 of MATG, ViTeGNN, RTGA, Cascade, TGLite-CPU, or the complete TempGNN paper
 configuration.
 

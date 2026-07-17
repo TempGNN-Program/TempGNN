@@ -10,7 +10,6 @@ Environment variables :
 ------------------------------------------
 SHELL=/bin/bash
 RDI_APPROOT=/tools/Xilinx/Vitis/2023.2
-PLATFORM=/opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm
 RDI_JAVA_PLATFORM=
 LANGUAGE=en_US:en
 XIL_SUPPRESS_OVERRIDE_WARNINGS=1
@@ -20,15 +19,14 @@ RDI_OPT_EXT=.o
 RDI_INSTALLVER=2023.2
 RDI_INSTALLROOT=/tools/Xilinx
 RDI_PATCHROOT=
-KERNEL=forward
 XIL_NO_OVERRIDE=0
 RDI_LIBDIR=/tools/Xilinx/Vitis/2023.2/lib/lnx64.o/Ubuntu/22:/tools/Xilinx/Vitis/2023.2/lib/lnx64.o/Ubuntu:/tools/Xilinx/Vitis/2023.2/lib/lnx64.o
-PWD=/home/ae_reviewer/TempGNN/hardware/vitis
 KRB5CCNAME=FILE:/tmp/krb5cc_1694735466_TYN4Zh
+PWD=/home/ae_reviewer/TempGNN_opt_20260715_onchip_chain
 LOGNAME=ae_reviewer
+TEMPGNN_INCREMENTAL_DCP=/home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_epoch_168mhz/_x/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper_routed.dcp
 XDG_SESSION_TYPE=tty
 _RDI_DONT_SET_XILINX_AS_PATH=True
-MAKEOVERRIDES=${-*-command-variables-*-}
 XAUTHORITY=/home/ae_reviewer/.Xauthority
 RDI_PREPEND_PATH=/tools/Xilinx/Vitis/2023.2/bin
 XILINX_DSP=
@@ -41,12 +39,10 @@ HDI_PROCESSOR=x86_64
 RDI_BUILD=yes
 RDI_PROG=/tools/Xilinx/Vitis/2023.2/bin/unwrapped/lnx64.o/v++
 SSH_CONNECTION=<redacted>
-RDI_SESSION_INFO=/home/ae_reviewer/TempGNN/hardware/vitis:u280-ae-host_1784063313_1829351
+RDI_SESSION_INFO=/home/ae_reviewer/TempGNN_opt_20260715_onchip_chain:u280-ae-host_1784227579_84817
 RT_TCL_PATH=/tools/Xilinx/Vitis/2023.2/scripts/rt/base_tcl/tcl
-MFLAGS=-w
 XILINX_SDK=/tools/Xilinx/Vitis/2023.2
 RDI_SHARED_DATA=/tools/Xilinx/SharedData/2023.2/data
-MAKEFLAGS=w -- VPP_LINK_FLAGS=--freqhz\ 225000000:tempgnn_forward_kernel_1 BUILD_DIR=/home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw PLATFORM=/opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm TARGET=hw KERNEL=forward
 XDG_SESSION_CLASS=user
 USER=ae_reviewer
 XILINX_PLANAHEAD=/tools/Xilinx/Vitis/2023.2
@@ -55,101 +51,781 @@ RDI_TPS_ROOT=/tools/Xilinx/Vivado/2023.2/tps/lnx64
 RDI_JAVA_VERSION=17.0.7_7
 RDI_DATADIR=/tools/Xilinx/SharedData/2023.2/data:/tools/Xilinx/Vitis/2023.2/data
 SHLVL=3
-MAKELEVEL=1
 XILINX_VIVADO_HLS=/tools/Xilinx/Vivado/2023.2
 XIL_CHECK_TCL_DEBUG=False
-XDG_SESSION_ID=12259
+XDG_SESSION_ID=13621
 LD_LIBRARY_PATH=/tools/Xilinx/Vitis/2023.2/tps/lnx64/java-cef-95.0.4638.69/bin/lib/linux64:/tools/Xilinx/Vitis/2023.2/lib/lnx64.o/Ubuntu/22:/tools/Xilinx/Vitis/2023.2/lib/lnx64.o/Ubuntu:/tools/Xilinx/Vitis/2023.2/lib/lnx64.o:/tools/Xilinx/Vitis/2023.2/tps/lnx64/jre17.0.7_7/lib/:/tools/Xilinx/Vitis/2023.2/tps/lnx64/jre17.0.7_7/lib//server:/tools/Xilinx/Vitis/2023.2/lib/lnx64.o/Ubuntu/22:/tools/Xilinx/Vitis/2023.2/lib/lnx64.o/Ubuntu:/tools/Xilinx/Vitis/2023.2/lib/lnx64.o:/tools/Xilinx/Vitis/2023.2/bin/../lnx64/tools/dot/lib
 HDIPRELDPATH=/tools/Xilinx/Vitis/2023.2/lib/lnx64.o/Ubuntu/22:/tools/Xilinx/Vitis/2023.2/lib/lnx64.o/Ubuntu:/tools/Xilinx/Vitis/2023.2/lib/lnx64.o:/tools/Xilinx/Vitis/2023.2/bin/../lnx64/tools/dot/lib
 XDG_RUNTIME_DIR=/run/user/1694735466
 TCMALLOC_LARGE_ALLOC_REPORT_THRESHOLD=4294967296
 SSH_CLIENT=<redacted>
 TCL_LIBRARY=/tools/Xilinx/Vitis/2023.2/tps/tcl/tcl8.5
-BUILD_DIR=/home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw
 LC_ALL=en_US.UTF-8
 XDG_DATA_DIRS=/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop
 PATH=/tools/Xilinx/Vivado/2023.2/tps/lnx64/binutils-2.26/bin:/tools/Xilinx/Vitis/2023.2/bin/../gnu/aarch64/lin/aarch64-linux/bin:/tools/Xilinx/Vitis/2023.2/bin/../gnu/ppc64le/4.9.3/lnx64/bin:/tools/Xilinx/Vitis/2023.2/bin/../gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin:/tools/Xilinx/Vivado/2023.2/tps/lnx64/gcc-8.3.0/bin:/tools/Xilinx/Vivado/2023.2/gnu/microblaze/lin/bin:/tools/Xilinx/Vitis/2023.2/bin:/tools/Xilinx/Vitis/2023.2/tps/lnx64/jre17.0.7_7/bin:/tools/Xilinx/Vivado/2023.2/bin:/tools/Xilinx/Vitis_HLS/2023.2/bin:/tools/Xilinx/Model_Composer/2023.2/bin:/tools/Xilinx/Vitis/2023.2/gnu/microblaze/lin/bin:/tools/Xilinx/Vitis/2023.2/gnu/microblaze/linux_toolchain/lin64_le/bin:/tools/Xilinx/Vitis/2023.2/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin:/tools/Xilinx/Vitis/2023.2/gnu/aarch32/lin/gcc-arm-none-eabi/bin:/tools/Xilinx/Vitis/2023.2/gnu/aarch64/lin/aarch64-linux/bin:/tools/Xilinx/Vitis/2023.2/gnu/aarch64/lin/aarch64-none/bin:/tools/Xilinx/Vitis/2023.2/gnu/armr5/lin/gcc-arm-none-eabi/bin:/tools/Xilinx/Vitis/2023.2/tps/lnx64/cmake-3.3.2/bin:/tools/Xilinx/Vitis/2023.2/aietools/bin:/tools/Xilinx/Vitis/2023.2/gnu/riscv/lin/riscv64-unknown-elf/bin:/tools/Xilinx/DocNav:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 RT_LIBPATH=/tools/Xilinx/Vitis/2023.2/scripts/rt/data
 HDI_APPROOT=/tools/Xilinx/Vitis/2023.2
-VPP_LINK_FLAGS=--freqhz 225000000:tempgnn_forward_kernel_1
 DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1694735466/bus
 RDI_PLATFORM=lnx64
 MYVIVADO=
 ISL_IOSTREAMS_RSA=/tools/Xilinx/Vitis/2023.2/tps/isl
 XILINX_VITIS=/tools/Xilinx/Vitis/2023.2
 OLDPWD=/tools/Xilinx/Vitis/2023.2/bin
-TARGET=hw
 _=/tools/Xilinx/Vitis/2023.2/bin/unwrapped/lnx64.o/v++
-XILINX_CD_CONNECT_ID=40651
-XILINX_CD_SESSION=b009cc7f-88e2-442f-81e3-75be746c44ee
+XILINX_CD_CONNECT_ID=34123
+XILINX_CD_SESSION=ff4203f5-e3b9-4aa5-a554-c8a0394a534d
 
 
 V++ command line:
 ------------------------------------------
-/tools/Xilinx/Vitis/2023.2/bin/unwrapped/lnx64.o/v++ -l -t hw --platform /opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm --temp_dir /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x --remote_ip_cache /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/.ipcache --freqhz 225000000:tempgnn_forward_kernel_1 --config /home/ae_reviewer/TempGNN/hardware/vitis/tempgnn_forward_u280.cfg /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/tempgnn_forward_kernel.hw.xo -o /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/tempgnn_forward_kernel.hw.xclbin 
+/tools/Xilinx/Vitis/2023.2/bin/unwrapped/lnx64.o/v++ -l -t hw --platform xilinx_u280_gen3x16_xdma_1_202211_1 --save-temps --temp_dir /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x --remote_ip_cache /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_cached_finalopt_12cu_175mhz/.ipcache --freqhz 168000000:tempgnn_forward_kernel_1,tempgnn_forward_kernel_2,tempgnn_forward_kernel_3,tempgnn_forward_kernel_4,tempgnn_forward_kernel_5,tempgnn_forward_kernel_6,tempgnn_forward_kernel_7,tempgnn_forward_kernel_8,tempgnn_forward_kernel_9,tempgnn_forward_kernel_10,tempgnn_forward_kernel_11,tempgnn_forward_kernel_12,tempgnn_forward_kernel_13,tempgnn_forward_kernel_14,tempgnn_forward_kernel_15,tempgnn_forward_kernel_16,tempgnn_forward_kernel_17,tempgnn_forward_kernel_18,tempgnn_forward_kernel_19,tempgnn_forward_kernel_20,tempgnn_forward_kernel_21 --vivado.prop run.impl_1.STEPS.PLACE_DESIGN.TCL.PRE=/home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/hardware/vitis/tempgnn_incremental_place_pre.tcl --config /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/hardware/vitis/tempgnn_forward_u280_21cu.cfg /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/tempgnn_forward_kernel.hw.xo -o /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/tempgnn_forward_kernel.hw.xclbin 
 
 FINAL PROGRAM OPTIONS
---config /home/ae_reviewer/TempGNN/hardware/vitis/tempgnn_forward_u280.cfg
---connectivity.nk tempgnn_forward_kernel:1:tempgnn_forward_kernel_1
+--config /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/hardware/vitis/tempgnn_forward_u280_21cu.cfg
+--connectivity.nk tempgnn_forward_kernel:21:tempgnn_forward_kernel_1.tempgnn_forward_kernel_2.tempgnn_forward_kernel_3.tempgnn_forward_kernel_4.tempgnn_forward_kernel_5.tempgnn_forward_kernel_6.tempgnn_forward_kernel_7.tempgnn_forward_kernel_8.tempgnn_forward_kernel_9.tempgnn_forward_kernel_10.tempgnn_forward_kernel_11.tempgnn_forward_kernel_12.tempgnn_forward_kernel_13.tempgnn_forward_kernel_14.tempgnn_forward_kernel_15.tempgnn_forward_kernel_16.tempgnn_forward_kernel_17.tempgnn_forward_kernel_18.tempgnn_forward_kernel_19.tempgnn_forward_kernel_20.tempgnn_forward_kernel_21
+--connectivity.slr tempgnn_forward_kernel_1:SLR0
+--connectivity.slr tempgnn_forward_kernel_2:SLR0
+--connectivity.slr tempgnn_forward_kernel_3:SLR0
+--connectivity.slr tempgnn_forward_kernel_4:SLR0
+--connectivity.slr tempgnn_forward_kernel_5:SLR0
+--connectivity.slr tempgnn_forward_kernel_6:SLR0
+--connectivity.slr tempgnn_forward_kernel_7:SLR0
+--connectivity.slr tempgnn_forward_kernel_8:SLR1
+--connectivity.slr tempgnn_forward_kernel_9:SLR1
+--connectivity.slr tempgnn_forward_kernel_10:SLR1
+--connectivity.slr tempgnn_forward_kernel_11:SLR1
+--connectivity.slr tempgnn_forward_kernel_12:SLR1
+--connectivity.slr tempgnn_forward_kernel_13:SLR1
+--connectivity.slr tempgnn_forward_kernel_14:SLR1
+--connectivity.slr tempgnn_forward_kernel_15:SLR2
+--connectivity.slr tempgnn_forward_kernel_16:SLR2
+--connectivity.slr tempgnn_forward_kernel_17:SLR2
+--connectivity.slr tempgnn_forward_kernel_18:SLR2
+--connectivity.slr tempgnn_forward_kernel_19:SLR2
+--connectivity.slr tempgnn_forward_kernel_20:SLR2
+--connectivity.slr tempgnn_forward_kernel_21:SLR2
 --connectivity.sp tempgnn_forward_kernel_1.event_src:HBM[0]
---connectivity.sp tempgnn_forward_kernel_1.event_dst:HBM[1]
---connectivity.sp tempgnn_forward_kernel_1.event_ts:HBM[2]
---connectivity.sp tempgnn_forward_kernel_1.vertex_offsets:HBM[3]
---connectivity.sp tempgnn_forward_kernel_1.history_event_idx:HBM[4]
---connectivity.sp tempgnn_forward_kernel_1.history_peer:HBM[5]
---connectivity.sp tempgnn_forward_kernel_1.target_vertex:HBM[6]
---connectivity.sp tempgnn_forward_kernel_1.target_event_idx:HBM[7]
---connectivity.sp tempgnn_forward_kernel_1.initial_memory:HBM[8]
---connectivity.sp tempgnn_forward_kernel_1.event_features:HBM[9]
---connectivity.sp tempgnn_forward_kernel_1.weight_self:HBM[10]
---connectivity.sp tempgnn_forward_kernel_1.weight_peer:HBM[10]
---connectivity.sp tempgnn_forward_kernel_1.weight_event:HBM[10]
---connectivity.sp tempgnn_forward_kernel_1.bias:HBM[10]
---connectivity.sp tempgnn_forward_kernel_1.embedding_out:HBM[11]
---connectivity.sp tempgnn_forward_kernel_1.stats_out:HBM[12]
---freqhz 225000000:tempgnn_forward_kernel_1
---hls.clock 225000000:tempgnn_forward_kernel_1
---input_files /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/tempgnn_forward_kernel.hw.xo
+--connectivity.sp tempgnn_forward_kernel_1.event_dst:HBM[0]
+--connectivity.sp tempgnn_forward_kernel_1.event_ts:HBM[0]
+--connectivity.sp tempgnn_forward_kernel_1.vertex_offsets:HBM[0]
+--connectivity.sp tempgnn_forward_kernel_1.history_event_idx:HBM[0]
+--connectivity.sp tempgnn_forward_kernel_1.history_peer:HBM[0]
+--connectivity.sp tempgnn_forward_kernel_1.target_vertex:HBM[0]
+--connectivity.sp tempgnn_forward_kernel_1.target_event_idx:HBM[0]
+--connectivity.sp tempgnn_forward_kernel_1.initial_memory:HBM[0]
+--connectivity.sp tempgnn_forward_kernel_1.event_features:HBM[0]
+--connectivity.sp tempgnn_forward_kernel_1.weight_self:HBM[0]
+--connectivity.sp tempgnn_forward_kernel_1.weight_peer:HBM[0]
+--connectivity.sp tempgnn_forward_kernel_1.weight_event:HBM[0]
+--connectivity.sp tempgnn_forward_kernel_1.bias:HBM[0]
+--connectivity.sp tempgnn_forward_kernel_1.embedding_out:HBM[0]
+--connectivity.sp tempgnn_forward_kernel_1.stats_out:HBM[0]
+--connectivity.sp tempgnn_forward_kernel_2.event_src:HBM[1]
+--connectivity.sp tempgnn_forward_kernel_2.event_dst:HBM[1]
+--connectivity.sp tempgnn_forward_kernel_2.event_ts:HBM[1]
+--connectivity.sp tempgnn_forward_kernel_2.vertex_offsets:HBM[1]
+--connectivity.sp tempgnn_forward_kernel_2.history_event_idx:HBM[1]
+--connectivity.sp tempgnn_forward_kernel_2.history_peer:HBM[1]
+--connectivity.sp tempgnn_forward_kernel_2.target_vertex:HBM[1]
+--connectivity.sp tempgnn_forward_kernel_2.target_event_idx:HBM[1]
+--connectivity.sp tempgnn_forward_kernel_2.initial_memory:HBM[1]
+--connectivity.sp tempgnn_forward_kernel_2.event_features:HBM[1]
+--connectivity.sp tempgnn_forward_kernel_2.weight_self:HBM[1]
+--connectivity.sp tempgnn_forward_kernel_2.weight_peer:HBM[1]
+--connectivity.sp tempgnn_forward_kernel_2.weight_event:HBM[1]
+--connectivity.sp tempgnn_forward_kernel_2.bias:HBM[1]
+--connectivity.sp tempgnn_forward_kernel_2.embedding_out:HBM[1]
+--connectivity.sp tempgnn_forward_kernel_2.stats_out:HBM[1]
+--connectivity.sp tempgnn_forward_kernel_3.event_src:HBM[18]
+--connectivity.sp tempgnn_forward_kernel_3.event_dst:HBM[18]
+--connectivity.sp tempgnn_forward_kernel_3.event_ts:HBM[18]
+--connectivity.sp tempgnn_forward_kernel_3.vertex_offsets:HBM[18]
+--connectivity.sp tempgnn_forward_kernel_3.history_event_idx:HBM[18]
+--connectivity.sp tempgnn_forward_kernel_3.history_peer:HBM[18]
+--connectivity.sp tempgnn_forward_kernel_3.target_vertex:HBM[18]
+--connectivity.sp tempgnn_forward_kernel_3.target_event_idx:HBM[18]
+--connectivity.sp tempgnn_forward_kernel_3.initial_memory:HBM[18]
+--connectivity.sp tempgnn_forward_kernel_3.event_features:HBM[18]
+--connectivity.sp tempgnn_forward_kernel_3.weight_self:HBM[18]
+--connectivity.sp tempgnn_forward_kernel_3.weight_peer:HBM[18]
+--connectivity.sp tempgnn_forward_kernel_3.weight_event:HBM[18]
+--connectivity.sp tempgnn_forward_kernel_3.bias:HBM[18]
+--connectivity.sp tempgnn_forward_kernel_3.embedding_out:HBM[18]
+--connectivity.sp tempgnn_forward_kernel_3.stats_out:HBM[18]
+--connectivity.sp tempgnn_forward_kernel_4.event_src:HBM[19]
+--connectivity.sp tempgnn_forward_kernel_4.event_dst:HBM[19]
+--connectivity.sp tempgnn_forward_kernel_4.event_ts:HBM[19]
+--connectivity.sp tempgnn_forward_kernel_4.vertex_offsets:HBM[19]
+--connectivity.sp tempgnn_forward_kernel_4.history_event_idx:HBM[19]
+--connectivity.sp tempgnn_forward_kernel_4.history_peer:HBM[19]
+--connectivity.sp tempgnn_forward_kernel_4.target_vertex:HBM[19]
+--connectivity.sp tempgnn_forward_kernel_4.target_event_idx:HBM[19]
+--connectivity.sp tempgnn_forward_kernel_4.initial_memory:HBM[19]
+--connectivity.sp tempgnn_forward_kernel_4.event_features:HBM[19]
+--connectivity.sp tempgnn_forward_kernel_4.weight_self:HBM[19]
+--connectivity.sp tempgnn_forward_kernel_4.weight_peer:HBM[19]
+--connectivity.sp tempgnn_forward_kernel_4.weight_event:HBM[19]
+--connectivity.sp tempgnn_forward_kernel_4.bias:HBM[19]
+--connectivity.sp tempgnn_forward_kernel_4.embedding_out:HBM[19]
+--connectivity.sp tempgnn_forward_kernel_4.stats_out:HBM[19]
+--connectivity.sp tempgnn_forward_kernel_5.event_src:HBM[20]
+--connectivity.sp tempgnn_forward_kernel_5.event_dst:HBM[20]
+--connectivity.sp tempgnn_forward_kernel_5.event_ts:HBM[20]
+--connectivity.sp tempgnn_forward_kernel_5.vertex_offsets:HBM[20]
+--connectivity.sp tempgnn_forward_kernel_5.history_event_idx:HBM[20]
+--connectivity.sp tempgnn_forward_kernel_5.history_peer:HBM[20]
+--connectivity.sp tempgnn_forward_kernel_5.target_vertex:HBM[20]
+--connectivity.sp tempgnn_forward_kernel_5.target_event_idx:HBM[20]
+--connectivity.sp tempgnn_forward_kernel_5.initial_memory:HBM[20]
+--connectivity.sp tempgnn_forward_kernel_5.event_features:HBM[20]
+--connectivity.sp tempgnn_forward_kernel_5.weight_self:HBM[20]
+--connectivity.sp tempgnn_forward_kernel_5.weight_peer:HBM[20]
+--connectivity.sp tempgnn_forward_kernel_5.weight_event:HBM[20]
+--connectivity.sp tempgnn_forward_kernel_5.bias:HBM[20]
+--connectivity.sp tempgnn_forward_kernel_5.embedding_out:HBM[20]
+--connectivity.sp tempgnn_forward_kernel_5.stats_out:HBM[20]
+--connectivity.sp tempgnn_forward_kernel_6.event_src:HBM[21]
+--connectivity.sp tempgnn_forward_kernel_6.event_dst:HBM[21]
+--connectivity.sp tempgnn_forward_kernel_6.event_ts:HBM[21]
+--connectivity.sp tempgnn_forward_kernel_6.vertex_offsets:HBM[21]
+--connectivity.sp tempgnn_forward_kernel_6.history_event_idx:HBM[21]
+--connectivity.sp tempgnn_forward_kernel_6.history_peer:HBM[21]
+--connectivity.sp tempgnn_forward_kernel_6.target_vertex:HBM[21]
+--connectivity.sp tempgnn_forward_kernel_6.target_event_idx:HBM[21]
+--connectivity.sp tempgnn_forward_kernel_6.initial_memory:HBM[21]
+--connectivity.sp tempgnn_forward_kernel_6.event_features:HBM[21]
+--connectivity.sp tempgnn_forward_kernel_6.weight_self:HBM[21]
+--connectivity.sp tempgnn_forward_kernel_6.weight_peer:HBM[21]
+--connectivity.sp tempgnn_forward_kernel_6.weight_event:HBM[21]
+--connectivity.sp tempgnn_forward_kernel_6.bias:HBM[21]
+--connectivity.sp tempgnn_forward_kernel_6.embedding_out:HBM[21]
+--connectivity.sp tempgnn_forward_kernel_6.stats_out:HBM[21]
+--connectivity.sp tempgnn_forward_kernel_7.event_src:HBM[22]
+--connectivity.sp tempgnn_forward_kernel_7.event_dst:HBM[22]
+--connectivity.sp tempgnn_forward_kernel_7.event_ts:HBM[22]
+--connectivity.sp tempgnn_forward_kernel_7.vertex_offsets:HBM[22]
+--connectivity.sp tempgnn_forward_kernel_7.history_event_idx:HBM[22]
+--connectivity.sp tempgnn_forward_kernel_7.history_peer:HBM[22]
+--connectivity.sp tempgnn_forward_kernel_7.target_vertex:HBM[22]
+--connectivity.sp tempgnn_forward_kernel_7.target_event_idx:HBM[22]
+--connectivity.sp tempgnn_forward_kernel_7.initial_memory:HBM[22]
+--connectivity.sp tempgnn_forward_kernel_7.event_features:HBM[22]
+--connectivity.sp tempgnn_forward_kernel_7.weight_self:HBM[22]
+--connectivity.sp tempgnn_forward_kernel_7.weight_peer:HBM[22]
+--connectivity.sp tempgnn_forward_kernel_7.weight_event:HBM[22]
+--connectivity.sp tempgnn_forward_kernel_7.bias:HBM[22]
+--connectivity.sp tempgnn_forward_kernel_7.embedding_out:HBM[22]
+--connectivity.sp tempgnn_forward_kernel_7.stats_out:HBM[22]
+--connectivity.sp tempgnn_forward_kernel_8.event_src:HBM[2]
+--connectivity.sp tempgnn_forward_kernel_8.event_dst:HBM[2]
+--connectivity.sp tempgnn_forward_kernel_8.event_ts:HBM[2]
+--connectivity.sp tempgnn_forward_kernel_8.vertex_offsets:HBM[2]
+--connectivity.sp tempgnn_forward_kernel_8.history_event_idx:HBM[2]
+--connectivity.sp tempgnn_forward_kernel_8.history_peer:HBM[2]
+--connectivity.sp tempgnn_forward_kernel_8.target_vertex:HBM[2]
+--connectivity.sp tempgnn_forward_kernel_8.target_event_idx:HBM[2]
+--connectivity.sp tempgnn_forward_kernel_8.initial_memory:HBM[2]
+--connectivity.sp tempgnn_forward_kernel_8.event_features:HBM[2]
+--connectivity.sp tempgnn_forward_kernel_8.weight_self:HBM[2]
+--connectivity.sp tempgnn_forward_kernel_8.weight_peer:HBM[2]
+--connectivity.sp tempgnn_forward_kernel_8.weight_event:HBM[2]
+--connectivity.sp tempgnn_forward_kernel_8.bias:HBM[2]
+--connectivity.sp tempgnn_forward_kernel_8.embedding_out:HBM[2]
+--connectivity.sp tempgnn_forward_kernel_8.stats_out:HBM[2]
+--connectivity.sp tempgnn_forward_kernel_9.event_src:HBM[3]
+--connectivity.sp tempgnn_forward_kernel_9.event_dst:HBM[3]
+--connectivity.sp tempgnn_forward_kernel_9.event_ts:HBM[3]
+--connectivity.sp tempgnn_forward_kernel_9.vertex_offsets:HBM[3]
+--connectivity.sp tempgnn_forward_kernel_9.history_event_idx:HBM[3]
+--connectivity.sp tempgnn_forward_kernel_9.history_peer:HBM[3]
+--connectivity.sp tempgnn_forward_kernel_9.target_vertex:HBM[3]
+--connectivity.sp tempgnn_forward_kernel_9.target_event_idx:HBM[3]
+--connectivity.sp tempgnn_forward_kernel_9.initial_memory:HBM[3]
+--connectivity.sp tempgnn_forward_kernel_9.event_features:HBM[3]
+--connectivity.sp tempgnn_forward_kernel_9.weight_self:HBM[3]
+--connectivity.sp tempgnn_forward_kernel_9.weight_peer:HBM[3]
+--connectivity.sp tempgnn_forward_kernel_9.weight_event:HBM[3]
+--connectivity.sp tempgnn_forward_kernel_9.bias:HBM[3]
+--connectivity.sp tempgnn_forward_kernel_9.embedding_out:HBM[3]
+--connectivity.sp tempgnn_forward_kernel_9.stats_out:HBM[3]
+--connectivity.sp tempgnn_forward_kernel_10.event_src:HBM[4]
+--connectivity.sp tempgnn_forward_kernel_10.event_dst:HBM[4]
+--connectivity.sp tempgnn_forward_kernel_10.event_ts:HBM[4]
+--connectivity.sp tempgnn_forward_kernel_10.vertex_offsets:HBM[4]
+--connectivity.sp tempgnn_forward_kernel_10.history_event_idx:HBM[4]
+--connectivity.sp tempgnn_forward_kernel_10.history_peer:HBM[4]
+--connectivity.sp tempgnn_forward_kernel_10.target_vertex:HBM[4]
+--connectivity.sp tempgnn_forward_kernel_10.target_event_idx:HBM[4]
+--connectivity.sp tempgnn_forward_kernel_10.initial_memory:HBM[4]
+--connectivity.sp tempgnn_forward_kernel_10.event_features:HBM[4]
+--connectivity.sp tempgnn_forward_kernel_10.weight_self:HBM[4]
+--connectivity.sp tempgnn_forward_kernel_10.weight_peer:HBM[4]
+--connectivity.sp tempgnn_forward_kernel_10.weight_event:HBM[4]
+--connectivity.sp tempgnn_forward_kernel_10.bias:HBM[4]
+--connectivity.sp tempgnn_forward_kernel_10.embedding_out:HBM[4]
+--connectivity.sp tempgnn_forward_kernel_10.stats_out:HBM[4]
+--connectivity.sp tempgnn_forward_kernel_11.event_src:HBM[5]
+--connectivity.sp tempgnn_forward_kernel_11.event_dst:HBM[5]
+--connectivity.sp tempgnn_forward_kernel_11.event_ts:HBM[5]
+--connectivity.sp tempgnn_forward_kernel_11.vertex_offsets:HBM[5]
+--connectivity.sp tempgnn_forward_kernel_11.history_event_idx:HBM[5]
+--connectivity.sp tempgnn_forward_kernel_11.history_peer:HBM[5]
+--connectivity.sp tempgnn_forward_kernel_11.target_vertex:HBM[5]
+--connectivity.sp tempgnn_forward_kernel_11.target_event_idx:HBM[5]
+--connectivity.sp tempgnn_forward_kernel_11.initial_memory:HBM[5]
+--connectivity.sp tempgnn_forward_kernel_11.event_features:HBM[5]
+--connectivity.sp tempgnn_forward_kernel_11.weight_self:HBM[5]
+--connectivity.sp tempgnn_forward_kernel_11.weight_peer:HBM[5]
+--connectivity.sp tempgnn_forward_kernel_11.weight_event:HBM[5]
+--connectivity.sp tempgnn_forward_kernel_11.bias:HBM[5]
+--connectivity.sp tempgnn_forward_kernel_11.embedding_out:HBM[5]
+--connectivity.sp tempgnn_forward_kernel_11.stats_out:HBM[5]
+--connectivity.sp tempgnn_forward_kernel_12.event_src:HBM[6]
+--connectivity.sp tempgnn_forward_kernel_12.event_dst:HBM[6]
+--connectivity.sp tempgnn_forward_kernel_12.event_ts:HBM[6]
+--connectivity.sp tempgnn_forward_kernel_12.vertex_offsets:HBM[6]
+--connectivity.sp tempgnn_forward_kernel_12.history_event_idx:HBM[6]
+--connectivity.sp tempgnn_forward_kernel_12.history_peer:HBM[6]
+--connectivity.sp tempgnn_forward_kernel_12.target_vertex:HBM[6]
+--connectivity.sp tempgnn_forward_kernel_12.target_event_idx:HBM[6]
+--connectivity.sp tempgnn_forward_kernel_12.initial_memory:HBM[6]
+--connectivity.sp tempgnn_forward_kernel_12.event_features:HBM[6]
+--connectivity.sp tempgnn_forward_kernel_12.weight_self:HBM[6]
+--connectivity.sp tempgnn_forward_kernel_12.weight_peer:HBM[6]
+--connectivity.sp tempgnn_forward_kernel_12.weight_event:HBM[6]
+--connectivity.sp tempgnn_forward_kernel_12.bias:HBM[6]
+--connectivity.sp tempgnn_forward_kernel_12.embedding_out:HBM[6]
+--connectivity.sp tempgnn_forward_kernel_12.stats_out:HBM[6]
+--connectivity.sp tempgnn_forward_kernel_13.event_src:HBM[7]
+--connectivity.sp tempgnn_forward_kernel_13.event_dst:HBM[7]
+--connectivity.sp tempgnn_forward_kernel_13.event_ts:HBM[7]
+--connectivity.sp tempgnn_forward_kernel_13.vertex_offsets:HBM[7]
+--connectivity.sp tempgnn_forward_kernel_13.history_event_idx:HBM[7]
+--connectivity.sp tempgnn_forward_kernel_13.history_peer:HBM[7]
+--connectivity.sp tempgnn_forward_kernel_13.target_vertex:HBM[7]
+--connectivity.sp tempgnn_forward_kernel_13.target_event_idx:HBM[7]
+--connectivity.sp tempgnn_forward_kernel_13.initial_memory:HBM[7]
+--connectivity.sp tempgnn_forward_kernel_13.event_features:HBM[7]
+--connectivity.sp tempgnn_forward_kernel_13.weight_self:HBM[7]
+--connectivity.sp tempgnn_forward_kernel_13.weight_peer:HBM[7]
+--connectivity.sp tempgnn_forward_kernel_13.weight_event:HBM[7]
+--connectivity.sp tempgnn_forward_kernel_13.bias:HBM[7]
+--connectivity.sp tempgnn_forward_kernel_13.embedding_out:HBM[7]
+--connectivity.sp tempgnn_forward_kernel_13.stats_out:HBM[7]
+--connectivity.sp tempgnn_forward_kernel_14.event_src:HBM[8]
+--connectivity.sp tempgnn_forward_kernel_14.event_dst:HBM[8]
+--connectivity.sp tempgnn_forward_kernel_14.event_ts:HBM[8]
+--connectivity.sp tempgnn_forward_kernel_14.vertex_offsets:HBM[8]
+--connectivity.sp tempgnn_forward_kernel_14.history_event_idx:HBM[8]
+--connectivity.sp tempgnn_forward_kernel_14.history_peer:HBM[8]
+--connectivity.sp tempgnn_forward_kernel_14.target_vertex:HBM[8]
+--connectivity.sp tempgnn_forward_kernel_14.target_event_idx:HBM[8]
+--connectivity.sp tempgnn_forward_kernel_14.initial_memory:HBM[8]
+--connectivity.sp tempgnn_forward_kernel_14.event_features:HBM[8]
+--connectivity.sp tempgnn_forward_kernel_14.weight_self:HBM[8]
+--connectivity.sp tempgnn_forward_kernel_14.weight_peer:HBM[8]
+--connectivity.sp tempgnn_forward_kernel_14.weight_event:HBM[8]
+--connectivity.sp tempgnn_forward_kernel_14.bias:HBM[8]
+--connectivity.sp tempgnn_forward_kernel_14.embedding_out:HBM[8]
+--connectivity.sp tempgnn_forward_kernel_14.stats_out:HBM[8]
+--connectivity.sp tempgnn_forward_kernel_15.event_src:HBM[10]
+--connectivity.sp tempgnn_forward_kernel_15.event_dst:HBM[10]
+--connectivity.sp tempgnn_forward_kernel_15.event_ts:HBM[10]
+--connectivity.sp tempgnn_forward_kernel_15.vertex_offsets:HBM[10]
+--connectivity.sp tempgnn_forward_kernel_15.history_event_idx:HBM[10]
+--connectivity.sp tempgnn_forward_kernel_15.history_peer:HBM[10]
+--connectivity.sp tempgnn_forward_kernel_15.target_vertex:HBM[10]
+--connectivity.sp tempgnn_forward_kernel_15.target_event_idx:HBM[10]
+--connectivity.sp tempgnn_forward_kernel_15.initial_memory:HBM[10]
+--connectivity.sp tempgnn_forward_kernel_15.event_features:HBM[10]
+--connectivity.sp tempgnn_forward_kernel_15.weight_self:HBM[10]
+--connectivity.sp tempgnn_forward_kernel_15.weight_peer:HBM[10]
+--connectivity.sp tempgnn_forward_kernel_15.weight_event:HBM[10]
+--connectivity.sp tempgnn_forward_kernel_15.bias:HBM[10]
+--connectivity.sp tempgnn_forward_kernel_15.embedding_out:HBM[10]
+--connectivity.sp tempgnn_forward_kernel_15.stats_out:HBM[10]
+--connectivity.sp tempgnn_forward_kernel_16.event_src:HBM[11]
+--connectivity.sp tempgnn_forward_kernel_16.event_dst:HBM[11]
+--connectivity.sp tempgnn_forward_kernel_16.event_ts:HBM[11]
+--connectivity.sp tempgnn_forward_kernel_16.vertex_offsets:HBM[11]
+--connectivity.sp tempgnn_forward_kernel_16.history_event_idx:HBM[11]
+--connectivity.sp tempgnn_forward_kernel_16.history_peer:HBM[11]
+--connectivity.sp tempgnn_forward_kernel_16.target_vertex:HBM[11]
+--connectivity.sp tempgnn_forward_kernel_16.target_event_idx:HBM[11]
+--connectivity.sp tempgnn_forward_kernel_16.initial_memory:HBM[11]
+--connectivity.sp tempgnn_forward_kernel_16.event_features:HBM[11]
+--connectivity.sp tempgnn_forward_kernel_16.weight_self:HBM[11]
+--connectivity.sp tempgnn_forward_kernel_16.weight_peer:HBM[11]
+--connectivity.sp tempgnn_forward_kernel_16.weight_event:HBM[11]
+--connectivity.sp tempgnn_forward_kernel_16.bias:HBM[11]
+--connectivity.sp tempgnn_forward_kernel_16.embedding_out:HBM[11]
+--connectivity.sp tempgnn_forward_kernel_16.stats_out:HBM[11]
+--connectivity.sp tempgnn_forward_kernel_17.event_src:HBM[12]
+--connectivity.sp tempgnn_forward_kernel_17.event_dst:HBM[12]
+--connectivity.sp tempgnn_forward_kernel_17.event_ts:HBM[12]
+--connectivity.sp tempgnn_forward_kernel_17.vertex_offsets:HBM[12]
+--connectivity.sp tempgnn_forward_kernel_17.history_event_idx:HBM[12]
+--connectivity.sp tempgnn_forward_kernel_17.history_peer:HBM[12]
+--connectivity.sp tempgnn_forward_kernel_17.target_vertex:HBM[12]
+--connectivity.sp tempgnn_forward_kernel_17.target_event_idx:HBM[12]
+--connectivity.sp tempgnn_forward_kernel_17.initial_memory:HBM[12]
+--connectivity.sp tempgnn_forward_kernel_17.event_features:HBM[12]
+--connectivity.sp tempgnn_forward_kernel_17.weight_self:HBM[12]
+--connectivity.sp tempgnn_forward_kernel_17.weight_peer:HBM[12]
+--connectivity.sp tempgnn_forward_kernel_17.weight_event:HBM[12]
+--connectivity.sp tempgnn_forward_kernel_17.bias:HBM[12]
+--connectivity.sp tempgnn_forward_kernel_17.embedding_out:HBM[12]
+--connectivity.sp tempgnn_forward_kernel_17.stats_out:HBM[12]
+--connectivity.sp tempgnn_forward_kernel_18.event_src:HBM[13]
+--connectivity.sp tempgnn_forward_kernel_18.event_dst:HBM[13]
+--connectivity.sp tempgnn_forward_kernel_18.event_ts:HBM[13]
+--connectivity.sp tempgnn_forward_kernel_18.vertex_offsets:HBM[13]
+--connectivity.sp tempgnn_forward_kernel_18.history_event_idx:HBM[13]
+--connectivity.sp tempgnn_forward_kernel_18.history_peer:HBM[13]
+--connectivity.sp tempgnn_forward_kernel_18.target_vertex:HBM[13]
+--connectivity.sp tempgnn_forward_kernel_18.target_event_idx:HBM[13]
+--connectivity.sp tempgnn_forward_kernel_18.initial_memory:HBM[13]
+--connectivity.sp tempgnn_forward_kernel_18.event_features:HBM[13]
+--connectivity.sp tempgnn_forward_kernel_18.weight_self:HBM[13]
+--connectivity.sp tempgnn_forward_kernel_18.weight_peer:HBM[13]
+--connectivity.sp tempgnn_forward_kernel_18.weight_event:HBM[13]
+--connectivity.sp tempgnn_forward_kernel_18.bias:HBM[13]
+--connectivity.sp tempgnn_forward_kernel_18.embedding_out:HBM[13]
+--connectivity.sp tempgnn_forward_kernel_18.stats_out:HBM[13]
+--connectivity.sp tempgnn_forward_kernel_19.event_src:HBM[14]
+--connectivity.sp tempgnn_forward_kernel_19.event_dst:HBM[14]
+--connectivity.sp tempgnn_forward_kernel_19.event_ts:HBM[14]
+--connectivity.sp tempgnn_forward_kernel_19.vertex_offsets:HBM[14]
+--connectivity.sp tempgnn_forward_kernel_19.history_event_idx:HBM[14]
+--connectivity.sp tempgnn_forward_kernel_19.history_peer:HBM[14]
+--connectivity.sp tempgnn_forward_kernel_19.target_vertex:HBM[14]
+--connectivity.sp tempgnn_forward_kernel_19.target_event_idx:HBM[14]
+--connectivity.sp tempgnn_forward_kernel_19.initial_memory:HBM[14]
+--connectivity.sp tempgnn_forward_kernel_19.event_features:HBM[14]
+--connectivity.sp tempgnn_forward_kernel_19.weight_self:HBM[14]
+--connectivity.sp tempgnn_forward_kernel_19.weight_peer:HBM[14]
+--connectivity.sp tempgnn_forward_kernel_19.weight_event:HBM[14]
+--connectivity.sp tempgnn_forward_kernel_19.bias:HBM[14]
+--connectivity.sp tempgnn_forward_kernel_19.embedding_out:HBM[14]
+--connectivity.sp tempgnn_forward_kernel_19.stats_out:HBM[14]
+--connectivity.sp tempgnn_forward_kernel_20.event_src:HBM[15]
+--connectivity.sp tempgnn_forward_kernel_20.event_dst:HBM[15]
+--connectivity.sp tempgnn_forward_kernel_20.event_ts:HBM[15]
+--connectivity.sp tempgnn_forward_kernel_20.vertex_offsets:HBM[15]
+--connectivity.sp tempgnn_forward_kernel_20.history_event_idx:HBM[15]
+--connectivity.sp tempgnn_forward_kernel_20.history_peer:HBM[15]
+--connectivity.sp tempgnn_forward_kernel_20.target_vertex:HBM[15]
+--connectivity.sp tempgnn_forward_kernel_20.target_event_idx:HBM[15]
+--connectivity.sp tempgnn_forward_kernel_20.initial_memory:HBM[15]
+--connectivity.sp tempgnn_forward_kernel_20.event_features:HBM[15]
+--connectivity.sp tempgnn_forward_kernel_20.weight_self:HBM[15]
+--connectivity.sp tempgnn_forward_kernel_20.weight_peer:HBM[15]
+--connectivity.sp tempgnn_forward_kernel_20.weight_event:HBM[15]
+--connectivity.sp tempgnn_forward_kernel_20.bias:HBM[15]
+--connectivity.sp tempgnn_forward_kernel_20.embedding_out:HBM[15]
+--connectivity.sp tempgnn_forward_kernel_20.stats_out:HBM[15]
+--connectivity.sp tempgnn_forward_kernel_21.event_src:HBM[16]
+--connectivity.sp tempgnn_forward_kernel_21.event_dst:HBM[16]
+--connectivity.sp tempgnn_forward_kernel_21.event_ts:HBM[16]
+--connectivity.sp tempgnn_forward_kernel_21.vertex_offsets:HBM[16]
+--connectivity.sp tempgnn_forward_kernel_21.history_event_idx:HBM[16]
+--connectivity.sp tempgnn_forward_kernel_21.history_peer:HBM[16]
+--connectivity.sp tempgnn_forward_kernel_21.target_vertex:HBM[16]
+--connectivity.sp tempgnn_forward_kernel_21.target_event_idx:HBM[16]
+--connectivity.sp tempgnn_forward_kernel_21.initial_memory:HBM[16]
+--connectivity.sp tempgnn_forward_kernel_21.event_features:HBM[16]
+--connectivity.sp tempgnn_forward_kernel_21.weight_self:HBM[16]
+--connectivity.sp tempgnn_forward_kernel_21.weight_peer:HBM[16]
+--connectivity.sp tempgnn_forward_kernel_21.weight_event:HBM[16]
+--connectivity.sp tempgnn_forward_kernel_21.bias:HBM[16]
+--connectivity.sp tempgnn_forward_kernel_21.embedding_out:HBM[16]
+--connectivity.sp tempgnn_forward_kernel_21.stats_out:HBM[16]
+--freqhz 168000000:tempgnn_forward_kernel_1,tempgnn_forward_kernel_2,tempgnn_forward_kernel_3,tempgnn_forward_kernel_4,tempgnn_forward_kernel_5,tempgnn_forward_kernel_6,tempgnn_forward_kernel_7,tempgnn_forward_kernel_8,tempgnn_forward_kernel_9,tempgnn_forward_kernel_10,tempgnn_forward_kernel_11,tempgnn_forward_kernel_12,tempgnn_forward_kernel_13,tempgnn_forward_kernel_14,tempgnn_forward_kernel_15,tempgnn_forward_kernel_16,tempgnn_forward_kernel_17,tempgnn_forward_kernel_18,tempgnn_forward_kernel_19,tempgnn_forward_kernel_20,tempgnn_forward_kernel_21
+--input_files /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/tempgnn_forward_kernel.hw.xo
 --link
 --optimize 0
---output /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/tempgnn_forward_kernel.hw.xclbin
---platform /opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm
---remote_ip_cache /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/.ipcache
+--output /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/tempgnn_forward_kernel.hw.xclbin
+--platform xilinx_u280_gen3x16_xdma_1_202211_1
+--remote_ip_cache /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_cached_finalopt_12cu_175mhz/.ipcache
 --report_level 0
+--save-temps
 --target hw
---temp_dir /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x
+--temp_dir /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x
+--vivado.prop run.impl_1.STEPS.PLACE_DESIGN.TCL.PRE=/home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/hardware/vitis/tempgnn_incremental_place_pre.tcl
 
 PARSED COMMAND LINE OPTIONS
 -l 
 -t hw 
---platform /opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm 
---temp_dir /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x 
---remote_ip_cache /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/.ipcache 
---freqhz 225000000:tempgnn_forward_kernel_1 
---config /home/ae_reviewer/TempGNN/hardware/vitis/tempgnn_forward_u280.cfg 
-/home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/tempgnn_forward_kernel.hw.xo 
--o /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/tempgnn_forward_kernel.hw.xclbin 
+--platform xilinx_u280_gen3x16_xdma_1_202211_1 
+--save-temps 
+--temp_dir /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x 
+--remote_ip_cache /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_cached_finalopt_12cu_175mhz/.ipcache 
+--freqhz 168000000:tempgnn_forward_kernel_1,tempgnn_forward_kernel_2,tempgnn_forward_kernel_3,tempgnn_forward_kernel_4,tempgnn_forward_kernel_5,tempgnn_forward_kernel_6,tempgnn_forward_kernel_7,tempgnn_forward_kernel_8,tempgnn_forward_kernel_9,tempgnn_forward_kernel_10,tempgnn_forward_kernel_11,tempgnn_forward_kernel_12,tempgnn_forward_kernel_13,tempgnn_forward_kernel_14,tempgnn_forward_kernel_15,tempgnn_forward_kernel_16,tempgnn_forward_kernel_17,tempgnn_forward_kernel_18,tempgnn_forward_kernel_19,tempgnn_forward_kernel_20,tempgnn_forward_kernel_21 
+--vivado.prop run.impl_1.STEPS.PLACE_DESIGN.TCL.PRE=/home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/hardware/vitis/tempgnn_incremental_place_pre.tcl 
+--config /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/hardware/vitis/tempgnn_forward_u280_21cu.cfg 
+/home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/tempgnn_forward_kernel.hw.xo 
+-o /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/tempgnn_forward_kernel.hw.xclbin 
 
 PARSED CONFIG FILE (1) OPTIONS
-file: /home/ae_reviewer/TempGNN/hardware/vitis/tempgnn_forward_u280.cfg
-connectivity.nk tempgnn_forward_kernel:1:tempgnn_forward_kernel_1 
+file: /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/hardware/vitis/tempgnn_forward_u280_21cu.cfg
+connectivity.nk tempgnn_forward_kernel:21:tempgnn_forward_kernel_1.tempgnn_forward_kernel_2.tempgnn_forward_kernel_3.tempgnn_forward_kernel_4.tempgnn_forward_kernel_5.tempgnn_forward_kernel_6.tempgnn_forward_kernel_7.tempgnn_forward_kernel_8.tempgnn_forward_kernel_9.tempgnn_forward_kernel_10.tempgnn_forward_kernel_11.tempgnn_forward_kernel_12.tempgnn_forward_kernel_13.tempgnn_forward_kernel_14.tempgnn_forward_kernel_15.tempgnn_forward_kernel_16.tempgnn_forward_kernel_17.tempgnn_forward_kernel_18.tempgnn_forward_kernel_19.tempgnn_forward_kernel_20.tempgnn_forward_kernel_21 
+connectivity.slr tempgnn_forward_kernel_1:SLR0 
+connectivity.slr tempgnn_forward_kernel_2:SLR0 
+connectivity.slr tempgnn_forward_kernel_3:SLR0 
+connectivity.slr tempgnn_forward_kernel_4:SLR0 
+connectivity.slr tempgnn_forward_kernel_5:SLR0 
+connectivity.slr tempgnn_forward_kernel_6:SLR0 
+connectivity.slr tempgnn_forward_kernel_7:SLR0 
+connectivity.slr tempgnn_forward_kernel_8:SLR1 
+connectivity.slr tempgnn_forward_kernel_9:SLR1 
+connectivity.slr tempgnn_forward_kernel_10:SLR1 
+connectivity.slr tempgnn_forward_kernel_11:SLR1 
+connectivity.slr tempgnn_forward_kernel_12:SLR1 
+connectivity.slr tempgnn_forward_kernel_13:SLR1 
+connectivity.slr tempgnn_forward_kernel_14:SLR1 
+connectivity.slr tempgnn_forward_kernel_15:SLR2 
+connectivity.slr tempgnn_forward_kernel_16:SLR2 
+connectivity.slr tempgnn_forward_kernel_17:SLR2 
+connectivity.slr tempgnn_forward_kernel_18:SLR2 
+connectivity.slr tempgnn_forward_kernel_19:SLR2 
+connectivity.slr tempgnn_forward_kernel_20:SLR2 
+connectivity.slr tempgnn_forward_kernel_21:SLR2 
 connectivity.sp tempgnn_forward_kernel_1.event_src:HBM[0] 
-connectivity.sp tempgnn_forward_kernel_1.event_dst:HBM[1] 
-connectivity.sp tempgnn_forward_kernel_1.event_ts:HBM[2] 
-connectivity.sp tempgnn_forward_kernel_1.vertex_offsets:HBM[3] 
-connectivity.sp tempgnn_forward_kernel_1.history_event_idx:HBM[4] 
-connectivity.sp tempgnn_forward_kernel_1.history_peer:HBM[5] 
-connectivity.sp tempgnn_forward_kernel_1.target_vertex:HBM[6] 
-connectivity.sp tempgnn_forward_kernel_1.target_event_idx:HBM[7] 
-connectivity.sp tempgnn_forward_kernel_1.initial_memory:HBM[8] 
-connectivity.sp tempgnn_forward_kernel_1.event_features:HBM[9] 
-connectivity.sp tempgnn_forward_kernel_1.weight_self:HBM[10] 
-connectivity.sp tempgnn_forward_kernel_1.weight_peer:HBM[10] 
-connectivity.sp tempgnn_forward_kernel_1.weight_event:HBM[10] 
-connectivity.sp tempgnn_forward_kernel_1.bias:HBM[10] 
-connectivity.sp tempgnn_forward_kernel_1.embedding_out:HBM[11] 
-connectivity.sp tempgnn_forward_kernel_1.stats_out:HBM[12] 
-hls.clock 225000000:tempgnn_forward_kernel_1 
+connectivity.sp tempgnn_forward_kernel_1.event_dst:HBM[0] 
+connectivity.sp tempgnn_forward_kernel_1.event_ts:HBM[0] 
+connectivity.sp tempgnn_forward_kernel_1.vertex_offsets:HBM[0] 
+connectivity.sp tempgnn_forward_kernel_1.history_event_idx:HBM[0] 
+connectivity.sp tempgnn_forward_kernel_1.history_peer:HBM[0] 
+connectivity.sp tempgnn_forward_kernel_1.target_vertex:HBM[0] 
+connectivity.sp tempgnn_forward_kernel_1.target_event_idx:HBM[0] 
+connectivity.sp tempgnn_forward_kernel_1.initial_memory:HBM[0] 
+connectivity.sp tempgnn_forward_kernel_1.event_features:HBM[0] 
+connectivity.sp tempgnn_forward_kernel_1.weight_self:HBM[0] 
+connectivity.sp tempgnn_forward_kernel_1.weight_peer:HBM[0] 
+connectivity.sp tempgnn_forward_kernel_1.weight_event:HBM[0] 
+connectivity.sp tempgnn_forward_kernel_1.bias:HBM[0] 
+connectivity.sp tempgnn_forward_kernel_1.embedding_out:HBM[0] 
+connectivity.sp tempgnn_forward_kernel_1.stats_out:HBM[0] 
+connectivity.sp tempgnn_forward_kernel_2.event_src:HBM[1] 
+connectivity.sp tempgnn_forward_kernel_2.event_dst:HBM[1] 
+connectivity.sp tempgnn_forward_kernel_2.event_ts:HBM[1] 
+connectivity.sp tempgnn_forward_kernel_2.vertex_offsets:HBM[1] 
+connectivity.sp tempgnn_forward_kernel_2.history_event_idx:HBM[1] 
+connectivity.sp tempgnn_forward_kernel_2.history_peer:HBM[1] 
+connectivity.sp tempgnn_forward_kernel_2.target_vertex:HBM[1] 
+connectivity.sp tempgnn_forward_kernel_2.target_event_idx:HBM[1] 
+connectivity.sp tempgnn_forward_kernel_2.initial_memory:HBM[1] 
+connectivity.sp tempgnn_forward_kernel_2.event_features:HBM[1] 
+connectivity.sp tempgnn_forward_kernel_2.weight_self:HBM[1] 
+connectivity.sp tempgnn_forward_kernel_2.weight_peer:HBM[1] 
+connectivity.sp tempgnn_forward_kernel_2.weight_event:HBM[1] 
+connectivity.sp tempgnn_forward_kernel_2.bias:HBM[1] 
+connectivity.sp tempgnn_forward_kernel_2.embedding_out:HBM[1] 
+connectivity.sp tempgnn_forward_kernel_2.stats_out:HBM[1] 
+connectivity.sp tempgnn_forward_kernel_3.event_src:HBM[18] 
+connectivity.sp tempgnn_forward_kernel_3.event_dst:HBM[18] 
+connectivity.sp tempgnn_forward_kernel_3.event_ts:HBM[18] 
+connectivity.sp tempgnn_forward_kernel_3.vertex_offsets:HBM[18] 
+connectivity.sp tempgnn_forward_kernel_3.history_event_idx:HBM[18] 
+connectivity.sp tempgnn_forward_kernel_3.history_peer:HBM[18] 
+connectivity.sp tempgnn_forward_kernel_3.target_vertex:HBM[18] 
+connectivity.sp tempgnn_forward_kernel_3.target_event_idx:HBM[18] 
+connectivity.sp tempgnn_forward_kernel_3.initial_memory:HBM[18] 
+connectivity.sp tempgnn_forward_kernel_3.event_features:HBM[18] 
+connectivity.sp tempgnn_forward_kernel_3.weight_self:HBM[18] 
+connectivity.sp tempgnn_forward_kernel_3.weight_peer:HBM[18] 
+connectivity.sp tempgnn_forward_kernel_3.weight_event:HBM[18] 
+connectivity.sp tempgnn_forward_kernel_3.bias:HBM[18] 
+connectivity.sp tempgnn_forward_kernel_3.embedding_out:HBM[18] 
+connectivity.sp tempgnn_forward_kernel_3.stats_out:HBM[18] 
+connectivity.sp tempgnn_forward_kernel_4.event_src:HBM[19] 
+connectivity.sp tempgnn_forward_kernel_4.event_dst:HBM[19] 
+connectivity.sp tempgnn_forward_kernel_4.event_ts:HBM[19] 
+connectivity.sp tempgnn_forward_kernel_4.vertex_offsets:HBM[19] 
+connectivity.sp tempgnn_forward_kernel_4.history_event_idx:HBM[19] 
+connectivity.sp tempgnn_forward_kernel_4.history_peer:HBM[19] 
+connectivity.sp tempgnn_forward_kernel_4.target_vertex:HBM[19] 
+connectivity.sp tempgnn_forward_kernel_4.target_event_idx:HBM[19] 
+connectivity.sp tempgnn_forward_kernel_4.initial_memory:HBM[19] 
+connectivity.sp tempgnn_forward_kernel_4.event_features:HBM[19] 
+connectivity.sp tempgnn_forward_kernel_4.weight_self:HBM[19] 
+connectivity.sp tempgnn_forward_kernel_4.weight_peer:HBM[19] 
+connectivity.sp tempgnn_forward_kernel_4.weight_event:HBM[19] 
+connectivity.sp tempgnn_forward_kernel_4.bias:HBM[19] 
+connectivity.sp tempgnn_forward_kernel_4.embedding_out:HBM[19] 
+connectivity.sp tempgnn_forward_kernel_4.stats_out:HBM[19] 
+connectivity.sp tempgnn_forward_kernel_5.event_src:HBM[20] 
+connectivity.sp tempgnn_forward_kernel_5.event_dst:HBM[20] 
+connectivity.sp tempgnn_forward_kernel_5.event_ts:HBM[20] 
+connectivity.sp tempgnn_forward_kernel_5.vertex_offsets:HBM[20] 
+connectivity.sp tempgnn_forward_kernel_5.history_event_idx:HBM[20] 
+connectivity.sp tempgnn_forward_kernel_5.history_peer:HBM[20] 
+connectivity.sp tempgnn_forward_kernel_5.target_vertex:HBM[20] 
+connectivity.sp tempgnn_forward_kernel_5.target_event_idx:HBM[20] 
+connectivity.sp tempgnn_forward_kernel_5.initial_memory:HBM[20] 
+connectivity.sp tempgnn_forward_kernel_5.event_features:HBM[20] 
+connectivity.sp tempgnn_forward_kernel_5.weight_self:HBM[20] 
+connectivity.sp tempgnn_forward_kernel_5.weight_peer:HBM[20] 
+connectivity.sp tempgnn_forward_kernel_5.weight_event:HBM[20] 
+connectivity.sp tempgnn_forward_kernel_5.bias:HBM[20] 
+connectivity.sp tempgnn_forward_kernel_5.embedding_out:HBM[20] 
+connectivity.sp tempgnn_forward_kernel_5.stats_out:HBM[20] 
+connectivity.sp tempgnn_forward_kernel_6.event_src:HBM[21] 
+connectivity.sp tempgnn_forward_kernel_6.event_dst:HBM[21] 
+connectivity.sp tempgnn_forward_kernel_6.event_ts:HBM[21] 
+connectivity.sp tempgnn_forward_kernel_6.vertex_offsets:HBM[21] 
+connectivity.sp tempgnn_forward_kernel_6.history_event_idx:HBM[21] 
+connectivity.sp tempgnn_forward_kernel_6.history_peer:HBM[21] 
+connectivity.sp tempgnn_forward_kernel_6.target_vertex:HBM[21] 
+connectivity.sp tempgnn_forward_kernel_6.target_event_idx:HBM[21] 
+connectivity.sp tempgnn_forward_kernel_6.initial_memory:HBM[21] 
+connectivity.sp tempgnn_forward_kernel_6.event_features:HBM[21] 
+connectivity.sp tempgnn_forward_kernel_6.weight_self:HBM[21] 
+connectivity.sp tempgnn_forward_kernel_6.weight_peer:HBM[21] 
+connectivity.sp tempgnn_forward_kernel_6.weight_event:HBM[21] 
+connectivity.sp tempgnn_forward_kernel_6.bias:HBM[21] 
+connectivity.sp tempgnn_forward_kernel_6.embedding_out:HBM[21] 
+connectivity.sp tempgnn_forward_kernel_6.stats_out:HBM[21] 
+connectivity.sp tempgnn_forward_kernel_7.event_src:HBM[22] 
+connectivity.sp tempgnn_forward_kernel_7.event_dst:HBM[22] 
+connectivity.sp tempgnn_forward_kernel_7.event_ts:HBM[22] 
+connectivity.sp tempgnn_forward_kernel_7.vertex_offsets:HBM[22] 
+connectivity.sp tempgnn_forward_kernel_7.history_event_idx:HBM[22] 
+connectivity.sp tempgnn_forward_kernel_7.history_peer:HBM[22] 
+connectivity.sp tempgnn_forward_kernel_7.target_vertex:HBM[22] 
+connectivity.sp tempgnn_forward_kernel_7.target_event_idx:HBM[22] 
+connectivity.sp tempgnn_forward_kernel_7.initial_memory:HBM[22] 
+connectivity.sp tempgnn_forward_kernel_7.event_features:HBM[22] 
+connectivity.sp tempgnn_forward_kernel_7.weight_self:HBM[22] 
+connectivity.sp tempgnn_forward_kernel_7.weight_peer:HBM[22] 
+connectivity.sp tempgnn_forward_kernel_7.weight_event:HBM[22] 
+connectivity.sp tempgnn_forward_kernel_7.bias:HBM[22] 
+connectivity.sp tempgnn_forward_kernel_7.embedding_out:HBM[22] 
+connectivity.sp tempgnn_forward_kernel_7.stats_out:HBM[22] 
+connectivity.sp tempgnn_forward_kernel_8.event_src:HBM[2] 
+connectivity.sp tempgnn_forward_kernel_8.event_dst:HBM[2] 
+connectivity.sp tempgnn_forward_kernel_8.event_ts:HBM[2] 
+connectivity.sp tempgnn_forward_kernel_8.vertex_offsets:HBM[2] 
+connectivity.sp tempgnn_forward_kernel_8.history_event_idx:HBM[2] 
+connectivity.sp tempgnn_forward_kernel_8.history_peer:HBM[2] 
+connectivity.sp tempgnn_forward_kernel_8.target_vertex:HBM[2] 
+connectivity.sp tempgnn_forward_kernel_8.target_event_idx:HBM[2] 
+connectivity.sp tempgnn_forward_kernel_8.initial_memory:HBM[2] 
+connectivity.sp tempgnn_forward_kernel_8.event_features:HBM[2] 
+connectivity.sp tempgnn_forward_kernel_8.weight_self:HBM[2] 
+connectivity.sp tempgnn_forward_kernel_8.weight_peer:HBM[2] 
+connectivity.sp tempgnn_forward_kernel_8.weight_event:HBM[2] 
+connectivity.sp tempgnn_forward_kernel_8.bias:HBM[2] 
+connectivity.sp tempgnn_forward_kernel_8.embedding_out:HBM[2] 
+connectivity.sp tempgnn_forward_kernel_8.stats_out:HBM[2] 
+connectivity.sp tempgnn_forward_kernel_9.event_src:HBM[3] 
+connectivity.sp tempgnn_forward_kernel_9.event_dst:HBM[3] 
+connectivity.sp tempgnn_forward_kernel_9.event_ts:HBM[3] 
+connectivity.sp tempgnn_forward_kernel_9.vertex_offsets:HBM[3] 
+connectivity.sp tempgnn_forward_kernel_9.history_event_idx:HBM[3] 
+connectivity.sp tempgnn_forward_kernel_9.history_peer:HBM[3] 
+connectivity.sp tempgnn_forward_kernel_9.target_vertex:HBM[3] 
+connectivity.sp tempgnn_forward_kernel_9.target_event_idx:HBM[3] 
+connectivity.sp tempgnn_forward_kernel_9.initial_memory:HBM[3] 
+connectivity.sp tempgnn_forward_kernel_9.event_features:HBM[3] 
+connectivity.sp tempgnn_forward_kernel_9.weight_self:HBM[3] 
+connectivity.sp tempgnn_forward_kernel_9.weight_peer:HBM[3] 
+connectivity.sp tempgnn_forward_kernel_9.weight_event:HBM[3] 
+connectivity.sp tempgnn_forward_kernel_9.bias:HBM[3] 
+connectivity.sp tempgnn_forward_kernel_9.embedding_out:HBM[3] 
+connectivity.sp tempgnn_forward_kernel_9.stats_out:HBM[3] 
+connectivity.sp tempgnn_forward_kernel_10.event_src:HBM[4] 
+connectivity.sp tempgnn_forward_kernel_10.event_dst:HBM[4] 
+connectivity.sp tempgnn_forward_kernel_10.event_ts:HBM[4] 
+connectivity.sp tempgnn_forward_kernel_10.vertex_offsets:HBM[4] 
+connectivity.sp tempgnn_forward_kernel_10.history_event_idx:HBM[4] 
+connectivity.sp tempgnn_forward_kernel_10.history_peer:HBM[4] 
+connectivity.sp tempgnn_forward_kernel_10.target_vertex:HBM[4] 
+connectivity.sp tempgnn_forward_kernel_10.target_event_idx:HBM[4] 
+connectivity.sp tempgnn_forward_kernel_10.initial_memory:HBM[4] 
+connectivity.sp tempgnn_forward_kernel_10.event_features:HBM[4] 
+connectivity.sp tempgnn_forward_kernel_10.weight_self:HBM[4] 
+connectivity.sp tempgnn_forward_kernel_10.weight_peer:HBM[4] 
+connectivity.sp tempgnn_forward_kernel_10.weight_event:HBM[4] 
+connectivity.sp tempgnn_forward_kernel_10.bias:HBM[4] 
+connectivity.sp tempgnn_forward_kernel_10.embedding_out:HBM[4] 
+connectivity.sp tempgnn_forward_kernel_10.stats_out:HBM[4] 
+connectivity.sp tempgnn_forward_kernel_11.event_src:HBM[5] 
+connectivity.sp tempgnn_forward_kernel_11.event_dst:HBM[5] 
+connectivity.sp tempgnn_forward_kernel_11.event_ts:HBM[5] 
+connectivity.sp tempgnn_forward_kernel_11.vertex_offsets:HBM[5] 
+connectivity.sp tempgnn_forward_kernel_11.history_event_idx:HBM[5] 
+connectivity.sp tempgnn_forward_kernel_11.history_peer:HBM[5] 
+connectivity.sp tempgnn_forward_kernel_11.target_vertex:HBM[5] 
+connectivity.sp tempgnn_forward_kernel_11.target_event_idx:HBM[5] 
+connectivity.sp tempgnn_forward_kernel_11.initial_memory:HBM[5] 
+connectivity.sp tempgnn_forward_kernel_11.event_features:HBM[5] 
+connectivity.sp tempgnn_forward_kernel_11.weight_self:HBM[5] 
+connectivity.sp tempgnn_forward_kernel_11.weight_peer:HBM[5] 
+connectivity.sp tempgnn_forward_kernel_11.weight_event:HBM[5] 
+connectivity.sp tempgnn_forward_kernel_11.bias:HBM[5] 
+connectivity.sp tempgnn_forward_kernel_11.embedding_out:HBM[5] 
+connectivity.sp tempgnn_forward_kernel_11.stats_out:HBM[5] 
+connectivity.sp tempgnn_forward_kernel_12.event_src:HBM[6] 
+connectivity.sp tempgnn_forward_kernel_12.event_dst:HBM[6] 
+connectivity.sp tempgnn_forward_kernel_12.event_ts:HBM[6] 
+connectivity.sp tempgnn_forward_kernel_12.vertex_offsets:HBM[6] 
+connectivity.sp tempgnn_forward_kernel_12.history_event_idx:HBM[6] 
+connectivity.sp tempgnn_forward_kernel_12.history_peer:HBM[6] 
+connectivity.sp tempgnn_forward_kernel_12.target_vertex:HBM[6] 
+connectivity.sp tempgnn_forward_kernel_12.target_event_idx:HBM[6] 
+connectivity.sp tempgnn_forward_kernel_12.initial_memory:HBM[6] 
+connectivity.sp tempgnn_forward_kernel_12.event_features:HBM[6] 
+connectivity.sp tempgnn_forward_kernel_12.weight_self:HBM[6] 
+connectivity.sp tempgnn_forward_kernel_12.weight_peer:HBM[6] 
+connectivity.sp tempgnn_forward_kernel_12.weight_event:HBM[6] 
+connectivity.sp tempgnn_forward_kernel_12.bias:HBM[6] 
+connectivity.sp tempgnn_forward_kernel_12.embedding_out:HBM[6] 
+connectivity.sp tempgnn_forward_kernel_12.stats_out:HBM[6] 
+connectivity.sp tempgnn_forward_kernel_13.event_src:HBM[7] 
+connectivity.sp tempgnn_forward_kernel_13.event_dst:HBM[7] 
+connectivity.sp tempgnn_forward_kernel_13.event_ts:HBM[7] 
+connectivity.sp tempgnn_forward_kernel_13.vertex_offsets:HBM[7] 
+connectivity.sp tempgnn_forward_kernel_13.history_event_idx:HBM[7] 
+connectivity.sp tempgnn_forward_kernel_13.history_peer:HBM[7] 
+connectivity.sp tempgnn_forward_kernel_13.target_vertex:HBM[7] 
+connectivity.sp tempgnn_forward_kernel_13.target_event_idx:HBM[7] 
+connectivity.sp tempgnn_forward_kernel_13.initial_memory:HBM[7] 
+connectivity.sp tempgnn_forward_kernel_13.event_features:HBM[7] 
+connectivity.sp tempgnn_forward_kernel_13.weight_self:HBM[7] 
+connectivity.sp tempgnn_forward_kernel_13.weight_peer:HBM[7] 
+connectivity.sp tempgnn_forward_kernel_13.weight_event:HBM[7] 
+connectivity.sp tempgnn_forward_kernel_13.bias:HBM[7] 
+connectivity.sp tempgnn_forward_kernel_13.embedding_out:HBM[7] 
+connectivity.sp tempgnn_forward_kernel_13.stats_out:HBM[7] 
+connectivity.sp tempgnn_forward_kernel_14.event_src:HBM[8] 
+connectivity.sp tempgnn_forward_kernel_14.event_dst:HBM[8] 
+connectivity.sp tempgnn_forward_kernel_14.event_ts:HBM[8] 
+connectivity.sp tempgnn_forward_kernel_14.vertex_offsets:HBM[8] 
+connectivity.sp tempgnn_forward_kernel_14.history_event_idx:HBM[8] 
+connectivity.sp tempgnn_forward_kernel_14.history_peer:HBM[8] 
+connectivity.sp tempgnn_forward_kernel_14.target_vertex:HBM[8] 
+connectivity.sp tempgnn_forward_kernel_14.target_event_idx:HBM[8] 
+connectivity.sp tempgnn_forward_kernel_14.initial_memory:HBM[8] 
+connectivity.sp tempgnn_forward_kernel_14.event_features:HBM[8] 
+connectivity.sp tempgnn_forward_kernel_14.weight_self:HBM[8] 
+connectivity.sp tempgnn_forward_kernel_14.weight_peer:HBM[8] 
+connectivity.sp tempgnn_forward_kernel_14.weight_event:HBM[8] 
+connectivity.sp tempgnn_forward_kernel_14.bias:HBM[8] 
+connectivity.sp tempgnn_forward_kernel_14.embedding_out:HBM[8] 
+connectivity.sp tempgnn_forward_kernel_14.stats_out:HBM[8] 
+connectivity.sp tempgnn_forward_kernel_15.event_src:HBM[10] 
+connectivity.sp tempgnn_forward_kernel_15.event_dst:HBM[10] 
+connectivity.sp tempgnn_forward_kernel_15.event_ts:HBM[10] 
+connectivity.sp tempgnn_forward_kernel_15.vertex_offsets:HBM[10] 
+connectivity.sp tempgnn_forward_kernel_15.history_event_idx:HBM[10] 
+connectivity.sp tempgnn_forward_kernel_15.history_peer:HBM[10] 
+connectivity.sp tempgnn_forward_kernel_15.target_vertex:HBM[10] 
+connectivity.sp tempgnn_forward_kernel_15.target_event_idx:HBM[10] 
+connectivity.sp tempgnn_forward_kernel_15.initial_memory:HBM[10] 
+connectivity.sp tempgnn_forward_kernel_15.event_features:HBM[10] 
+connectivity.sp tempgnn_forward_kernel_15.weight_self:HBM[10] 
+connectivity.sp tempgnn_forward_kernel_15.weight_peer:HBM[10] 
+connectivity.sp tempgnn_forward_kernel_15.weight_event:HBM[10] 
+connectivity.sp tempgnn_forward_kernel_15.bias:HBM[10] 
+connectivity.sp tempgnn_forward_kernel_15.embedding_out:HBM[10] 
+connectivity.sp tempgnn_forward_kernel_15.stats_out:HBM[10] 
+connectivity.sp tempgnn_forward_kernel_16.event_src:HBM[11] 
+connectivity.sp tempgnn_forward_kernel_16.event_dst:HBM[11] 
+connectivity.sp tempgnn_forward_kernel_16.event_ts:HBM[11] 
+connectivity.sp tempgnn_forward_kernel_16.vertex_offsets:HBM[11] 
+connectivity.sp tempgnn_forward_kernel_16.history_event_idx:HBM[11] 
+connectivity.sp tempgnn_forward_kernel_16.history_peer:HBM[11] 
+connectivity.sp tempgnn_forward_kernel_16.target_vertex:HBM[11] 
+connectivity.sp tempgnn_forward_kernel_16.target_event_idx:HBM[11] 
+connectivity.sp tempgnn_forward_kernel_16.initial_memory:HBM[11] 
+connectivity.sp tempgnn_forward_kernel_16.event_features:HBM[11] 
+connectivity.sp tempgnn_forward_kernel_16.weight_self:HBM[11] 
+connectivity.sp tempgnn_forward_kernel_16.weight_peer:HBM[11] 
+connectivity.sp tempgnn_forward_kernel_16.weight_event:HBM[11] 
+connectivity.sp tempgnn_forward_kernel_16.bias:HBM[11] 
+connectivity.sp tempgnn_forward_kernel_16.embedding_out:HBM[11] 
+connectivity.sp tempgnn_forward_kernel_16.stats_out:HBM[11] 
+connectivity.sp tempgnn_forward_kernel_17.event_src:HBM[12] 
+connectivity.sp tempgnn_forward_kernel_17.event_dst:HBM[12] 
+connectivity.sp tempgnn_forward_kernel_17.event_ts:HBM[12] 
+connectivity.sp tempgnn_forward_kernel_17.vertex_offsets:HBM[12] 
+connectivity.sp tempgnn_forward_kernel_17.history_event_idx:HBM[12] 
+connectivity.sp tempgnn_forward_kernel_17.history_peer:HBM[12] 
+connectivity.sp tempgnn_forward_kernel_17.target_vertex:HBM[12] 
+connectivity.sp tempgnn_forward_kernel_17.target_event_idx:HBM[12] 
+connectivity.sp tempgnn_forward_kernel_17.initial_memory:HBM[12] 
+connectivity.sp tempgnn_forward_kernel_17.event_features:HBM[12] 
+connectivity.sp tempgnn_forward_kernel_17.weight_self:HBM[12] 
+connectivity.sp tempgnn_forward_kernel_17.weight_peer:HBM[12] 
+connectivity.sp tempgnn_forward_kernel_17.weight_event:HBM[12] 
+connectivity.sp tempgnn_forward_kernel_17.bias:HBM[12] 
+connectivity.sp tempgnn_forward_kernel_17.embedding_out:HBM[12] 
+connectivity.sp tempgnn_forward_kernel_17.stats_out:HBM[12] 
+connectivity.sp tempgnn_forward_kernel_18.event_src:HBM[13] 
+connectivity.sp tempgnn_forward_kernel_18.event_dst:HBM[13] 
+connectivity.sp tempgnn_forward_kernel_18.event_ts:HBM[13] 
+connectivity.sp tempgnn_forward_kernel_18.vertex_offsets:HBM[13] 
+connectivity.sp tempgnn_forward_kernel_18.history_event_idx:HBM[13] 
+connectivity.sp tempgnn_forward_kernel_18.history_peer:HBM[13] 
+connectivity.sp tempgnn_forward_kernel_18.target_vertex:HBM[13] 
+connectivity.sp tempgnn_forward_kernel_18.target_event_idx:HBM[13] 
+connectivity.sp tempgnn_forward_kernel_18.initial_memory:HBM[13] 
+connectivity.sp tempgnn_forward_kernel_18.event_features:HBM[13] 
+connectivity.sp tempgnn_forward_kernel_18.weight_self:HBM[13] 
+connectivity.sp tempgnn_forward_kernel_18.weight_peer:HBM[13] 
+connectivity.sp tempgnn_forward_kernel_18.weight_event:HBM[13] 
+connectivity.sp tempgnn_forward_kernel_18.bias:HBM[13] 
+connectivity.sp tempgnn_forward_kernel_18.embedding_out:HBM[13] 
+connectivity.sp tempgnn_forward_kernel_18.stats_out:HBM[13] 
+connectivity.sp tempgnn_forward_kernel_19.event_src:HBM[14] 
+connectivity.sp tempgnn_forward_kernel_19.event_dst:HBM[14] 
+connectivity.sp tempgnn_forward_kernel_19.event_ts:HBM[14] 
+connectivity.sp tempgnn_forward_kernel_19.vertex_offsets:HBM[14] 
+connectivity.sp tempgnn_forward_kernel_19.history_event_idx:HBM[14] 
+connectivity.sp tempgnn_forward_kernel_19.history_peer:HBM[14] 
+connectivity.sp tempgnn_forward_kernel_19.target_vertex:HBM[14] 
+connectivity.sp tempgnn_forward_kernel_19.target_event_idx:HBM[14] 
+connectivity.sp tempgnn_forward_kernel_19.initial_memory:HBM[14] 
+connectivity.sp tempgnn_forward_kernel_19.event_features:HBM[14] 
+connectivity.sp tempgnn_forward_kernel_19.weight_self:HBM[14] 
+connectivity.sp tempgnn_forward_kernel_19.weight_peer:HBM[14] 
+connectivity.sp tempgnn_forward_kernel_19.weight_event:HBM[14] 
+connectivity.sp tempgnn_forward_kernel_19.bias:HBM[14] 
+connectivity.sp tempgnn_forward_kernel_19.embedding_out:HBM[14] 
+connectivity.sp tempgnn_forward_kernel_19.stats_out:HBM[14] 
+connectivity.sp tempgnn_forward_kernel_20.event_src:HBM[15] 
+connectivity.sp tempgnn_forward_kernel_20.event_dst:HBM[15] 
+connectivity.sp tempgnn_forward_kernel_20.event_ts:HBM[15] 
+connectivity.sp tempgnn_forward_kernel_20.vertex_offsets:HBM[15] 
+connectivity.sp tempgnn_forward_kernel_20.history_event_idx:HBM[15] 
+connectivity.sp tempgnn_forward_kernel_20.history_peer:HBM[15] 
+connectivity.sp tempgnn_forward_kernel_20.target_vertex:HBM[15] 
+connectivity.sp tempgnn_forward_kernel_20.target_event_idx:HBM[15] 
+connectivity.sp tempgnn_forward_kernel_20.initial_memory:HBM[15] 
+connectivity.sp tempgnn_forward_kernel_20.event_features:HBM[15] 
+connectivity.sp tempgnn_forward_kernel_20.weight_self:HBM[15] 
+connectivity.sp tempgnn_forward_kernel_20.weight_peer:HBM[15] 
+connectivity.sp tempgnn_forward_kernel_20.weight_event:HBM[15] 
+connectivity.sp tempgnn_forward_kernel_20.bias:HBM[15] 
+connectivity.sp tempgnn_forward_kernel_20.embedding_out:HBM[15] 
+connectivity.sp tempgnn_forward_kernel_20.stats_out:HBM[15] 
+connectivity.sp tempgnn_forward_kernel_21.event_src:HBM[16] 
+connectivity.sp tempgnn_forward_kernel_21.event_dst:HBM[16] 
+connectivity.sp tempgnn_forward_kernel_21.event_ts:HBM[16] 
+connectivity.sp tempgnn_forward_kernel_21.vertex_offsets:HBM[16] 
+connectivity.sp tempgnn_forward_kernel_21.history_event_idx:HBM[16] 
+connectivity.sp tempgnn_forward_kernel_21.history_peer:HBM[16] 
+connectivity.sp tempgnn_forward_kernel_21.target_vertex:HBM[16] 
+connectivity.sp tempgnn_forward_kernel_21.target_event_idx:HBM[16] 
+connectivity.sp tempgnn_forward_kernel_21.initial_memory:HBM[16] 
+connectivity.sp tempgnn_forward_kernel_21.event_features:HBM[16] 
+connectivity.sp tempgnn_forward_kernel_21.weight_self:HBM[16] 
+connectivity.sp tempgnn_forward_kernel_21.weight_peer:HBM[16] 
+connectivity.sp tempgnn_forward_kernel_21.weight_event:HBM[16] 
+connectivity.sp tempgnn_forward_kernel_21.bias:HBM[16] 
+connectivity.sp tempgnn_forward_kernel_21.embedding_out:HBM[16] 
+connectivity.sp tempgnn_forward_kernel_21.stats_out:HBM[16] 
 
 EXPANDED PARAMETERS
 From application of optMap.xml: 
@@ -161,1018 +837,419 @@ FINAL PLATFORM PATH
 
 ==========================================
 new:  steps log generated by v++ for new launch 
-timestamp: 15 Jul 2026 05:08:43
+timestamp: 17 Jul 2026 02:46:29
 ------------------------------------------
 V++ internal step: generating xclbin xml file
-timestamp: 15 Jul 2026 05:08:44
-output: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/int/tempgnn_forward_kernel.hw.xml
+timestamp: 17 Jul 2026 02:46:30
+output: /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/int/tempgnn_forward_kernel.hw.xml
 ------------------------------------------
 step: running system_link
-timestamp: 15 Jul 2026 05:08:44
-cmd: /tools/Xilinx/Vitis/2023.2/bin/system_link --xo /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/tempgnn_forward_kernel.hw.xo --config /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/int/syslinkConfig.ini --xpfm /opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm --target hw --output_dir /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/int --temp_dir /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/sys_link
+timestamp: 17 Jul 2026 02:46:31
+cmd: /tools/Xilinx/Vitis/2023.2/bin/system_link --xo /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/tempgnn_forward_kernel.hw.xo -keep --config /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/int/syslinkConfig.ini --xpfm /opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm --target hw --output_dir /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/int --temp_dir /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/sys_link
 system_link status: success
 ------------------------------------------
 step: running cf2sw
-timestamp: 15 Jul 2026 05:09:13
-cmd: /tools/Xilinx/Vitis/2023.2/bin/cf2sw -sdsl /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/int/sdsl.dat -rtd /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/int/cf2sw.rtd -nofilter /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/int/cf2sw_full.rtd -xclbin /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/int/xclbin_orig.xml -o /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/int/xclbin_orig.1.xml
+timestamp: 17 Jul 2026 02:47:14
+cmd: /tools/Xilinx/Vitis/2023.2/bin/cf2sw -sdsl /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/int/sdsl.dat -rtd /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/int/cf2sw.rtd -nofilter /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/int/cf2sw_full.rtd -xclbin /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/int/xclbin_orig.xml -o /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/int/xclbin_orig.1.xml
 cf2sw status: success
 ------------------------------------------
 step: running rtd2_system_diagram
-timestamp: 15 Jul 2026 05:09:22
+timestamp: 17 Jul 2026 02:47:48
 cmd: rtd2SystemDiagram
 rtd2_system_diagram status: success
 ------------------------------------------
 step: running vpl
-timestamp: 15 Jul 2026 05:09:22
-cmd: /tools/Xilinx/Vitis/2023.2/bin/vpl -t hw -f /opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm --remote_ip_cache /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/.ipcache --output_dir /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/int --log_dir /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/logs/link --report_dir /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/reports/link --config /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/int/vplConfig.ini -k /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link --no-info --iprepo /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/int/xo/ip_repo/xilinx_com_hls_tempgnn_forward_kernel_1_0 --messageDb /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/run_link/vpl.pb /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/int/dr.bd.tcl
-Vivado Log File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/run_link/../vivado/vpl/vivado.log
+timestamp: 17 Jul 2026 02:47:48
+cmd: /tools/Xilinx/Vitis/2023.2/bin/vpl -t hw -f xilinx_u280_gen3x16_xdma_1_202211_1 -s --remote_ip_cache /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_cached_finalopt_12cu_175mhz/.ipcache --output_dir /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/int --log_dir /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/logs/link --report_dir /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/reports/link --config /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/int/vplConfig.ini -k /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/int/kernel_info.dat --webtalk_flag Vitis --temp_dir /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link --no-info --iprepo /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/int/xo/ip_repo/xilinx_com_hls_tempgnn_forward_kernel_1_0 --messageDb /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/run_link/vpl.pb /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/int/dr.bd.tcl
+Vivado Log File: /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/run_link/../vivado/vpl/vivado.log
 file: vplConfig.ini
 [advanced]
 misc=report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}
 misc=report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}
 param=compiler.enablePerformanceTrace=1
-param=compiler.vppCurrentWorkingDir=/home/ae_reviewer/TempGNN/hardware/vitis
+param=compiler.vppCurrentWorkingDir=/home/ae_reviewer/TempGNN_opt_20260715_onchip_chain
 misc=BinaryName=tempgnn_forward_kernel.hw
 [connectivity]
-nk=tempgnn_forward_kernel:1:tempgnn_forward_kernel_1
+nk=tempgnn_forward_kernel:21:tempgnn_forward_kernel_1,tempgnn_forward_kernel_2,tempgnn_forward_kernel_3,tempgnn_forward_kernel_4,tempgnn_forward_kernel_5,tempgnn_forward_kernel_6,tempgnn_forward_kernel_7,tempgnn_forward_kernel_8,tempgnn_forward_kernel_9,tempgnn_forward_kernel_10,tempgnn_forward_kernel_11,tempgnn_forward_kernel_12,tempgnn_forward_kernel_13,tempgnn_forward_kernel_14,tempgnn_forward_kernel_15,tempgnn_forward_kernel_16,tempgnn_forward_kernel_17,tempgnn_forward_kernel_18,tempgnn_forward_kernel_19,tempgnn_forward_kernel_20,tempgnn_forward_kernel_21
 [vivado]
 prop=run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}
+prop=run.impl_1.STEPS.PLACE_DESIGN.TCL.PRE=/home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/hardware/vitis/tempgnn_incremental_place_pre.tcl
 
 FINAL PROGRAM OPTIONS
 --advanced.misc report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}
 --advanced.misc report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}
 --advanced.misc BinaryName=tempgnn_forward_kernel.hw
 --advanced.param compiler.enablePerformanceTrace=1
---advanced.param compiler.vppCurrentWorkingDir=/home/ae_reviewer/TempGNN/hardware/vitis
---config /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/int/vplConfig.ini
---connectivity.nk tempgnn_forward_kernel:1:tempgnn_forward_kernel_1
---input_file /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/int/dr.bd.tcl
---iprepo /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/int/xo/ip_repo/xilinx_com_hls_tempgnn_forward_kernel_1_0
---kernels /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/int/kernel_info.dat
---log_dir /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/logs/link
---messageDb /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/run_link/vpl.pb
+--advanced.param compiler.vppCurrentWorkingDir=/home/ae_reviewer/TempGNN_opt_20260715_onchip_chain
+--config /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/int/vplConfig.ini
+--connectivity.nk tempgnn_forward_kernel:21:tempgnn_forward_kernel_1,tempgnn_forward_kernel_2,tempgnn_forward_kernel_3,tempgnn_forward_kernel_4,tempgnn_forward_kernel_5,tempgnn_forward_kernel_6,tempgnn_forward_kernel_7,tempgnn_forward_kernel_8,tempgnn_forward_kernel_9,tempgnn_forward_kernel_10,tempgnn_forward_kernel_11,tempgnn_forward_kernel_12,tempgnn_forward_kernel_13,tempgnn_forward_kernel_14,tempgnn_forward_kernel_15,tempgnn_forward_kernel_16,tempgnn_forward_kernel_17,tempgnn_forward_kernel_18,tempgnn_forward_kernel_19,tempgnn_forward_kernel_20,tempgnn_forward_kernel_21
+--input_file /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/int/dr.bd.tcl
+--iprepo /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/int/xo/ip_repo/xilinx_com_hls_tempgnn_forward_kernel_1_0
+--kernels /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/int/kernel_info.dat
+--log_dir /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/logs/link
+--messageDb /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/run_link/vpl.pb
 --no-info
---output_dir /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/int
---platform /opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm
---remote_ip_cache /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/.ipcache
---report_dir /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/reports/link
+--output_dir /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/int
+--platform xilinx_u280_gen3x16_xdma_1_202211_1
+--remote_ip_cache /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_cached_finalopt_12cu_175mhz/.ipcache
+--report_dir /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/reports/link
+--save_temps
 --target hw
---temp_dir /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link
+--temp_dir /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link
 --vivado.prop run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}
+--vivado.prop run.impl_1.STEPS.PLACE_DESIGN.TCL.PRE=/home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/hardware/vitis/tempgnn_incremental_place_pre.tcl
 --webtalk_flag Vitis
 
 PARSED COMMAND LINE OPTIONS
 -t hw 
--f /opt/xilinx/platforms/xilinx_u280_gen3x16_xdma_1_202211_1/xilinx_u280_gen3x16_xdma_1_202211_1.xpfm 
---remote_ip_cache /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/.ipcache 
---output_dir /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/int 
---log_dir /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/logs/link 
---report_dir /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/reports/link 
---config /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/int/vplConfig.ini 
--k /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/int/kernel_info.dat 
+-f xilinx_u280_gen3x16_xdma_1_202211_1 
+-s 
+--remote_ip_cache /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_cached_finalopt_12cu_175mhz/.ipcache 
+--output_dir /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/int 
+--log_dir /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/logs/link 
+--report_dir /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/reports/link 
+--config /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/int/vplConfig.ini 
+-k /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/int/kernel_info.dat 
 --webtalk_flag Vitis 
---temp_dir /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link 
+--temp_dir /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link 
 --no-info 
---iprepo /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/int/xo/ip_repo/xilinx_com_hls_tempgnn_forward_kernel_1_0 
---messageDb /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/run_link/vpl.pb 
-/home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/int/dr.bd.tcl 
+--iprepo /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/int/xo/ip_repo/xilinx_com_hls_tempgnn_forward_kernel_1_0 
+--messageDb /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/run_link/vpl.pb 
+/home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/int/dr.bd.tcl 
 
 PARSED CONFIG FILE (1) OPTIONS
-file: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/int/vplConfig.ini
+file: /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/int/vplConfig.ini
 advanced.misc report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10} 
 advanced.misc report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10} 
 advanced.param compiler.enablePerformanceTrace=1 
-advanced.param compiler.vppCurrentWorkingDir=/home/ae_reviewer/TempGNN/hardware/vitis 
+advanced.param compiler.vppCurrentWorkingDir=/home/ae_reviewer/TempGNN_opt_20260715_onchip_chain 
 advanced.misc BinaryName=tempgnn_forward_kernel.hw 
-connectivity.nk tempgnn_forward_kernel:1:tempgnn_forward_kernel_1 
+connectivity.nk tempgnn_forward_kernel:21:tempgnn_forward_kernel_1,tempgnn_forward_kernel_2,tempgnn_forward_kernel_3,tempgnn_forward_kernel_4,tempgnn_forward_kernel_5,tempgnn_forward_kernel_6,tempgnn_forward_kernel_7,tempgnn_forward_kernel_8,tempgnn_forward_kernel_9,tempgnn_forward_kernel_10,tempgnn_forward_kernel_11,tempgnn_forward_kernel_12,tempgnn_forward_kernel_13,tempgnn_forward_kernel_14,tempgnn_forward_kernel_15,tempgnn_forward_kernel_16,tempgnn_forward_kernel_17,tempgnn_forward_kernel_18,tempgnn_forward_kernel_19,tempgnn_forward_kernel_20,tempgnn_forward_kernel_21 
 vivado.prop run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high} 
+vivado.prop run.impl_1.STEPS.PLACE_DESIGN.TCL.PRE=/home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/hardware/vitis/tempgnn_incremental_place_pre.tcl 
 
 
    ------------------------------------------
    VPL internal step: generating ipirun.tcl for vivado
-   timestamp: 15 Jul 2026 05:09:32
+   timestamp: 17 Jul 2026 02:47:57
    -----------------------
    VPL internal step: source -notrace ./ipirun.tcl
    File: vpl.tcl:125
    Line computed from base: 122 offset: 3
-   timestamp: 15 July 2026 05:09:41
+   timestamp: 17 July 2026 02:48:05
    -----------------------
    VPL internal step: source scripts/_vivado_params.tcl
    File: vpl.tcl:140
    Line computed from base: 122 offset: 18
-   timestamp: 15 July 2026 05:09:41
+   timestamp: 17 July 2026 02:48:05
    -----------------------
   current step: vpl.create_project
    -----------------------
    VPL internal step: create_vivado_project
    Proc: ::ocl_util::create_vivado_project
    File: ocl_util.tcl:503
-   timestamp: 15 July 2026 05:09:41
+   timestamp: 17 July 2026 02:48:05
    -----------------------
    VPL internal step: source .local/hw_platform/tcl_hooks/prelink.tcl
    File: vpl.tcl:1232
-   timestamp: 15 July 2026 05:09:41
+   timestamp: 17 July 2026 02:48:05
    -----------------------
    VPL internal step: create_project -part xcu280-fsvh2892-2L-e -force prj prj
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:818
-   timestamp: 15 July 2026 05:09:41
+   File: /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/vivado/vpl/.local/ocl_util.tcl:818
+   timestamp: 17 July 2026 02:48:05
    -----------------------
    VPL internal step: add_files .local/hw_platform/hw_bb_locked.dcp
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:853
-   timestamp: 15 July 2026 05:09:50
+   File: /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/vivado/vpl/.local/ocl_util.tcl:853
+   timestamp: 17 July 2026 02:48:14
    -----------------------
    VPL internal step: create_partition_def -name my_pd -module ulp
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:859
-   timestamp: 15 July 2026 05:09:50
+   File: /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/vivado/vpl/.local/ocl_util.tcl:859
+   timestamp: 17 July 2026 02:48:14
    -----------------------
    VPL internal step: create_reconfig_module -name my_rm -partition_def [get_partition_defs my_pd ] -top ulp
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:861
-   timestamp: 15 July 2026 05:09:50
+   File: /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/vivado/vpl/.local/ocl_util.tcl:861
+   timestamp: 17 July 2026 02:48:14
    -----------------------
    VPL internal step: create_pr_configuration -name config_1 -partitions [list level0_i/ulp:my_rm]
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:872
-   timestamp: 15 July 2026 05:09:50
+   File: /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/vivado/vpl/.local/ocl_util.tcl:872
+   timestamp: 17 July 2026 02:48:14
    -----------------------
   current step: vpl.create_bd
    -----------------------
    VPL internal step: update_ip_catalog
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:2412
-   timestamp: 15 July 2026 05:09:50
+   File: /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/vivado/vpl/.local/ocl_util.tcl:2412
+   timestamp: 17 July 2026 02:48:14
    -----------------------
-   VPL internal step: config_ip_cache -use_cache_location /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/.ipcache
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:2422
-   timestamp: 15 July 2026 05:09:52
+   VPL internal step: config_ip_cache -use_cache_location /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_cached_finalopt_12cu_175mhz/.ipcache
+   File: /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/vivado/vpl/.local/ocl_util.tcl:2422
+   timestamp: 17 July 2026 02:48:16
    -----------------------
    VPL internal step: import_files -norecurse .local/hw_platform/bd/202211_1_dev.srcs/sources_1/bd/ulp/ulp.bd -of_objects my_rm
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:2100
-   timestamp: 15 July 2026 05:09:52
+   File: /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/vivado/vpl/.local/ocl_util.tcl:2100
+   timestamp: 17 July 2026 02:48:16
    -----------------------
    VPL internal step: open_bd_design -auto_upgrade [get_files ulp.bd]
    File: vpl.tcl:199
-   timestamp: 15 July 2026 05:09:54
+   timestamp: 17 July 2026 02:48:18
    -----------------------
    VPL internal step: report locked IPs
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3129
-   timestamp: 15 July 2026 05:10:28
+   File: /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/vivado/vpl/.local/ocl_util.tcl:3129
+   timestamp: 17 July 2026 02:48:53
    -----------------------
    VPL internal step: source .local/dr.bd.tcl
    File: vpl.tcl:224
-   timestamp: 15 July 2026 05:10:28
+   timestamp: 17 July 2026 02:48:53
    -----------------------
    VPL internal step: save_bd_design
    File: vpl.tcl:241
-   timestamp: 15 July 2026 05:10:39
+   timestamp: 17 July 2026 02:49:23
    -----------------------
    VPL internal step: add_files .local/hw_platform/tcl_hooks/impl.xdc -fileset [current_fileset -constrset]
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:2746
-   timestamp: 15 July 2026 05:10:39
+   File: /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/vivado/vpl/.local/ocl_util.tcl:2746
+   timestamp: 17 July 2026 02:49:25
    -----------------------
   current step: vpl.update_bd
    -----------------------
    VPL internal step: inserting profiling and debug cores
    File: vpl.tcl:287
-   timestamp: 15 July 2026 05:10:39
+   timestamp: 17 July 2026 02:49:25
    -----------------------
    VPL internal step: assign_bd_address
    File: vpl.tcl:299
-   timestamp: 15 July 2026 05:10:40
+   timestamp: 17 July 2026 02:49:25
    -----------------------
    VPL internal step: source .local/hw_platform/tcl_hooks/postlink.tcl
    File: vpl.tcl:2229
-   timestamp: 15 July 2026 05:10:40
+   timestamp: 17 July 2026 02:49:25
    -----------------------
    VPL internal step: writing address_map.xml
    File: vpl.tcl:309
-   timestamp: 15 July 2026 05:10:40
+   timestamp: 17 July 2026 02:49:25
    -----------------------
    VPL internal step: collect BD interface connectivity and update compute units
    File: vpl.tcl:313
-   timestamp: 15 July 2026 05:10:40
+   timestamp: 17 July 2026 02:49:25
    -----------------------
    VPL internal step: save_bd_design
    File: vpl.tcl:316
-   timestamp: 15 July 2026 05:10:40
+   timestamp: 17 July 2026 02:49:25
    -----------------------
   current step: vpl.generate_target
    -----------------------
    VPL internal step: generate_target all [get_files ulp.bd]
    File: vpl.tcl:368
-   timestamp: 15 July 2026 05:10:44
+   timestamp: 17 July 2026 02:49:36
    -----------------------
-   VPL internal step: writing user synth clock constraints in /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/output/ulp_ooc_copy.xdc
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:2488
-   timestamp: 15 July 2026 05:13:27
+   VPL internal step: writing user synth clock constraints in /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/vivado/vpl/output/ulp_ooc_copy.xdc
+   File: /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/vivado/vpl/.local/ocl_util.tcl:2488
+   timestamp: 17 July 2026 02:54:48
    -----------------------
-   VPL internal step: add_files /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/output/ulp_ooc_copy.xdc -fileset [current_fileset -constrset]
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:2492
-   timestamp: 15 July 2026 05:13:27
+   VPL internal step: add_files /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/vivado/vpl/output/ulp_ooc_copy.xdc -fileset [current_fileset -constrset]
+   File: /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/vivado/vpl/.local/ocl_util.tcl:2492
+   timestamp: 17 July 2026 02:54:48
    -----------------------
-   VPL internal step: move_files [get_files /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/output/ulp_ooc_copy.xdc] -of_objects [get_reconfig_modules my_rm] -quiet
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:2507
-   timestamp: 15 July 2026 05:13:27
+   VPL internal step: move_files [get_files /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/vivado/vpl/output/ulp_ooc_copy.xdc] -of_objects [get_reconfig_modules my_rm] -quiet
+   File: /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/vivado/vpl/.local/ocl_util.tcl:2507
+   timestamp: 17 July 2026 02:54:48
    -----------------------
    VPL internal step: add_files .local/hw_platform/tcl_hooks/impl.xdc -fileset [current_fileset -constrset]
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:2746
-   timestamp: 15 July 2026 05:13:27
+   File: /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/vivado/vpl/.local/ocl_util.tcl:2746
+   timestamp: 17 July 2026 02:54:48
    -----------------------
-   VPL internal step: read_xdc /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/output/dont_partition.xdc
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:4605
-   timestamp: 15 July 2026 05:13:27
+   VPL internal step: read_xdc /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/vivado/vpl/output/dont_partition.xdc
+   File: /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/vivado/vpl/.local/ocl_util.tcl:4605
+   timestamp: 17 July 2026 02:54:48
    -----------------------
    VPL internal step: collect clock information and write automation summary report
    File: vpl.tcl:381
-   timestamp: 15 July 2026 05:13:27
+   timestamp: 17 July 2026 02:54:48
    -----------------------
   current step: vpl.config_hw_runs
    -----------------------
    VPL internal step: creating vpl tcl hooks for implementation run
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3909
-   timestamp: 15 July 2026 05:13:27
+   File: /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/vivado/vpl/.local/ocl_util.tcl:3909
+   timestamp: 17 July 2026 02:54:48
    -----------------------
    VPL internal step: source scripts/_vivado_report_commands.tcl
    File: vpl.tcl:417
-   timestamp: 15 July 2026 05:13:27
+   timestamp: 17 July 2026 02:54:48
    -----------------------
    VPL internal step: create_report_config -report_name impl_report_timing_summary_route_design_summary -report_type report_timing_summary -steps {route_design} -runs {impl_1} -options {-max_paths 10}
    File: scripts/_vivado_report_commands.tcl:84
-   timestamp: 15 July 2026 05:13:28
+   timestamp: 17 July 2026 02:54:48
    -----------------------
    VPL internal step: create_report_config -report_name impl_report_timing_summary_post_route_phys_opt_design_summary -report_type report_timing_summary -steps {post_route_phys_opt_design} -runs {impl_1} -options {-max_paths 10}
    File: scripts/_vivado_report_commands.tcl:84
-   timestamp: 15 July 2026 05:13:28
+   timestamp: 17 July 2026 02:54:48
    -----------------------
    VPL internal step: source scripts/_vivado_synth_props.tcl
    File: vpl.tcl:425
-   timestamp: 15 July 2026 05:13:28
+   timestamp: 17 July 2026 02:54:48
    -----------------------
    VPL internal step: source scripts/_vivado_impl_props.tcl
    File: vpl.tcl:487
-   timestamp: 15 July 2026 05:15:05
+   timestamp: 17 July 2026 02:55:39
    -----------------------
   current step: vpl.synth
    -----------------------
    VPL internal step: launch_runs my_rm_synth_1 -jobs 8  
    File: vpl.tcl:531
-   timestamp: 15 July 2026 05:15:06
+   timestamp: 17 July 2026 02:55:39
    -----------------------
-   VPL internal step: generating resource usage report '/home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/output/resource.json'
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:5414
-   timestamp: 15 July 2026 05:45:25
+   VPL internal step: generating resource usage report '/home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/vivado/vpl/output/resource.json'
+   File: /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/vivado/vpl/.local/ocl_util.tcl:5414
+   timestamp: 17 July 2026 03:13:16
    -----------------------
-   VPL internal step: log_generated_reports for synthesis '/home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/output/generated_reports.log'
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3005
-   timestamp: 15 July 2026 05:45:25
+   VPL internal step: log_generated_reports for synthesis '/home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/vivado/vpl/output/generated_reports.log'
+   File: /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/vivado/vpl/.local/ocl_util.tcl:3005
+   timestamp: 17 July 2026 03:13:16
    -----------------------
    VPL internal step: launched run my_rm_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run ulp_ii_level0_wire_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_85ad_interconnect9_8_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run ulp_regslice_control_userpf_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run ulp_axi_gpio_null_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run ulp_proc_sys_reset_freerun_slr1_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run ulp_axi_vip_ctrl_userpf_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run ulp_proc_sys_reset_kernel2_slr1_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run ulp_proc_sys_reset_freerun_slr2_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run ulp_proc_sys_reset_freerun_slr0_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run ulp_proc_sys_reset_kernel2_slr2_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run ulp_proc_sys_reset_kernel_slr2_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run ulp_proc_sys_reset_kernel_slr1_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run ulp_proc_sys_reset_ctrl_slr1_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run ulp_proc_sys_reset_kernel2_slr0_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run ulp_proc_sys_reset_kernel_slr0_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run ulp_proc_sys_reset_ctrl_slr2_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run ulp_proc_sys_reset_ctrl_slr0_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run ulp_hmss_0_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run ulp_axi_vip_data_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run ulp_ulp_ucs_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run ulp_ulp_cmp_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run ulp_regslice_control_userpf_2_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run ulp_axi_gpio_null_2_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run ulp_axi_vip_ctrl_userpf_2_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run ulp_axi_vip_ctrl_userpf_1_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run ulp_axi_gpio_null_1_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run ulp_regslice_control_userpf_1_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_frequency_counter_aclk_kernel_01_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_097b_user_debug_hub_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_fanout_aresetn_kernel_01_slr2_3_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_psreset_kernel_00_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_frequency_counter_aclk_hbm_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_frequency_counter_aclk_kernel_00_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_xbar_1_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run ulp_xbar_3_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_85ad_slice6_5_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_7cf0_bsip_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_58f6_lut_buffer_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_85ad_slice9_8_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_clkwiz_aclk_kernel_01_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_58f6_xsdbm_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_fanout_aresetn_kernel_00_slr1_3_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_fanout_aresetn_kernel_00_slr1_1_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_fanout_aresetn_kernel_00_slr2_2_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_fanout_aresetn_kernel_00_slr0_3_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_fanout_aresetn_kernel_00_slr0_4_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_fanout_aresetn_kernel_00_slr0_2_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_fanout_aresetn_kernel_00_slr0_1_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_85ad_interconnect11_10_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run ulp_rst_clk_wiz_225M_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_fanout_aresetn_kernel_00_slr2_1_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_fanout_aresetn_kernel_00_slr1_4_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_aclk_kernel_01_cont_adapt_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_aclk_kernel_01_adapt_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_clkwiz_aclk_kernel_00_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_clock_throttling_aclk_kernel_00_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_fanout_aresetn_kernel_00_slr2_3_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_fanout_aresetn_kernel_00_slr2_4_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_psreset_kernel_01_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_fanout_aresetn_kernel_01_slr2_1_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_fanout_aresetn_kernel_01_slr1_2_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_fanout_aresetn_kernel_01_slr1_4_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_fanout_aresetn_kernel_01_slr1_1_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_fanout_aresetn_kernel_01_slr1_3_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_fanout_aresetn_kernel_01_slr0_4_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_fanout_aresetn_kernel_00_slr1_2_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_fanout_aresetn_kernel_01_slr2_2_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_fanout_aresetn_kernel_01_slr0_3_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_fanout_aresetn_kernel_01_slr0_1_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_fanout_aresetn_kernel_01_slr0_2_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_aclk_kernel_00_cont_adapt_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_aclk_kernel_00_adapt_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_097b_build_info_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_85ad_interconnect4_3_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_psreset_aclk_freerun_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_clock_throttling_aclk_kernel_01_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_frequency_counter_aclk_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_fanout_aresetn_kernel_01_slr2_4_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_7cf0_axi_jtag_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_097b_user_debug_bridge_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_7cf0_bs_switch_1_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_85ad_interconnect2_1_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run ulp_clk_wiz_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_85ad_slice3_2_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
+   File: /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
+   timestamp: 17 July 2026 03:13:16
+   -----------------------
+   VPL internal step: launched run ulp_tempgnn_forward_kernel_20_0_synth_1
+   File: /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
+   timestamp: 17 July 2026 03:13:16
+   -----------------------
+   VPL internal step: launched run ulp_tempgnn_forward_kernel_2_0_synth_1
+   File: /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
+   timestamp: 17 July 2026 03:13:16
+   -----------------------
+   VPL internal step: launched run ulp_tempgnn_forward_kernel_5_0_synth_1
+   File: /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
+   timestamp: 17 July 2026 03:13:16
+   -----------------------
+   VPL internal step: launched run ulp_tempgnn_forward_kernel_17_0_synth_1
+   File: /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
+   timestamp: 17 July 2026 03:13:16
+   -----------------------
+   VPL internal step: launched run ulp_tempgnn_forward_kernel_11_0_synth_1
+   File: /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
+   timestamp: 17 July 2026 03:13:16
+   -----------------------
+   VPL internal step: launched run ulp_tempgnn_forward_kernel_8_0_synth_1
+   File: /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
+   timestamp: 17 July 2026 03:13:16
+   -----------------------
+   VPL internal step: launched run ulp_tempgnn_forward_kernel_10_0_synth_1
+   File: /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
+   timestamp: 17 July 2026 03:13:16
+   -----------------------
+   VPL internal step: launched run ulp_tempgnn_forward_kernel_13_0_synth_1
+   File: /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
+   timestamp: 17 July 2026 03:13:16
+   -----------------------
+   VPL internal step: launched run ulp_tempgnn_forward_kernel_16_0_synth_1
+   File: /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
+   timestamp: 17 July 2026 03:13:16
+   -----------------------
+   VPL internal step: launched run ulp_tempgnn_forward_kernel_14_0_synth_1
+   File: /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
+   timestamp: 17 July 2026 03:13:16
+   -----------------------
+   VPL internal step: launched run ulp_tempgnn_forward_kernel_9_0_synth_1
+   File: /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
+   timestamp: 17 July 2026 03:13:16
+   -----------------------
+   VPL internal step: launched run ulp_tempgnn_forward_kernel_21_0_synth_1
+   File: /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
+   timestamp: 17 July 2026 03:13:16
+   -----------------------
+   VPL internal step: launched run ulp_tempgnn_forward_kernel_6_0_synth_1
+   File: /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
+   timestamp: 17 July 2026 03:13:16
+   -----------------------
+   VPL internal step: launched run ulp_tempgnn_forward_kernel_15_0_synth_1
+   File: /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
+   timestamp: 17 July 2026 03:13:16
+   -----------------------
+   VPL internal step: launched run ulp_tempgnn_forward_kernel_4_0_synth_1
+   File: /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
+   timestamp: 17 July 2026 03:13:16
+   -----------------------
+   VPL internal step: launched run ulp_tempgnn_forward_kernel_3_0_synth_1
+   File: /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
+   timestamp: 17 July 2026 03:13:16
+   -----------------------
+   VPL internal step: launched run ulp_tempgnn_forward_kernel_12_0_synth_1
+   File: /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
+   timestamp: 17 July 2026 03:13:16
+   -----------------------
+   VPL internal step: launched run ulp_tempgnn_forward_kernel_18_0_synth_1
+   File: /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
+   timestamp: 17 July 2026 03:13:16
+   -----------------------
+   VPL internal step: launched run ulp_tempgnn_forward_kernel_7_0_synth_1
+   File: /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
+   timestamp: 17 July 2026 03:13:16
    -----------------------
    VPL internal step: launched run ulp_tempgnn_forward_kernel_1_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_fanout_aresetn_hbm_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_psreset_hbm_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_clkwiz_hbm_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_clock_throttling_avg_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_gapping_demand_toggle_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_gapping_demand_update_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_fanout_aresetn_ctrl_slr0_2_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_build_info_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_gpio_gapping_demand_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_fanout_aresetn_pcie_slr0_3_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_85ad_slice11_10_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_fanout_aresetn_pcie_slr0_1_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_clock_shutdown_latch_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_clk_hbm_adapt_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_fanout_aresetn_ctrl_slr0_3_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_fanout_aresetn_ctrl_slr0_1_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_fanout_aresetn_ctrl_slr2_2_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_fanout_aresetn_ctrl_slr2_3_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_fanout_aresetn_ctrl_slr1_3_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_fanout_aresetn_ctrl_slr2_4_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_fanout_aresetn_ctrl_slr2_1_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_fanout_aresetn_ctrl_slr0_4_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_fanout_aresetn_ctrl_slr1_2_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_fanout_aresetn_ctrl_slr1_4_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_fanout_aresetn_ctrl_slr1_1_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_fanout_aresetn_pcie_slr2_3_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_fanout_aresetn_pcie_slr2_4_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_fanout_aresetn_pcie_slr1_4_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_fanout_aresetn_pcie_slr2_2_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_fanout_aresetn_pcie_slr2_1_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_fanout_aresetn_pcie_slr1_1_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_fanout_aresetn_pcie_slr1_3_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_fanout_aresetn_pcie_slr1_2_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_fanout_aresetn_pcie_slr0_2_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_fanout_aresetn_pcie_slr0_4_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_xbar_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_gpio_ucs_control_status_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_85ad_interconnect7_6_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_85ad_slice1_0_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_85ad_interconnect3_2_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_85ad_slice13_12_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_85ad_interconnect8_7_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_85ad_slice0_13_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_85ad_init_reduce_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_85ad_interconnect0_13_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run ulp_m00_regslice_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_85ad_slice8_7_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_85ad_slice5_4_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_85ad_interconnect13_12_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run ulp_xbar_2_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_85ad_interconnect6_5_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run ulp_auto_cc_1_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run ulp_s00_regslice_20_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run ulp_auto_cc_3_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run ulp_auto_cc_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run ulp_m01_regslice_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run ulp_s00_regslice_18_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run ulp_s00_regslice_19_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_22c0_auto_cc_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_85ad_axi_apb_bridge_inst_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_85ad_hbm_inst_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run ulp_auto_cc_2_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_85ad_slice10_9_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_85ad_slice2_1_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_85ad_interconnect5_4_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_85ad_interconnect12_11_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_85ad_slice7_6_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_85ad_interconnect10_9_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_85ad_slice4_3_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_85ad_slice12_11_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_85ad_vip_S13_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_85ad_vip_S00_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_85ad_vip_S12_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_85ad_vip_S10_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_85ad_vip_S11_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_85ad_vip_S09_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_85ad_vip_S07_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_85ad_vip_S08_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_85ad_vip_S06_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_85ad_vip_S04_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_85ad_vip_S05_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_85ad_vip_S01_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_85ad_interconnect1_0_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_85ad_vip_S02_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_85ad_vip_S03_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_85ad_hbm_reset_sync_SLR2_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
-   -----------------------
-   VPL internal step: launched run bd_85ad_hbm_reset_sync_SLR0_0_synth_1
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
-   timestamp: 15 July 2026 05:45:29
+   File: /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
+   timestamp: 17 July 2026 03:13:16
+   -----------------------
+   VPL internal step: launched run ulp_tempgnn_forward_kernel_19_0_synth_1
+   File: /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/vivado/vpl/.local/ocl_util.tcl:3028
+   timestamp: 17 July 2026 03:13:16
    -----------------------
   current step: vpl.impl
    -----------------------
    VPL internal step: launch_runs impl_1 -to_step write_bitstream -jobs 8  
    File: vpl.tcl:601
-   timestamp: 15 July 2026 05:45:29
+   timestamp: 17 July 2026 03:13:16
    -----------------------
-   VPL internal step: log_generated_reports for implementation '/home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/output/generated_reports.log'
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:931
-   timestamp: 15 July 2026 07:39:56
+   VPL internal step: log_generated_reports for implementation '/home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/vivado/vpl/output/generated_reports.log'
+   File: /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/vivado/vpl/.local/ocl_util.tcl:931
+   timestamp: 17 July 2026 10:27:59
    -----------------------
    VPL internal step: copy implementation run (impl_1) output files
-   File: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/vivado/vpl/.local/ocl_util.tcl:1589
-   timestamp: 15 July 2026 07:40:49
+   File: /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/vivado/vpl/.local/ocl_util.tcl:1589
+   timestamp: 17 July 2026 10:28:00
    VPL internal step status: success
 vpl status: success
 ------------------------------------------
 step: running rtdgen
-timestamp: 15 Jul 2026 07:40:50
+timestamp: 17 Jul 2026 10:28:04
 cmd: rtdgen
 ------------------------------------------
 step: running cf2sw to update xclbin xml and generate rtd file (runtime data)
-timestamp: 15 Jul 2026 07:40:50
-cmd: cf2sw -a /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/int/address_map.xml -sdsl /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/int/sdsl.dat -xclbin /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/int/xclbin_orig.xml -rtd /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/int/tempgnn_forward_kernel.hw.rtd -o /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/int/tempgnn_forward_kernel.hw.xml
+timestamp: 17 Jul 2026 10:28:04
+cmd: cf2sw -a /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/int/address_map.xml -sdsl /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/int/sdsl.dat -xclbin /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/int/xclbin_orig.xml -rtd /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/int/tempgnn_forward_kernel.hw.rtd -o /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/int/tempgnn_forward_kernel.hw.xml
 V++ internal step status: success
 ------------------------------------------
 step: running writeSystemDiagram to update system diagram with slr and base address info.
-timestamp: 15 Jul 2026 07:40:58
+timestamp: 17 Jul 2026 10:28:31
 cmd: writeSystemDiagram
 V++ internal step status: success
 ------------------------------------------
 step: running writeAutomationSummary to write automation summary report
-timestamp: 15 Jul 2026 07:40:58
+timestamp: 17 Jul 2026 10:28:31
 cmd: writeAutomationSummary
 V++ internal step status: success
 rtdgen status: success
 ------------------------------------------
 step: running xclbinutil
-timestamp: 15 Jul 2026 07:40:58
-cmd: /tools/Xilinx/Vitis/2023.2/bin/xclbinutil --add-section BITSTREAM:RAW:/home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/int/partial.bit --force --target hw --key-value SYS:dfx_enable:true --add-section :JSON:/home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/int/tempgnn_forward_kernel.hw.rtd --append-section :JSON:/home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/int/appendSection.rtd --add-section CLOCK_FREQ_TOPOLOGY:JSON:/home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/int/tempgnn_forward_kernel.hw_xml.rtd --add-section BUILD_METADATA:JSON:/home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/int/tempgnn_forward_kernel.hw_build.rtd --add-section EMBEDDED_METADATA:RAW:/home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/int/tempgnn_forward_kernel.hw.xml --add-section SYSTEM_METADATA:RAW:/home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/link/int/systemDiagramModelSlrBaseAddress.json --key-value SYS:PlatformVBNV:xilinx_u280_gen3x16_xdma_1_202211_1 --output /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/tempgnn_forward_kernel.hw.xclbin
+timestamp: 17 Jul 2026 10:28:31
+cmd: /tools/Xilinx/Vitis/2023.2/bin/xclbinutil --add-section BITSTREAM:RAW:/home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/int/partial.bit --force --target hw --key-value SYS:dfx_enable:true --add-section :JSON:/home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/int/tempgnn_forward_kernel.hw.rtd --append-section :JSON:/home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/int/appendSection.rtd --add-section CLOCK_FREQ_TOPOLOGY:JSON:/home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/int/tempgnn_forward_kernel.hw_xml.rtd --add-section BUILD_METADATA:JSON:/home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/int/tempgnn_forward_kernel.hw_build.rtd --add-section EMBEDDED_METADATA:RAW:/home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/int/tempgnn_forward_kernel.hw.xml --add-section SYSTEM_METADATA:RAW:/home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/link/int/systemDiagramModelSlrBaseAddress.json --key-value SYS:PlatformVBNV:xilinx_u280_gen3x16_xdma_1_202211_1 --output /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/tempgnn_forward_kernel.hw.xclbin
 xclbinutil status: success
 ------------------------------------------
 step: running xclbinutilinfo
-timestamp: 15 Jul 2026 07:40:58
-cmd: /tools/Xilinx/Vitis/2023.2/bin/xclbinutil --quiet --force --info /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/tempgnn_forward_kernel.hw.xclbin.info --input /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/tempgnn_forward_kernel.hw.xclbin
+timestamp: 17 Jul 2026 10:28:31
+cmd: /tools/Xilinx/Vitis/2023.2/bin/xclbinutil --quiet --force --info /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/tempgnn_forward_kernel.hw.xclbin.info --input /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/tempgnn_forward_kernel.hw.xclbin
 xclbinutilinfo status: success
 ------------------------------------------
 step: running generate_sc_driver
-timestamp: 15 Jul 2026 07:40:58
+timestamp: 17 Jul 2026 10:28:32
 cmd: 
 generate_sc_driver status: success
 ------------------------------------------
 hw completed
-timestamp: 15 Jul 2026 07:40:58
+timestamp: 17 Jul 2026 10:28:32
 ------------------------------------------
 V++ internal step: generating system estimate report file
-timestamp: 15 Jul 2026 07:40:58
-output: /home/ae_reviewer/TempGNN/build/vitis_u280_forward_clean_hw/_x/reports/link/system_estimate_tempgnn_forward_kernel.hw.xtxt
+timestamp: 17 Jul 2026 10:28:32
+output: /home/ae_reviewer/TempGNN_opt_20260715_onchip_chain/build/vitis_u280_uram_21cu_bitmap_key_168mhz/_x/reports/link/system_estimate_tempgnn_forward_kernel.hw.xtxt
 V++ internal step status: success
 ------------------------------------------
 system estimate report task completed
-timestamp: 15 Jul 2026 07:40:58
+timestamp: 17 Jul 2026 10:28:33

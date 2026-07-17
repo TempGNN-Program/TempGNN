@@ -28,6 +28,11 @@ def parse_args() -> argparse.Namespace:
         default=Path("results/q14_real_tgl_edges/q14_dataset_model_summary.csv"),
     )
     parser.add_argument("--board-json", type=Path, default=Path("results/board_u280/summary.json"))
+    parser.add_argument(
+        "--build-provenance",
+        type=Path,
+        default=Path("artifacts/u280/TempGNN/evidence/build_provenance.json"),
+    )
     parser.add_argument("--runs-dir", type=Path, default=Path("results/reviewer_u280_runs"))
     parser.add_argument("--out", type=Path, default=Path("results/ae_report"))
     return parser.parse_args()
@@ -53,21 +58,62 @@ def collect_state(args: argparse.Namespace) -> dict[str, object]:
     if args.board_json.is_file():
         board = json.loads(args.board_json.read_text(encoding="utf-8"))
 
+    build = None
+    if args.build_provenance.is_file():
+        build = json.loads(args.build_provenance.read_text(encoding="utf-8"))
+
     q14_rows = read_csv(args.q14_summary) if args.q14_summary.is_file() else []
     run = latest_run(args.runs_dir)
     verification = None
     provenance = None
+    fresh_summary: dict[str, object] = {}
     if run is not None:
         verification = json.loads((run / "verification.json").read_text(encoding="utf-8"))
         provenance = json.loads((run / "provenance.json").read_text(encoding="utf-8"))
+        fresh_summary = collect_fresh_summary(run)
     return {
         "averages": averages,
         "board": board,
+        "build": build,
         "q14_rows": q14_rows,
         "run": run,
         "verification": verification,
         "provenance": provenance,
+        "fresh_summary": fresh_summary,
     }
+
+
+def collect_fresh_summary(run: Path) -> dict[str, object]:
+    systems: dict[str, dict[str, float | int]] = {}
+    for system in ("TempGNN", "MATG", "ViTeGNN", "RTGA"):
+        path = run / "raw" / system / "measurements.csv"
+        if not path.is_file():
+            continue
+        rows = read_csv(path)
+        bad = sum(
+            row.get("golden_validation") != "PASS"
+            or row.get("repeat_consistency") != "PASS"
+            or row.get("timing_met") != "PASS"
+            for row in rows
+        )
+        systems[system] = {
+            "rows": len(rows),
+            "bad": bad,
+            "mean_latency_ms": mean(float(row["latency_ms"]) for row in rows),
+        }
+
+    speedup = None
+    figure = run / "derived_comparison_figures" / "fig11_speedup_matg.csv"
+    if figure.is_file():
+        for row in read_csv(figure):
+            if (
+                row.get("dataset") == "AVG"
+                and row.get("model") == "AVG"
+                and row.get("solution") == "TempGNN"
+            ):
+                speedup = float(row["value"])
+                break
+    return {"systems": systems, "tempgnn_matg_speedup": speedup}
 
 
 def latest_run(runs_dir: Path) -> Path | None:
@@ -120,10 +166,36 @@ def verification_table(state: dict[str, object]) -> str:
     return "\n".join(lines)
 
 
+def fresh_summary_table(state: dict[str, object]) -> str:
+    summary = state.get("fresh_summary")
+    if not isinstance(summary, dict):
+        return "No complete fresh measurement summary is available."
+    systems = summary.get("systems")
+    if not isinstance(systems, dict) or not systems:
+        return "No complete fresh measurement summary is available."
+    lines = [
+        "| System | Rows | Failed functional rows | Mean latency (ms) |",
+        "| --- | ---: | ---: | ---: |",
+    ]
+    for system in ("TempGNN", "MATG", "ViTeGNN", "RTGA"):
+        item = systems.get(system)
+        if isinstance(item, dict):
+            lines.append(
+                f"| {system} | {int(item['rows'])} | {int(item['bad'])} | "
+                f"{float(item['mean_latency_ms']):.6f} |"
+            )
+    speedup = summary.get("tempgnn_matg_speedup")
+    if isinstance(speedup, float):
+        lines.extend(
+            ["", f"Fresh measured TempGNN/MATG all-workload average speedup: **{speedup:.4f}x**."]
+        )
+    return "\n".join(lines)
+
+
 def summary_document(state: dict[str, object]) -> str:
     averages = state["averages"]
     run = state["run"]
-    board = state["board"]
+    build = state.get("build")
     lines = [
         "# TempGNN AE Reproduction Report",
         "",
@@ -162,6 +234,8 @@ def summary_document(state: dict[str, object]) -> str:
             "",
             f"Latest run: `{run.as_posix()}`" if isinstance(run, Path) else "Latest run: none",
             "",
+            fresh_summary_table(state),
+            "",
             verification_table(state),
             "",
             "A numerical tolerance PASS does not establish the Results Reproduced bridge while provenance marks the method as not paper-equivalent. Reference CSV values are never substituted for measured rows.",
@@ -171,10 +245,11 @@ def summary_document(state: dict[str, object]) -> str:
             "Each comparison build uses the per-design timing-closed clock recorded in its raw rows and post-route evidence on `xilinx_u280_gen3x16_xdma_1_202211_1`; no frequency rescaling is applied.",
         ]
     )
-    if isinstance(board, dict):
-        timing = board.get("post_route_timing", {})
+    if isinstance(build, dict):
         lines.append(
-            f"The original TempGNN sanity build reports WNS={timing.get('wns_ns')} ns and TNS={timing.get('tns_ns')} ns."
+            "The packaged TempGNN build reports "
+            f"WNS={build.get('post_route_wns_ns')} ns and "
+            f"TNS={build.get('post_route_tns_ns')} ns."
         )
     lines.extend(
         [

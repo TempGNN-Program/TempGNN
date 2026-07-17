@@ -2,9 +2,12 @@
 
 This file records the software and hardware environment used to generate the packaged TempGNN AE evidence.
 
-## Default CPU-Only Review Environment
+## Optional Software-Check Environment
 
-The default AE path regenerates CSV/SVG figures, runs unit tests, and regenerates the AE report. It does not require FPGA hardware.
+This optional path regenerates CSV/SVG figures from code constants, runs unit
+tests, and regenerates the AE report. It does not execute a CPU performance
+baseline and does not require FPGA hardware. The recommended core review path
+is `make ae-core-u280` on the provided U280 host.
 
 Minimum requirements:
 
@@ -15,7 +18,7 @@ Build tools: GNU Make, Bash, tar, gzip
 Python packages: none beyond the standard library for core CSV/SVG generation
 ```
 
-Recommended setup:
+Optional setup:
 
 ```bash
 python3 -m venv .venv
@@ -66,7 +69,11 @@ source /opt/xilinx/xrt/setup.sh
 source /tools/Xilinx/Vitis/2023.2/settings64.sh
 ```
 
-The packaged U280 forward-path run uses a 225 MHz kernel target and is summarized in:
+The reviewer artifact uses a timing-closed 168 MHz, 21-CU TempGNN kernel; the
+three packaged FPGA baseline reproductions use timing-closed 225 MHz kernels.
+The current delivered TempGNN build has post-route WNS `+0.002 ns`, TNS
+`0.0 ns`, WHS `+0.006 ns`, and THS `0.0 ns`.
+The historical 225 MHz TempGNN sanity run is summarized in:
 
 ```text
 results/board_u280/summary.json
